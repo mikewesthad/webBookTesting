@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="pandoc" name="generator"/>
+<title></title>
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+<link href="../style/bootstrap.css" rel="stylesheet">
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/themes/black-tie/jquery-ui.css" rel="stylesheet">
+<link href="../style/jquery.tocify.css" rel="stylesheet">
+<link href="../style/prettify.css" rel="stylesheet" type="text/css"/>
+<link href="../style/style.css" rel="stylesheet" type="text/css"/>
+<link href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|Merriweather:400,300,300italic,400italic,700,900,700italic,900italic" rel="stylesheet" type="text/css">
+<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<style>  
+  .headerDoc {
+        color: #005580;
+      }
+  }
+  </style>
+</link></link></link></link></link></head>
+<body>
+<span class="btn-open">
+<i class="fa fa-bars"></i>
+</span>
+<div id="toc">
+<span class="btn-close">
+<i class="fa fa-close"></i>
+</span>
+</div>
+<div class="row-fluid">
+<div id="chapter">
+<h1 id="installation-up-4evr---linux">Installation up 4evr - Linux</h1>
+<p><em>by <a href="http://arturocastro.net" target="_blank">Arturo Castro</a></em></p>
+<p>In linux you can install a barebones desktop which makes things way easier to setup for installations, since among other things, you won't need to worry about deactivating annoying notifications. Also things like deactivating screen blanking can be done via scripts so everything can just be copy and pasted and it's easy to automate.</p>
+<ol style="list-style-type: decimal">
+<li><p>Install a linux distribution of your choice, for installations i usually use ubuntu since the drivers for the graphics cards come preinstalled. While installing, choose the option to login automatically to your user, that way the installation can be started later just by turning on the computer.</p></li>
+<li><p>Update all the packages to the latest versions. In ubuntu you can use the Software Updater tool or via the command line do:</p></li>
+</ol>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> apt-get update
+<span class="kw">sudo</span> apt-get upgrade</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Install the propietary drivers if you are using nvidia or ati cards. In latest ubuntu versions you can install it through the "Software &amp; Updates" tool in the Additional Drivers tab</p></li>
+<li><p>Ubuntu Unity, the default desktop is usually bloated with features that are not used in a computer running an installation, i've been recently using Openbox which also makes OpenGL slihtly faster since the desktop is not composited and even solves some problems with vsync:</p></li>
+</ol>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> apt-get install openbox</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li>You also probably want to install openssh server to be able to access the machine remotely:</li>
+</ol>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> apt-get install openssh-server</code></pre>
+<ol start="6" style="list-style-type: decimal">
+<li><p>Now download and install openFrameworks via the install_dependencies.sh script</p></li>
+<li><p>Logout the session and choose openbox instead of unity in the greeter screen</p></li>
+<li><p>You'll get a grey screen with no decorations, bars... you can access a context menu pressing with the right button of the mouse anywhere in the desktop although i find it easier at this point to just log in through ssh from my laptop.</p></li>
+<li><p>Once you've installed your application in the computer you probably want it to start when the machine boots. With Openbox you just need to create a script in ~/.config/openbox/autostart there add the path to the binary for your application:</p></li>
+</ol>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">~/openFrameworks/apps/myapps/myapp/bin/myapp</span> <span class="kw">&amp;</span></code></pre>
+<pre><code>don't forget the &amp; at the end so the application is started in the background.</code></pre>
+<ol start="10" style="list-style-type: decimal">
+<li>Disable the screen blank, in the same autostart file add this lines:</li>
+</ol>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">xset</span> s off
+<span class="kw">xset</span> -dpms</code></pre>
+<p>And that's it now the computer will start you app everytime it starts. Most PC's have a BIOS setting where you can choose to start it automatically after a power cut so if the installation is somewhere where they just cut the power at night it'll immediately start automatically in the morning when they turn it on again.</p>
+<h2 id="some-additional-tricks">Some additional tricks:</h2>
+<ul>
+<li>Linux can be installed in an SD card so you can save some money by buying a 16Gb SD Card instead of an HD, most SD Cards are also pretty fast so boot times will be really short. Just boot from a USB stick or CD and with the SD card in the reader, if there's no HD the ubuntu installer will just install in the sdcard. Installing to an SD card makes it also really easy to make copies of an installation. In ubuntu you can use the "Disks" tool to create and restore backups or from the command line with:</li>
+</ul>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> dd bs=4M if=/dev/sdcardDevice of=sdcardimg.bin</code></pre>
+<pre><code>To create the backup where sdcardDevice is the name of the device that you can find out by mounting the device and showing it's properties from nautilus. And then:</code></pre>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> dd bs=4M if=sdcardimg.bin of=/dev/sdcardDevice</code></pre>
+<pre><code>To restore the backup. If you have 2 sdcard readers you can just copy from one to another using dd</code></pre>
+<ul>
+<li>When accesing a machine via ssh you can start applications that have a graphical output if you set the display first:</li>
+</ul>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">export</span> <span class="ot">DISPLAY=</span>:0</code></pre>
+<pre><code>also you can tunnel the graphical output to your own computer if you add -X when starting the ssh session</code></pre>
+<ul>
+<li>You can make an application restart in case it crashes really easy from the same autostart script:</li>
+</ul>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">~/openFrameworks/apps/myapps/myapp/bin/myapp.sh</span> <span class="kw">&amp;</span></code></pre>
+<pre><code>and now create a myapp.sh script with this contents:</code></pre>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">cd</span> ~/openFrameworks/apps/myapps/myapp/bin/
+<span class="ot">ret=</span>1
+<span class="kw">while [</span> ret -neq 0<span class="kw"> ]</span>; <span class="kw">do</span>
+    <span class="kw">./myapp</span>
+    <span class="ot">ret=$?</span>
+<span class="kw">done</span></code></pre>
+<pre><code>that will restart your application in case it crashes and you can still quit it pressing escape (unless your app crashes when exiting)</code></pre>
+</div>
+</div>
+</body></html>
+<script src="../javascript/jquery-1.8.3.min.js"></script>
+<script src="../javascript/jquery-ui-1.9.1.custom.min.js"></script>
+<script src="../javascript/bootstrap.js"></script>
+<script src="../javascript/jquery.tocify.js"></script>
+<script src="../javascript/prettify.js"></script>
+<script src="../javascript/tocOpenClose.js"></script>
+<script>
+        $(function() {
+
+            var toc = $("#toc").tocify({
+              selectors: "h2,h3,h4,h5"
+            }).data("toc-tocify");
+
+            prettyPrint();
+            $(".optionName").popover({ trigger: "hover" });
+
+        });
+    </script>
+
+
