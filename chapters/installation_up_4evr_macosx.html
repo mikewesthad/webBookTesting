@@ -32,7 +32,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <link href="../style/prettify.css" rel="stylesheet" type="text/css"/>
 <link href="../style/style.css" rel="stylesheet" type="text/css"/>
 <link href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|Merriweather:400,300,300italic,400italic,700,900,700italic,900italic" rel="stylesheet" type="text/css">
-<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="../octicons/octicons.css" rel="stylesheet">
 <style>  
   .headerDoc {
         color: #005580;
@@ -41,13 +41,24 @@ code > span.er { color: #ff0000; font-weight: bold; }
   </style>
 </link></link></link></link></link></head>
 <body>
-<span class="btn-open">
-<i class="fa fa-bars"></i>
+<span id="side-nav">
+<span class="side-nav-button chapterBtn mega-octicon octicon-book"></span>
+<span class="side-nav-button navBtn mega-octicon octicon-three-bars"></span>
+<span class="side-nav-button infoBtn mega-octicon octicon-info"></span>
 </span>
+<!-- table of content -->
 <div id="toc">
-<span class="btn-close">
-<i class="fa fa-close"></i>
-</span>
+<span class="closeBtn mega-octicon octicon-x"></span>
+</div></body></html>
+<!-- table of content -->
+<div id="chapters">
+<span class="closeBtn mega-octicon octicon-x"></span>
+chapters
+<ul><li><a href="intro.html">intro</a></li><li><a href="cplusplus_basics.html">C++ Language Basics</a></li><li><a href="setup_and_project_structure.html">openFrameworks project structure and setup</a></li><li><a href="OOPs!.html">Ooops! = Object Oriented Programming + Classes</a></li><li><a href="animation.html">Animation</a></li><li><a href="intro_to_graphics.html">Graphics</a></li><li><a href="data_vis.html">Information Visualization Chapter</a></li><li><a href="game_design.html">Experimental Game Development in openFrameworks</a></li><li><a href="hardware.html">needs h1</a></li><li><a href="sound.html">Sound</a></li><li><a href="ios.html">ofxiOS</a></li><li><a href="c++11.html">C++ 11</a></li><li><a href="memory.html">Memory in C++</a></li><li><a href="threads.html">Threads</a></li><li><a href="version_control_with_git.html">Version control with Git</a></li><li><a href="advanced_graphics.html">Advanced graphics</a></li><li><a href="network.html">Network</a></li><li><a href="math.html">That Math Chapter: From 1D to 4D</a></li><li><a href="ofSketch.html">ofSketch</a></li><li><a href="project_elliot.html">Case Study : Line Segments Space</a></li><li><a href="project_eva.html">Case Study: Choreographies for Humans and Stars</a></li><li><a href="project_joel.html">Case Study: Anthropocene, an interactive film installation for Greenpeace as part of their field at Glastonbury 2013</a></li><li><a href="project_memo.html">Case Study: Memo (TODO: need title!)</a></li><li class="selected"><a href="installation_up_4evr_macosx.html">Installation up 4evr - OSX</a></li><li><a href="installation_up_4evr_linux.html">Installation up 4evr - Linux</a></li></ul></div>
+<!-- info about the book -->
+<div id="bookInfo">
+<span class="closeBtn mega-octicon octicon-x"></span>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida, luctus mauris in, congue ante. Phasellus egestas est id velit ornare, eu vehicula augue tincidunt. Aliquam laoreet faucibus turpis eget gravida. Vestibulum pharetra scelerisque leo, eu tincidunt leo tincidunt feugiat. Sed rutrum, felis eget posuere tempus, neque justo pretium libero, quis facilisis mauris turpis nec enim. Sed quis metus massa. Maecenas tincidunt, leo at ultricies interdum, nisl ipsum finibus massa, quis dictum nulla nibh sed urna. Vestibulum rhoncus, nunc sit amet tincidunt interdum, ligula lacus dictum massa, pharetra tristique nisi augue vitae risus.
 </div>
 <div class="row-fluid">
 <div id="chapter">
@@ -74,16 +85,16 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li><strong>Security:</strong> I would make sure that "Disable Automatic Login" is unchecked so you don't hit any surprises on reboots. If you’re really paranoid, you can even disable things like the IR remote receiver that still exists on some macs and definitely on Macbooks. This would keep pranksters with Apple TV remotes from “Front Rowing” your installation. To disable, go to Security-&gt;General-&gt;Advanced (in &gt;10.8) and “Disable remote control IR receiver”.</li>
 </ul>
 <div class="figure">
-<img alt="BluetoothSettings" src="..\images\installation_up_4evr_macosx/images/Bluetooth_settings.png"/><span class="caption">BluetoothSettings</span>
+<div style="clear:both"><img alt="BluetoothSettings" src="..\images\installation_up_4evr_macosx/images/Bluetooth_settings.png"/></div><span class="caption">BluetoothSettings</span>
 </div>
 <div class="figure">
-<img alt="SecuritySettings" src="..\images\installation_up_4evr_macosx/images/Security_settings.png"/><span class="caption">SecuritySettings</span>
+<div style="clear:both"><img alt="SecuritySettings" src="..\images\installation_up_4evr_macosx/images/Security_settings.png"/></div><span class="caption">SecuritySettings</span>
 </div>
 <div class="figure">
-<img alt="SharingSettings" src="..\images\installation_up_4evr_macosx/images/Sharing_settings.png"/><span class="caption">SharingSettings</span>
+<div style="clear:both"><img alt="SharingSettings" src="..\images\installation_up_4evr_macosx/images/Sharing_settings.png"/></div><span class="caption">SharingSettings</span>
 </div>
 <div class="figure">
-<img alt="Login_items" src="..\images\installation_up_4evr_macosx/images/Auto_login.png"/><span class="caption">Login_items</span>
+<div style="clear:both"><img alt="Login_items" src="..\images\installation_up_4evr_macosx/images/Auto_login.png"/></div><span class="caption">Login_items</span>
 </div>
 <p>You can also disable the "This Application Unexpectedly Quit" and the subsequent bug report that comes with it by running this command in terminal OR renaming the Problem Reporter app:</p>
 <pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> chmod 000 /System/Library/CoreServices/Problem\ Reporter.app</code></pre>
@@ -95,7 +106,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <h2 id="step-2-boot-into-your-software">Step 2: Boot into your software</h2>
 <p>Things get unplugged, power goes out, not everyone has budget or space for a battery backup etc etc. Above, I covered how to have everything reboot automatically after power failures or freezes, but you’ll also need your app to be ready to go from boot and not leave the desktop open to prying eyes. There are many ways to have your application load automatically - the simplest is using OSX's built in tools: In the System Preferences “Accounts” panel, select “Login Items” and drag your application into there to have it open automatically on launch.</p>
 <div class="figure">
-<img alt="Login Items" src="..\images\installation_up_4evr_macosx/images/Login_items.png"/><span class="caption">Login Items</span>
+<div style="clear:both"><img alt="Login Items" src="..\images\installation_up_4evr_macosx/images/Login_items.png"/></div><span class="caption">Login Items</span>
 </div>
 <h2 id="step-3-keep-it-up-champ">Step 3: Keep it up (champ!)</h2>
 <p>There are several ways to make sure your application goes up and stays up -</p>
@@ -108,11 +119,11 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <p>Of course you could make the launchd plist yourself for free from a template like above. You can read all about them with the command "man launchd.plist" typed into terminal to get an idea of what each toggle controls. One quick method to setting up Launchd is to use Lingon ($4.99 in the App Store) or <a href="http://www.peterborgapps.com/lingon/" target="_blank">Lingon X</a></p>
 <p>In Lingon, hit the + to create a new launchd plist. Just make it a standard launch agent. Now Set up your plist like so:</p>
 <div class="figure">
-<img alt="LingonSetup" src="..\images\installation_up_4evr_macosx/images/LingonSetup.png"/><span class="caption">LingonSetup</span>
+<div style="clear:both"><img alt="LingonSetup" src="..\images\installation_up_4evr_macosx/images/LingonSetup.png"/></div><span class="caption">LingonSetup</span>
 </div>
 <p>One additional/optional thing you can add to this is to put an additional key in the plist for a “Successful Exit”. By adding this, your app won’t re-open when it has detected that it closed normally (ie You just hit escape intentionally, it didn’t crash). Can be useful if you’re trying to check something and OS X won’t stop re-opening the app on you. To easily add this to the key, just hit “expert mode” on the bottom of the Lingon window after selecting your newly made script on the left. Then modify the relevant bits highlighted in the screenshot:</p>
 <div class="figure">
-<img alt="LingonplistSetup" src="..\images\installation_up_4evr_macosx/images/LingonSetup2.png"/><span class="caption">LingonplistSetup</span>
+<div style="clear:both"><img alt="LingonplistSetup" src="..\images\installation_up_4evr_macosx/images/LingonSetup2.png"/></div><span class="caption">LingonplistSetup</span>
 </div>
 <p><strong>Shell script+Cron Job method</strong></p>
 <p>(I got the following super helpful tip from <a href="http://kylemcdonald.net/" target="_blank">Kyle McDonald</a>)</p>
@@ -128,7 +139,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <p>Cronjobs are just low level system tasks that are set to run on a timer. The syntax for cronjobs is outside of the scope of this walkthrough, but there are many sites available for that. Instead, the application CronniX can do a lot of the heavy lifting for you.</p>
 <p>After downloading CronniX, open it up and create a new cronjob. In the window that opens, in the command window, point it to your KeepOpen.sh file and check all of the boxes in the simple tab for minute, hour, month, etc. This tells the job to run every minute, every hour, every day, every month. If you want it to run less frequently or at a different frequency, play around with the sliders.</p>
 <div class="figure">
-<img alt="Cronnix_link" src="..\images\installation_up_4evr_macosx/images/Cronnix-settings.png"/><span class="caption">Cronnix_link</span>
+<div style="clear:both"><img alt="Cronnix_link" src="..\images\installation_up_4evr_macosx/images/Cronnix-settings.png"/></div><span class="caption">Cronnix_link</span>
 </div>
 <p>Now just hit “New” and then make sure to hit “Save” to save it into the system’s crontab. Now if you just wait a minute then it should open your app every minute on the minute. Maybe save this one for the very end if you have more to do :)</p>
 <p>This is a great tool if there is an unintended crash because the app will never be down longer than a minute.</p>
@@ -149,17 +160,17 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <p>This one is a little more preventative, or maybe superstitious so hopefully someone can point out a concrete reason why this is a good idea. Depending on your app and the amount of stuff it reaches into, there could be some memory leaks or other OS bugs that you haven’t accounted for. Rebooting every day or week is a good idea to keep everything tidy, system wise.</p>
 <p>The simplest option by far would be to go to System Preferences-&gt;Energy Saver and then click “Schedule…” and enter in some values if you need to turn the computer off to rest for a longer period of time to save it some stress when it might not be used at night time or something. Heat can do funny things sometimes, so if you have a chance to get your computer to rest and the time to test it, definitely give this a shot…saves some energy too which is nice.</p>
 <div class="figure">
-<img alt="Auto-reboot" src="..\images\installation_up_4evr_macosx/images/Auto_reboot.png"/><span class="caption">Auto-reboot</span>
+<div style="clear:both"><img alt="Auto-reboot" src="..\images\installation_up_4evr_macosx/images/Auto_reboot.png"/></div><span class="caption">Auto-reboot</span>
 </div>
 <p>You could also set up another shell script with a crontab as above with CronniX that reboots the system with as often as you specify.</p>
 <p>Another option (if you don’t want to deal with the terminal and shell scripting) is to use iCal to call an Automator iCal event. This method is perhaps a little easier to schedule and visualize when you will reboot. Within Automator, create a new file with the iCal event template to do something like this:</p>
 <div class="figure">
-<img alt="Automator Shell Script" src="..\images\installation_up_4evr_macosx/images/Automator_example2.png"/><span class="caption">Automator Shell Script</span>
+<div style="clear:both"><img alt="Automator Shell Script" src="..\images\installation_up_4evr_macosx/images/Automator_example2.png"/></div><span class="caption">Automator Shell Script</span>
 </div>
 <p>Run it to see if it does what you expect and then save it out. When you save,it will open in iCal as an action that gets opened. Just set it to repeat as often as you’d like. You can also set things like having it email you when it reboots or runs the script.</p>
 <p>If you’d like to just close your programs and re-open them and there is a background and foreground do something like this (pauses are so the quitting and re-opening stuff has time to actually execute):</p>
 <div class="figure">
-<img alt="enter image description here" src="..\images\installation_up_4evr_macosx/images/Automator_example.png"/><span class="caption">enter image description here</span>
+<div style="clear:both"><img alt="enter image description here" src="..\images\installation_up_4evr_macosx/images/Automator_example.png"/></div><span class="caption">enter image description here</span>
 </div>
 <h2 id="step-5-check-in-on-it-from-afar">Step 5: Check in on it from afar</h2>
 <p>There are a bunch of options here from various paid web services (like <a href="http://www.logmein.com/" target="_blank">Logmein</a> or <a href="http://teamviewer.com/" target="_blank">Teamviewer</a>), to VNC (many options for this: <a href="http://realvnc.com/" target="_blank">RealVNC</a> and Chicken of the VNC tend to come up a bunch) to <a href="http://www.mactricksandtips.com/2009/06/ssh-into-your-mac.html" target="_blank">SSHing</a>. The choice here depends on your comfort level and how much you need to do to perform maintenance from far away. Also - see below for tips on logging the status of your app as an alternative way</p>
@@ -231,7 +242,6 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <p>Check out this great step by step from EVSC: http://www.evsc.net/home/prep-windows-machine-for-fulltime-exhibition-setup</p>
 </div>
 </div>
-</body></html>
 <script src="../javascript/jquery-1.8.3.min.js"></script>
 <script src="../javascript/jquery-ui-1.9.1.custom.min.js"></script>
 <script src="../javascript/bootstrap.js"></script>
@@ -242,7 +252,8 @@ code > span.er { color: #ff0000; font-weight: bold; }
         $(function() {
 
             var toc = $("#toc").tocify({
-              selectors: "h2,h3,h4,h5"
+              selectors: "h2,h3,h4,h5",
+              showAndHide: false
             }).data("toc-tocify");
 
             prettyPrint();
@@ -250,5 +261,3 @@ code > span.er { color: #ff0000; font-weight: bold; }
 
         });
     </script>
-
-

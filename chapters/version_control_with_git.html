@@ -13,7 +13,7 @@
 <link href="../style/prettify.css" rel="stylesheet" type="text/css"/>
 <link href="../style/style.css" rel="stylesheet" type="text/css"/>
 <link href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|Merriweather:400,300,300italic,400italic,700,900,700italic,900italic" rel="stylesheet" type="text/css">
-<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="../octicons/octicons.css" rel="stylesheet">
 <style>  
   .headerDoc {
         color: #005580;
@@ -22,24 +22,35 @@
   </style>
 </link></link></link></link></link></head>
 <body>
-<span class="btn-open">
-<i class="fa fa-bars"></i>
+<span id="side-nav">
+<span class="side-nav-button chapterBtn mega-octicon octicon-book"></span>
+<span class="side-nav-button navBtn mega-octicon octicon-three-bars"></span>
+<span class="side-nav-button infoBtn mega-octicon octicon-info"></span>
 </span>
+<!-- table of content -->
 <div id="toc">
-<span class="btn-close">
-<i class="fa fa-close"></i>
-</span>
+<span class="closeBtn mega-octicon octicon-x"></span>
+</div></body></html>
+<!-- table of content -->
+<div id="chapters">
+<span class="closeBtn mega-octicon octicon-x"></span>
+chapters
+<ul><li><a href="intro.html">intro</a></li><li><a href="cplusplus_basics.html">C++ Language Basics</a></li><li><a href="setup_and_project_structure.html">openFrameworks project structure and setup</a></li><li><a href="OOPs!.html">Ooops! = Object Oriented Programming + Classes</a></li><li><a href="animation.html">Animation</a></li><li><a href="intro_to_graphics.html">Graphics</a></li><li><a href="data_vis.html">Information Visualization Chapter</a></li><li><a href="game_design.html">Experimental Game Development in openFrameworks</a></li><li><a href="hardware.html">needs h1</a></li><li><a href="sound.html">Sound</a></li><li><a href="ios.html">ofxiOS</a></li><li><a href="c++11.html">C++ 11</a></li><li><a href="memory.html">Memory in C++</a></li><li><a href="threads.html">Threads</a></li><li class="selected"><a href="version_control_with_git.html">Version control with Git</a></li><li><a href="advanced_graphics.html">Advanced graphics</a></li><li><a href="network.html">Network</a></li><li><a href="math.html">That Math Chapter: From 1D to 4D</a></li><li><a href="ofSketch.html">ofSketch</a></li><li><a href="project_elliot.html">Case Study : Line Segments Space</a></li><li><a href="project_eva.html">Case Study: Choreographies for Humans and Stars</a></li><li><a href="project_joel.html">Case Study: Anthropocene, an interactive film installation for Greenpeace as part of their field at Glastonbury 2013</a></li><li><a href="project_memo.html">Case Study: Memo (TODO: need title!)</a></li><li><a href="installation_up_4evr_macosx.html">Installation up 4evr - OSX</a></li><li><a href="installation_up_4evr_linux.html">Installation up 4evr - Linux</a></li></ul></div>
+<!-- info about the book -->
+<div id="bookInfo">
+<span class="closeBtn mega-octicon octicon-x"></span>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida, luctus mauris in, congue ante. Phasellus egestas est id velit ornare, eu vehicula augue tincidunt. Aliquam laoreet faucibus turpis eget gravida. Vestibulum pharetra scelerisque leo, eu tincidunt leo tincidunt feugiat. Sed rutrum, felis eget posuere tempus, neque justo pretium libero, quis facilisis mauris turpis nec enim. Sed quis metus massa. Maecenas tincidunt, leo at ultricies interdum, nisl ipsum finibus massa, quis dictum nulla nibh sed urna. Vestibulum rhoncus, nunc sit amet tincidunt interdum, ligula lacus dictum massa, pharetra tristique nisi augue vitae risus.
 </div>
 <div class="row-fluid">
 <div id="chapter">
 <h1 id="version-control-with-git">Version control with Git</h1>
-<p><em>by Christoph Buchner</em></p>
+<p><em>by Christoph Buchner (<a href="https://github.com/bilderbuchi" target="_blank">bilderbuchi</a>)</em></p>
 <p>In this chapter, you will learn about version control and why you should use it. You will get a short introduction to Git, the version control system of choice for openFrameworks. The major concepts and keywords are explained, enabling you to easily dig deeper into the subject using available online resources. A number of tools for working with Git are presented. You will learn about Github, a web service for hosting Git repositories and one of the major platforms for "social coding". You will be shown how you can start hosting your own projects on Github and leverage its features. Finally, you will learn how you can build upon the things you just learned and where you can get help if you get stuck.</p>
 <h2 id="what-is-version-control-and-why-should-you-use-it">What is version control, and why should you use it?</h2>
 <p>How do you track the state of your projects over time? Have you ever made several copies of your project folder (or text document, Photoshop file,...)? Did you name them something like <code>Awesome_project_1</code>, <code>Awesome_project_may10</code>, <code>Awesome_project_final</code>, <code>Awesome_project_final2</code>, <code>Awesome_project_really_final</code>,...? Did you mail around zipped projects to collaborators, and had some trouble synchronizing the changes they (or you) made in the meantime? Have you run into problems when you had to go back to a previous version, change things, copy those changes to other version, or generally keep tabs on changes?</p>
 <p>If you nodded at some of these questions, you've come to the right place - version control is there to help you! <a href="http://en.wikipedia.org/wiki/Revision_control" target="_blank">Version control</a> (also called revision control) is the management of changes to documents, computer programs, large web sites, and other collections of information. It is used to easily, efficiently and reproducibly track changes to all kinds of information (like a really advanced "undo" function). Specifically, in programming it is (primarily) used to track changes to your source code, but it's generally applicable to most kinds of files on your computer. Version control also enables programmers to effectively collaborate in teams, because it offers methods to distribute changes, merge different development versions together, resolve conflicts if two (or more) programmers modified the same file, sync state between computers, etc.</p>
 <p>I hope you'll agree by now that it is a very good idea to use some manner of version control when developing your programs. In the next section, I'll talk a bit about the different choices you have when choosing a particular system.</p>
-<h2 id="version-control-systems">Version control systems</h2>
+<h2 id="different-version-control-systems">Different version control systems</h2>
 <p>There is a number of version control systems out there, some of which you've maybe encountered already. They can be divided into two big camps: "centralized" and "distributed" systems.</p>
 <p>In <a href="http://en.wikipedia.org/wiki/Revision_control" target="_blank"><em>centralized version control systems</em></a>, a central server orchestrates the various tasks the version control system performs, and programmers synchronize with this server. Common operations often need a network connection to the central server. Typically, programmers only have a part of the whole project locally available. Some <a href="http://en.wikipedia.org/wiki/List_of_revision_control_software" target="_blank">popular centralized version control</a> systems are:</p>
 <ul>
@@ -63,7 +74,7 @@
 <p>Branches can be <strong>merged</strong> into another branch. When this happens, Git analyzes the two different branches and merges their different histories/changes together.</p>
 <p>This figure visualizes how this looks like:</p>
 <div class="figure">
-<img alt="Simple Git branch diagram." src="..\images\version_control_with_git/images/branch_diagram.png" title="Simple Git branch diagram."/><span class="caption">Simple Git branch diagram.</span>
+<div style="clear:both"><img alt="Simple Git branch diagram." src="..\images\version_control_with_git/images/branch_diagram.png" title="Simple Git branch diagram."/></div><span class="caption">Simple Git branch diagram.</span>
 </div>
 <p>Finally, there are three different "areas" in Git, which you will encounter often when reading about Git:</p>
 <p>The <strong>repository</strong> in the <code>.git</code> directory contains all the commits. The <strong>HEAD</strong> points to the current commit of the branch you are currently on. This represents the <em>latest committed state</em> of your repository. If you create a new commit, it will become this commit's parent (and HEAD will be moved to the new commit).</p>
@@ -71,7 +82,7 @@
 <p>When you prepare a commit, you first have to <strong>stage</strong> any changes you want that commit to contain. This means that these changes will be put into the <strong>index</strong> (or <strong>staging area</strong>).</p>
 <p>So, you modify your files in the working directory, you stage those modifications, putting them into the index, and then you <strong>create a commit</strong>, taking the files from the index and storing them in the repository. To get files <em>back</em> from the repository (i.e. restore the state as it was at some previous point), you <strong>check out</strong> files, putting them into the working directory. This is shown graphically in the following figure:</p>
 <div class="figure">
-<img alt="The three areas of Git." src="..\images\version_control_with_git/images/git_areas.png" title="The three areas of Git."/><span class="caption">The three areas of Git.</span>
+<div style="clear:both"><img alt="The three areas of Git." src="..\images\version_control_with_git/images/git_areas.png" title="The three areas of Git."/></div><span class="caption">The three areas of Git.</span>
 </div>
 <p>Armed with these basic facts, we can dive right in, and start working on our first project!</p>
 <h3 id="getting-started-project-setup">Getting started: project setup</h3>
@@ -84,20 +95,20 @@
 </ul>
 <p>First, we have to set up Git itself for our operation system. This mainly involves <a href="http://git-scm.com/downloads" target="_blank">downloading and installing</a> and setting the username and email address. The instructions <a href="https://help.github.com/articles/set-up-git#platform-all" target="_blank">vary slightly depending on the operating system</a>.</p>
 <p>When we have successfully set up Git, we create a new, <strong>empty project</strong> with the OF project generator. We will end up with a project folder containing some C++ files and some IDE files depending on OS and chosen IDE (in my case: Linux and Code::Blocks). This will look similar to this:</p>
-<pre><code>$ tree -a
+<pre><code>$ tree -a --charset ascii
 .
-├── addons.make
-├── bin
-│   └── data
-│       └── .gitkeep
-├── config.make
-├── demoProject.cbp
-├── demoProject.workspace
-├── Makefile
-└── src
-    ├── main.cpp
-    ├── ofApp.cpp
-    └── ofApp.h
+|-- addons.make
+|-- bin
+|   `-- data
+|       `-- .gitkeep
+|-- config.make
+|-- demoProject.cbp
+|-- demoProject.workspace
+|-- Makefile
+`-- src
+    |-- main.cpp
+    |-- ofApp.cpp
+    `-- ofApp.h
 
 3 directories, 9 files</code></pre>
 <p>Now, it's time to create our Git repository, using the <code>git init</code> command:</p>
@@ -108,35 +119,35 @@ Initialised empty Git repository in /home/bilderbuchi/demoProject/.git/</code></
 <p>It's important that the Git repository contains all files necessary to successfully compile our program, but no unnecessary stuff. Generally, this means that files we edit by hand (e.g. source and header files, Readme files, images,...) should be included in the repository, but files which are <em>generated from</em> our code (e.g. compiled binaries, pdfs generated from some source file, video files or image sequences created with our program) should stay out. Also, user-specific files like IDE files describing the location of windows in our IDE, or backup copies of our files that the OS creates, don't really belong in the repository.</p>
 <p>If we take care of this right at the beginning, we can easily make sure that only "proper" files end up in our repo. Git handles this file exclusion with the aforementioned <code>.gitignore</code> files (there can be several), which contains patterns describing which files are ignored by Git. Those ignored files will still exist in our working directory, that means we can still use them, but Git will not track them.</p>
 <p>If, later down the line, we see files appearing in our list of changes which should not be there, or if we can't seem to add a file that belongs in the repository, we don't force Git to do what it doesn't want to, rather fine-tune the <code>.gitignore</code> pattern to match our expectations. Note that the <code>.gitignore</code> pattern does <em>not</em> affect files that have already been committed.</p>
-<p>Because it can be daunting to come up with a generally useful <code>.gitignore</code> template, we can (<strong>[TODO: in the future, see <a href="https://github.com/openframeworks/openFrameworks/issues/2791" target="_blank">this issue</a>]</strong>) add a pre-made <code>.gitignore</code> file when we create our OF project. This file will look similar to this (formatted into three columns for convenience):</p>
+<p>Because it can be daunting to come up with a generally useful <code>.gitignore</code> template, it's <a href="https://github.com/openframeworks/openFrameworks/issues/2791" target="_blank">currently planned</a> that OF offers to add a pre-made <code>.gitignore</code> file when we create our project. This file will look similar to this (formatted into three columns for convenience):</p>
 <pre><code>$ pr -tW84 -s"|" -i" "1 -3 .gitignore
-###########################|                     |.externalToolBuilders
-# ignore generated binaries|# XCode              |
-# but not the data folder  |*.pbxuser            |##################
-###########################|*.perspective        |# operating system
-                           |*.perspectivev3      |##################
-/bin/*                     |*.mode1v3            |
-!/bin/data/                |*.mode2v3            |# Linux
-                           |# XCode 4            |*~
-#########                  |xcuserdata           |# KDE
-# general                  |*.xcworkspace        |.directory
-#########                  |                     |.AppleDouble
-                           |# Code::Blocks       |
-[Bb]uild/                  |*.depend             |# OSX
-[Oo]bj/                    |*.layout             |.DS_Store
-*.o                        |                     |*.swp
-[Dd]ebug*/                 |# Visual Studio      |*~.nib
-[Rr]elease*/               |*.sdf                |# Thumbnails
-*.mode*                    |*.opensdf            |._*
-*.app/                     |*.suo                |
-*.pyc                      |*.pdb                |# Windows
-.svn/                      |*.ilk                |# Image file caches
-*.log                      |*.aps                |Thumbs.db
-                           |ipch/                |# Folder config file
-########################   |                     |Desktop.ini
-# IDE files which should   |# Eclipse            |
-# be ignored               |.metadata            |# Android
-########################   |local.properties     |.csettings</code></pre>
+###########################|                   |.externalToolBuilders
+# ignore generated binaries|# XCode            |
+# but not the data folder  |*.pbxuser          |##################
+###########################|*.perspective      |# operating system
+                           |*.perspectivev3    |##################
+/bin/*                     |*.mode1v3          |
+!/bin/data/                |*.mode2v3          |# Linux
+                           |# XCode 4          |*~
+#########                  |xcuserdata         |# KDE
+# general                  |*.xcworkspace      |.directory
+#########                  |                   |.AppleDouble
+                           |# Code::Blocks     |
+[Bb]uild/                  |*.depend           |# OSX
+[Oo]bj/                    |*.layout           |.DS_Store
+*.o                        |                   |*.swp
+[Dd]ebug*/                 |# Visual Studio    |*~.nib
+[Rr]elease*/               |*.sdf              |# Thumbnails
+*.mode*                    |*.opensdf          |._*
+*.app/                     |*.suo              |
+*.pyc                      |*.pdb              |# Windows
+.svn/                      |*.ilk              |# Image file caches
+*.log                      |*.aps              |Thumbs.db
+                           |ipch/              |# Folder config file
+########################   |                   |Desktop.ini
+# IDE files which should   |# Eclipse          |
+# be ignored               |.metadata          |# Android
+########################   |local.properties   |.csettings</code></pre>
 <p>This might look like magic to you, but let us just continue for now, you can always look up more information on the <code>.gitignore</code> syntax later, for example <a href="http://git-scm.com/docs/gitignore" target="_blank">here</a>.</p>
 <h4 id="git-status"><code>git status</code></h4>
 <p>A command which we will use very often is <a href="http://git-scm.com/docs/git-status" target="_blank"><code>git status</code></a>. This command enables us to see the current state of a repository at a glance. It offers some flags to fine-tune its output (like most Git commands).</p>
@@ -164,7 +175,7 @@ nothing added to commit but untracked files present (use "git add" to track)</co
 <p>The list of files looks correct, so far so good! You might have noticed the <code>.gitkeep</code> file in <code>bin/data/</code>. Git only tracks files, not directories, which means that empty directories are not visible to Git. A common technique to work around this, if you want to have empty directories (e.g. for future output files) in your repository, is to place an empty file there, which makes sure that that directory can be added to Git. Naming that file <code>.gitkeep</code> is just a convention, and has no special meaning to Git.</p>
 <p>If we compile the OF project now, some additional files will be created in the /bin folder. Because we added a <code>.gitignore</code> file in the previous step, these files will not be picked up by Git. We can check this by running <code>git status -u</code> again.</p>
 <h4 id="git-add"><code>git add</code></h4>
-<p>The next step is to <em>stage</em> the untracked files using <a href="http://git-scm.com/docs/git-add" target="_blank"><code>git add</code></a>. This will put those files into the <em>index</em>, as discussed <a href="#basic-concepts" target="_blank">previously</a>. <strong>[NOTE: This is an internal link!]</strong></p>
+<p>The next step is to <em>stage</em> the untracked files using <a href="http://git-scm.com/docs/git-add" target="_blank"><code>git add</code></a>. This will put those files into the <em>index</em>, as discussed <a href="#basic-concepts" target="_blank">previously</a>.</p>
 <p>We stage untracked files and modifications to files already in the repository with the command <code>git add &lt;filespec&gt;</code>, where <code>&lt;filespec&gt;</code> describes one or more files or directories, so could be for example <code>addons.make</code>, <code>src</code> or <code>*.cpp</code>.</p>
 <p>We can also add <em>all</em> files and modifications in the repository with <code>git add .</code>, but as this is a catch-all filespec, we will have to check the output of <code>git status -u</code> first, to make sure no unwanted files are missed by the <code>.gitignore</code> pattern and would slip into the repository! Since we just made sure our git status looks alright, let's do it:</p>
 <pre><code>$ git add .</code></pre>
@@ -465,7 +476,7 @@ $ git log --all --graph --decorate --oneline
 <p>Congratulations, you have just resolved your first merge conflict! This concludes the walk-through portion of this chapter, I will continue with more high-level explanations of Git features.</p>
 <h4 id="git-tag"><code>git tag</code></h4>
 <p>During your work, you will encounter special commits, which mark significant stations in your project's history, for example released versions, or the state of your code when it was installed somewhere, or handed off to your customer. You can do this easily with <a href="http://git-scm.com/docs/git-tag" target="_blank">Git tags</a>. Use <code>git tag somename</code> to put a tag on the current commit. This tag now permanently points to that commit, and you can (mostly) use it in Git commands just like commit hashes and branch names. For example, <code>git checkout v1.2</code> will check out the repository's state (if the tag exists) just like it was when you published version 1.2.</p>
-<h3 id="working-with-remote-repositories-github">Working with remote repositories, Github</h3>
+<h3 id="remote-repositories-and-github">Remote repositories and Github</h3>
 <p>An important aspect of your work may involve collaboration with others. With Git, this typically involves one or more remote repositories (short <strong>remotes</strong>), to which you <strong>push</strong> your modifications, and from which you <strong>fetch</strong> the modifications of others.</p>
 <p>One of several popular hosting platforms for Git repositories is <a href="www.github.com" target="_blank">Github</a>. Github offers repository hosting (public and private), project wiki pages, an issue tracker, social features, project web pages, etc. OpenFrameworks primarily uses Github to host its <a href="https://github.com/openframeworks" target="_blank">source code repositories</a> and the <a href="https://github.com/openframeworks/openFrameworks/issues" target="_blank">openFrameworks issue tracker</a>.</p>
 <p>Delving deeper into Github's features would lead too far here, so I'll just outline the typical operations you will deal with when interacting with Github repositories.</p>
@@ -535,7 +546,6 @@ $ git log --all --graph --decorate --oneline
 <p>Finally, I hope that this chapter made you realize how useful it can be to integrate version control into your creative coding workflow, and that you will one day soon look fondly back on the days of zip files called <code>Awesome_project_really_final.zip</code>.</p>
 </div>
 </div>
-</body></html>
 <script src="../javascript/jquery-1.8.3.min.js"></script>
 <script src="../javascript/jquery-ui-1.9.1.custom.min.js"></script>
 <script src="../javascript/bootstrap.js"></script>
@@ -546,7 +556,8 @@ $ git log --all --graph --decorate --oneline
         $(function() {
 
             var toc = $("#toc").tocify({
-              selectors: "h2,h3,h4,h5"
+              selectors: "h2,h3,h4,h5",
+              showAndHide: false
             }).data("toc-tocify");
 
             prettyPrint();
@@ -554,5 +565,3 @@ $ git log --all --graph --decorate --oneline
 
         });
     </script>
-
-

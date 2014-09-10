@@ -13,7 +13,7 @@
 <link href="../style/prettify.css" rel="stylesheet" type="text/css"/>
 <link href="../style/style.css" rel="stylesheet" type="text/css"/>
 <link href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|Merriweather:400,300,300italic,400italic,700,900,700italic,900italic" rel="stylesheet" type="text/css">
-<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="../octicons/octicons.css" rel="stylesheet">
 <style>  
   .headerDoc {
         color: #005580;
@@ -22,13 +22,24 @@
   </style>
 </link></link></link></link></link></head>
 <body>
-<span class="btn-open">
-<i class="fa fa-bars"></i>
+<span id="side-nav">
+<span class="side-nav-button chapterBtn mega-octicon octicon-book"></span>
+<span class="side-nav-button navBtn mega-octicon octicon-three-bars"></span>
+<span class="side-nav-button infoBtn mega-octicon octicon-info"></span>
 </span>
+<!-- table of content -->
 <div id="toc">
-<span class="btn-close">
-<i class="fa fa-close"></i>
-</span>
+<span class="closeBtn mega-octicon octicon-x"></span>
+</div></body></html>
+<!-- table of content -->
+<div id="chapters">
+<span class="closeBtn mega-octicon octicon-x"></span>
+chapters
+<ul><li><a href="intro.html">intro</a></li><li><a href="cplusplus_basics.html">C++ Language Basics</a></li><li><a href="setup_and_project_structure.html">openFrameworks project structure and setup</a></li><li><a href="OOPs!.html">Ooops! = Object Oriented Programming + Classes</a></li><li><a href="animation.html">Animation</a></li><li><a href="intro_to_graphics.html">Graphics</a></li><li><a href="data_vis.html">Information Visualization Chapter</a></li><li><a href="game_design.html">Experimental Game Development in openFrameworks</a></li><li class="selected"><a href="hardware.html">needs h1</a></li><li><a href="sound.html">Sound</a></li><li><a href="ios.html">ofxiOS</a></li><li><a href="c++11.html">C++ 11</a></li><li><a href="memory.html">Memory in C++</a></li><li><a href="threads.html">Threads</a></li><li><a href="version_control_with_git.html">Version control with Git</a></li><li><a href="advanced_graphics.html">Advanced graphics</a></li><li><a href="network.html">Network</a></li><li><a href="math.html">That Math Chapter: From 1D to 4D</a></li><li><a href="ofSketch.html">ofSketch</a></li><li><a href="project_elliot.html">Case Study : Line Segments Space</a></li><li><a href="project_eva.html">Case Study: Choreographies for Humans and Stars</a></li><li><a href="project_joel.html">Case Study: Anthropocene, an interactive film installation for Greenpeace as part of their field at Glastonbury 2013</a></li><li><a href="project_memo.html">Case Study: Memo (TODO: need title!)</a></li><li><a href="installation_up_4evr_macosx.html">Installation up 4evr - OSX</a></li><li><a href="installation_up_4evr_linux.html">Installation up 4evr - Linux</a></li></ul></div>
+<!-- info about the book -->
+<div id="bookInfo">
+<span class="closeBtn mega-octicon octicon-x"></span>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida, luctus mauris in, congue ante. Phasellus egestas est id velit ornare, eu vehicula augue tincidunt. Aliquam laoreet faucibus turpis eget gravida. Vestibulum pharetra scelerisque leo, eu tincidunt leo tincidunt feugiat. Sed rutrum, felis eget posuere tempus, neque justo pretium libero, quis facilisis mauris turpis nec enim. Sed quis metus massa. Maecenas tincidunt, leo at ultricies interdum, nisl ipsum finibus massa, quis dictum nulla nibh sed urna. Vestibulum rhoncus, nunc sit amet tincidunt interdum, ligula lacus dictum massa, pharetra tristique nisi augue vitae risus.
 </div>
 <div class="row-fluid">
 <div id="chapter">
@@ -45,7 +56,7 @@
 <p>Serial, in the most basic language sense, refers to things that come one after another; it’s a term often used to describe magazines, crimes, and television programs. That meaning also applies when talking about serial data: “serial communication” means that all information between two entities is being sent one piece at a time, following in a single stream. One piece of data, or one bit, is just a binary piece of information: you’re either sending a 0 or a 1. Using the terminology of digital electronics, these are frequently referred to as “high” and “low”; 0 is low (like turning a light off) and 1 is high (flipping it back on). 8 bits (for example the stream 01000001, which represents the letter A) are sometimes packaged together to create a single byte.</p>
 <p>Serial communication is actually a very broad topic and there are many serial protocols, including audio-visual protocols such as DMX (based on RS-485) and MIDI (serial at 31,250 bits per second) which we'll briefly cover in this chapter. The most common serial protocol is called RS-232 and computers used to be equipped with RS-232 serial ports (remember them?) but today they are rarely present, which is why serial communications involving a computer will typically require an RS-232 to USB adaptor (found on-line or at your local electronics store).</p>
 <div class="figure">
-<img alt="RS-232 to USB adaptor" src="..\images\hardware/images/USB-rs232.jpg" title="RS-232 to USB adaptor"/><span class="caption">RS-232 to USB adaptor</span>
+<div style="clear:both"><img alt="RS-232 to USB adaptor" src="..\images\hardware/images/USB-rs232.jpg" title="RS-232 to USB adaptor"/></div><span class="caption">RS-232 to USB adaptor</span>
 </div>
 <p>However, if you're connecting to an Arduino, it already appears to the computer as a virtual serial port and you just need a regular USB cable (the exact type is dependent on which model Arduino you have). The Arduino also has a built-in library which handles reading and writing to the serial port that appears on your computer. Additionally, the Arduino has bi-directional RS-232 serial ports which can be used to connect to other external serial devices. In short - the Arduino is well equipped for serial communications and does most of the hard work for you!</p>
 <p><strong>note: expand on Serial library</strong></p>
@@ -201,7 +212,7 @@ sendAnalogPinMode(PIN_NUMBER, ARD_INPUT) // analog input</code></pre>
 <h2 id="lights-on---controlling-hardware-via-dmx">Lights On - controlling hardware via DMX</h2>
 <p>DMX (which stands for Digital Multiplex), also known as DMX512 (512 being the number of channels each output can accommodate), is a protocol for controlling lighting and stage equipment. It's been around since the 80's, and is sometimes referred to as the MIDI of the lighting world as it achieves a fairly similar outcome - the sequencing and controlling of hardware through the use of a computer. DMX can be used to control anything from strobes to RGB par-can lights to LED fixtures. It's even possible to drive LED strips by Pulse Width Modulation if you have the right hardware. The advantage of sending DMX through a custom openFrameworks app is that you can then integrate it via all the other goodness OF has to offer, including custom GUI's, custom sequencing algorithms, camera tracking - you name it.</p>
 <div class="figure">
-<img alt="DMX Lighting" src="..\images\hardware/images/stutterspot.jpg" title="DMX Lighting"/><span class="caption">DMX Lighting</span>
+<div style="clear:both"><img alt="DMX Lighting" src="..\images\hardware/images/stutterspot.jpg" title="DMX Lighting"/></div><span class="caption">DMX Lighting</span>
 </div>
 <p><strong>Overview of the DMX protocol</strong></p>
 <p>In order to send DMX first of all you need a DMX to USB control interface. This is a special box that you'll need to purchase in order to enable your computer to send DMX data via a USB port. These interfaces can be easily purchased on-line in case you can't track one down locally. You'll also need some DMX cables to connect between the interface and the DMX device you want to control. Microphone cables with XLR connectors can be used to send DMX data, although the official standard for DMX is a 5-pin cable, unlike the 3-pins that XLR has to offer. There does exist adaptors between 5 and 3-pin connectors in case you need to mix and match them. In any case, hook up your hardware via cables to your DMX to USB device, install your drivers if required (Operating System dependent) and you are ready to send. As previously mentioned, each DMX output from your controller can send up to 512 channels of DMX data. In DMX terminology, each group of 512 channels is known as a "Universe". Multiple DMX Universes are often used in complex setups requiring lots of channels. Typically you won't need more than a single universe as a single coloured light will only use up around 3 channels (one each for red, green and blue).</p>
@@ -299,7 +310,6 @@ done</code></pre>
 <p>in a terminal. This will list all running processes on the system. Anyhow, that's enough system administration for the moment, time to get creative instead.</p>
 </div>
 </div>
-</body></html>
 <script src="../javascript/jquery-1.8.3.min.js"></script>
 <script src="../javascript/jquery-ui-1.9.1.custom.min.js"></script>
 <script src="../javascript/bootstrap.js"></script>
@@ -310,7 +320,8 @@ done</code></pre>
         $(function() {
 
             var toc = $("#toc").tocify({
-              selectors: "h2,h3,h4,h5"
+              selectors: "h2,h3,h4,h5",
+              showAndHide: false
             }).data("toc-tocify");
 
             prettyPrint();
@@ -318,5 +329,3 @@ done</code></pre>
 
         });
     </script>
-
-

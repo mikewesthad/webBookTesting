@@ -13,7 +13,7 @@
 <link href="../style/prettify.css" rel="stylesheet" type="text/css"/>
 <link href="../style/style.css" rel="stylesheet" type="text/css"/>
 <link href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|Merriweather:400,300,300italic,400italic,700,900,700italic,900italic" rel="stylesheet" type="text/css">
-<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="../octicons/octicons.css" rel="stylesheet">
 <style>  
   .headerDoc {
         color: #005580;
@@ -22,13 +22,24 @@
   </style>
 </link></link></link></link></link></head>
 <body>
-<span class="btn-open">
-<i class="fa fa-bars"></i>
+<span id="side-nav">
+<span class="side-nav-button chapterBtn mega-octicon octicon-book"></span>
+<span class="side-nav-button navBtn mega-octicon octicon-three-bars"></span>
+<span class="side-nav-button infoBtn mega-octicon octicon-info"></span>
 </span>
+<!-- table of content -->
 <div id="toc">
-<span class="btn-close">
-<i class="fa fa-close"></i>
-</span>
+<span class="closeBtn mega-octicon octicon-x"></span>
+</div></body></html>
+<!-- table of content -->
+<div id="chapters">
+<span class="closeBtn mega-octicon octicon-x"></span>
+chapters
+<ul><li class="selected"><a href="intro.html">intro</a></li><li><a href="cplusplus_basics.html">C++ Language Basics</a></li><li><a href="setup_and_project_structure.html">openFrameworks project structure and setup</a></li><li><a href="OOPs!.html">Ooops! = Object Oriented Programming + Classes</a></li><li><a href="animation.html">Animation</a></li><li><a href="intro_to_graphics.html">Graphics</a></li><li><a href="data_vis.html">Information Visualization Chapter</a></li><li><a href="game_design.html">Experimental Game Development in openFrameworks</a></li><li><a href="hardware.html">needs h1</a></li><li><a href="sound.html">Sound</a></li><li><a href="ios.html">ofxiOS</a></li><li><a href="c++11.html">C++ 11</a></li><li><a href="memory.html">Memory in C++</a></li><li><a href="threads.html">Threads</a></li><li><a href="version_control_with_git.html">Version control with Git</a></li><li><a href="advanced_graphics.html">Advanced graphics</a></li><li><a href="network.html">Network</a></li><li><a href="math.html">That Math Chapter: From 1D to 4D</a></li><li><a href="ofSketch.html">ofSketch</a></li><li><a href="project_elliot.html">Case Study : Line Segments Space</a></li><li><a href="project_eva.html">Case Study: Choreographies for Humans and Stars</a></li><li><a href="project_joel.html">Case Study: Anthropocene, an interactive film installation for Greenpeace as part of their field at Glastonbury 2013</a></li><li><a href="project_memo.html">Case Study: Memo (TODO: need title!)</a></li><li><a href="installation_up_4evr_macosx.html">Installation up 4evr - OSX</a></li><li><a href="installation_up_4evr_linux.html">Installation up 4evr - Linux</a></li></ul></div>
+<!-- info about the book -->
+<div id="bookInfo">
+<span class="closeBtn mega-octicon octicon-x"></span>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida, luctus mauris in, congue ante. Phasellus egestas est id velit ornare, eu vehicula augue tincidunt. Aliquam laoreet faucibus turpis eget gravida. Vestibulum pharetra scelerisque leo, eu tincidunt leo tincidunt feugiat. Sed rutrum, felis eget posuere tempus, neque justo pretium libero, quis facilisis mauris turpis nec enim. Sed quis metus massa. Maecenas tincidunt, leo at ultricies interdum, nisl ipsum finibus massa, quis dictum nulla nibh sed urna. Vestibulum rhoncus, nunc sit amet tincidunt interdum, ligula lacus dictum massa, pharetra tristique nisi augue vitae risus.
 </div>
 <div class="row-fluid">
 <div id="chapter">
@@ -126,7 +137,6 @@ float position;</code></pre>
 <p>In addition to header search paths, there are also setting in the IDE for dealing with linker paths and libraries to link against. A common error you might see is a link error, where the code in your project compiles fine, but it's having trouble linking because some object is missing. For example, if you forget to include a .cpp file from the source code, the other code will comiple fine, but when the linker goes to make that jump, it can't find where to jump to. Linker errors are described as "undefined reference" errors and occur at the end of the compile process.</p>
 </div>
 </div>
-</body></html>
 <script src="../javascript/jquery-1.8.3.min.js"></script>
 <script src="../javascript/jquery-ui-1.9.1.custom.min.js"></script>
 <script src="../javascript/bootstrap.js"></script>
@@ -137,7 +147,8 @@ float position;</code></pre>
         $(function() {
 
             var toc = $("#toc").tocify({
-              selectors: "h2,h3,h4,h5"
+              selectors: "h2,h3,h4,h5",
+              showAndHide: false
             }).data("toc-tocify");
 
             prettyPrint();
@@ -145,5 +156,3 @@ float position;</code></pre>
 
         });
     </script>
-
-

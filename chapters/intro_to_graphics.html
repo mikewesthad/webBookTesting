@@ -32,7 +32,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <link href="../style/prettify.css" rel="stylesheet" type="text/css"/>
 <link href="../style/style.css" rel="stylesheet" type="text/css"/>
 <link href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|Merriweather:400,300,300italic,400italic,700,900,700italic,900italic" rel="stylesheet" type="text/css">
-<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="../octicons/octicons.css" rel="stylesheet">
 <style>  
   .headerDoc {
         color: #005580;
@@ -41,58 +41,38 @@ code > span.er { color: #ff0000; font-weight: bold; }
   </style>
 </link></link></link></link></link></head>
 <body>
-<span class="btn-open">
-<i class="fa fa-bars"></i>
+<span id="side-nav">
+<span class="side-nav-button chapterBtn mega-octicon octicon-book"></span>
+<span class="side-nav-button navBtn mega-octicon octicon-three-bars"></span>
+<span class="side-nav-button infoBtn mega-octicon octicon-info"></span>
 </span>
+<!-- table of content -->
 <div id="toc">
-<span class="btn-close">
-<i class="fa fa-close"></i>
-</span>
+<span class="closeBtn mega-octicon octicon-x"></span>
+</div></body></html>
+<!-- table of content -->
+<div id="chapters">
+<span class="closeBtn mega-octicon octicon-x"></span>
+chapters
+<ul><li><a href="intro.html">intro</a></li><li><a href="cplusplus_basics.html">C++ Language Basics</a></li><li><a href="setup_and_project_structure.html">openFrameworks project structure and setup</a></li><li><a href="OOPs!.html">Ooops! = Object Oriented Programming + Classes</a></li><li><a href="animation.html">Animation</a></li><li class="selected"><a href="intro_to_graphics.html">Graphics</a></li><li><a href="data_vis.html">Information Visualization Chapter</a></li><li><a href="game_design.html">Experimental Game Development in openFrameworks</a></li><li><a href="hardware.html">needs h1</a></li><li><a href="sound.html">Sound</a></li><li><a href="ios.html">ofxiOS</a></li><li><a href="c++11.html">C++ 11</a></li><li><a href="memory.html">Memory in C++</a></li><li><a href="threads.html">Threads</a></li><li><a href="version_control_with_git.html">Version control with Git</a></li><li><a href="advanced_graphics.html">Advanced graphics</a></li><li><a href="network.html">Network</a></li><li><a href="math.html">That Math Chapter: From 1D to 4D</a></li><li><a href="ofSketch.html">ofSketch</a></li><li><a href="project_elliot.html">Case Study : Line Segments Space</a></li><li><a href="project_eva.html">Case Study: Choreographies for Humans and Stars</a></li><li><a href="project_joel.html">Case Study: Anthropocene, an interactive film installation for Greenpeace as part of their field at Glastonbury 2013</a></li><li><a href="project_memo.html">Case Study: Memo (TODO: need title!)</a></li><li><a href="installation_up_4evr_macosx.html">Installation up 4evr - OSX</a></li><li><a href="installation_up_4evr_linux.html">Installation up 4evr - Linux</a></li></ul></div>
+<!-- info about the book -->
+<div id="bookInfo">
+<span class="closeBtn mega-octicon octicon-x"></span>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida, luctus mauris in, congue ante. Phasellus egestas est id velit ornare, eu vehicula augue tincidunt. Aliquam laoreet faucibus turpis eget gravida. Vestibulum pharetra scelerisque leo, eu tincidunt leo tincidunt feugiat. Sed rutrum, felis eget posuere tempus, neque justo pretium libero, quis facilisis mauris turpis nec enim. Sed quis metus massa. Maecenas tincidunt, leo at ultricies interdum, nisl ipsum finibus massa, quis dictum nulla nibh sed urna. Vestibulum rhoncus, nunc sit amet tincidunt interdum, ligula lacus dictum massa, pharetra tristique nisi augue vitae risus.
 </div>
 <div class="row-fluid">
 <div id="chapter">
 <h1 id="graphics">Graphics</h1>
 <p><em>By: <a href="http://www.mikewesthad.com/" target="_blank">Michael Hadley</a> with generous editor support from <a href="http://abrahamavnisan.com/" target="_blank">Abraham Avnisan</a> and <a href="http://brannondorsey.com/" target="_blank">Brannon Dorsey</a></em></p>
 <p>This chapter builds off of chapters 2 and 3, so if you aren't familiar with basic C++ and creating openFrameworks projects, check out those chapters first.</p>
-<p>In sections 1 and 2, we will create "paintbrushes" where the mouse is our brush and our code defines how our brush makes marks on the screen. In section 3, we will explore something called "coordinate system transformations" to create hypnotizing, spiraling rectangles. Source code for the projects is linked at the end of each section. If you feel lost at any point, don't hesitate to look at the completed code! You can check out the whole collection of code <a href="https://github.com/openframeworks/ofBook/tree/master/04_intro_to_graphics/code" target="_blank">here</a>.</p>
-<p><strong>Chapter Outline:</strong></p>
-<ol style="list-style-type: decimal">
-<li>Brushes with Basic Shapes
-<ol style="list-style-type: decimal">
-<li>Basic Shapes</li>
-<li>Brushes from Basic Shapes
-<ol style="list-style-type: decimal">
-<li>Single Rectangle Brush: Using the Mouse</li>
-<li>Bursting Rectangle Brush: Creating Randomized Bursts</li>
-<li>Glowing Circle Brush: Using Transparency and Color</li>
-<li>Star Line Brush: Working with a Linear Map</li>
-<li>Fleeing Triangle Brush: Vectors and Rotations</li>
-<li>Raster Graphics: Taking a Snapshot</li>
-</ol></li>
-</ol></li>
-<li>Brushes with Freeform Shapes
-<ol style="list-style-type: decimal">
-<li>Basic Polylines</li>
-<li>Building a Brushes from Polylines
-<ol style="list-style-type: decimal">
-<li>Polyline Pen: Tracking the Mouse</li>
-<li>Polyline Brushes: Using Points, Normals and Tangents</li>
-</ol></li>
-</ol></li>
-<li>Moving the World
-<ol style="list-style-type: decimal">
-<li>Translating: Stick Family</li>
-<li>Rotating and Scaling: Spiraling Rectangles</li>
-</ol></li>
-<li>Next Steps</li>
-</ol>
+<p>In sections 1 and 2, we will create "paintbrushes" where the mouse is our brush and our code defines how our brush makes marks on the screen. In section 3, we will explore something called "coordinate system transformations" to create hypnotizing, spiraling rectangles. In the last section, we'll seeSource code for the projects is linked at the end of each section. If you feel lost at any point, don't hesitate to look at the completed code! You can check out the whole collection of code <a href="https://github.com/openframeworks/ofBook/tree/master/04_intro_to_graphics/code" target="_blank">here</a>.</p>
 <h2 id="brushes-with-basic-shapes">Brushes with Basic Shapes</h2>
 <p>To create brushes, we need to define some basic building blocks of graphics. We can classify the 2D graphics functions into two categories: basic shapes and freeform shapes. Basic shapes are rectangles, circles, triangles and straight lines. Freeform shapes are polygons and paths. In this section, we will focus on the basic shapes.</p>
 <h3 id="basic-shapes">Basic Shapes</h3>
 <p>Before drawing any shape, we need to know how to specify locations on screen. Computer graphics use the <a href="http://en.wikipedia.org/wiki/Cartesian_coordinate_system" target="_blank" title="Wiki on Cartesian coordinate system">Cartesian coordinate system</a>. Remember figure 1 (left) from math class? A pair of values <code>(x, y)</code> told us how far away we were from <code>(0, 0)</code>, the origin. Computer graphics are based on this same system, but with two twists. First, <code>(0, 0)</code> is the upper leftmost pixel of the screen. Second, the y axis is flipped such that the positive y direction is located below the origin figure 1 (center).</p>
 <p>If we apply this to the top left of my screen figure 1 (right), which happens to be my browser. We can see the pixels and identify their locations in our new coordinate system. The top left pixel is <code>(0, 0)</code>. The top left pixel of the blue calender icon (with the white "19") is <code>(58, 5)</code>.</p>
 <div class="figure">
-<img alt="Figure 1: 2D screen coordinates" src="..\images\intro_to_graphics/images/Figure1_CoordSystemFigure.png" title="Figure 1: 2D screen coordinates"/><span class="caption">Figure 1: 2D screen coordinates</span>
+<div style="clear:both"><img alt="Figure 1: 2D screen coordinates" src="..\images\intro_to_graphics/images/Figure1_CoordSystemFigure.png" title="Figure 1: 2D screen coordinates"/></div><span class="caption">Figure 1: 2D screen coordinates</span>
 </div>
 <p>Now that we can talk about locations, let's jump into code. Create an openFrameworks project and call it "BasicShapes" (or something more imaginative). Open the source file, ofApp.cpp, and navigate to the <code>draw()</code> function. Add the following:</p>
 <pre class="sourceCode cpp"><code class="sourceCode cpp">ofBackground(<span class="dv">0</span>);  <span class="co">// Clear the screen with a black color</span>
@@ -119,7 +99,7 @@ ofSetLineWidth(<span class="fl">4.</span><span class="dv">5</span>); <span class
 <span class="co">// Draw some shapes (code omitted)</span></code></pre>
 <p>Lines looking jagged? We can fix that with a smoothing technique called <a href="http://en.wikipedia.org/wiki/Spatial_anti-aliasing" target="_blank" title="Wiki on spatial anti-aliasing">anti-aliasing</a>. Add <a href="http://openframeworks.cc/documentation/graphics/ofGraphics.html#show_ofEnableAntiAliasing" target="_blank" title="ofEnableAntiAliasing Documentation Page"><code>ofEnableAntiAliasing()</code></a> to <code>setup()</code>. (For future reference, you can turn it off to save computing power: <a href="http://openframeworks.cc/documentation/graphics/ofGraphics.html#show_ofDisableAntiAliasing" target="_blank" title="ofDisableAntiAliasing Documentation Page"><code>ofDisableAntiAliasing()</code></a>.)</p>
 <div class="figure">
-<img alt="Figure 2: Basic shapes with and without a fill" src="..\images\intro_to_graphics/images/Figure2_BasicShapes.png" title="Figure 2: Basic shapes with and without a fill"/><span class="caption">Figure 2: Basic shapes with and without a fill</span>
+<div style="clear:both"><img alt="Figure 2: Basic shapes with and without a fill" src="..\images\intro_to_graphics/images/Figure2_BasicShapes.png" title="Figure 2: Basic shapes with and without a fill"/></div><span class="caption">Figure 2: Basic shapes with and without a fill</span>
 </div>
 <p>[<a href="https://github.com/openframeworks/ofBook/tree/master/04_intro_to_graphics/code/1_i_Basic_Shapes" target="_blank">Source code for this section</a>]</p>
 <p><strong>Extensions</strong></p>
@@ -130,7 +110,7 @@ ofSetLineWidth(<span class="fl">4.</span><span class="dv">5</span>); <span class
 <h3 id="brushes-from-basic-shapes">Brushes from Basic Shapes</h3>
 <p>We survived the boring bits, but why draw one rectangle, when we can draw a million (figure 3)? That is essentially what we will be doing in this section. We will build brushes that drop a burst of many small shapes whenever we press the left mouse button. To make things more exciting, we will mix in some randomness. Start a new openFrameworks project, called "ShapeBrush."</p>
 <div class="figure">
-<img alt="Figure 3: Okay, not actually a million rectangles" src="..\images\intro_to_graphics/images/Figure3_LotsOfRectangles.png" title="Figure 3: Okay, not actually a million rectangles"/><span class="caption">Figure 3: Okay, not actually a million rectangles</span>
+<div style="clear:both"><img alt="Figure 3: Okay, not actually a million rectangles" src="..\images\intro_to_graphics/images/Figure3_LotsOfRectangles.png" title="Figure 3: Okay, not actually a million rectangles"/></div><span class="caption">Figure 3: Okay, not actually a million rectangles</span>
 </div>
 <h4 id="single-rectangle-brush-using-the-mouse">Single Rectangle Brush: Using the Mouse</h4>
 <p>We are going to lay down the foundation for our brushes by making a simple one that draws a single rectangle when we hold down the mouse. To get started, we are going to need to know 1) the mouse location and 2) if the left mouse button is pressed.</p>
@@ -167,7 +147,7 @@ ofBackground(<span class="dv">0</span>);   </code></pre>
 <pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">float</span> randomColor = ofRandom(<span class="dv">50</span>, <span class="dv">255</span>);
 ofSetColor(randomColor);  <span class="co">// Exclude dark grayscale values (0 - 50) that won't show on black background</span></code></pre>
 <div class="figure">
-<img alt="Figure 4: Drawing a rectangle snake" src="..\images\intro_to_graphics/images/Figure4_RectangleSnake.png" title="Figure 4: Drawing a rectangle snake"/><span class="caption">Figure 4: Drawing a rectangle snake</span>
+<div style="clear:both"><img alt="Figure 4: Drawing a rectangle snake" src="..\images\intro_to_graphics/images/Figure4_RectangleSnake.png" title="Figure 4: Drawing a rectangle snake"/></div><span class="caption">Figure 4: Drawing a rectangle snake</span>
 </div>
 <p>To finish off this single rectangle brush, let's add the ability to erase by pressing the right mouse button. We will create a <code>isRightMousePressed</code> that will act very similarly to our <code>isLeftMousePressed</code>. In the header file, create a public variable <code>bool isRightMousePressed</code>. Initialize the value to false in <code>setup()</code>. Inside of <code>mousePressed(...)</code>, set it to <code>true</code> if <code>button == OF_MOUSE_BUTTON_RIGHT</code>, and inside of <code>mouseReleased(...)</code>, set it to <code>false</code> if <code>button == OF_MOUSE_BUTTON_RIGHT</code>. Lastly, at the beginning of the <code>draw()</code> function, draw a black background when <code>isRightMousePressed == true</code>.</p>
 <p>[<a href="https://github.com/openframeworks/ofBook/tree/master/04_intro_to_graphics/code/1_ii_a_Single_Rectangle_Brush" target="_blank">Source code for this section</a>]</p>
@@ -205,7 +185,7 @@ ofSetColor(randomColor);  <span class="co">// Exclude dark grayscale values (0 -
     ofRect(mouseX+xOffset, mouseY+yOffset, width, height);
 }</code></pre>
 <div class="figure">
-<img alt="Figure 5: Cartesian brush spread versus polar brush spread" src="..\images\intro_to_graphics/images/Figure5_CartesianVsPolarSpread.png" title="Figure 5: Cartesian brush spread versus polar brush spread"/><span class="caption">Figure 5: Cartesian brush spread versus polar brush spread</span>
+<div style="clear:both"><img alt="Figure 5: Cartesian brush spread versus polar brush spread" src="..\images\intro_to_graphics/images/Figure5_CartesianVsPolarSpread.png" title="Figure 5: Cartesian brush spread versus polar brush spread"/></div><span class="caption">Figure 5: Cartesian brush spread versus polar brush spread</span>
 </div>
 <p>[<a href="https://github.com/openframeworks/ofBook/tree/master/04_intro_to_graphics/code/1_ii_b_Bursting_Rect_Brush" target="_blank">Source code for this section</a>]</p>
 <h4 id="glowing-circle-brush-using-transparency-and-color">Glowing Circle Brush: Using Transparency and Color</h4>
@@ -225,7 +205,7 @@ ofSetColor(randomColor);  <span class="co">// Exclude dark grayscale values (0 -
     ofCircle(mouseX+xOffset, mouseY+yOffset, radius);
 }</code></pre>
 <div class="figure">
-<img alt="Figure 6: Results of using the circle glow brush" src="..\images\intro_to_graphics/images/Figure6_CircleGlowBrush.png" title="Figure 6: Results of using the circle glow brush"/><span class="caption">Figure 6: Results of using the circle glow brush</span>
+<div style="clear:both"><img alt="Figure 6: Results of using the circle glow brush" src="..\images\intro_to_graphics/images/Figure6_CircleGlowBrush.png" title="Figure 6: Results of using the circle glow brush"/></div><span class="caption">Figure 6: Results of using the circle glow brush</span>
 </div>
 <p>We end up with something like figure 6, a glowing light except without color. Tired of living in moody shades of gray? <code>ofSetColor(...)</code> can make use of the <a href="http://en.wikipedia.org/wiki/RGB_color_model" target="_blank" title="Wiki on RGB Color Model">Red Blue Green (RGB) color model</a> in addition to the grayscale color model. We specify the amount (<code>0</code> to <code>255</code>) of red, blue and green light respectively, e.g. <code>ofSetColor(255, 0, 0)</code> for opaque red. We can also add alpha, e.g. <code>ofSetColor(0, 0, 255, 10)</code> for transparent blue. Go ahead and modify the <code>ofSetColor(...)</code> in our circle brush to use a nice orange: <code>ofSetColor(255, 103, 0, alpha)</code>.</p>
 <p>There's another way we can use <code>ofSetColor(...)</code>. Meet <a href="http://openframeworks.cc/documentation/types/ofColor.html" target="_blank" title="ofColor Documentation Page"><code>ofColor</code></a>, a handy class for handling colors which allows for fancy color math (among other things). Here are some examples of defining and modifying colors:</p>
@@ -268,13 +248,13 @@ ofSetColor(inBetween);</code></pre>
 <p>What have we done with the alpha? We used <a href="http://www.openframeworks.cc/documentation/math/ofMath.html#show_ofMap" target="_blank" title="ofMap Documentation Page"><code>ofMap(...)</code></a> to do a linear interpolation, similar to <code>getLerped(...)</code>. To get a "twinkle" we want our shortest lines to be the most opaque and our longer lines to be the most transparent. <code>ofMap(...)</code> takes a value from one range and maps it into another range like this: <code>ofMap(value, inputMin, inputMax, outputMin, outputMax)</code>. We tell it that distance is a value in-between <code>minRadius</code> and <code>maxRadius</code> and that we want it mapped so that a distance value of 125 (<code>maxRadius</code>) returns an alpha value of 50 and a distance value of 25 (<code>minRadius</code>) returns an alpha value of 0.</p>
 <p>We can also vary the line width using: <code>ofSetLineWidth(ofRandom(1.0, 5.0))</code>, but remember that if we change the line width in this brush, we will need go back and set our line width back to <code>1.0</code> in our other brushes.</p>
 <div class="figure">
-<img alt="Figure 7: Results from using the line brush" src="..\images\intro_to_graphics/images/Figure7_LineStarBrush.png" title="Figure 7: Results from using the line brush"/><span class="caption">Figure 7: Results from using the line brush</span>
+<div style="clear:both"><img alt="Figure 7: Results from using the line brush" src="..\images\intro_to_graphics/images/Figure7_LineStarBrush.png" title="Figure 7: Results from using the line brush"/></div><span class="caption">Figure 7: Results from using the line brush</span>
 </div>
 <p>[<a href="https://github.com/openframeworks/ofBook/tree/master/04_intro_to_graphics/code/1_ii_d_Star_Line_Brush" target="_blank">Source code for this section</a>]</p>
 <h4 id="fleeing-triangle-brush-vectors-and-rotations">Fleeing Triangle Brush: Vectors and Rotations</h4>
 <p>Time for the last brush in section 1: the triangle. We'll draw a bunch of triangles that are directed outward from the mouse position (figure 8, left). <code>ofTriangle(...)</code> requires us to specify the three corners of the triangle, which means that we will need to calculate the rotation of the corners to make the triangle point away from the mouse. A new class will make that math easier: <a href="http://openframeworks.cc/documentation/math/ofVec2f.html" target="_blank" title="ofVec2f Documentation Page"><code>ofVec2f</code></a>.</p>
 <div class="figure">
-<img alt="Figure 8: Isosceles triangles in a brush, left, and isolated in a diagram, right" src="..\images\intro_to_graphics/images/Figure8_IsoscelesTriangleDiagrams.png" title="Figure 8: Isosceles triangles in a brush, left, and isolated in a diagram, right"/><span class="caption">Figure 8: Isosceles triangles in a brush, left, and isolated in a diagram, right</span>
+<div style="clear:both"><img alt="Figure 8: Isosceles triangles in a brush, left, and isolated in a diagram, right" src="..\images\intro_to_graphics/images/Figure8_IsoscelesTriangleDiagrams.png" title="Figure 8: Isosceles triangles in a brush, left, and isolated in a diagram, right"/></div><span class="caption">Figure 8: Isosceles triangles in a brush, left, and isolated in a diagram, right</span>
 </div>
 <p>We've been defining points by keeping two separate variables: x and y. <code>ofVec2f</code> is a 2D vector, and for our purposes, we can just think of it as a point in 2D space. <code>ofVec2f</code> allows us to hold both x and y in a single variable (and perform handy math operations):</p>
 <pre class="sourceCode cpp"><code class="sourceCode cpp">ofVec2f mousePos(mouseX, mouseY);  <span class="co">// Defining a new ofVec2f</span>
@@ -314,7 +294,7 @@ p1.rotate(rotation);
 p2.rotate(rotation);
 p3.rotate(rotation);</code></pre>
 <div class="figure">
-<img alt="Figure 9: Results from using the rotating triangle brush" src="..\images\intro_to_graphics/images/Figure9_RotatingTriangleBrush.png" title="Figure 9: Results from using the rotating triangle brush"/><span class="caption">Figure 9: Results from using the rotating triangle brush</span>
+<div style="clear:both"><img alt="Figure 9: Results from using the rotating triangle brush" src="..\images\intro_to_graphics/images/Figure9_RotatingTriangleBrush.png" title="Figure 9: Results from using the rotating triangle brush"/></div><span class="caption">Figure 9: Results from using the rotating triangle brush</span>
 </div>
 <p>Our brush looks something like figure 8 (left). If we were to move that rotation code to <em>after</em> we shifted the triangle position, the code wouldn't work very nicely because <code>rotate(...)</code> assumes we want to rotate our point around the origin. (Check out the documentation for an alternate way to use <code>rotate(...)</code> that rotates around an arbitrary point.) Last step, let's integrate our prior approach of drawing multiple shapes that are offset from the mouse:</p>
 <pre class="sourceCode cpp"><code class="sourceCode cpp">ofVec2f mousePos(mouseX, mouseY);
@@ -343,7 +323,7 @@ p3.rotate(rotation);</code></pre>
 }</code></pre>
 <p>We are now using <code>ofVec2f</code> for our offset. We started with a vector that points rightward, the same direction our triangle starts out pointing. When we apply the rotation to them both, they stay in sync (i.e. both pointing away from the mouse). We can push them out of sync with: <code>triangleOffset.rotate(rotation+90)</code>, and we get a swirling blob of triangles. After that, we can add some color using <code>ofRandom(...)</code> and <code>getLerped(...)</code> again (figure 9) or play with fill and line width.</p>
 <div class="figure">
-<img alt="Figure 10: Results from using the final triangle brush" src="..\images\intro_to_graphics/images/Figure10_TriangleSwirlBrush.png" title="Figure 10: Results from using the final triangle brush"/><span class="caption">Figure 10: Results from using the final triangle brush</span>
+<div style="clear:both"><img alt="Figure 10: Results from using the final triangle brush" src="..\images\intro_to_graphics/images/Figure10_TriangleSwirlBrush.png" title="Figure 10: Results from using the final triangle brush"/></div><span class="caption">Figure 10: Results from using the final triangle brush</span>
 </div>
 <p>[<a href="https://github.com/openframeworks/ofBook/tree/master/04_intro_to_graphics/code/1_ii_e_Triangle_Brush" target="_blank">Source code for this section</a>]</p>
 <p><strong>Extensions</strong></p>
@@ -396,7 +376,7 @@ curvedSegmentPolyline.draw();  <span class="co">// Nice and easy, right?</span>
 closedShapePolyline.draw();</code></pre>
 <p>We created three different types of polylines (figure 11). <code>straightSegmentPolyline</code> is composed of a series points connected with straight lines. <code>curvedSegmentPolyline</code> uses the same points but connects them with curved lines. The curves that are created are <a href="http://en.wikipedia.org/wiki/Centripetal_Catmull%E2%80%93Rom_spline" target="_blank" title="Wiki on Catmull-Rom splines">Catmull–Rom splines</a>, which use four points to define a curve: two define the start and end, while two control points determine the curvature. These control points are the reason why we need to add the first and last vertex twice. Lastly, <code>closedShapePolyline</code> uses straight line segments that are closed, connecting the first and last vertices.</p>
 <div class="figure">
-<img alt="Figure 11: Examples of polylines - straight, curved and closed straight" src="..\images\intro_to_graphics/images/Figure11_PolylineExamples.png" title="Figure 11: Examples of polylines - straight, curved and closed straight"/><span class="caption">Figure 11: Examples of polylines - straight, curved and closed straight</span>
+<div style="clear:both"><img alt="Figure 11: Examples of polylines - straight, curved and closed straight" src="..\images\intro_to_graphics/images/Figure11_PolylineExamples.png" title="Figure 11: Examples of polylines - straight, curved and closed straight"/></div><span class="caption">Figure 11: Examples of polylines - straight, curved and closed straight</span>
 </div>
 <p>The advantage of drawing in this way (versus raster graphics) is that the polylines are modifiable. We could easily move, add, delete, scale our vertices on the the fly.</p>
 <p>[<a href="https://github.com/openframeworks/ofBook/tree/master/04_intro_to_graphics/code/2_i_Basic_Polylines" target="_blank">Source code for this section</a>]</p>
@@ -443,7 +423,7 @@ ofSetColor(<span class="dv">255</span>,<span class="dv">100</span>,<span class="
 currentPolyline.draw();</code></pre>
 <p>And we have a simple pen-like brush that tracks the mouse, and we can draw a dopey smiley face (figure 12).</p>
 <div class="figure">
-<img alt="Figure 12: Drawing a smilie with the polyline brush" src="..\images\intro_to_graphics/images/Figure12_PolylineSmilie.png" title="Figure 12: Drawing a smilie with the polyline brush"/><span class="caption">Figure 12: Drawing a smilie with the polyline brush</span>
+<div style="clear:both"><img alt="Figure 12: Drawing a smilie with the polyline brush" src="..\images\intro_to_graphics/images/Figure12_PolylineSmilie.png" title="Figure 12: Drawing a smilie with the polyline brush"/></div><span class="caption">Figure 12: Drawing a smilie with the polyline brush</span>
 </div>
 <p>[<a href="https://github.com/openframeworks/ofBook/tree/master/04_intro_to_graphics/code/2_ii_a_Polyline_Pen" target="_blank">Source code for this section</a>]</p>
 <p><strong>Extensions</strong></p>
@@ -464,7 +444,7 @@ currentPolyline.draw();</code></pre>
 <p>What happens when we run it? Our white lines look thicker. That's because our polyline is jam-packed with vertices! Every time we call the <code>curveTo(...)</code> method, we create 20 extra vertices (by default). These help make a smooth-looking curve. We can adjust how many vertices are added with an optional parameter, <code>curveResolution</code>, in <code>curveTo(...)</code>. We don't need that many vertices, but instead of lowering the <code>curveResolution</code>, we can make use of <a href="http://openframeworks.cc/documentation/graphics/ofPolyline.html#show_simplify" target="_blank" title="simplify Documentation Page"><code>simplify(...)</code></a>.</p>
 <p><code>simplify(...)</code> is a method that will remove "duplicate" points from our polyline. We pass a single argument into it: <code>tolerance</code>, a value between 0.0 and 1.0. The <code>tolerance</code> describes how dis-similar points must be in order to be considered 'unique' enough to not be deleted. The higher the <code>tolerance</code>, the more points will be removed. So right before we save our polyline by putting it into our <code>polylines</code> vector, we can simplify it. Inside of the if statement within <code>mouseReleased(...)</code> (before <code>polylines.push_back(currentPolyline)</code>), add: <code>currentPolyline.simplify(0.75)</code>. Now we should see something like figure 13 (left).</p>
 <div class="figure">
-<img alt="Figure 13: Drawing circles at the vertices of a polyline, without and with resampling points evenly" src="..\images\intro_to_graphics/images/Figure13_PolylinePoints.png" title="Figure 13: Drawing circles at the vertices of a polyline, without and with resampling points evenly"/><span class="caption">Figure 13: Drawing circles at the vertices of a polyline, without and with resampling points evenly</span>
+<div style="clear:both"><img alt="Figure 13: Drawing circles at the vertices of a polyline, without and with resampling points evenly" src="..\images\intro_to_graphics/images/Figure13_PolylinePoints.png" title="Figure 13: Drawing circles at the vertices of a polyline, without and with resampling points evenly"/></div><span class="caption">Figure 13: Drawing circles at the vertices of a polyline, without and with resampling points evenly</span>
 </div>
 <p>We can also sample points along the polyline using <a href="http://openframeworks.cc/documentation/graphics/ofPolyline.html#show_getPointAtPercent" target="_blank" title="getPointAtPercent Documentation Page"><code>getPointAtPercent(...)</code></a>, which takes a <code>float</code> between <code>0.0</code> and <code>1.0</code> and returns a <code>ofVec3f</code>. Inside the <code>draw()</code> function, comment out the code that draws a circle at each vertex. Below that, add:</p>
 <pre class="sourceCode cpp"><code class="sourceCode cpp">    <span class="kw">for</span> (<span class="dt">int</span> p=<span class="dv">0</span>; p&lt;<span class="dv">100</span>; p+=<span class="dv">10</span>) {
@@ -482,7 +462,7 @@ currentPolyline.draw();</code></pre>
   </code></pre>
 <p>We are getting all of the vertices in our <code>ofPolyline</code>. But here, we are also using <a href="http://www.openframeworks.cc/documentation/graphics/ofPolyline.html#show_getNormalAtIndex" target="_blank" title="getNormalAtIndex Documentation Page"><code>getNormalAtIndex</code></a> which takes an index and returns an <code>ofVec3f</code> that represents the normal vector for the vertex at that index. We take that normal, scale it and then display it centered around the vertex. So, we have something like figure 14 (left), but we can also sample normals, using the function <a href="http://www.openframeworks.cc/documentation/graphics/ofPolyline.html#show_getNormalAtIndexInterpolated" target="_blank" title="getNormalAtIndexInterpolated Documentation Page"><code>getNormalAtIndexInterpolated(...)</code></a>. So let's comment out the code we just wrote, and try sampling our normals evenly along the polyline:</p>
 <div class="figure">
-<img alt="Figure 14: Drawing normals at the vertices of a polyline, without and with resampling points evenly" src="..\images\intro_to_graphics/images/Figure14_PolylineNormals.png" title="Figure 14: Drawing normals at the vertices of a polyline, without and with resampling points evenly"/><span class="caption">Figure 14: Drawing normals at the vertices of a polyline, without and with resampling points evenly</span>
+<div style="clear:both"><img alt="Figure 14: Drawing normals at the vertices of a polyline, without and with resampling points evenly" src="..\images\intro_to_graphics/images/Figure14_PolylineNormals.png" title="Figure 14: Drawing normals at the vertices of a polyline, without and with resampling points evenly"/></div><span class="caption">Figure 14: Drawing normals at the vertices of a polyline, without and with resampling points evenly</span>
 </div>
 <pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">float</span> numPoints = polyline.size();
 <span class="dt">float</span> normalLength = <span class="dv">50</span>;
@@ -495,7 +475,7 @@ currentPolyline.draw();</code></pre>
 <p>We can get an evenly spaced point by using percents again, but <code>getNormalAtIndexInterpolated(...)</code> is asking for an index. Specifically, it is asking for a <code>floatIndex</code> which means that we can pass in 1.5 and the polyline will return a normal that lives halfway between the point at index 1 and halfway between the point at index 2. So we need to convert our percent, <code>p/100.0</code>, to a <code>floatIndex</code>. All we need to do is to multiply the percent by the last index in our polyline (which we can get from subtracting one from the <a href="http://www.openframeworks.cc/documentation/graphics/ofPolyline.html#show_size" target="_blank" title="size Documentation Page"><code>size()</code></a> which tells us how many vertices are in our polyline), resulting in figure 14 (right).</p>
 <p>Now we can pump up the number of normals in our drawing. Let's change our loop increment from <code>p+=10</code> to <code>p+=1</code>, change our loop condition from <code>p&lt;100</code> to <code>p&lt;500</code> and change our <code>p/100.0</code> lines of code to <code>p/500.0</code>. We might also want to use a transparent white for drawing these normals, so let's add <code>ofSetColor(255,100)</code> right before our loop. We will end up being able to draw ribbon lines, like figure 15.</p>
 <div class="figure">
-<img alt="Figure 15: Drawing many many normals to fill out the polyline" src="..\images\intro_to_graphics/images/Figure15_PolylineManyNormals.png" title="Figure 15: Drawing many many normals to fill out the polyline"/><span class="caption">Figure 15: Drawing many many normals to fill out the polyline</span>
+<div style="clear:both"><img alt="Figure 15: Drawing many many normals to fill out the polyline" src="..\images\intro_to_graphics/images/Figure15_PolylineManyNormals.png" title="Figure 15: Drawing many many normals to fill out the polyline"/></div><span class="caption">Figure 15: Drawing many many normals to fill out the polyline</span>
 </div>
 <p>We've just added some thickness to our polylines. Now let's have a quick aside about tangents, the "opposite" of normals. These wonderful things are perpendicular to the normals that we just drew. So if we drew tangents along a perfectly straight line we wouldn't really see anything. The fun part comes when we draw tangents on a curved line, so let's see what that looks like. Same drill as before. Comment out the last code and add in the following:</p>
 <pre class="sourceCode cpp"><code class="sourceCode cpp">vector&lt;ofVec3f&gt; vertices = polyline.getVertices();
@@ -507,7 +487,7 @@ currentPolyline.draw();</code></pre>
 }</code></pre>
 <p>This should look very familiar except for <a href="http://www.openframeworks.cc/documentation/graphics/ofPolyline.html#show_getTangentAtIndex" target="_blank" title="getTangentAtIndex Documenation Page"><code>getTangentAtIndex(...)</code></a> which is the equivalent of <code>getNormalAtIndex(...)</code> but for tangents. Not much happens for straight and slightly curved lines, however, sharply curved lines reveal the tangents figure 16 (left).</p>
 <div class="figure">
-<img alt="Figure 16: Drawing tangents at vertices of polylines" src="..\images\intro_to_graphics/images/Figure16_PolylineTangents.png" title="Figure 16: Drawing tangents at vertices of polylines"/><span class="caption">Figure 16: Drawing tangents at vertices of polylines</span>
+<div style="clear:both"><img alt="Figure 16: Drawing tangents at vertices of polylines" src="..\images\intro_to_graphics/images/Figure16_PolylineTangents.png" title="Figure 16: Drawing tangents at vertices of polylines"/></div><span class="caption">Figure 16: Drawing tangents at vertices of polylines</span>
 </div>
 <p>I'm sure you can guess what's next... drawing a whole bunch of tangents at evenly spaced locations (figure 16, right)! It's more fun that it sounds. <a href="http://www.openframeworks.cc/documentation/graphics/ofPolyline.html#show_getTangentAtIndexInterpolated" target="_blank" title="getTangentAtIndexInterpolated Documentation Page"><code>getTangentAtIndexInterpolated(...)</code></a> works like <code>getNormalAtIndexInterpolated(...)</code>. Same drill, comment out the last code, and add the following:</p>
 <pre class="sourceCode cpp"><code class="sourceCode cpp">ofSetColor(<span class="dv">255</span>, <span class="dv">50</span>);
@@ -543,7 +523,7 @@ ofCircle(<span class="dv">80</span>, <span class="dv">90</span>, <span class="dv
 ofRect(<span class="dv">65</span>, <span class="dv">110</span>, <span class="dv">30</span>, <span class="dv">60</span>);</code></pre>
 <p>Draw a white background and color the shapes, and we end up with something like figure 17 (left).</p>
 <div class="figure">
-<img alt="Figure 17: Arranging a little stick figure family" src="..\images\intro_to_graphics/images/Figure17_ArrangingTheFamily.png" title="Figure 17: Arranging a little stick figure family"/><span class="caption">Figure 17: Arranging a little stick figure family</span>
+<div style="clear:both"><img alt="Figure 17: Arranging a little stick figure family" src="..\images\intro_to_graphics/images/Figure17_ArrangingTheFamily.png" title="Figure 17: Arranging a little stick figure family"/></div><span class="caption">Figure 17: Arranging a little stick figure family</span>
 </div>
 <p>What if, after figuring out where to put our shapes, we needed to draw them at a different spot on the screen, or to draw a row of copies? We <em>could</em> change all the positions manually, or we could use <code>ofTranslate(...)</code> to move our coordinate system and leave the positions alone:</p>
 <pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Loop and draw a row</span>
@@ -568,13 +548,13 @@ ofRect(<span class="dv">65</span>, <span class="dv">110</span>, <span class="dv"
     }</code></pre>
 <p>And we should end up with a grid. See figure 17, right. (I used <code>ofScale</code> to jam many in one image.) Or if you hate grids, we can make a mess of a crowd using random rotations and translations, figure 18.</p>
 <div class="figure">
-<img alt="Figure 18: A crowd" src="..\images\intro_to_graphics/images/Figure18_Crowd.png" title="Figure 18: A crowd"/><span class="caption">Figure 18: A crowd</span>
+<div style="clear:both"><img alt="Figure 18: A crowd" src="..\images\intro_to_graphics/images/Figure18_Crowd.png" title="Figure 18: A crowd"/></div><span class="caption">Figure 18: A crowd</span>
 </div>
 <p>[<a href="https://github.com/openframeworks/ofBook/tree/master/04_intro_to_graphics/code/3_i_Translating_Stick_Family" target="_blank">Source code for this section</a>]</p>
 <h3 id="rotating-and-scaling-spiraling-rectangles">Rotating and Scaling: Spiraling Rectangles</h3>
 <p>Onto <code>ofScale(...)</code> and <code>ofRotate(...)</code>! Let's create a new project where rotating and scaling rectangles to get something like figure 19.</p>
 <div class="figure">
-<img alt="Figure 19: Drawing a series of spiraling rectangles" src="..\images\intro_to_graphics/images/Figure19_SpiralingRectangles.png" title="Figure 19: Drawing a series of spiraling rectangles"/><span class="caption">Figure 19: Drawing a series of spiraling rectangles</span>
+<div style="clear:both"><img alt="Figure 19: Drawing a series of spiraling rectangles" src="..\images\intro_to_graphics/images/Figure19_SpiralingRectangles.png" title="Figure 19: Drawing a series of spiraling rectangles"/></div><span class="caption">Figure 19: Drawing a series of spiraling rectangles</span>
 </div>
 <p>Before knowing about <code>ofRotate(...)</code>, we couldn't have drawn a rotated rectangle with <code>ofRect(...)</code>. <a href="http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#show_ofRotate" target="_blank" title="ofRotate Documentation Page"><code>ofRotate(...)</code></a> takes an angle (in degrees) and rotates our coordinate system around the current origin. Let's attempt a rotated rectangle:</p>
 <pre class="sourceCode cpp"><code class="sourceCode cpp">ofBackground(<span class="dv">255</span>);
@@ -655,7 +635,7 @@ ofColor fgColor = lightColor;  <span class="co">// Color for the rectangle outli
 fgColor.lerp(darkColor, percent);  <span class="co">// Modifies color in place</span></code></pre>
 <p>Now use <code>bgColor</code> for the transparent rectangle we draw on the screen and <code>fgColor</code> for the rectangle outlines to get figure 21</p>
 <div class="figure">
-<img alt="Figure 21: A single frame from animated spiraling rectangles where the contrast reverses over time" src="..\images\intro_to_graphics/images/Figure21_ContrastReversingSpiral.png" title="Figure 21: A single frame from animated spiraling rectangles where the contrast reverses over time"/><span class="caption">Figure 21: A single frame from animated spiraling rectangles where the contrast reverses over time</span>
+<div style="clear:both"><img alt="Figure 21: A single frame from animated spiraling rectangles where the contrast reverses over time" src="..\images\intro_to_graphics/images/Figure21_ContrastReversingSpiral.png" title="Figure 21: A single frame from animated spiraling rectangles where the contrast reverses over time"/></div><span class="caption">Figure 21: A single frame from animated spiraling rectangles where the contrast reverses over time</span>
 </div>
 <p>[<a href="https://github.com/openframeworks/ofBook/tree/master/04_intro_to_graphics/code/3_ii_Rotating_and_Scaling" target="_blank">Source code for this section</a>]</p>
 <p><strong>Extensions</strong></p>
@@ -668,7 +648,6 @@ fgColor.lerp(darkColor, percent);  <span class="co">// Modifies color in place</
 <p>If you are looking to learn more about graphics in openFrameworks, definitely continue on to chapter 7 to dive into more advanced graphical features. You can also check out these three tutorials: <a href="http://openframeworks.cc/tutorials/graphics/generativemesh.html" target="_blank" title="Generative Mesh Tutorial Link">Basics of Generating Meshes from an Image</a>, for a gentle introduction to meshes; <a href="http://openframeworks.cc/tutorials/graphics/opengl.html" target="_blank" title="Basics of OpenGL Tutorial Link">Basics of OpenGL</a>, for a comprehensive look at graphics that helps explain what is happening under the hood of openFrameworks; and <a href="http://openframeworks.cc/tutorials/graphics/shaders.html" target="_blank" title="Introducing Shaders Tutorial Link">Introducting Shaders</a>, for a great way to start programming with your graphical processing unit (GPU).</p>
 </div>
 </div>
-</body></html>
 <script src="../javascript/jquery-1.8.3.min.js"></script>
 <script src="../javascript/jquery-ui-1.9.1.custom.min.js"></script>
 <script src="../javascript/bootstrap.js"></script>
@@ -679,7 +658,8 @@ fgColor.lerp(darkColor, percent);  <span class="co">// Modifies color in place</
         $(function() {
 
             var toc = $("#toc").tocify({
-              selectors: "h2,h3,h4,h5"
+              selectors: "h2,h3,h4,h5",
+              showAndHide: false
             }).data("toc-tocify");
 
             prettyPrint();
@@ -687,5 +667,3 @@ fgColor.lerp(darkColor, percent);  <span class="co">// Modifies color in place</
 
         });
     </script>
-
-

@@ -32,7 +32,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <link href="../style/prettify.css" rel="stylesheet" type="text/css"/>
 <link href="../style/style.css" rel="stylesheet" type="text/css"/>
 <link href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|Merriweather:400,300,300italic,400italic,700,900,700italic,900italic" rel="stylesheet" type="text/css">
-<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="../octicons/octicons.css" rel="stylesheet">
 <style>  
   .headerDoc {
         color: #005580;
@@ -41,13 +41,24 @@ code > span.er { color: #ff0000; font-weight: bold; }
   </style>
 </link></link></link></link></link></head>
 <body>
-<span class="btn-open">
-<i class="fa fa-bars"></i>
+<span id="side-nav">
+<span class="side-nav-button chapterBtn mega-octicon octicon-book"></span>
+<span class="side-nav-button navBtn mega-octicon octicon-three-bars"></span>
+<span class="side-nav-button infoBtn mega-octicon octicon-info"></span>
 </span>
+<!-- table of content -->
 <div id="toc">
-<span class="btn-close">
-<i class="fa fa-close"></i>
-</span>
+<span class="closeBtn mega-octicon octicon-x"></span>
+</div></body></html>
+<!-- table of content -->
+<div id="chapters">
+<span class="closeBtn mega-octicon octicon-x"></span>
+chapters
+<ul><li><a href="intro.html">intro</a></li><li><a href="cplusplus_basics.html">C++ Language Basics</a></li><li><a href="setup_and_project_structure.html">openFrameworks project structure and setup</a></li><li><a href="OOPs!.html">Ooops! = Object Oriented Programming + Classes</a></li><li><a href="animation.html">Animation</a></li><li><a href="intro_to_graphics.html">Graphics</a></li><li><a href="data_vis.html">Information Visualization Chapter</a></li><li><a href="game_design.html">Experimental Game Development in openFrameworks</a></li><li><a href="hardware.html">needs h1</a></li><li><a href="sound.html">Sound</a></li><li><a href="ios.html">ofxiOS</a></li><li><a href="c++11.html">C++ 11</a></li><li><a href="memory.html">Memory in C++</a></li><li><a href="threads.html">Threads</a></li><li><a href="version_control_with_git.html">Version control with Git</a></li><li><a href="advanced_graphics.html">Advanced graphics</a></li><li><a href="network.html">Network</a></li><li><a href="math.html">That Math Chapter: From 1D to 4D</a></li><li><a href="ofSketch.html">ofSketch</a></li><li><a href="project_elliot.html">Case Study : Line Segments Space</a></li><li><a href="project_eva.html">Case Study: Choreographies for Humans and Stars</a></li><li class="selected"><a href="project_joel.html">Case Study: Anthropocene, an interactive film installation for Greenpeace as part of their field at Glastonbury 2013</a></li><li><a href="project_memo.html">Case Study: Memo (TODO: need title!)</a></li><li><a href="installation_up_4evr_macosx.html">Installation up 4evr - OSX</a></li><li><a href="installation_up_4evr_linux.html">Installation up 4evr - Linux</a></li></ul></div>
+<!-- info about the book -->
+<div id="bookInfo">
+<span class="closeBtn mega-octicon octicon-x"></span>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida, luctus mauris in, congue ante. Phasellus egestas est id velit ornare, eu vehicula augue tincidunt. Aliquam laoreet faucibus turpis eget gravida. Vestibulum pharetra scelerisque leo, eu tincidunt leo tincidunt feugiat. Sed rutrum, felis eget posuere tempus, neque justo pretium libero, quis facilisis mauris turpis nec enim. Sed quis metus massa. Maecenas tincidunt, leo at ultricies interdum, nisl ipsum finibus massa, quis dictum nulla nibh sed urna. Vestibulum rhoncus, nunc sit amet tincidunt interdum, ligula lacus dictum massa, pharetra tristique nisi augue vitae risus.
 </div>
 <div class="row-fluid">
 <div id="chapter">
@@ -67,16 +78,16 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <p>On 9th April 2013 we were approached by Paul Earnshaw of Greenpeace about an installation as part of Greenpeace's Field at Glastonbury 2013, a large music festival in the South West of England. Another interaction design studio had previously been in place to create a five day experience due to go live for the public duration of the festival on the 25th of June, but a scheduling conflict had emerged that had meant that they had to reluctantly withdraw.</p>
 <p>Paul already had a budget and a unique space picked out for the installation, a large geodesic dome:</p>
 <div class="figure">
-<img alt="External Shell Structure for Installation from Client" src="..\images\project_joel/images/2013_04_11_GreenpeaceStructure.jpg" title="External Shell Structure for Installation from Client"/><span class="caption">External Shell Structure for Installation from Client</span>
+<div style="clear:both"><img alt="External Shell Structure for Installation from Client" src="..\images\project_joel/images/2013_04_11_GreenpeaceStructure.jpg" title="External Shell Structure for Installation from Client"/></div><span class="caption">External Shell Structure for Installation from Client</span>
 </div>
 <h3 id="our-response">Our response</h3>
 <p>We initially sought out a projector hire firm, who responded with a quote and a plan for a projection setup that met our requirements for maximum visual impact on a budget:</p>
 <div class="figure">
-<img alt="Initial Projection Plan from Projector Firm" src="..\images\project_joel/images/2013_04_16_DomeWithProjector.jpg" title="Initial Projection Plan from Projector Firm"/><span class="caption">Initial Projection Plan from Projector Firm</span>
+<div style="clear:both"><img alt="Initial Projection Plan from Projector Firm" src="..\images\project_joel/images/2013_04_16_DomeWithProjector.jpg" title="Initial Projection Plan from Projector Firm"/></div><span class="caption">Initial Projection Plan from Projector Firm</span>
 </div>
 <p>After some studio thinking, by 16th April we responded with the following document:</p>
 <div class="figure">
-<img alt="First Page of Presentation" src="..\images\project_joel/images/2013_04_16_Greenpeace_HandL_01.jpg" title="First Page of Presentation"/><span class="caption">First Page of Presentation</span>
+<div style="clear:both"><img alt="First Page of Presentation" src="..\images\project_joel/images/2013_04_16_Greenpeace_HandL_01.jpg" title="First Page of Presentation"/></div><span class="caption">First Page of Presentation</span>
 </div>
 <blockquote>
 <p>We would like this installation to be a relaxing and immersive space. An oasis where the viewer can relax on bean bags looking up at a screen.</p>
@@ -100,7 +111,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <p>Pete and I had arrived at a final interactive concept after some discussions with Paul, who stated that a "show time" of about 15 minutes was desirable - enough time to get a detailed message across, but not so long as to bore a casual visitor. Pete took his film edit to 15 minutes and had it approved by the Greenpeace team for pacing and content. We decided to use the Microsoft Kinect to allow the openFrameworks application to distort or effect the film footage in real time - based on viewers movements in front of the projection screen. To make the dome a bit more comfortable Paul arranged the donation of several jumbo size bean bags - meaning that visitors could lie comfortably and wave their hands in the air to interact with the film - we angled the Kinect to hopefully pick up unintended user interaction first, surprising users and gently guiding them to stand in front of the bean bags and use their whole bodies to interact. We knew we had to strike a balance between a pre-scripted show and a completely spontaneous one - so we decided on developing several visual looks which could be placed onto a time line for easy repetition, editing and playback. The aim was to get to a system with the reliability of a static linear film and the responsivity of a live "VJ" system - albeit one that used the viewers silhouette rather than pre-rendered matts to affect the edited Greenpeace film.</p>
 <p>At the beginning of June 2014 we received the following image from Paul:</p>
 <div class="figure">
-<img alt="Site Visit by Client" src="..\images\project_joel/images/2013_06_04_SiteFromPaul.jpg" title="Site Visit by Client"/><span class="caption">Site Visit by Client</span>
+<div style="clear:both"><img alt="Site Visit by Client" src="..\images\project_joel/images/2013_06_04_SiteFromPaul.jpg" title="Site Visit by Client"/></div><span class="caption">Site Visit by Client</span>
 </div>
 <p>The site awaited us.</p>
 <h3 id="interactive-background-to-delay-maps-and-the-possibility-of-generating-a-delay-map-from-the-kinect-depth-image">Interactive Background to Delay Maps, and the possibility of generating a Delay Map from the Kinect Depth Image</h3>
@@ -233,12 +244,12 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <p>While I could have gone down the <a href="http://en.wikipedia.org/wiki/Polymorphism_(computer_science)" target="_blank">polymorphic</a> custom class route, I felt that the ENUM apporach provided good performance (through compiler optimisation of common C++ coding paradigms), speed of development (lower file overhead) and clarity of code.</p>
 <h3 id="sequencing">Sequencing</h3>
 <div class="figure">
-<img alt="Kieran in front of the projection screen, final sequencing" src="..\images\project_joel/images/2013_06_25_KieranProjection.jpg" title="Kieran in front of the projection screen, final sequencing"/><span class="caption">Kieran in front of the projection screen, final sequencing</span>
+<div style="clear:both"><img alt="Kieran in front of the projection screen, final sequencing" src="..\images\project_joel/images/2013_06_25_KieranProjection.jpg" title="Kieran in front of the projection screen, final sequencing"/></div><span class="caption">Kieran in front of the projection screen, final sequencing</span>
 </div>
 <p>Kieran and Pete completed the main sequencing on-site.</p>
 <h2 id="show-time">Show time</h2>
 <div class="figure">
-<img alt="The Installation in Action, 27th June 2013" src="..\images\project_joel/images/2013_06_27_HandsInTheAir.jpg" title="The Installation in Action, 27th June 2013"/><span class="caption">The Installation in Action, 27th June 2013</span>
+<div style="clear:both"><img alt="The Installation in Action, 27th June 2013" src="..\images\project_joel/images/2013_06_27_HandsInTheAir.jpg" title="The Installation in Action, 27th June 2013"/></div><span class="caption">The Installation in Action, 27th June 2013</span>
 </div>
 <h2 id="post-event">Post Event</h2>
 <p>The biggest PR boost to the project while it was live was a <a href="http://www.glastonburyfestivals.co.uk/news/greenpeace-at-glastonbury-2013" target="_blank">review</a> from Timeout:</p>
@@ -436,7 +447,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <h2 id="appendix-2-modes-with-screen-grabs-and-code-explanation">Appendix 2: Modes, with screen grabs and code explanation</h2>
 <h4 id="blank">BLANK</h4>
 <div class="figure">
-<img alt="BLANK Mode" src="..\images\project_joel/images/grabs/00_BLANK.jpg" title="BLANK Mode"/><span class="caption">BLANK Mode</span>
+<div style="clear:both"><img alt="BLANK Mode" src="..\images\project_joel/images/grabs/00_BLANK.jpg" title="BLANK Mode"/></div><span class="caption">BLANK Mode</span>
 </div>
 <p>Blank mode simply displayed a blank screen. A useful default for measuring idle performance.</p>
 <p>Mode update:</p>
@@ -444,7 +455,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
             <span class="kw">break</span>;</code></pre>
 <h4 id="gui">GUI</h4>
 <div class="figure">
-<img alt="GUI Mode" src="..\images\project_joel/images/grabs/01_GUI.jpg" title="GUI Mode"/><span class="caption">GUI Mode</span>
+<div style="clear:both"><img alt="GUI Mode" src="..\images\project_joel/images/grabs/01_GUI.jpg" title="GUI Mode"/></div><span class="caption">GUI Mode</span>
 </div>
 <p>GUI displayed several program variables and image previews of various stages of Kinect image and blob outline processing.</p>
 <p>Mode update:</p>
@@ -539,7 +550,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
             <span class="kw">break</span>;</code></pre>
 <h4 id="video">VIDEO</h4>
 <div class="figure">
-<img alt="VIDEO Mode" src="..\images\project_joel/images/grabs/02_VIDEO.jpg" title="VIDEO Mode"/><span class="caption">VIDEO Mode</span>
+<div style="clear:both"><img alt="VIDEO Mode" src="..\images\project_joel/images/grabs/02_VIDEO.jpg" title="VIDEO Mode"/></div><span class="caption">VIDEO Mode</span>
 </div>
 <p>Video mode displayed the current frame of the unprocessed video file.</p>
 <p>Mode update:</p>
@@ -553,7 +564,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
             <span class="kw">break</span>;</code></pre>
 <h4 id="videocircles">VIDEOCIRCLES</h4>
 <div class="figure">
-<img alt="VIDEOCIRCLES Mode" src="..\images\project_joel/images/grabs/03_VIDEOCIRCLES.jpg" title="VIDEOCIRCLES Mode"/><span class="caption">VIDEOCIRCLES Mode</span>
+<div style="clear:both"><img alt="VIDEOCIRCLES Mode" src="..\images\project_joel/images/grabs/03_VIDEOCIRCLES.jpg" title="VIDEOCIRCLES Mode"/></div><span class="caption">VIDEOCIRCLES Mode</span>
 </div>
 <p>VideoCircles was a direct cut and paste from the <code>examples/video/osxHighPerformanceVideoPlayerExample</code>. This code was useful during initial development to discover the performance hit for individual pixel array access. A lot of my early development during projects is based around finding what the limits of various prospective coding functionality is - getting to a happy mix of performance and functionality.</p>
 <p>Mode update:</p>
@@ -592,7 +603,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
             <span class="kw">break</span>;</code></pre>
 <h4 id="kinectpointcloud">KINECTPOINTCLOUD</h4>
 <div class="figure">
-<img alt="KINECTPOINTCLOUD Mode" src="..\images\project_joel/images/grabs/04_KINECTPOINTCLOUD.jpg" title="KINECTPOINTCLOUD Mode"/><span class="caption">KINECTPOINTCLOUD Mode</span>
+<div style="clear:both"><img alt="KINECTPOINTCLOUD Mode" src="..\images\project_joel/images/grabs/04_KINECTPOINTCLOUD.jpg" title="KINECTPOINTCLOUD Mode"/></div><span class="caption">KINECTPOINTCLOUD Mode</span>
 </div>
 <p>Another cut and paste from addon example code, this time from the now core <code>ofxKinect</code>.</p>
 <p>Mode update:</p>
@@ -606,7 +617,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
             <span class="kw">break</span>;</code></pre>
 <h4 id="slitscanbasic">SLITSCANBASIC</h4>
 <div class="figure">
-<img alt="SLITSCANBASIC Mode" src="..\images\project_joel/images/grabs/08_SLITSCANBASIC.jpg" title="SLITSCANBASIC Mode"/><span class="caption">SLITSCANBASIC Mode</span>
+<div style="clear:both"><img alt="SLITSCANBASIC Mode" src="..\images\project_joel/images/grabs/08_SLITSCANBASIC.jpg" title="SLITSCANBASIC Mode"/></div><span class="caption">SLITSCANBASIC Mode</span>
 </div>
 <p>The most basic of the slitscan modes on this project - a direct port of example functionality in ofxSlitscan - but with the possibility of changing the slitscan PNG source file on the ofxTimeline GUI.</p>
 <p>Mode update:</p>
@@ -636,7 +647,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
             <span class="kw">break</span>;</code></pre>
 <h4 id="slitscankinectdepthgrey">SLITSCANKINECTDEPTHGREY</h4>
 <div class="figure">
-<img alt="SLITSCANKINECTDEPTHGREY Mode" src="..\images\project_joel/images/grabs/09_SLITSCANKINECTDEPTHGREY.jpg" title="SLITSCANKINECTDEPTHGREY Mode"/><span class="caption">SLITSCANKINECTDEPTHGREY Mode</span>
+<div style="clear:both"><img alt="SLITSCANKINECTDEPTHGREY Mode" src="..\images\project_joel/images/grabs/09_SLITSCANKINECTDEPTHGREY.jpg" title="SLITSCANKINECTDEPTHGREY Mode"/></div><span class="caption">SLITSCANKINECTDEPTHGREY Mode</span>
 </div>
 <p>The most basic of novel slitscan modes developed for this project - feeding the Kinect depth image into ofxSlitscan on a per frame basis - once I realised this would still result in interactive frame rates I knew the project would succeed.</p>
 <p>Mode update:</p>
@@ -661,7 +672,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
             <span class="kw">break</span>;</code></pre>
 <h4 id="sparkle">SPARKLE</h4>
 <div class="figure">
-<img alt="SPARKLE Mode" src="..\images\project_joel/images/grabs/07_SPARKLE.jpg" title="SPARKLE Mode"/><span class="caption">SPARKLE Mode</span>
+<div style="clear:both"><img alt="SPARKLE Mode" src="..\images\project_joel/images/grabs/07_SPARKLE.jpg" title="SPARKLE Mode"/></div><span class="caption">SPARKLE Mode</span>
 </div>
 <p>An experiment with using previously developed Somantics functionality into ofxTimeline.</p>
 <p>Mode update:</p>
@@ -694,7 +705,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
             <span class="kw">break</span>;</code></pre>
 <h4 id="verticalmirror">VERTICALMIRROR</h4>
 <div class="figure">
-<img alt="VERTICALMIRROR Mode" src="..\images\project_joel/images/grabs/05_VERTICALMIRROR.jpg" title="VERTICALMIRROR Mode"/><span class="caption">VERTICALMIRROR Mode</span>
+<div style="clear:both"><img alt="VERTICALMIRROR Mode" src="..\images\project_joel/images/grabs/05_VERTICALMIRROR.jpg" title="VERTICALMIRROR Mode"/></div><span class="caption">VERTICALMIRROR Mode</span>
 </div>
 <p>A vertical mirror on the video playback - again ported directly from Somantics.</p>
 <p>Mode update:</p>
@@ -754,7 +765,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
             <span class="kw">break</span>;</code></pre>
 <h4 id="horizontalmirror">HORIZONTALMIRROR</h4>
 <div class="figure">
-<img alt="HORIZONTALMIRROR Mode" src="..\images\project_joel/images/grabs/06_HORIZONTAL.jpg" title="HORIZONTALMIRROR Mode"/><span class="caption">HORIZONTALMIRROR Mode</span>
+<div style="clear:both"><img alt="HORIZONTALMIRROR Mode" src="..\images\project_joel/images/grabs/06_HORIZONTAL.jpg" title="HORIZONTALMIRROR Mode"/></div><span class="caption">HORIZONTALMIRROR Mode</span>
 </div>
 <p>A horizontal mirror on the video playback - again ported directly from Somantics.</p>
 <p>Mode update:</p>
@@ -813,7 +824,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
             <span class="kw">break</span>;</code></pre>
 <h4 id="kaleidoscope">KALEIDOSCOPE</h4>
 <div class="figure">
-<img alt="KALEIDOSCOPE Mode" src="..\images\project_joel/images/grabs/10_KALEIDOSCOPE.jpg" title="KALEIDOSCOPE Mode"/><span class="caption">KALEIDOSCOPE Mode</span>
+<div style="clear:both"><img alt="KALEIDOSCOPE Mode" src="..\images\project_joel/images/grabs/10_KALEIDOSCOPE.jpg" title="KALEIDOSCOPE Mode"/></div><span class="caption">KALEIDOSCOPE Mode</span>
 </div>
 <p>A Kaleidoscope mirror on the video playback - again ported directly from Somantics, using <a href="http://mazbox.com/" target="_blank">Marek Bereza's</a> logic.</p>
 <p>Mode update:</p>
@@ -919,7 +930,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
             <span class="kw">break</span>;</code></pre>
 <h4 id="colourfur">COLOURFUR</h4>
 <div class="figure">
-<img alt="COLOURFUR Mode" src="..\images\project_joel/images/grabs/12_COLOURFUR.jpg" title="COLOURFUR Mode"/><span class="caption">COLOURFUR Mode</span>
+<div style="clear:both"><img alt="COLOURFUR Mode" src="..\images\project_joel/images/grabs/12_COLOURFUR.jpg" title="COLOURFUR Mode"/></div><span class="caption">COLOURFUR Mode</span>
 </div>
 <p>A direct port of <a href="https://github.com/timscaffidi/ofxOpticalFlowFarneback" target="_blank">Tim Scaffidi's ofxOpticalFlowFarneback</a> demo code.</p>
 <p>Mode update:</p>
@@ -940,7 +951,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
             <span class="kw">break</span>;</code></pre>
 <h4 id="depth">DEPTH</h4>
 <div class="figure">
-<img alt="DEPTH Mode" src="..\images\project_joel/images/grabs/13_DEPTH.jpg" title="DEPTH Mode"/><span class="caption">DEPTH Mode</span>
+<div style="clear:both"><img alt="DEPTH Mode" src="..\images\project_joel/images/grabs/13_DEPTH.jpg" title="DEPTH Mode"/></div><span class="caption">DEPTH Mode</span>
 </div>
 <p>A simple mode to display the depth image directly - useful for debugging when onsite.</p>
 <p>Mode update:</p>
@@ -955,7 +966,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
             <span class="kw">break</span>;</code></pre>
 <h4 id="shatter">SHATTER</h4>
 <div class="figure">
-<img alt="SHATTER Mode" src="..\images\project_joel/images/grabs/14_SHATTER.jpg" title="SHATTER Mode"/><span class="caption">SHATTER Mode</span>
+<div style="clear:both"><img alt="SHATTER Mode" src="..\images\project_joel/images/grabs/14_SHATTER.jpg" title="SHATTER Mode"/></div><span class="caption">SHATTER Mode</span>
 </div>
 <p>A direct port of <a href="http://vanderlin.cc/projects/feedback/" target="_blank">Todd Vanderlin's</a> code that he wrote for the Feedback project, but using it as live delay map input to the Slitscan.</p>
 <p>Mode update:</p>
@@ -990,7 +1001,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
             <span class="kw">break</span>;</code></pre>
 <h4 id="selfslitscan">SELFSLITSCAN</h4>
 <div class="figure">
-<img alt="SELFSLITSCAN Mode" src="..\images\project_joel/images/grabs/15_SELFSLITSCAN.jpg" title="SELFSLITSCAN Mode"/><span class="caption">SELFSLITSCAN Mode</span>
+<div style="clear:both"><img alt="SELFSLITSCAN Mode" src="..\images\project_joel/images/grabs/15_SELFSLITSCAN.jpg" title="SELFSLITSCAN Mode"/></div><span class="caption">SELFSLITSCAN Mode</span>
 </div>
 <p>Feeding the greyscale image of the current film frame back into the SlitScan delay map made for some interesting feedback effects.</p>
 <p>Mode update:</p>
@@ -1017,7 +1028,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
             <span class="kw">break</span>;</code></pre>
 <h4 id="spikyblobslitscan">SPIKYBLOBSLITSCAN</h4>
 <div class="figure">
-<img alt="SPIKYBLOBSLITSCAN Mode" src="..\images\project_joel/images/grabs/16_SPIKYBLOBSLITSCAN.jpg" title="SPIKYBLOBSLITSCAN Mode"/><span class="caption">SPIKYBLOBSLITSCAN Mode</span>
+<div style="clear:both"><img alt="SPIKYBLOBSLITSCAN Mode" src="..\images\project_joel/images/grabs/16_SPIKYBLOBSLITSCAN.jpg" title="SPIKYBLOBSLITSCAN Mode"/></div><span class="caption">SPIKYBLOBSLITSCAN Mode</span>
 </div>
 <p>Feeding the Spiked blob outline back into the SlitScan delay map.</p>
 <p>Mode update:</p>
@@ -1051,7 +1062,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
             <span class="kw">break</span>;</code></pre>
 <h4 id="mirrorkaleidoscope">MIRRORKALEIDOSCOPE</h4>
 <div class="figure">
-<img alt="MIRRORKALEIDOSCOPE Mode" src="..\images\project_joel/images/grabs/17_MIRRORKALEIDOSCOPE.jpg" title="MIRRORKALEIDOSCOPE Mode"/><span class="caption">MIRRORKALEIDOSCOPE Mode</span>
+<div style="clear:both"><img alt="MIRRORKALEIDOSCOPE Mode" src="..\images\project_joel/images/grabs/17_MIRRORKALEIDOSCOPE.jpg" title="MIRRORKALEIDOSCOPE Mode"/></div><span class="caption">MIRRORKALEIDOSCOPE Mode</span>
 </div>
 <p>Combining Mirror and Kaleidoscope modes.</p>
 <p>Mode update:</p>
@@ -1176,7 +1187,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
             <span class="kw">break</span>;</code></pre>
 <h4 id="particles">PARTICLES</h4>
 <div class="figure">
-<img alt="PARTICLES Mode" src="..\images\project_joel/images/grabs/18_PARTICLES.jpg" title="PARTICLES Mode"/><span class="caption">PARTICLES Mode</span>
+<div style="clear:both"><img alt="PARTICLES Mode" src="..\images\project_joel/images/grabs/18_PARTICLES.jpg" title="PARTICLES Mode"/></div><span class="caption">PARTICLES Mode</span>
 </div>
 <p>Using Somantics particle functionality as a SlitScan delay map.</p>
 <p>Mode update:</p>
@@ -1206,7 +1217,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
             <span class="kw">break</span>;</code></pre>
 <h4 id="whitefur">WHITEFUR</h4>
 <div class="figure">
-<img alt="WHITEFUR Mode" src="..\images\project_joel/images/grabs/19_WHITEFUR.jpg" title="WHITEFUR Mode"/><span class="caption">WHITEFUR Mode</span>
+<div style="clear:both"><img alt="WHITEFUR Mode" src="..\images\project_joel/images/grabs/19_WHITEFUR.jpg" title="WHITEFUR Mode"/></div><span class="caption">WHITEFUR Mode</span>
 </div>
 <p>Turning the ofxOpticalFlowFarneback demo code, but making the graphical output monochrome.</p>
 <p>Mode update:</p>
@@ -1226,7 +1237,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
             <span class="kw">break</span>;</code></pre>
 <h4 id="paint">PAINT</h4>
 <div class="figure">
-<img alt="PAINT Mode" src="..\images\project_joel/images/grabs/11_PAINT.jpg" title="PAINT Mode"/><span class="caption">PAINT Mode</span>
+<div style="clear:both"><img alt="PAINT Mode" src="..\images\project_joel/images/grabs/11_PAINT.jpg" title="PAINT Mode"/></div><span class="caption">PAINT Mode</span>
 </div>
 <p>Porting the Paint mode from Somantics as a delay map.</p>
 <p>Mode update:</p>
@@ -1384,7 +1395,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <p>oF/openFrameworks-develop/examples/video/osxHighPerformanceVideoPlayerExample oF/openFrameworks-develop/examples/gui/guiExample</p>
 <p>copying over gui data...that works with gui.. now lets try with high performance video...all works! nice debug screen! saved it out to making of....</p>
 <div class="figure">
-<img alt="Kinect, GUI and High Performance Video Debug Screen" src="..\images\project_joel/images/2013_05_29_MashingHighPerfAndKinectAndGUI.jpg" title="Kinect, GUI and High Performance Video Debug Screen"/><span class="caption">Kinect, GUI and High Performance Video Debug Screen</span>
+<div style="clear:both"><img alt="Kinect, GUI and High Performance Video Debug Screen" src="..\images\project_joel/images/2013_05_29_MashingHighPerfAndKinectAndGUI.jpg" title="Kinect, GUI and High Performance Video Debug Screen"/></div><span class="caption">Kinect, GUI and High Performance Video Debug Screen</span>
 </div>
 <h4 id="th-may-2013-1">30th May 2013</h4>
 <p>Doing modes, tidying up gui, need to do more on gui tidy up and keys. Made:</p>
@@ -1393,7 +1404,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <p>oF/openFrameworks-develop/addons/ofxSlitScan</p>
 <p>Made that... Image is PNG RGB for slitscan delay map, so kinect depth map is good for that... right? (-; lucky birthday boy! works great...did grab..</p>
 <div class="figure">
-<img alt="Slit scan generated from Kinect Depth Map Slice" src="..\images\project_joel/images/2013_05_31_BirthdayPresentSlitScanFromDepthImage.jpg" title="Slit scan generated from Kinect Depth Map Slice"/><span class="caption">Slit scan generated from Kinect Depth Map Slice</span>
+<div style="clear:both"><img alt="Slit scan generated from Kinect Depth Map Slice" src="..\images\project_joel/images/2013_05_31_BirthdayPresentSlitScanFromDepthImage.jpg" title="Slit scan generated from Kinect Depth Map Slice"/></div><span class="caption">Slit scan generated from Kinect Depth Map Slice</span>
 </div>
 <h4 id="st-may-2013">31st May 2013</h4>
 <p>Showed Pete, performance better on his laptop, no optimisation yet, tried out some maps with bafic...</p>
@@ -1950,7 +1961,6 @@ include <span class="st">"ofxOpenCv.h"</span></code></pre>
 <p>Just changed the fur to not have any alpha (white fur that is) also added non-ofxTimeline GUI to everything...</p>
 </div>
 </div>
-</body></html>
 <script src="../javascript/jquery-1.8.3.min.js"></script>
 <script src="../javascript/jquery-ui-1.9.1.custom.min.js"></script>
 <script src="../javascript/bootstrap.js"></script>
@@ -1961,7 +1971,8 @@ include <span class="st">"ofxOpenCv.h"</span></code></pre>
         $(function() {
 
             var toc = $("#toc").tocify({
-              selectors: "h2,h3,h4,h5"
+              selectors: "h2,h3,h4,h5",
+              showAndHide: false
             }).data("toc-tocify");
 
             prettyPrint();
@@ -1969,5 +1980,3 @@ include <span class="st">"ofxOpenCv.h"</span></code></pre>
 
         });
     </script>
-
-
