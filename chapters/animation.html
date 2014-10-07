@@ -7,6 +7,25 @@
 <meta content="pandoc" name="generator"/>
 <title></title>
 <style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
 <link href="../style/bootstrap.css" rel="stylesheet">
 <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/themes/black-tie/jquery-ui.css" rel="stylesheet">
 <link href="../style/jquery.tocify.css" rel="stylesheet">
@@ -35,7 +54,7 @@
 <div id="chapters">
 <span class="closeBtn mega-octicon octicon-x"></span>
 chapters
-<ul><li><a href="intro.html">intro</a></li><li><a href="cplusplus_basics.html">C++ Language Basics</a></li><li><a href="setup_and_project_structure.html">openFrameworks project structure and setup</a></li><li><a href="OOPs!.html">Ooops! = Object Oriented Programming + Classes</a></li><li class="selected"><a href="animation.html">Animation</a></li><li><a href="intro_to_graphics.html">Graphics</a></li><li><a href="data_vis.html">Information Visualization Chapter</a></li><li><a href="game_design.html">Experimental Game Development in openFrameworks</a></li><li><a href="hardware.html">needs h1</a></li><li><a href="sound.html">Sound</a></li><li><a href="ios.html">ofxiOS</a></li><li><a href="c++11.html">C++ 11</a></li><li><a href="memory.html">Memory in C++</a></li><li><a href="threads.html">Threads</a></li><li><a href="version_control_with_git.html">Version control with Git</a></li><li><a href="advanced_graphics.html">Advanced graphics</a></li><li><a href="network.html">Network</a></li><li><a href="math.html">That Math Chapter: From 1D to 4D</a></li><li><a href="ofSketch.html">ofSketch</a></li><li><a href="project_elliot.html">Case Study : Line Segments Space</a></li><li><a href="project_eva.html">Case Study: Choreographies for Humans and Stars</a></li><li><a href="project_joel.html">Case Study: Anthropocene, an interactive film installation for Greenpeace as part of their field at Glastonbury 2013</a></li><li><a href="project_memo.html">Case Study: Memo (TODO: need title!)</a></li><li><a href="installation_up_4evr_macosx.html">Installation up 4evr - OSX</a></li><li><a href="installation_up_4evr_linux.html">Installation up 4evr - Linux</a></li></ul></div>
+<ul><li class="group">foreword</li><li><a href="foreword.html">Foreword</a></li><li class="group">basics</li><li><a href="of_philosophy.html">philosophy</a></li><li><a href="cplusplus_basics.html">C++ Language Basics</a></li><li><a href="setup_and_project_structure.html">OF structure</a></li><li><a href="intro_to_graphics.html">Graphics</a></li><li><a href="OOPs!.html">Ooops! = Object Oriented Programming + Classes</a></li><li class="group">approaches</li><li class="selected"><a href="animation.html">Animation</a></li><li><a href="data_vis.html">Information Visualization Chapter</a></li><li><a href="game_design.html">Experimental Game Development in openFrameworks</a></li><li><a href="image_processing_computer_vision.html">Image Processing and Computer Vision</a></li><li class="group">i/o</li><li><a href="hardware.html">hardware</a></li><li><a href="sound.html">Sound</a></li><li><a href="network.html">Network</a></li><li class="group">advanced topics</li><li><a href="advanced_graphics.html">Advanced graphics</a></li><li><a href="math.html">That Math Chapter: From 1D to 4D</a></li><li><a href="memory.html">Memory in C++</a></li><li><a href="threads.html">Threads</a></li><li><a href="ios.html">ofxiOS</a></li><li><a href="c++11.html">C++ 11</a></li><li class="group">project breakdowns</li><li><a href="project_elliot.html">Case Study : Line Segments Space</a></li><li><a href="project_eva.html">Case Study: Choreographies for Humans and Stars</a></li><li><a href="project_joel.html">Case Study: Anthropocene, an interactive film installation for Greenpeace as part of their field at Glastonbury 2013</a></li><li class="group">tools</li><li><a href="version_control_with_git.html">Version control with Git</a></li><li><a href="ofSketch.html">ofSketch</a></li><li><a href="installation_up_4evr_macosx.html">Installation up 4evr - OSX</a></li><li><a href="installation_up_4evr_linux.html">Installation up 4evr - Linux</a></li></ul></div>
 <!-- info about the book -->
 <div id="bookInfo">
 <span class="closeBtn mega-octicon octicon-x"></span>
@@ -44,6 +63,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
 <div class="row-fluid">
 <div id="chapter">
 <h1 id="animation">Animation</h1>
+<p><em>by <a href="http://thesystemis.com" target="_blank">Zach Lieberman</a></em></p>
+<p><em>with edits from Kayla Lewis</em></p>
 <h2 id="background">Background</h2>
 <p>The word animation is a medieval term stemming from the Latin animare, which means ‘instill with life’. In modern terms, it's used to describe the process of creating movement from still, sequential images. Early creators of animation used spinning discs (phenakistoscopes) and cylinders (zoetropes) with successive frames to create the illusion of a smooth movement from persistence of vision. In modern times, we're quite used to other techniques such as flip books and cinematic techniques like stop motion. Increasingly, artists have been using computational techniques to create animation -- using code to "bring life" to objects on the screen over successive frames. This chapter is going to look at these techniques and specifically try to address a central question: how can we create compelling, organic, and even absurd movement through code?</p>
 <p>As a side note, I studied fine arts, painting and printmaking, and it was accidental that I started using computers. The moment that I saw how you could write code to move something across the screen, even as simple as silly rectangle, I was hooked. I began during the first dot-com era working with flash / actionscript and lingo / director and have never looked back.</p>
@@ -66,10 +87,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
 <h3 id="frame-rate">Frame rate</h3>
 <p>The third point to make about OF and animation is frame rate. We animate in openframeworks using successive frames. Frame rate refers to how quickly frames get drawn. In OF there are several important functions to know about.</p>
 <ul>
-<li><code>ofGetFrameRate()</code> returns the current frame rate (in frames per second). Set it 0 to run as fast as possible <strong>[note:double check this]</strong></li>
+<li><code>ofGetFrameRate()</code> returns the current frame rate (in frames per second). Set it 0 to run as fast as possible</li>
 <li><code>ofSetFrameRate( float targetFrameRate )</code> sets the maximum frame rate. If the software is animating faster than this, it will slow it down. Think of it like a speed limit. It doesn't make you go faster, but it prevents you from going too fast.</li>
 </ul>
-<p>In addition, openGL works with an output display and will attempt to synchronize with the refresh rate of the monitor -- sometimes called vertical-sync or vertical blanking. If you don't synchronize with the refresh rate, you can get something called frame tearing, where the non-synchronization can mean frames get drawn before and after a change, leading to horizontal lines of discontinuity.</p>
+<p>In addition, openGL works with an output display and will attempt to synchronize with the refresh rate of the monitor -- sometimes called vertical-sync or vertical blanking. If you don't synchronize with the refresh rate, you can get something called frame tearing, where the non-synchronization can mean frames get drawn before and after a change, leading to horizontal lines of discontinuity, called <a href="http://en.wikipedia.org/wiki/Screen_tearing" target="_blank">screen tearing</a></p>
 <p><strong>[note: frame rip graphic here]</strong></p>
 <p>We have a function in OF for controlling this. Some graphics card drivers (see for example Nvidia's PC drivers) have settings that override application settings, so please be sure to check your driver options.</p>
 <ul>
@@ -77,20 +98,20 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
 </ul>
 <p>By default, OF enables vertical sync and sets a frame rate of 60FPS. You can adjust the VSYCN and frame rate settings if you want to animate faster, but please note that by default OF wants to run as fast as possible. It's not uncommon if you are drawing a simple scene to see frame rates of 800 FPS if you don't have VSYNC enabled (and the frame rate cap set really high or disabled).</p>
 <p>Another imporant point which is a bit hard to cover deeply in this chapter is frame rate independence. If you animate using a simple model -- say for example, you create a variable called xPos, increase it by a certain amount every frame and draw it.</p>
-<pre><code>void testApp::setup(){
-	xPos = 100;
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> testApp::setup(){
+    xPos = <span class="dv">100</span>;
 }
 
-void testApp::update(){
-	xPos += 0.5;
+<span class="dt">void</span> testApp::update(){
+    xPos += <span class="fl">0.</span><span class="dv">5</span>;
 }
 
-void testApp::draw(){
-	ofRect(xPos, 100, 10, 10);
+<span class="dt">void</span> testApp::draw(){
+    ofRect(xPos, <span class="dv">100</span>, <span class="dv">10</span>, <span class="dv">10</span>);
 }</code></pre>
 <p>this kind of animation works fine, but it assumes that your frame rate is constant. If you app runs faster, say by jumping from 30fps to 60fps, the object will appear to go twice as fast, since there will be 2x the number of update and draw functions called per second. Typically more complex animation will be written to take this into account, either by using functions like time (explained below) or mixing the frame rate or elapsed time into your update. For example, a solution might be something like:</p>
-<pre><code>void testApp::update(){
-	xPos += 0.5 * (30.0 / ofGetFrameRate());
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> testApp::update(){
+    xPos += <span class="fl">0.</span><span class="dv">5</span> * (<span class="fl">30.</span><span class="dv">0</span> / ofGetFrameRate());
 }</code></pre>
 <p>if ofGetFrameRate() returns 30, we multiply 0.5 by 1, if ofGetFrameRate() returns 60, we multiply it by 1/2, so although we are animating twice as fast, we take half sized steps, therefore effectively moving at the same speed regardless of framerate. Framerate indepence is fairly important to think about once you get the hang of things, since as observers of animation, we really do feel objects speeding up or slowwing down even slightly, but in this chapter I will skip it for the sake of simplicity in the code.</p>
 <h3 id="time-functions">Time functions</h3>
@@ -111,17 +132,17 @@ void testApp::draw(){
 <p>The first and probably most important lesson of animation is that we <strong>love</strong> numbers between 0 and 1.</p>
 <p><strong>[note: love picture here]</strong></p>
 <p>The thing about numbers between 0 and 1 is that they are super easy to use in interesting ways. We typically refer to these kinds of numbers as percent, and you'll see me use the shorthand <code>pct</code> in the code–this is a floating point number between 0 and 1. If we wanted to get from point A to point B, we could use this number to figure out how much of one point and how much of another point to use. The formula is this:</p>
-<pre><code>((1-pct) * A) + (pct * B)</code></pre>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">((<span class="dv">1</span>-pct) * A) + (pct * B)</code></pre>
 <p>To add some detail if we are 0 pct of the way from A to B, we calculate</p>
-<pre><code>((1-0) * A) + (0 * B)</code></pre>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">((<span class="dv">1-0</span>) * A) + (<span class="dv">0</span> * B)</code></pre>
 <p>which simplifies to <code>(1*A + 0*B)</code> or A. If we are 25 percent of the way, it looks like</p>
-<pre><code>((1-0.75) * A) + (0.25 * B)</code></pre>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">((<span class="dv">1</span><span class="fl">-0.</span><span class="dv">75</span>) * A) + (<span class="fl">0.</span><span class="dv">25</span> * B)</code></pre>
 <p>which is 75% of A + 25% of B. Essentially by taking a mix, you get from one to the other. The first example shows how this is done.</p>
 <p><strong>[note: linear example code here]</strong></p>
 <p><em>As a side note, the function <code>ofMap</code>, which maps between an input range, uses pct internally. It takes a value, converts it into a percentage based on the input range, and then uses that pct to find the point between the output range.</em> <strong>[note: see omer's chapter]</strong></p>
 <h3 id="curves">Curves</h3>
 <p>One of the interesting properties of numbers between 0 and 1 is that they can be easily adjusted / curved.</p>
-<p>The easiest way to see this is by raising the number to a power. A power, as you might remember from math class, is multiplying a number by itself, e.g., 2^3 <strong>[note: latex helpful here?]</strong> = <code>2*2*2 = 8</code>. Numbers between 0 and 1 have some interesting properties. If you raise 0 to any power it equals 0 (<code>0x0x0x0 = 0</code>). The same thing is true for 1 (<code>1*1*1*1 = 1</code>), but if you raise a number between 0 and 1 to a power, it changes. For example, 0.5 to the 2nd power = 0.25.</p>
+<p>The easiest way to see this is by raising the number to a power. A power, as you might remember from math class, is multiplying a number by itself, e.g., 2^3 = <code>2*2*2 = 8</code>. Numbers between 0 and 1 have some interesting properties. If you raise 0 to any power it equals 0 (<code>0x0x0x0 = 0</code>). The same thing is true for 1 (<code>1*1*1*1 = 1</code>), but if you raise a number between 0 and 1 to a power, it changes. For example, 0.5 to the 2nd power = 0.25.</p>
 <p>Let's look at a plot of pct raised to the second power:</p>
 <p><strong>[note: plot grpahic here]</strong></p>
 <p><strong>[note: better explanation of how to read the chart]</strong> Think about the x value of the plot as the input and y value as the output. If put in 0, we get out a y value of 0, if we put in 0.1, we get out a y value of 0.01, all the way to putting in a value of 1 and getting out a value of 1.</p>
@@ -159,17 +180,17 @@ void testApp::draw(){
 <div style="clear:both"><img alt="xeno diagram" src="..\images\animation/images/xeno.png"/></div><span class="caption">xeno diagram</span>
 </div>
 <p>In code, that's basically the same as saying</p>
-<pre><code>currentValue = currentValue + ( targetValue - currentValue ) * 0.5.</code></pre>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">currentValue = currentValue + ( targetValue - currentValue ) * <span class="fl">0.5.</span></code></pre>
 <p>In this case <code>targetValue - currentValue</code> is the distance. You could also change the size of the step you make every time, for example, taking steps of 10% instead of 50%:</p>
-<pre><code>currentValue = currentValue + ( targetValue - currentValue ) * 0.1.</code></pre>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">currentValue = currentValue + ( targetValue - currentValue ) * <span class="fl">0.1.</span></code></pre>
 <p>If you expand the expression, you can write the same thing this way:</p>
-<pre><code>currentValue = currentValue * 0.9 + targetValue * 0.1.</code></pre>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">currentValue = currentValue * <span class="fl">0.</span><span class="dv">9</span> + targetValue * <span class="fl">0.1.</span></code></pre>
 <p>This is a form of smoothing: you take some percentage of your current value and another percentage of the target and add them together. Those percentages have to add up to 100%, so if you take 95% of the current position, you need to take 5% of the target (e.g., currentValue * 0.95 + target * 0.05).</p>
 <p>In Zeno's paradox, you never actually get to the target, since there's always some remaining distance to go. On the computer, since we are dealing with pixel positions on the screen and floating point numbers at a specific range, the object appears to stop.</p>
 <p>In the 5th example <strong>(5_rectangleXeno)</strong>, we add a function to the rectangle that uses xeno to catch up to a point:</p>
-<pre><code>void rectangle::xenoToPoint(float catchX, float catchY){
-	pos.x = catchUpSpeed * catchX + (1-catchUpSpeed) * pos.x; 
-	pos.y = catchUpSpeed * catchY + (1-catchUpSpeed) * pos.y; 
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> rectangle::xenoToPoint(<span class="dt">float</span> catchX, <span class="dt">float</span> catchY){
+    pos.x = catchUpSpeed * catchX + (<span class="dv">1</span>-catchUpSpeed) * pos.x; 
+    pos.y = catchUpSpeed * catchY + (<span class="dv">1</span>-catchUpSpeed) * pos.y; 
 }</code></pre>
 <p>Here, we have a value, <code>catchUpSpeed</code>, that represents how fast we catch up to the object we are trying to get to. It's set to 0.01 (1%) in this example code, which means take 99% of my own postion, 1% of the target position and move to their sum. If you alter this number you'll see the rectangle catch up to the mouse faster or slower. 0.001 means it will run 10 times slower, 0.1 means ten times faster.</p>
 <p>This technique is very useful if you are working with noisy data -- a sensor for example. You can create a variable that catched up to it using xeno and smoothes out the result. I use this quite often when I'm working with hardware sensors / physical computing, or when I have noisy data. The nice thing is that the catch up speed becomes a knob that you can adjust between more real-time (and more noisey data) and less real-time (and more smooth) data. Having that kind of control comes in handy!</p>
@@ -179,8 +200,7 @@ void testApp::draw(){
 <p>Another interesting and simple system to experiment with motion in openframeworks is using sin and cos.</p>
 <p>Sin and cos (sine and cosine) are trigonometric functions, which means they are based on angles. They are the x and y position of a point moving in a constant rate around a circle. The circle is a unit circle with a radius of 1, which means the diameter is <code>2*r*PI</code> or <code>2*PI</code>. In OF you'll see this constant as <code>TWO_PI</code>, which is 6.28318...</p>
 <p><em>As a side note, sometimes it can be confusing that some functions in OF take degress where others take radians. Sin and cos are part of the math library, so they take radians, whereas most openGL rotation takes degrees. We have some helper constants such as <code>DEG_TO_RAD</code> and <code>RAD_TO_DEG</code>, which can help you convert one to the other.</em></p>
-<h4 id="everything-about-sin-and-cos-in-one-graph">Everything about sin and cos in one graph</h4>
-<p>So here's a simple drawing that helps explain sin and cos.</p>
+<p>Here's a simple drawing that helps explain sin and cos.</p>
 <div class="figure">
 <div style="clear:both"><img alt="sin" src="..\images\animation/images/atob_circle.png"/></div><span class="caption">sin</span>
 </div>
@@ -188,31 +208,29 @@ void testApp::draw(){
 <h4 id="simple-examples">Simple examples</h4>
 <p>It's pretty easy to use sin to animate the position of an object.</p>
 <p>Here, we'll take the sin of the elapsed time <code>sin(ofGetElpasedTimef())</code>. This returns a number between negative one and one. It does this every 6.28 seconds. We can use of map to map this to a new range. For example</p>
-<pre><code>void ofApp::draw(){
-	float xPos = ofMap(sin(ofGetElpasedTimef()), -1, 1, 0, ofGetWidth());
-	ofRect(xPos, ofGetHeight/2, 10,10);
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> ofApp::draw(){
+    <span class="dt">float</span> xPos = ofMap(sin(ofGetElpasedTimef()), <span class="dv">-1</span>, <span class="dv">1</span>, <span class="dv">0</span>, ofGetWidth());
+    ofRect(xPos, ofGetHeight/<span class="dv">2</span>, <span class="dv">10</span>,<span class="dv">10</span>);
 }</code></pre>
 <p>This draws a rectangle which move sinusoidally across the screen, back and forth every 6.28 seconds.</p>
 <p>You can do simple things with offseting the phase (how shifted over the sin wave is). In example 7 <strong>(7_sinExample_phase)</strong>, we calculate the sin of time twice, but the second time, we add PI: <code>ofGetElapsedTimef() + PI</code>. This means to the two values will be offset from each other by 180 degrees on the circle (imaginging our dot, when one is far right, the other will be far left. When one is up, the other is down). Here we set the background color and the color of a rectangle using these offset values. It's useful if you start playing with sin and cos to start to manipulate phase.</p>
-<pre><code>//--------------------------------------------------------------
-void testApp::draw(){
-	
-	
-	float sinOfTime				= sin( ofGetElapsedTimef() );
-	float sinOfTimeMapped		= ofMap( sinOfTime, -1, 1, 0, 255);
-	
-	
-	ofBackground(sinOfTimeMapped, sinOfTimeMapped, sinOfTimeMapped);
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//--------------------------------------------------------------</span>
+<span class="dt">void</span> testApp::draw(){
+    
+    
+    <span class="dt">float</span> sinOfTime                = sin( ofGetElapsedTimef() );
+    <span class="dt">float</span> sinOfTimeMapped        = ofMap( sinOfTime, <span class="dv">-1</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">255</span>);
+    
+    
+    ofBackground(sinOfTimeMapped, sinOfTimeMapped, sinOfTimeMapped);
 
-	
-	float sinOfTime2			= sin( ofGetElapsedTimef() + PI);
-	float sinOfTimeMapped2		= ofMap( sinOfTime2, -1, 1, 0, 255);
-	
-	ofSetColor(sinOfTimeMapped2, sinOfTimeMapped2, sinOfTimeMapped2);
-	ofRect(100,100,ofGetWidth()-200, ofGetHeight()-200);
-	
-	
-
+    
+    <span class="dt">float</span> sinOfTime2            = sin( ofGetElapsedTimef() + PI);
+    <span class="dt">float</span> sinOfTimeMapped2        = ofMap( sinOfTime2, <span class="dv">-1</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">255</span>);
+    
+    ofSetColor(sinOfTimeMapped2, sinOfTimeMapped2, sinOfTimeMapped2);
+    ofRect(<span class="dv">100</span>,<span class="dv">100</span>,ofGetWidth()<span class="dv">-200</span>, ofGetHeight()<span class="dv">-200</span>);
+    
 }</code></pre>
 <p><em>As a nerdy detail, floating point numbers are not linearly precise, e.g., there's a different number of floating point numbers between 0.0 and 1.0 than 100.0 and 101.0. You actually lose precision the larger a floating point number gets, so taking sin of elapsed time can start looking crunch after some time. For long running installations I will sometimes write code that looks like</em> <code>sin((ofGetElapsedTimeMillis() % 6283) / 6283.0)</code> <em>or something similar, to account for this. Even though ofGetElapsedTimef() gets larger over time, it's a worse and worse input to sin() as it grows. ofGetElapsedTimeMillis() doesn't suffer from this problem since it's an integer number and the number of integers between 0 and 10 is the same as between 1000 and 1010.</em></p>
 <h4 id="circular-movement">Circular movement</h4>
@@ -223,87 +241,145 @@ void testApp::draw(){
 <li>the angle around the circle (angle)</li>
 </ul>
 <p>The formula is fairly simple:</p>
-<pre><code>xPos = xOrig + radius * cos(angle);
+<pre class="sourceCode cpp"><code class="sourceCode cpp">xPos = xOrig + radius * cos(angle);
 yPos = yOrig + radius * sin(angle);</code></pre>
 <p>This allows us to create something moving in a circular way. In the circle example, I will animate using this approach.</p>
-<pre><code>float xorig = 500;
-float yorig = 300;
-float angle = ofGetElapsedTimef()*3.5;
-float x = xorig + radius * cos(angle);
-float y = yorig + radius * sin(angle);</code></pre>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">float</span> xorig = <span class="dv">500</span>;
+<span class="dt">float</span> yorig = <span class="dv">300</span>;
+<span class="dt">float</span> angle = ofGetElapsedTimef()*<span class="fl">3.</span><span class="dv">5</span>;
+<span class="dt">float</span> x = xorig + radius * cos(angle);
+<span class="dt">float</span> y = yorig + radius * sin(angle);</code></pre>
 <p><em>Note: In OF, the top left corner is 0,0 (y axis is increasing as you go down) so you'll notive that the point travels clockwise instead of counter-clockwise. If this bugs you (since above, I asked you imagine it moving counter clockwise) you can modify this line <code>float y = yorig + radius * sin(angle)</code> to <code>float y = yorig + radius * -sin(angle)</code> and see the circle go in the counter clockwise direction.</em></p>
 <p>For these examples, I start to add a "trail" to the object by using the ofPolyline object. I keep adding points, and once I have a certain number I delete the oldest one. This helps us better see the motion of the object.</p>
 <p>If we increase the radius, for example by doing:</p>
-<pre><code>void testApp::update(){
-	radius = radius + 0.1;
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> testApp::update(){
+    radius = radius + <span class="fl">0.</span><span class="dv">1</span>;
 }</code></pre>
 <p>we get spirals.</p>
 <h4 id="lisajous-figures">Lisajous figures</h4>
 <p>Finally, if we alter the angles we pass in to x and y for this formula in different rates, we can get interesting figures, called "Lissajous" figures, named after the French mathematician, Jules Antoine Lissajous. These formulas look cool. Often times I joke with my students in algo class about how this is really a course to make cool screen savers.</p>
 <h3 id="noise">Noise</h3>
-<p>** TODO **</p>
+<p>Noise is similar sin/cos in that it's a function that takes some input and produces output, which we can then use for movement. In the case of sin/cos you are passing in an angle and getting a results back that goes back and forth between -1 and 1. In openframeworks we wrap code that uses <a href="http://en.wikipedia.org/wiki/Simplex_noise" target="_blank">simplex noise</a>, which is comparable to Perlin noise and we have a function <code>ofNoise()</code> that takes an input and produces an output. Both algorithms (Perlin, Simplex) provide a psueduo random noise pattern -- they are quite useful for animation, because they are continuous functions, unlike something like ofRandom, which just returns random values.</p>
+<p>When I say continuous function, what I mean is if you pass in smaller changes as input, you get smaller output and if you pass in the same value you get the same result. For example, <code>sin(1.7)</code> always returns the same value, and <code>ofNoise(1.7)</code> also always returns the same result. Likewise if you call <code>sin(1.7)</code> and <code>sin(1.75)</code> you get results that are continuous (meaning, you can call <code>sin(1.71) sin(1.72)... sin(1.74)</code> to get intermediate results).</p>
+<p>You can do the same thing with ofNoise -- here, I write a for loop to draw noise as a line. <code>ofNoise</code> takes an input, here i/10 and produces an output which is between 0 and 1. <code>ofSignedNoise</code> is similar but it produces an output between -1 and 1.</p>
+<div class="figure">
+<div style="clear:both"><img alt="noise line" src="..\images\animation/images/noiseLine.png"/></div><span class="caption">noise line</span>
+</div>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">ofBackground(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>);
+ofSetColor(<span class="dv">255</span>);
+
+ofNoFill();
+ofBeginShape();
+<span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; <span class="dv">500</span>; i++){
+    
+    <span class="dt">float</span> x = i;
+    <span class="dt">float</span> noise = ofNoise(i/<span class="fl">10.</span><span class="dv">0</span>);
+    <span class="dt">float</span> y = ofMap(noise, <span class="dv">0</span>,<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">100</span>);
+    ofVertex(x,y);
+}
+ofEndShape();</code></pre>
+<p>If you alter the i/10.0, you can adjust the scale of the noise, either zooming in (ie, i/100.0), so you see more details, or zooming out (ie, i/5.0) so you see more variation.</p>
+<div class="figure">
+<div style="clear:both"><img alt="noise with i dividied by 100" src="..\images\animation/images/noise_i_d_100.png"/></div><span class="caption">noise with i dividied by 100</span>
+</div>
+<div class="figure">
+<div style="clear:both"><img alt="noise with i dividied by 5" src="..\images\animation/images/noise_i_d_5.png"/></div><span class="caption">noise with i dividied by 5</span>
+</div>
+<p>We can use noise to animate, for example, here, we move an object on screen using noise:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">float</span> x = ofMap( ofNoise( ofGetElapsedTimef()), <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, ofGetWidth());
+ofCircle(x,<span class="dv">200</span>,<span class="dv">30</span>);</code></pre>
+<p>If we move y via noise, we can take a noise input value somewhere "away" from the x value, ie further down the curved line:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">float</span> x = ofMap( ofNoise( ofGetElapsedTimef()), <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, ofGetWidth());
+<span class="dt">float</span> y = ofMap( ofNoise( <span class="fl">1000.</span><span class="dv">0</span>+ ofGetElapsedTimef()), <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, ofGetHeight());
+ofCircle(x,y,<span class="dv">30</span>);</code></pre>
+<p>Alternatively, ofNoise takes multiple demensions. Here's a quick sketch moving something in a path via ofNoise using the 2d dimensions</p>
+<div class="figure">
+<div style="clear:both"><img alt="noise via 2d" src="..\images\animation/images/noise2d.png"/></div><span class="caption">noise via 2d</span>
+</div>
+<p>The code for this example (note the 2 inputs into ofNoise, this is a 2-dimensional noise call. it allows us to use the same value for time, but get different results):</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//--------------------------------------------------------------</span>
+<span class="dt">void</span> ofApp::setup(){
+    ofBackground(<span class="dv">0</span>);
+    ofSetBackgroundAuto(<span class="kw">false</span>);
+}
+
+<span class="co">//--------------------------------------------------------------</span>
+<span class="dt">void</span> ofApp::update(){
+}
+
+<span class="co">//--------------------------------------------------------------</span>
+<span class="dt">void</span> ofApp::draw(){
+    
+    <span class="dt">float</span> x = ofMap( ofNoise( ofGetElapsedTimef()/<span class="fl">2.</span><span class="dv">0</span>, <span class="dv">-1000</span>), <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, ofGetWidth());
+    <span class="dt">float</span> y = ofMap( ofNoise( ofGetElapsedTimef()/<span class="fl">2.</span><span class="dv">0</span>, <span class="dv">1000</span>), <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, ofGetHeight());
+    ofNoFill();
+    ofCircle(x,y,<span class="dv">3</span>);
+    
+}</code></pre>
+<p>There's a ton more we can do with noise, we'll leave it for now but encourage you to look at the noise examples that come with openframeworks, which show how noise can be use to create lifelike movement. Also, we encourage readers to investigate the work of <a href="http://mrl.nyu.edu/~perlin/" target="_blank">Ken Perlin</a>, author of the simplex noise algorithm -- he's got great examples of how you can use noise in creative playful ways.</p>
 <h2 id="simulation">Simulation</h2>
 <p>If you have a photograph of an object at one point in time, you know its position. If you have a photograph of an object at another point in time and the camera hasn't changed, you can measure its velocity, i.e., its change in distance over time. If you have a photograph at three points in time, you can measure its acceleration, i.e., how much the speed changing over time.</p>
 <p>The individual measurements compared together tell us something about movement. Now, we're going to go in the opposite direction. Think about how we can use measurements like speed and acceleration to control position.</p>
 <p>If you know how fast an object is traveling, you can determine how far it's traveled in a certain amount of time. For example, if you are driving at 50 miles per hour (roughly 80km / hour), how far have you traveled in one hour? That's easy. You've traveled 50 miles. How far have you traveled in two or three hours? There is a simple equation to calculate this distance:</p>
-<pre><code>position = position + (velocity * elapsed time)</code></pre>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">position = position + (velocity * elapsed time)</code></pre>
 <p>e.g.:</p>
-<pre><code>position = position + 50 * 1;   // for one hour away</code></pre>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">position = position + <span class="dv">50</span> * <span class="dv">1</span>;   <span class="co">// for one hour away</span></code></pre>
 <p>or</p>
-<pre><code>position = position + 50 * 2;   // for two hours driving</code></pre>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">position = position + <span class="dv">50</span> * <span class="dv">2</span>;   <span class="co">// for two hours driving</span>
+</code></pre>
 <p>The key expression–position = position + velocity–in shorthand would be <code>p=p+v</code>.</p>
 <p><em>Note, the elapsed time part is important, but when we animate we'll be doing p=p+v quite regularly and you may see us drop this to simplify things (assume every frame has an elapsed time of one). This isn't entirely accurate but it keeps things simple. See the previous section on frame rate (and frame rate independence) for more details</em></p>
 <p>In addition, if you are traveling at 50 miles per hour (apologies to everyone who thinks in km!) and you accelerate by 5 miles per hour, how fast are you driving in 1 hr? The answer is 55 mph. In 2 hrs, you'd be traveling 60 mph. In these examples, you are doing the following:</p>
-<pre><code>velocity = velocity + acceleration</code></pre>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">velocity = velocity + acceleration</code></pre>
 <p>In shorthand, we'll use <code>v=v+a</code>. So we have two important equations for showing movement based on speed:</p>
-<pre><code>p = p + v;   // position = position + velocity
-v = v + a;   // velocity = velocity + acceleration</code></pre>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">p = p + v;   <span class="co">// position = position + velocity</span>
+v = v + a;   <span class="co">// velocity = velocity + acceleration</span></code></pre>
 <p>The amazing thing is that we've just described a system that can use acceleration to control position. Why is this useful? It's useful–if you remember from physics class– because Newton had very simple laws of motion, the second of which says</p>
-<pre><code>Force = Mass x Acceleration</code></pre>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">Force = Mass x Acceleration</code></pre>
 <p>In shorthand, <code>F = M x A</code>. This means force and acceleration are linearly related. If we assume that an object has a mass of one, then force equals acceleration. This means we can use force to control velocity and velocity to control position.</p>
 <p>The cool, amazing, beautiful thing is that are plenty of forces we can apply to an object, such as spring forces, repulsion forces, alignment forces, etc.</p>
 <p>I have several particle examples that use this approach, and while I won't go deeply into them, I'll try to explain some interesting ideas you might find</p>
 <h3 id="particle-class">particle class</h3>
 <p>The particle class in all of the examples is designed to be pretty straight forward. Let's take a look at the H file:</p>
-<pre><code>class particle{
-	
-    public:
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> particle{
+    
+    <span class="kw">public</span>:
 
         ofPoint pos;
         ofPoint vel;
         ofPoint frc;  
-        float damping;
-        				
+        <span class="dt">float</span> damping;
+                        
         particle();
-        void setInitialCondition(float px, float py, float vx, float vy);
-       	
-        void resetForce();
-        void addForce(float x, float y);
-        void addDampingForce();
+        <span class="dt">void</span> setInitialCondition(<span class="dt">float</span> px, <span class="dt">float</span> py, <span class="dt">float</span> vx, <span class="dt">float</span> vy);
+           
+        <span class="dt">void</span> resetForce();
+        <span class="dt">void</span> addForce(<span class="dt">float</span> x, <span class="dt">float</span> y);
+        <span class="dt">void</span> addDampingForce();
         
-        void update();
-        void draw();	
+        <span class="dt">void</span> update();
+        <span class="dt">void</span> draw();    
 };</code></pre>
 <p>For variables, it has ofPoint objects for position, velocity and force (abbreviated as pos, vel and frc). It also has a variable for damping, which represents how much this object slows down over time. A damping of 0 would mean not slowing down at all, and as damping gets higher, it's like adding more friction - imagine rolling a ball on ice, conrete or sand, it would slow down at different rates.</p>
 <p>In terms of functions, it has a contructor which sets some internal variables like damping and a setInitialCondition() that allows you to set the position and velocity of the particle. Think about this as setting up its initial state, and from here you let the particle play out. The next three functions are about forces (we'll see more) -- the first one, <code>resetForce()</code>, clears all the internal force variable frc. Forces are not cummualtive across frames, so at the start of every frame we clear it. <code>addForce()</code> adds a force in a given direction, useful for constant forces, like gravity. <code>addDampingForce()</code> adds a force opposite velocity (damping is a force felt opposite the direction of travel). Finally, update takes forces and adds it to velocity, and takes velocity and adds it to position. Draw just draws a dot where position is.</p>
 <p>The particle class is really simple, and throughout these examples, we add complexity to it. In general though formula you will see in all the examples is:</p>
-<pre><code>for (int i = 0; i &lt; particles.size(); i++){
-	particles[i].resetForce();
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; particles.size(); i++){
+    particles[i].resetForce();
 }
 
-// &lt;------ magic happens here ---------&gt;
+<span class="co">// &lt;------ magic happens here ---------&gt;</span>
 
-for (int i = 0; i &lt; particles.size(); i++){
-	particles[i].update();
+<span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; particles.size(); i++){
+    particles[i].update();
 }</code></pre>
 <p>where the magic is happening between the reset force and update. Although these examples increase in complexity, they do so simply by adding new functions to the particle class, and adding more things between reset and update.</p>
 <p><strong>[note: add screenshot of simple particle examples]</strong></p>
 <h3 id="simple-forces-repulsion-and-attraction">simple forces, repulsion and attraction</h3>
 <p>In the next few examples, I added a few functions to the particle object:</p>
-<pre><code>void addRepulsionForce( float px, float py, float radius, float strength);
-void addAttractionForce( float px, float py, float radius, float strength);
-void addClockwiseForce( float px, float py, float radius, float strength);
-void addCounterClockwiseForce( float px, float py, float radius, float strength);</code></pre>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> addRepulsionForce( <span class="dt">float</span> px, <span class="dt">float</span> py, <span class="dt">float</span> radius, <span class="dt">float</span> strength);
+<span class="dt">void</span> addAttractionForce( <span class="dt">float</span> px, <span class="dt">float</span> py, <span class="dt">float</span> radius, <span class="dt">float</span> strength);
+<span class="dt">void</span> addClockwiseForce( <span class="dt">float</span> px, <span class="dt">float</span> py, <span class="dt">float</span> radius, <span class="dt">float</span> strength);
+<span class="dt">void</span> addCounterClockwiseForce( <span class="dt">float</span> px, <span class="dt">float</span> py, <span class="dt">float</span> radius, <span class="dt">float</span> strength);</code></pre>
 <p>They essentially adds forces the move towards or away from a point that you pass in, or in the case of clockwise forces, around a point.</p>
 <div class="figure">
 <div style="clear:both"><img alt="sin" src="..\images\animation/images/particle.png"/></div><span class="caption">sin</span>
@@ -311,72 +387,72 @@ void addCounterClockwiseForce( float px, float py, float radius, float strength)
 <p>The calculation of these forces is fairly straight forward - first, we figure out how far away from a point is from the center of the force. If it's outside of the radius of interaction, we disregard it. If it's inside, we figure out its percentage , ie, the distance between the force and the particle devided by the radius of interaction. This gives us a number that's close to 1 when we towards the far edge of the circle and 0 as we get towards the center. If we invert this, by taking 1 - percent, we get a number that's small on the outside, and larger as we get closer to the center.</p>
 <p>This is useful because often times forces are proportional to disctance. For example, a magnetic force will have a radius at which it works, and the closer you get to the magnet the stronger the force.</p>
 <p>Here's a quick look at one of the functions for adding force:</p>
-<pre><code>void particle::addAttractionForce( float px, float py, float radius, float strength){
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> particle::addAttractionForce( <span class="dt">float</span> px, <span class="dt">float</span> py, <span class="dt">float</span> radius, <span class="dt">float</span> strength){
 
-	ofVec2f posOfForce;
-	posOfForce.set(px, py);
-	ofVec2f diff = pos - posOfForce;
-	
-	if (diff.length() &lt; radius){ 
-		float pct = 1 - (diff.length() / radius);
-		diff.normalize();
-		frc.x -= diff.x * pct * strength;
-		frc.y -= diff.y * pct * strength;
-	}
+    ofVec2f posOfForce;
+    posOfForce.set(px, py);
+    ofVec2f diff = pos - posOfForce;
+    
+    <span class="kw">if</span> (diff.length() &lt; radius){ 
+        <span class="dt">float</span> pct = <span class="dv">1</span> - (diff.length() / radius);
+        diff.normalize();
+        frc.x -= diff.x * pct * strength;
+        frc.y -= diff.y * pct * strength;
+    }
 } </code></pre>
 <p><code>diff</code> is a line between the particle and the position of the force. If the length of diff is less then the radius, we calculate the pct as a number that goes between 0 and 1 (0 on the outside of the radius of interaction, 1 as we get to the center of the force). We take the line <code>diff</code> and normalize it to get a "directional" vector, its magnitude (distance) is one, but the angle is still there. We then multiply that by pct * strength to get a line that tells us how to move. This gets added to our force.</p>
 <p>You'll notice that all the code is relatively similar, but with different additions to force. For example, repulsion is just the opposite of attraction:</p>
-<pre><code>		frc.x += diff.x * pct * strength;
-		frc.y += diff.y * pct * strength;</code></pre>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">        frc.x += diff.x * pct * strength;
+        frc.y += diff.y * pct * strength;</code></pre>
 <p>We just move in the oppisite direction. For the clockwise and counter clockwise forces we add the perpindicular of the diff line. The perpindicular of a 2d vector is just simply switching x and y and making one of them negative.</p>
 <p><strong>[more: show example]</strong></p>
 <h3 id="particle-particle-interaciton">particle particle interaciton</h3>
 <p>Now that we have particles interacting with forces, the next step is to give them more understanding of each other. For example, if you have a broad attraciton force, they will all converge on the same point without any respect for their neighbors. The trick is to add a function that allows the particle to feel a force based on their neighbor.</p>
 <p>We've added new functions to the particle object (looking in the h file):</p>
-<pre><code>void addRepulsionForce(particle &amp;p, float radius, float scale);
-void addAttractionForce(particle &amp;p, float radius, float scale);</code></pre>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> addRepulsionForce(particle &amp;p, <span class="dt">float</span> radius, <span class="dt">float</span> scale);
+<span class="dt">void</span> addAttractionForce(particle &amp;p, <span class="dt">float</span> radius, <span class="dt">float</span> scale);</code></pre>
 <p>This looks really similar to the code before, except here we pass in a particle instead of an x and y position. You'll notice that we pass by reference (using &amp;) as opposed to passing by copy. This is because internally we'll alter both the particle who has this function called as well as particle p -- ie, if you calculate A vs B, you don't need to calculate B vs A.</p>
-<pre><code>void particle::addRepulsionForce(particle &amp;p, float radius, float scale){
-	
-	// ----------- (1) make a vector of where this particle p is: 
-	ofVec2f posOfForce;
-	posOfForce.set(p.pos.x,p.pos.y);
-	
-	// ----------- (2) calculate the difference &amp; length 
-	
-	ofVec2f diff	= pos - posOfForce;
-	float length	= diff.length();
-	
-	// ----------- (3) check close enough
-	
-	bool bAmCloseEnough = true;
-    if (radius &gt; 0){
-        if (length &gt; radius){
-            bAmCloseEnough = false;
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> particle::addRepulsionForce(particle &amp;p, <span class="dt">float</span> radius, <span class="dt">float</span> scale){
+    
+    <span class="co">// ----------- (1) make a vector of where this particle p is: </span>
+    ofVec2f posOfForce;
+    posOfForce.set(p.pos.x,p.pos.y);
+    
+    <span class="co">// ----------- (2) calculate the difference &amp; length </span>
+    
+    ofVec2f diff    = pos - posOfForce;
+    <span class="dt">float</span> length    = diff.length();
+    
+    <span class="co">// ----------- (3) check close enough</span>
+    
+    <span class="dt">bool</span> bAmCloseEnough = <span class="kw">true</span>;
+    <span class="kw">if</span> (radius &gt; <span class="dv">0</span>){
+        <span class="kw">if</span> (length &gt; radius){
+            bAmCloseEnough = <span class="kw">false</span>;
         }
     }
-	
-	// ----------- (4) if so, update force
     
-	if (bAmCloseEnough == true){
-		float pct = 1 - (length / radius);  // stronger on the inside
-		diff.normalize();
-		frc.x = frc.x + diff.x * scale * pct;
+    <span class="co">// ----------- (4) if so, update force</span>
+    
+    <span class="kw">if</span> (bAmCloseEnough == <span class="kw">true</span>){
+        <span class="dt">float</span> pct = <span class="dv">1</span> - (length / radius);  <span class="co">// stronger on the inside</span>
+        diff.normalize();
+        frc.x = frc.x + diff.x * scale * pct;
         frc.y = frc.y + diff.y * scale * pct;
-		p.frc.x = p.frc.x - diff.x * scale * pct;
+        p.frc.x = p.frc.x - diff.x * scale * pct;
         p.frc.y = p.frc.y - diff.y * scale * pct;
     }
 }</code></pre>
 <p>The code should look very similar to before, except with these added lines:</p>
-<pre><code>frc.x = frc.x + diff.x * scale * pct;
+<pre class="sourceCode cpp"><code class="sourceCode cpp">frc.x = frc.x + diff.x * scale * pct;
 frc.y = frc.y + diff.y * scale * pct;
 p.frc.x = p.frc.x - diff.x * scale * pct;
 p.frc.y = p.frc.y - diff.y * scale * pct;</code></pre>
 <p>This is modifying both the particle you are calling this on and the particle that is passed in.</p>
 <p>This means we can cut down on the number of particle particle interactions we need to calculate:</p>
-<pre><code>for (int i = 0; i &lt; particles.size(); i++){
-    for (int j = 0; j &lt; i; j++){
-        particles[i].addRepulsionForce(particles[j], 10, 0.4);
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; particles.size(); i++){
+    <span class="kw">for</span> (<span class="dt">int</span> j = <span class="dv">0</span>; j &lt; i; j++){
+        particles[i].addRepulsionForce(particles[j], <span class="dv">10</span>, <span class="fl">0.</span><span class="dv">4</span>);
     }
 }</code></pre>
 <p>you'll notice that this 2d for loop, the inner loop counts up to the outer loop, so when i is 0, we don't even do the inner loop. When i is 1, we compare it to 0 (1 vs 0). When i is 2, we compare it to 0 and 1 (2 vs 0, 2 vs 1). This way we never compare a particle with itself, as that would make no sense (although we might know some poeple in our lives that have a strong self attraction or repulsion).</p>

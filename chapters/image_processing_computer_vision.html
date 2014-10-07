@@ -1,0 +1,499 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="pandoc" name="generator"/>
+<title></title>
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+<link href="../style/bootstrap.css" rel="stylesheet">
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/themes/black-tie/jquery-ui.css" rel="stylesheet">
+<link href="../style/jquery.tocify.css" rel="stylesheet">
+<link href="../style/prettify.css" rel="stylesheet" type="text/css"/>
+<link href="../style/style.css" rel="stylesheet" type="text/css"/>
+<link href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|Merriweather:400,300,300italic,400italic,700,900,700italic,900italic" rel="stylesheet" type="text/css">
+<link href="../octicons/octicons.css" rel="stylesheet">
+<style>  
+  .headerDoc {
+        color: #005580;
+      }
+  }
+  </style>
+</link></link></link></link></link></head>
+<body>
+<span id="side-nav">
+<span class="side-nav-button chapterBtn mega-octicon octicon-book"></span>
+<span class="side-nav-button navBtn mega-octicon octicon-three-bars"></span>
+<span class="side-nav-button infoBtn mega-octicon octicon-info"></span>
+</span>
+<!-- table of content -->
+<div id="toc">
+<span class="closeBtn mega-octicon octicon-x"></span>
+</div></body></html>
+<!-- table of content -->
+<div id="chapters">
+<span class="closeBtn mega-octicon octicon-x"></span>
+chapters
+<ul><li class="group">foreword</li><li><a href="foreword.html">Foreword</a></li><li class="group">basics</li><li><a href="of_philosophy.html">philosophy</a></li><li><a href="cplusplus_basics.html">C++ Language Basics</a></li><li><a href="setup_and_project_structure.html">OF structure</a></li><li><a href="intro_to_graphics.html">Graphics</a></li><li><a href="OOPs!.html">Ooops! = Object Oriented Programming + Classes</a></li><li class="group">approaches</li><li><a href="animation.html">Animation</a></li><li><a href="data_vis.html">Information Visualization Chapter</a></li><li><a href="game_design.html">Experimental Game Development in openFrameworks</a></li><li class="selected"><a href="image_processing_computer_vision.html">Image Processing and Computer Vision</a></li><li class="group">i/o</li><li><a href="hardware.html">hardware</a></li><li><a href="sound.html">Sound</a></li><li><a href="network.html">Network</a></li><li class="group">advanced topics</li><li><a href="advanced_graphics.html">Advanced graphics</a></li><li><a href="math.html">That Math Chapter: From 1D to 4D</a></li><li><a href="memory.html">Memory in C++</a></li><li><a href="threads.html">Threads</a></li><li><a href="ios.html">ofxiOS</a></li><li><a href="c++11.html">C++ 11</a></li><li class="group">project breakdowns</li><li><a href="project_elliot.html">Case Study : Line Segments Space</a></li><li><a href="project_eva.html">Case Study: Choreographies for Humans and Stars</a></li><li><a href="project_joel.html">Case Study: Anthropocene, an interactive film installation for Greenpeace as part of their field at Glastonbury 2013</a></li><li class="group">tools</li><li><a href="version_control_with_git.html">Version control with Git</a></li><li><a href="ofSketch.html">ofSketch</a></li><li><a href="installation_up_4evr_macosx.html">Installation up 4evr - OSX</a></li><li><a href="installation_up_4evr_linux.html">Installation up 4evr - Linux</a></li></ul></div>
+<!-- info about the book -->
+<div id="bookInfo">
+<span class="closeBtn mega-octicon octicon-x"></span>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida, luctus mauris in, congue ante. Phasellus egestas est id velit ornare, eu vehicula augue tincidunt. Aliquam laoreet faucibus turpis eget gravida. Vestibulum pharetra scelerisque leo, eu tincidunt leo tincidunt feugiat. Sed rutrum, felis eget posuere tempus, neque justo pretium libero, quis facilisis mauris turpis nec enim. Sed quis metus massa. Maecenas tincidunt, leo at ultricies interdum, nisl ipsum finibus massa, quis dictum nulla nibh sed urna. Vestibulum rhoncus, nunc sit amet tincidunt interdum, ligula lacus dictum massa, pharetra tristique nisi augue vitae risus.
+</div>
+<div class="row-fluid">
+<div id="chapter">
+<h1 id="image-processing-and-computer-vision">Image Processing and Computer Vision</h1>
+<p>By <a href="http://www.flong.com/" target="_blank">Golan Levin</a></p>
+<p>Edited by <a href="http://brannondorsey.com" target="_blank">Brannon Dorsey</a></p>
+<h2 id="preliminaries-to-image-processing">Preliminaries to Image Processing</h2>
+<h3 id="digital-image-acquisition-and-data-structures">Digital image acquisition and data structures</h3>
+<p>This chapter introduces techniques for manipulating (and extracting certain kinds of information from) <em>raster images</em>. Such images are sometimes also known as <em>bitmap images</em> or <em>pixmap images</em>, though we'll just use the generic term <strong>image</strong> to refer to any array (or <em>buffer</em>) of numbers that represenRat the color values of a rectangular grid of <em>pixels</em> ("picture elements"). In openFrameworks, such buffers come in a variety of flavors, and are used within (and managed by) a wide variety of convenient container objects, as we shall see.</p>
+<h4 id="loading-and-displaying-an-image">Loading and Displaying an Image</h4>
+<p>Image processing begins with, well, <em>an image</em>. Happily, loading and displaying an image is very straightforward in OF. Let's start with this tiny, low-resolution (12x16 pixel) grayscale portrait of Abraham Lincoln:</p>
+<div class="figure">
+<div style="clear:both"><img alt="Small Lincoln image" src="..\images\image_processing_computer_vision/images/lincoln.png"/></div><span class="caption">Small Lincoln image</span>
+</div>
+<p>Below is a simple application for loading and displaying an image, very similar to the <em>imageLoaderExample</em> in the OF examples collection. The header file for our program, <em>ofApp.h</em>, declares an instance of an <code>ofImage</code> object, <em>myImage</em>:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Example 1: Load and display an image.</span>
+<span class="co">// This is ofApp.h</span>
+
+<span class="ot">#pragma once</span>
+<span class="ot">#include "ofMain.h"</span>
+
+<span class="kw">class</span> ofApp : <span class="kw">public</span> ofBaseApp{
+	<span class="kw">public</span>:
+		<span class="dt">void</span> setup();
+		<span class="dt">void</span> draw();
+		ofImage myImage;
+};</code></pre>
+<p>Below is our complete <em>ofApp.cpp</em> file. The Lincoln image is <em>loaded</em> from our hard drive (once) in the <code>setup()</code> function; then we <em>display</em> it (many times per second) in our <code>draw()</code> function. As you can see from the filepath provided to the <code>loadImage()</code> function, the program assumes that the image <em>lincoln.png</em> can be found in a directory called "data" alongside your executable:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Example 1: Load and display an image.</span>
+<span class="co">// This is ofApp.cpp</span>
+
+<span class="ot">#include "ofApp.h"</span>
+
+<span class="dt">void</span> ofApp::setup(){
+	myImage.loadImage(<span class="st">"lincoln.png"</span>);
+	myImage.setImageType(OF_IMAGE_GRAYSCALE);
+}
+
+<span class="dt">void</span> ofApp::draw(){
+	ofBackground(<span class="dv">255</span>);
+	ofSetColor(<span class="dv">255</span>);
+
+	<span class="dt">int</span> imgW = myImage.width;
+	<span class="dt">int</span> imgH = myImage.height;
+	myImage.draw(<span class="dv">10</span>, <span class="dv">10</span>, imgW * <span class="dv">10</span>, imgH * <span class="dv">10</span>);
+}</code></pre>
+<p>Compiling and running the above program displays the following canvas, in which this (very tiny!) image is scaled up by a factor of 10, and rendered so that its upper left corner is positioned at pixel location (10,10). The positioning and scaling of the image are performed by the <code>myImage.draw()</code> command. Note that the image appears "blurry" because, by default, openFrameworks uses <a href="http://en.wikipedia.org/wiki/Linear_interpolation" target="_blank">linear interpolation</a> when displaying upscaled images.</p>
+<div class="figure">
+<div style="clear:both"><img alt="Pixel data diagram" src="..\images\image_processing_computer_vision/images/lincoln-displayed.jpg"/></div><span class="caption">Pixel data diagram</span>
+</div>
+<p>If you're new to working with images in OF, it's worth pointing out that you should try to avoid loading images in the <code>draw()</code> or <code>update()</code> functions, if possible. Why? Well, reading data from disk is one of the slowest things you can ask a computer to do. In many circumstances, you can simply load all the images you'll need just once, when your program is first initialized, in <code>setup()</code>. By contrast, if you're repeatedly loading an image in your <code>draw()</code> loop — the same image, again and again, sixty times per second — you're hurting the performance of your app, and potentially even risking damage to your hard disk.</p>
+<h4 id="where-else-images-come-from">Where (Else) Images Come From</h4>
+<p>In openFrameworks, raster images can come from a wide variety of sources, including (but not limited to):</p>
+<ul>
+<li>an image file (stored in a commonly-used format like .JPEG, .PNG, .TIFF, or .GIF), loaded and decompressed from your hard drive into an <code>ofImage</code>;</li>
+<li>a real-time image stream from a webcam or other video camera (using an <code>ofVideoGrabber</code>);</li>
+<li>a sequence of frames loaded from a digital video file (using an <code>ofVideoPlayer</code>);</li>
+<li>a buffer of pixels grabbed from whatever you've already displayed on your screen, captured with <code>ofImage::grabScreen()</code>;</li>
+<li>a synthetic computer graphic rendering, perhaps obtained from an <code>ofFBO</code> or stored in an <code>ofPixels</code> or <code>ofTexture</code> object;</li>
+<li>a real-time video from a more specialized variety of camera, such as a 1394b Firewire camera (via <code>ofxLibdc</code>), a networked Ethernet camera (via <code>ofxIpCamera</code>), a Canon DSLR (using <code>ofxCanonEOS</code>), or with the help of a variety of other community-contributed addons like <code>ofxQTKitVideoGrabber</code>, <code>ofxRPiCameraVideoGrabber</code>, etc.;</li>
+<li>perhaps more exotically, a <em>depth image</em>, in which pixel values represent <em>distances</em> instead of colors. Depth images can be captured from real-world scenes with special cameras (such as a Microsoft Kinect via the <code>ofxKinect</code> addon), or extracted from synthetic CGI scenes using (for example) <code>ofFBO::getDepthTexture()</code>.</li>
+</ul>
+<p><img alt="We don't have the rights to this image, it's just something I found on the internet. We need something similar" src="images/kinect_depth_image.png"/> <em>An example of a depth image (left) and a corresponding RGB color image (right), captured simultaneously with a Microsoft Kinect. In the depth image, the brightness of a pixel represents its proximity to the camera.</em></p>
+<p>Incidentally, OF makes it easy to <strong>load images directly from the Internet</strong>, by using a URL as the filename argument, as in <code>myImage.loadImage("http://en.wikipedia.org/wiki/File:Example.jpg");</code>. Keep in mind that doing this will load the remotely-stored image <em>synchronously</em>, meaning your program will "block" (or freeze) while it waits for all of the data to download from the web. For an improved user experience, you can also load Internet images <em>asynchronously</em> (in a background thread), using the response provided by <code>ofLoadURLAsync()</code>; a sample implementation of this can be found in the openFrameworks <em>imageLoaderWebExample</em> graphics example. Now that you can load images stored on the Internet, you can fetch images <em>computationally</em> using fun APIs (like those of <a href="https://temboo.com/library/" target="_blank">Temboo</a>, <a href="http://instagram.com/developer/" target="_blank">Instagram</a> or <a href="https://www.flickr.com/services/api/" target="_blank">Flickr</a>), or from dynamic online sources such as live traffic cameras.</p>
+<h4 id="acquiring-and-displaying-a-webcam-image">Acquiring and Displaying a Webcam Image</h4>
+<p>The procedure for <strong>acquiring a video stream</strong> from a live webcam or digital movie file is no more difficult than loading an <code>ofImage</code>. The main conceptual difference is that the image data contained within an <code>ofVideoGrabber</code> or <code>ofVideoPlayer</code> happens to be continually refreshed, usually about 30 times per second (or at the framerate of the footage).</p>
+<p>The following program (which you can find elaborated in the OF <em>videoGrabberExample</em>) shows the basic procedure. In this example below, for some added fun, we also retrieve the buffer of data that contains the <code>ofVideoGrabber</code>'s pixels, then "invert" this data (to produce a "photographic negative") and display it with an <code>ofTexture</code>.</p>
+<p>The header file for our app declares an <code>ofVideoGrabber</code>, which we will use to acquire video data from our computer's default webcam. We also declare a buffer of unsigned chars to store the inverted video frame, and the <code>ofTexture</code> which we'll use to display it:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Example 2. An application to capture, display,</span>
+<span class="co">// and invert live video from a webcam.</span>
+<span class="co">// This is ofApp.h</span>
+
+<span class="ot">#pragma once</span>
+<span class="ot">#include "ofMain.h"</span>
+
+<span class="kw">class</span> ofApp : <span class="kw">public</span> ofBaseApp{
+	<span class="kw">public</span>:
+	
+		<span class="dt">void</span> setup();
+		<span class="dt">void</span> update();
+		<span class="dt">void</span> draw();
+
+		ofVideoGrabber  	myVideoGrabber;
+		ofTexture           myTexture;
+
+		<span class="dt">unsigned</span> <span class="dt">char</span>*      invertedVideoData;
+		<span class="dt">int</span> 				camWidth;
+		<span class="dt">int</span> 				camHeight;
+};</code></pre>
+<p>Does the <code>unsigned char*</code> declaration look unfamiliar? It's important to recognize and understand, because this is a nearly universal way of storing and exchanging image data. The <code>unsigned</code> keyword means that the values which describe the colors in our image are exclusively positive numbers. The <code>char</code> means that each color component of each pixel is stored in a single 8-bit number—a byte, with values ranging from 0 to 255—which for many years was also the data type in which <em>char</em>acters were stored. And the <code>*</code> means that the data named by this variable is not just a single unsigned char, but rather, an <em>array</em> of unsigned chars (or more accurately, a <em>pointer</em> to a buffer of unsigned chars). For more information about such datatypes, see Chapter 9, <em>Memory in C++</em>.</p>
+<p>Below is the complete code of our webcam-grabbing .cpp file. As you might expect, the <code>ofVideoGrabber</code> object provides many more options and settings, not shown here. These allow you to do things like listing and selecting from available camera devices; setting your capture dimensions and framerate; and (depending on your hardware and drivers) adjusting parameters like camera exposure and contrast.</p>
+<p>Note that the example segregates our heavy computation into <code>update()</code>, and rendering our graphics into <code>draw()</code>. This is a recommended pattern for structuring your code.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Example 2. An application to capture, invert,</span>
+<span class="co">// and display live video from a webcam.</span>
+<span class="co">// This is ofApp.cpp</span>
+
+<span class="ot">#include "ofApp.h"</span>
+
+<span class="dt">void</span> ofApp::setup(){
+
+	<span class="co">// Set capture dimensions of 320x240, a common video size.</span>
+	camWidth  = <span class="dv">320</span>;
+	camHeight = <span class="dv">240</span>;
+
+	<span class="co">// Open an ofVideoGrabber for the default camera</span>
+	myVideoGrabber.initGrabber (camWidth,camHeight);
+
+	<span class="co">// Create resources to store and display another copy of the data</span>
+	invertedVideoData = <span class="kw">new</span> <span class="dt">unsigned</span> <span class="dt">char</span> [camWidth*camHeight*<span class="dv">3</span>];
+	myTexture.allocate (camWidth,camHeight, GL_RGB);
+}
+
+<span class="dt">void</span> ofApp::update(){
+
+	<span class="co">// Ask the grabber to refresh its data.</span>
+	myVideoGrabber.update();
+
+	<span class="co">// If the grabber indeed has fresh data,</span>
+	<span class="kw">if</span> (myVideoGrabber.isFrameNew()){
+
+		<span class="co">// Obtain a pointer to the grabber's image data.</span>
+		<span class="dt">unsigned</span> <span class="dt">char</span>* pixelData = myVideoGrabber.getPixels();
+
+		<span class="co">// For every byte of the RGB image data,</span>
+		<span class="dt">int</span> nTotalBytes = camWidth*camHeight*<span class="dv">3</span>;
+		<span class="kw">for</span> (<span class="dt">int</span> i=<span class="dv">0</span>; i&lt;nTotalBytes; i++){
+
+			<span class="co">// pixelData[i] is the i'th byte of the image;</span>
+			<span class="co">// subtract it from 255, to make a "photo negative"</span>
+			invertedVideoData[i] = <span class="dv">255</span> - pixelData[i];
+		}
+
+		<span class="co">// Now stash the inverted data in an ofTexture</span>
+		myTexture.loadData (invertedVideoData, camWidth,camHeight, GL_RGB);
+	}
+}
+
+<span class="dt">void</span> ofApp::draw(){
+	ofBackground(<span class="dv">100</span>,<span class="dv">100</span>,<span class="dv">100</span>);
+	ofSetColor(<span class="dv">255</span>,<span class="dv">255</span>,<span class="dv">255</span>);
+
+	<span class="co">// Draw the grabber, and next to it, the "negative" ofTexture.</span>
+	myVideoGrabber.draw(<span class="dv">10</span>,<span class="dv">10</span>);
+	myTexture.draw(<span class="dv">340</span>, <span class="dv">10</span>);
+}</code></pre>
+<p>This application continually displays the live camera feed, and also presents a live, "filtered" (photo negative) version. Here's the result, using my laptop's webcam:</p>
+<div class="figure">
+<div style="clear:both"><img alt="Video grabber screenshot" src="..\images\image_processing_computer_vision/images/videograbber.png"/></div><span class="caption">Video grabber screenshot</span>
+</div>
+<p>Acquiring frames from a Quicktime movie or other digital video file stored on disk is an almost identical procedure. See the OF <em>videoPlayerExample</em> implementation or <code>ofVideoGrabber</code> <a href="http://openframeworks.cc/documentation/video/ofVideoGrabber.html" target="_blank">documentation</a> for details.</p>
+<p>A common pattern among developers of interactive computer vision systems is to enable easy switching between a pre-stored "sample" video of your scene, and video from a live camera grabber. That way, you can test and refine your processing algorithms in the comfort of your hotel room, and then switch to "real" camera input when you're back at the installation site. A hacky if effective example of this pattern can be found in the openFrameworks <em>opencvExample</em>, in the addons example directory, where the switch is built using a <code>#define</code> <a href="http://www.cplusplus.com/doc/tutorial/preprocessor/" target="_blank">preprocessor directive</a>:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">    <span class="co">//...</span>
+	<span class="ot">#ifdef _USE_LIVE_VIDEO</span>
+        myVideoGrabber.initGrabber(<span class="dv">320</span>,<span class="dv">240</span>);
+	<span class="ot">#else</span>
+        myVideoPlayer.loadMovie(<span class="st">"pedestrians.mov"</span>);
+        myVideoPlayer.play();
+	<span class="ot">#endif</span>
+	<span class="co">//...</span></code></pre>
+<p>Uncommenting the <code>//#define _USE_LIVE_VIDEO</code> line in the .h file of the <em>opencvExample</em> forces the compiler to attempt to use a webcam instead of the pre-stored sample video.</p>
+<h4 id="pixels-in-memory">Pixels in Memory</h4>
+<p>To begin our study of image processing and computer vision, we'll need to do more than just load and display images; we'll need to <em>access, manipulate and analyze the numeric data represented by their pixels</em>. It's therefore worth reviewing how pixels are stored in computer memory. Below is a simple illustration of the grayscale image buffer which stores our image of Abraham Lincoln. Each pixel's brightness is represented by a single 8-bit number, whose range is from 0 (black) to 255 (white):</p>
+<div class="figure">
+<div style="clear:both"><img alt="Pixel data diagram" src="..\images\image_processing_computer_vision/images/lincoln_pixel_values.png"/></div><span class="caption">Pixel data diagram</span>
+</div>
+<p>In point of fact, pixel values are almost universally stored, at the hardware level, in a <em>one-dimensional array</em>. For example, the data from the image above is stored in a manner similar to this long list of unsigned chars:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">{<span class="dv">157</span>, <span class="dv">153</span>, <span class="dv">174</span>, <span class="dv">168</span>, <span class="dv">150</span>, <span class="dv">152</span>, <span class="dv">129</span>, <span class="dv">151</span>, <span class="dv">172</span>, <span class="dv">161</span>, <span class="dv">155</span>, <span class="dv">156</span>,
+ <span class="dv">155</span>, <span class="dv">182</span>, <span class="dv">163</span>,  <span class="dv">74</span>,  <span class="dv">75</span>,  <span class="dv">62</span>,  <span class="dv">33</span>,  <span class="dv">17</span>, <span class="dv">110</span>, <span class="dv">210</span>, <span class="dv">180</span>, <span class="dv">154</span>,
+ <span class="dv">180</span>, <span class="dv">180</span>,  <span class="dv">50</span>,  <span class="dv">14</span>,  <span class="dv">34</span>,   <span class="dv">6</span>,  <span class="dv">10</span>,  <span class="dv">33</span>,  <span class="dv">48</span>, <span class="dv">106</span>, <span class="dv">159</span>, <span class="dv">181</span>,
+ <span class="dv">206</span>, <span class="dv">109</span>,   <span class="dv">5</span>, <span class="dv">124</span>, <span class="dv">131</span>, <span class="dv">111</span>, <span class="dv">120</span>, <span class="dv">204</span>, <span class="dv">166</span>,  <span class="dv">15</span>,  <span class="dv">56</span>, <span class="dv">180</span>,
+ <span class="dv">194</span>,  <span class="dv">68</span>, <span class="dv">137</span>, <span class="dv">251</span>, <span class="dv">237</span>, <span class="dv">239</span>, <span class="dv">239</span>, <span class="dv">228</span>, <span class="dv">227</span>,  <span class="dv">87</span>,  <span class="dv">71</span>, <span class="dv">201</span>,
+ <span class="dv">172</span>, <span class="dv">105</span>, <span class="dv">207</span>, <span class="dv">233</span>, <span class="dv">233</span>, <span class="dv">214</span>, <span class="dv">220</span>, <span class="dv">239</span>, <span class="dv">228</span>,  <span class="dv">98</span>,  <span class="dv">74</span>, <span class="dv">206</span>,
+ <span class="dv">188</span>,  <span class="dv">88</span>, <span class="dv">179</span>, <span class="dv">209</span>, <span class="dv">185</span>, <span class="dv">215</span>, <span class="dv">211</span>, <span class="dv">158</span>, <span class="dv">139</span>,  <span class="dv">75</span>,  <span class="dv">20</span>, <span class="dv">169</span>,
+ <span class="dv">189</span>,  <span class="dv">97</span>, <span class="dv">165</span>,  <span class="dv">84</span>,  <span class="dv">10</span>, <span class="dv">168</span>, <span class="dv">134</span>,  <span class="dv">11</span>,  <span class="dv">31</span>,  <span class="dv">62</span>,  <span class="dv">22</span>, <span class="dv">148</span>,
+ <span class="dv">199</span>, <span class="dv">168</span>, <span class="dv">191</span>, <span class="dv">193</span>, <span class="dv">158</span>, <span class="dv">227</span>, <span class="dv">178</span>, <span class="dv">143</span>, <span class="dv">182</span>, <span class="dv">106</span>,  <span class="dv">36</span>, <span class="dv">190</span>,
+ <span class="dv">205</span>, <span class="dv">174</span>, <span class="dv">155</span>, <span class="dv">252</span>, <span class="dv">236</span>, <span class="dv">231</span>, <span class="dv">149</span>, <span class="dv">178</span>, <span class="dv">228</span>,  <span class="dv">43</span>,  <span class="dv">95</span>, <span class="dv">234</span>,
+ <span class="dv">190</span>, <span class="dv">216</span>, <span class="dv">116</span>, <span class="dv">149</span>, <span class="dv">236</span>, <span class="dv">187</span>,  <span class="dv">86</span>, <span class="dv">150</span>,  <span class="dv">79</span>,  <span class="dv">38</span>, <span class="dv">218</span>, <span class="dv">241</span>,
+ <span class="dv">190</span>, <span class="dv">224</span>, <span class="dv">147</span>, <span class="dv">108</span>, <span class="dv">227</span>, <span class="dv">210</span>, <span class="dv">127</span>, <span class="dv">102</span>,  <span class="dv">36</span>, <span class="dv">101</span>, <span class="dv">255</span>, <span class="dv">224</span>,
+ <span class="dv">190</span>, <span class="dv">214</span>, <span class="dv">173</span>,  <span class="dv">66</span>, <span class="dv">103</span>, <span class="dv">143</span>,  <span class="dv">96</span>,  <span class="dv">50</span>,   <span class="dv">2</span>, <span class="dv">109</span>, <span class="dv">249</span>, <span class="dv">215</span>,
+ <span class="dv">187</span>, <span class="dv">196</span>, <span class="dv">235</span>,  <span class="dv">75</span>,   <span class="dv">1</span>,  <span class="dv">81</span>,  <span class="dv">47</span>,   <span class="dv">0</span>,   <span class="dv">6</span>, <span class="dv">217</span>, <span class="dv">255</span>, <span class="dv">211</span>,
+ <span class="dv">183</span>, <span class="dv">202</span>, <span class="dv">237</span>, <span class="dv">145</span>,   <span class="dv">0</span>,   <span class="dv">0</span>,  <span class="dv">12</span>, <span class="dv">108</span>, <span class="dv">200</span>, <span class="dv">138</span>, <span class="dv">243</span>, <span class="dv">236</span>,
+ <span class="dv">195</span>, <span class="dv">206</span>, <span class="dv">123</span>, <span class="dv">207</span>, <span class="dv">177</span>, <span class="dv">121</span>, <span class="dv">123</span>, <span class="dv">200</span>, <span class="dv">175</span>,  <span class="dv">13</span>,  <span class="dv">96</span>, <span class="dv">218</span>};</code></pre>
+<p>This way of storing image data may run counter to your expectations, since the data certainly <em>appears</em> to be two-dimensional when it is displayed. Yet, this is the case, since computer memory consists simply of an ever-increasing linear list of address spaces.</p>
+<p>Note how this data includes no details about the image's width and height. Should this list of values be interpreted as a grayscale image which is 12 pixels wide and 16 pixels tall, or 8x24, or 3x64? Could it be interpreted as a color image? Such 'meta-data' is specified elsewhere — generally in a container object like an <code>ofImage</code>.</p>
+<h4 id="grayscale-pixels-and-array-indices">Grayscale Pixels and Array Indices</h4>
+<p>It's important to understand how pixel data is stored in computer memory. Each pixel has an <em>address</em>, indicated by a number (whose counting begins with zero):</p>
+<div class="figure">
+<div style="clear:both"><img alt="Based on Shiffman's image in the Processing tutorial" src="..\images\image_processing_computer_vision/images/pixels_in_memory.png"/></div><span class="caption">Based on Shiffman's image in the Processing tutorial</span>
+</div>
+<p>Observe how the (one-dimensional) list of values have been distributed to successive (two-dimensional) pixel locations in the image — wrapping over the right edge just like English text.</p>
+<p>It frequently happens that you'll need to determine the array-index of a given pixel <em>(x,y)</em> in an image that is stored in an <code>unsigned char*</code> buffer. This little task comes up often enough that it's worth committing the following pattern to memory:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Given:</span>
+<span class="co">// unsigned char *buffer, an array storing a one-channel image</span>
+<span class="co">// int x, the horizontal coordinate (column) of your query pixel</span>
+<span class="co">// int y, the vertical coordinate (row) of your query pixel</span>
+<span class="co">// int imgW, the width of your image</span>
+
+<span class="dt">int</span> arrayIndex = y*imgW + x;
+
+<span class="co">// Now you can GET values at location (x,y), e.g.:</span>
+<span class="dt">unsigned</span> <span class="dt">char</span> pixelValueAtXY = buffer[arrayIndex];
+
+<span class="co">// And you can also SET values at that location, e.g.:</span>
+buffer[arrayIndex] = pixelValueAtXY;</code></pre>
+<p>Reciprocally, you can also fetch the x and y locations of a pixel corresponding to a given array index:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Given:</span>
+<span class="co">// A one-channel (e.g. grayscale) image</span>
+<span class="co">// int arrayIndex, an index in that image's array of pixels</span>
+<span class="co">// int imgW, the width of the image</span>
+
+<span class="dt">int</span> y = arrayIndex / imgW; <span class="co">// NOTE, this is integer division!</span>
+<span class="dt">int</span> x = arrayIndex % imgW;</code></pre>
+<p>Most of the time, you'll be working with image data that is stored in a higher-level container object, such as an <code>ofImage</code>. There are <em>two</em> ways to get the values of pixel data stored in such a container. In one method, we can ask the image for its array of unsigned char pixel data, using <code>.getPixels()</code>, and then fetch the value we want from this array. Many image containers, such as <code>ofVideoGrabber</code>, also support a <code>.getPixels()</code> function.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">int</span> arrayIndex = y*imgW + x;
+<span class="dt">unsigned</span> <span class="dt">char</span>* myImagePixelBuffer = myImage.getPixels();
+<span class="dt">unsigned</span> <span class="dt">char</span> pixelValueAtXY = myImagePixelBuffer[arrayIndex];</code></pre>
+<p>The second method is a high-level convenience operator that returns the color stored at a pixel location:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">ofColor colorAtXY = myImage.getColor(x, y);
+<span class="dt">float</span> brightnessOfColorAtXY = colorAtXY.getBrightness();</code></pre>
+<h4 id="finding-the-brightest-pixel-in-an-image">Finding the Brightest Pixel in an Image</h4>
+<p>Using what we know now, we can write a simple computer-vision program that locates the brightest pixel in an image. This elementary concept was used to great artistic effect by the artist collective, Graffiti Research Lab (GRL), in the openFrameworks application they built for their 2007 project <a href="http://www.graffitiresearchlab.com/blog/projects/laser-tag/" target="_blank"><em>L.A.S.E.R Tag</em></a>. The concept of <em>L.A.S.E.R Tag</em> was to allow people to draw projected graffiti on a large building facade, using a laser pointer. The bright spot from the laser pointer was tracked by code similar to that shown below, and used as the basis for creating projected graphics.</p>
+<div class="figure">
+<div style="clear:both"><img alt="Laser Tag by GRL" src="..\images\image_processing_computer_vision/images/laser_tag.jpg"/></div><span class="caption">Laser Tag by GRL</span>
+</div>
+<p>The .h file for our app loads an ofImage (<code>laserTagImage</code>) of someone pointing a laser at the building. (In the real application, a live camera was used.)</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Example 3. Finding the Brightest Pixel in an Image</span>
+<span class="co">// This is ofApp.h</span>
+
+<span class="ot">#pragma once</span>
+<span class="ot">#include "ofMain.h"</span>
+
+<span class="kw">class</span> ofApp : <span class="kw">public</span> ofBaseApp{
+	<span class="kw">public</span>:
+		<span class="dt">void</span> setup();
+		<span class="dt">void</span> draw();
+		ofImage laserTagImage;
+};</code></pre>
+<p>Here's the .cpp file:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Example 3. Finding the Brightest Pixel in an Image</span>
+<span class="co">// This is ofApp.cpp</span>
+
+<span class="ot">#include "ofApp.h"</span>
+
+<span class="co">//---------------------</span>
+<span class="dt">void</span> ofApp::setup(){
+	laserTagImage.loadImage(<span class="st">"images/laser_tag.jpg"</span>);
+}
+
+<span class="co">//---------------------</span>
+<span class="dt">void</span> ofApp::draw(){
+	ofBackground(<span class="dv">255</span>);
+
+	<span class="dt">int</span> w = laserTagImage.getWidth();
+	<span class="dt">int</span> h = laserTagImage.getHeight();
+
+	<span class="dt">float</span> maxBrightness = <span class="dv">0</span>;  <span class="co">// these are used in the search</span>
+	<span class="dt">int</span>   maxBrightnessX = <span class="dv">0</span>; <span class="co">// for the brightest location</span>
+	<span class="dt">int</span>   maxBrightnessY = <span class="dv">0</span>;
+
+	<span class="co">// Search through every pixel. If it is brighter than any</span>
+	<span class="co">// we've seen before, store its brightness and coordinates.</span>
+	<span class="kw">for</span> (<span class="dt">int</span> y=<span class="dv">0</span>; y&lt;h; y++) {
+		<span class="kw">for</span>(<span class="dt">int</span> x=<span class="dv">0</span>; x&lt;w; x++) {
+			ofColor colorAtXY = laserTagImage.getColor(x, y);
+			<span class="dt">float</span> brightnessOfColorAtXY = colorAtXY.getBrightness();
+			<span class="kw">if</span> (brightnessOfColorAtXY &gt; maxBrightness){
+				maxBrightness = brightnessOfColorAtXY;
+				maxBrightnessX = x;
+				maxBrightnessY = y;
+			}
+		}
+	}
+
+	<span class="co">// Draw the image.</span>
+	ofSetColor (<span class="dv">255</span>);
+	laserTagImage.draw(<span class="dv">0</span>,<span class="dv">0</span>);
+
+	<span class="co">// Draw a circle at the brightest location.</span>
+	ofNoFill();
+	ofEllipse (maxBrightnessX, maxBrightnessY, <span class="dv">40</span>,<span class="dv">40</span>);
+}</code></pre>
+<p>Our application locates the bright spot of the laser (which, luckily for us, is the brightest part of the scene) and draws a circle around it. Of course, now that we know where the brightest (or darkest) spot is, we can can develop many interesting applications, such as sun trackers, turtle trackers...</p>
+<div class="figure">
+<div style="clear:both"><img alt="Laser Tag by GRL" src="..\images\image_processing_computer_vision/images/laser_tag_result.jpg"/></div><span class="caption">Laser Tag by GRL</span>
+</div>
+<p>Being able to locate the brightest pixel in an image has other uses, too. For example, in a depth image (such as produced by a Kinect sensor), the brightest pixel corresponds to the <em>foremost point</em>—or the nearest object to the camera. This can be extremely useful if you're making an interactive installation that tracks a user's hand.</p>
+<div class="figure">
+<div style="clear:both"><img alt="Not mine" src="..\images\image_processing_computer_vision/images/kinect-forepoint.jpg"/></div><span class="caption">Not mine</span>
+</div>
+<p><em>The brightest pixel in a depth image corresponds to the nearest object to the camera.</em></p>
+<p>Unsurprisingly, tracking <em>more than one</em> bright point requires more sophisticated forms of processing. If you're able to design and control the tracking environment, one simple yet effective way to track up to three objects is to search for the reddest, greenest and bluest pixels in the scene. Zachary Lieberman used a technique similar to this in his <a href="https://vimeo.com/5233789" target="_blank"><em>IQ Font</em></a> collaboration with typographers Pierre &amp; Damien et al., in which letterforms were created by tracking the movements of a specially-marked sports car.</p>
+<div class="figure">
+<div style="clear:both"><img alt="Not mine" src="..\images\image_processing_computer_vision/images/iq_font.jpg"/></div><span class="caption">Not mine</span>
+</div>
+<h4 id="three-channel-rgb-images.">Three-Channel (RGB) Images.</h4>
+<p>Our Lincoln portrait image shows an 8-bit, 1-channel image. Each pixel uses a single round number (technically, an unsigned char) to represent a single luminance value. But other data types and formats are possible.</p>
+<p>For example, it is common for color images to be represented by 8-bit, <em>3-channel</em> images. In this case, each pixel brings together 3 bytes' worth of information: one byte each for red, green and blue intensities. In computer memory, it is common for these values to be interleaved R-G-B. As you can see, color images necessarily contain three times as much data.</p>
+<div class="figure">
+<div style="clear:both"><img alt="Not mine" src="..\images\image_processing_computer_vision/images/interleaved.jpg"/></div><span class="caption">Not mine</span>
+</div>
+<p>Take a very close look at your LCD screen, and you'll see how this way of storing the data is directly motivated by the layout of your display's phosphors:</p>
+<div class="figure">
+<div style="clear:both"><img alt="Not mine" src="..\images\image_processing_computer_vision/images/rgb-screen.jpg"/></div><span class="caption">Not mine</span>
+</div>
+<p>Because the color data are interleaved, accessing pixel values in buffers containing RGB data is slightly more complex. Here's how you can retrieve the values representing the individual red, green and blue components of pixel at a given (x,y) location:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Given:</span>
+<span class="co">// unsigned char *buffer, an array storing an RGB image</span>
+<span class="co">// (assuming interleaved data in RGB order!)</span>
+<span class="co">// int x, the horizontal coordinate (column) of your query pixel</span>
+<span class="co">// int y, the vertical coordinate (row) of your query pixel</span>
+<span class="co">// int imgWidth, the width of the image</span>
+
+<span class="dt">int</span> rArrayIndex = (y*imgWidth*<span class="dv">3</span>) + (x*<span class="dv">3</span>);
+<span class="dt">int</span> gArrayIndex = (y*imgWidth*<span class="dv">3</span>) + (x*<span class="dv">3</span>) + <span class="dv">1</span>;
+<span class="dt">int</span> bArrayIndex = (y*imgWidth*<span class="dv">3</span>) + (x*<span class="dv">3</span>) + <span class="dv">2</span>;
+
+<span class="co">// Now you can get and set values at location (x,y), e.g.:</span>
+<span class="dt">unsigned</span> <span class="dt">char</span> redValueAtXY   = buffer[rArrayIndex];
+<span class="dt">unsigned</span> <span class="dt">char</span> greenValueAtXY = buffer[gArrayIndex];
+<span class="dt">unsigned</span> <span class="dt">char</span> blueValueAtXY  = buffer[bArrayIndex];</code></pre>
+<h4 id="other-kinds-of-image-formats-and-containers">Other Kinds of Image Formats and Containers</h4>
+<p>8-bit 1-channel and 8-bit 3-channel images are the most common image formats you'll find. In the wide world of image processing algorithms, however, you'll eventually encounter an exotic variety of other types of images, including: - 8-bit <em>palettized</em> images, in which each pixel stores an index into an array of (up to) 256 possible colors; - 16-bit (unsigned short) images, in which each channel uses <em>two</em> bytes to store each of the color values of each pixel, with a number that ranges from 0-65535; - 32-bit (float) images, in which each color channel's data is represented by floating point numbers.</p>
+<p>For a practical example, consider Microsoft's popular Kinect sensor, which produces a depth image whose values range from 0 to 1090. Clearly, that's wider than the range of 8-bit data (from 0 to 255) one might typically encounter; in fact, it's approximately 11 bits of resolution. To accommodate this, the <code>ofxKinect</code> addon employs a 16-bit image to store this information without losing precision. Likewise, the precision of 32-bit floats is almost mandatory for computing high-quality video composites.</p>
+<p>You'll also find: - 2-channel images (commonly used for luminance plus transparency); - 3-channel images (generally for RGB data, but occasionally used to store images in other color spaces, such as HSB or YUV); - 4-channel images (commonly for RGBA images, but occasionally for CMYK); - <em>Bayer images</em>, in which the RGB color channels are not interleaved R-G-B-R-G-B-R-G-B... but instead appear in a unique checkerboard pattern.</p>
+<p>It gets even more exotic. <a href="https://www.mapbox.com/blog/putting-landsat-8-bands-to-work/" target="_blank">"Hyperspectral" imagery from the Landsat 8 satellite</a>, for example, has 11 channels, including bands for ultraviolet, near infrared, and thermal (deep) infrared!</p>
+<p>In openFrameworks, images can be stored in a variety of different <em>container classes</em>, which allow their data to be used (captured, displayed, manipulated, and stored) in different ways and contexts. Some of the more common containers you may encounter are:</p>
+<ul>
+<li><strong>unsigned char</strong>* An array of unsigned chars, this is the raw format used for storing buffers of pixel data. It's not very smart, but it's often useful for exchanging data with different libraries. Many image processing textbooks will assume your data is stored this way.</li>
+<li><strong>ofPixels</strong> This is a container for pixel data which lives inside each ofImage, as well as other classes like ofVideoGrabber. It's a wrapper around a buffer that includes additional information like width and height.</li>
+<li><strong>ofImage</strong> The <code>ofImage</code> is the most common object for loading, saving and displaying static images in openFrameworks. Loading a file into the ofImage allocates an (internal) ofPixels object to store the image data. ofImage objects are not merely containers, but also support methods for displaying their pixel data.</li>
+<li><strong>ofxCvImage</strong> This is a container for image data used by the ofxOpenCV addon for openFrameworks, which supports certain functionality from the popular OpenCV library for filtering, thresholding, and other image manipulations.</li>
+<li><strong>cv::Mat</strong> This is the data structure used by OpenCV to store image information. It's not used in openFrameworks, but if you work a lot with OpenCV, you'll often find yourself placing and extracting data from this format.</li>
+</ul>
+<p>To the greatest extent possible, the designers of openFrameworks (and OF addons for image processing, like ofxOpenCV and ofxCv) have provided simple operators to help make it easy to exchange data between these containers.</p>
+<h4 id="rgb-grayscale-and-other-color-space-conversions">RGB, grayscale, and other color space conversions</h4>
+<p>Many computer vision algorithms (though not all!) are commonly performed on grayscale or monochome images. Converting color images to grayscale can significantly improve the speed of many image processing routines, because it reduces both the number of calculations as well as the amount of memory required to process the data. Except where stated otherwise, <em>all of the examples in this chapter assume that you're working with monochrome images</em>. Here's some simple code to convert a color image (e.g. captured from a webcam) into a grayscale version:</p>
+<p><code>[Code to convert RGB to grayscale using openFrameworks]</code></p>
+<p><code>[Code to convert RGB to grayscale using ofxCV]</code></p>
+<p><code>[Code to convert RGB to grayscale using OpenCV]</code></p>
+<p>Of course, there are times when</p>
+<h3 id="image-arithmetic-mathematical-operations-on-images">Image arithmetic: mathematical operations on images</h3>
+<p>A core part of the workflow of computer vision is <em>image arithmetic</em>. These are the basic mathematical operations we all know -- addition, subtraction, multiplication, and division -- but interpreted in the image domain. Here are two very simple examples:</p>
+<p><code>[Code to add a constant value to an image]</code></p>
+<p><code>[Code to multiply an image by a constant]</code></p>
+<p>TIP: Watch out for blowing out the range of your data types.</p>
+<p>When assume that these operations are performed <em>pixelwise</em> -- meaning, for every pixel in an image. When</p>
+<p>In the examples presented here, for the sake of simplicity, we'll assume that the images upon which we'll perform these operations are all the same size -- for example, 640x480 pixels, a typical capture size for many webcams. We'll also assume that these images are monochrome or grayscale.</p>
+<ul>
+<li>adding two images together</li>
+<li>subtracting two images</li>
+<li>multiplying an image by a constant</li>
+<li>mentioning ROI</li>
+<li>Example: creating an average of several images (e.g. Jason Salavon)</li>
+<li>Example: creating a running average</li>
+<li>Example: creating a circular alpha-mask from a computed Blinn spot</li>
+</ul>
+<h3 id="filtering-and-noise-removal-convolution-filtering">Filtering and Noise Removal Convolution Filtering</h3>
+<ul>
+<li>Blurring an image</li>
+<li>Edge detection</li>
+<li>Median filtering</li>
+<li>Advanced sidebar: dealing with boundary conditions</li>
+</ul>
+<p>======================================================== 3. Scenario I. Basic Blobs (e.g. Manual Input Sessions)</p>
+<p>3.1. The Why - Some examples of projects that use blob-tracking - and some scenarios that call for it.</p>
+<h3 id="detecting-and-locating-presence-and-motion">3.2. Detecting and Locating Presence and Motion</h3>
+<h4 id="detecting-presence-with-background-subtraction">3.2.1. Detecting presence with Background subtraction</h4>
+<p>sfdflkj #### 3.2.2. Detecting motion with frame-differencing sfdflkj #### 3.2.3. Binarization, blob detection and contour extraction sfdflkj - Area thresholds for contour extraction (min plausible area, max plausible area, as % of capture size) - Finding negative vs. positive contours</p>
+<h3 id="image-processing-refinements">3.3. Image Processing Refinements</h3>
+<h4 id="using-a-running-average-of-background">3.3.1. Using a running average of background</h4>
+<h4 id="erosion-dilation-median-to-remove-noise-after-binarization">3.3.2. Erosion, dilation, median to remove noise after binarization</h4>
+<h4 id="combining-presence-and-motion-in-a-weighted-average">3.3.3. Combining presence and motion in a weighted average</h4>
+<h4 id="compensating-for-perspectival-distortion-and-lens-distortion">3.3.4. Compensating for perspectival distortion and lens distortion</h4>
+<h3 id="thresholding-refinements">3.4. Thresholding Refinements</h3>
+<ul>
+<li>Some techniques for automatic threshold detection</li>
+<li>Dynamic thresholding (per-pixel thresholding)</li>
+</ul>
+<p>3.5. The Vector space: Extracting information from Blob Contours - Area, Perimeter, Centroids, Bounding box - Calculcating blob orientation (central axis) - Locating corners in contours, estimating local curvature - 1D Filtering of contours to eliminate noise, i.e local averaging. - Other shape metrics; shape recognition</p>
+<p>3.6. Using Kinect depth images - Finding the "fore-point" (foremost point) - Background subtraction with depth images - Hole-filling in depth images - Computing normals from depth gradients</p>
+<p>3.7. Suggestions for further experimentation: - Tracking multiple blobs with ofxCv.tracker - Box2D polygons using OpenCV contours, e.g. https://vimeo.com/9951522</p>
+<p>Automatic thresholding is</p>
+<p>======================================================== 4. Scenario II. Face Tracking.</p>
+<p>4.1. Overview Some examples of projects that use face-tracking - <em><a href="https://vimeo.com/29348533" target="_blank">Face Substitution</a></em> by Kyle McDonald &amp; Arturo Castro (2011). The classic - <em><a href="http://www.onformative.com/lab/googlefaces/" target="_blank">Google Faces</a></em> by Onformative (2012). This project, which identifies face-like features in Google Earth satellite imagery, explores what Greg Borenstein has called <em>machine pareidolia</em> -- the possibility that computer algorithms can "hallucinate" faces in everyday images.</p>
+<h3 id="a-basic-face-detector.">A basic face detector.</h3>
+<p>In this section we'll which implements face detection using the classic "Viola-Jones" face detector that comes with OpenCV. - Face detection with classic OpenCV viola-Jones detector - How it works, and considerations when using it. - cvDazzle;</p>
+<p>How does the Viola-Jones face-tracker work?</p>
+<p>The <a href="http://cvdazzle.com/" target="_blank">cvDazzle</a> project by Adam Harvey</p>
+<p>Ada writes: "OpenCV is one of the most widely used face detectors. This algorithm performs best for frontal face imagery and excels at computational speed. It's ideal for real-time face detection and is used widely in mobile phone apps, web apps, robotics, and for scientific research.</p>
+<p>OpenCV is based on the the Viola-Jones algorithm. This video shows the process used by the Viola Jones algorithm, a cascading set of features that scans across an image at increasing sizes. By understanding how the algorithm detects a face, the process of designing an "anti-face" becomes more intuitive."</p>
+<h4 id="sidebar">SIDEBAR</h4>
+<blockquote>
+<p><em>Orientation-dependence in the OpenCV face detector: Bug or Feature?</em> - Kyle &amp; Aram ("How to Avoid Facial Recognition"</p>
+</blockquote>
+<p>4.3. Advanced face analysis with the Saraghi FaceTracker</p>
+<h3 id="suggestions-for-further-experimentation">4.4. Suggestions for Further Experimentation</h3>
+<p>Now that you can locate faces in images and video, consider using the following exercises as starting-points for further exploration:</p>
+<ul>
+<li>Make a face-controlled puppet</li>
+<li>Mine an image database for faces</li>
+<li>Make a kinetic sculpture that points toward a visitor's face.</li>
+</ul>
+<h3 id="suggestions-for-further-experimentation-1">Suggestions for Further Experimentation</h3>
+<p>I sometimes assign my students the project of copying a well-known work of interactive new-media art. Reimplementing projects such as the ones below can be highly instructive, and test the limits of your attention to detail. As Gerald King <a href="http://www.geraldking.com/Copying.htm" target="_blank">writes</a>, such copying "provides insights which cannot be learned from any other source." <em>I recommend you build...</em></p>
+<h4 id="a-slit-scanner.">A Slit-Scanner.</h4>
+<p><em>Slit-scanning</em> — a type of "time-space imaging" — has been a common trope in interactive video art for more than twenty years. Interactive slit-scanners have been developed by some of the most revered pioneers of new media art (Toshio Iwai, Paul de Marinis, Steina Vasulka) as well as by <a href="http://www.flong.com/texts/lists/slit_scan/" target="_blank">literally dozens</a> of other highly regarded practitioners. The premise remains an open-ended format for seemingly limitless experimentation, whose possibilities have yet to be exhausted. It is also a good exercise in managing image data, particularly in extracting and copying pixel ROIs. In digital slit-scanning, thin slices are extracted from a sequence of video frames, and concatenated into a new image. The result is an image which succinctly reveals the history of movements in a video or camera stream.</p>
+<div class="figure">
+<div style="clear:both"><img alt="Daniel Rozin, Time Scan Mirror (2004)" src="..\images\image_processing_computer_vision/images/rozin_timescan.jpg"/></div><span class="caption">Daniel Rozin, Time Scan Mirror (2004)</span>
+</div>
+<h4 id="text-rain-by-camille-utterback-and-romy-achituv-1999.">Text Rain by Camille Utterback and Romy Achituv (1999).</h4>
+<p><em><a href="http://camilleutterback.com/projects/text-rain/" target="_blank">Text Rain</a></em> is a now-classic work of interactive art in which virtual letters appear to "fall" on the visitor's "silhouette". Utterback writes: "In the Text Rain installation, participants stand or move in front of a large projection screen. On the screen they see a mirrored video projection of themselves in black and white, combined with a color animation of falling letters. Like rain or snow, the letters appears to land on participants’ heads and arms. The letters respond to the participants’ motions and can be caught, lifted, and then let fall again. The falling text will 'land' on anything darker than a certain threshold, and 'fall' whenever that obstacle is removed."</p>
+<div class="figure">
+<div style="clear:both"><img alt="Camille Utterback and Romy Achituv, Text Rain (1999)" src="..\images\image_processing_computer_vision/images/text-rain.jpg"/></div><span class="caption">Camille Utterback and Romy Achituv, Text Rain (1999)</span>
+</div>
+<p>========================================================<br/>## A Computer-Vision lexicon, and where to find out more information</p>
+<p>Computer vision is a huge field and we can't possibly cover all useful examples here. Sometimes people lack the terminology to know what to google for.</p>
+<p>-- Camera calibration. -- Homography transforms and re-projection.</p>
+</div>
+</div>
+<script src="../javascript/jquery-1.8.3.min.js"></script>
+<script src="../javascript/jquery-ui-1.9.1.custom.min.js"></script>
+<script src="../javascript/bootstrap.js"></script>
+<script src="../javascript/jquery.tocify.js"></script>
+<script src="../javascript/prettify.js"></script>
+<script src="../javascript/tocOpenClose.js"></script>
+<script>
+        $(function() {
+
+            var toc = $("#toc").tocify({
+              selectors: "h2,h3,h4,h5",
+              showAndHide: false
+            }).data("toc-tocify");
+
+            prettyPrint();
+            $(".optionName").popover({ trigger: "hover" });
+
+        });
+    </script>

@@ -54,7 +54,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <div id="chapters">
 <span class="closeBtn mega-octicon octicon-x"></span>
 chapters
-<ul><li><a href="intro.html">intro</a></li><li><a href="cplusplus_basics.html">C++ Language Basics</a></li><li><a href="setup_and_project_structure.html">openFrameworks project structure and setup</a></li><li><a href="OOPs!.html">Ooops! = Object Oriented Programming + Classes</a></li><li><a href="animation.html">Animation</a></li><li><a href="intro_to_graphics.html">Graphics</a></li><li><a href="data_vis.html">Information Visualization Chapter</a></li><li><a href="game_design.html">Experimental Game Development in openFrameworks</a></li><li><a href="hardware.html">needs h1</a></li><li><a href="sound.html">Sound</a></li><li><a href="ios.html">ofxiOS</a></li><li class="selected"><a href="c++11.html">C++ 11</a></li><li><a href="memory.html">Memory in C++</a></li><li><a href="threads.html">Threads</a></li><li><a href="version_control_with_git.html">Version control with Git</a></li><li><a href="advanced_graphics.html">Advanced graphics</a></li><li><a href="network.html">Network</a></li><li><a href="math.html">That Math Chapter: From 1D to 4D</a></li><li><a href="ofSketch.html">ofSketch</a></li><li><a href="project_elliot.html">Case Study : Line Segments Space</a></li><li><a href="project_eva.html">Case Study: Choreographies for Humans and Stars</a></li><li><a href="project_joel.html">Case Study: Anthropocene, an interactive film installation for Greenpeace as part of their field at Glastonbury 2013</a></li><li><a href="project_memo.html">Case Study: Memo (TODO: need title!)</a></li><li><a href="installation_up_4evr_macosx.html">Installation up 4evr - OSX</a></li><li><a href="installation_up_4evr_linux.html">Installation up 4evr - Linux</a></li></ul></div>
+<ul><li class="group">foreword</li><li><a href="foreword.html">Foreword</a></li><li class="group">basics</li><li><a href="of_philosophy.html">philosophy</a></li><li><a href="cplusplus_basics.html">C++ Language Basics</a></li><li><a href="setup_and_project_structure.html">OF structure</a></li><li><a href="intro_to_graphics.html">Graphics</a></li><li><a href="OOPs!.html">Ooops! = Object Oriented Programming + Classes</a></li><li class="group">approaches</li><li><a href="animation.html">Animation</a></li><li><a href="data_vis.html">Information Visualization Chapter</a></li><li><a href="game_design.html">Experimental Game Development in openFrameworks</a></li><li><a href="image_processing_computer_vision.html">Image Processing and Computer Vision</a></li><li class="group">i/o</li><li><a href="hardware.html">hardware</a></li><li><a href="sound.html">Sound</a></li><li><a href="network.html">Network</a></li><li class="group">advanced topics</li><li><a href="advanced_graphics.html">Advanced graphics</a></li><li><a href="math.html">That Math Chapter: From 1D to 4D</a></li><li><a href="memory.html">Memory in C++</a></li><li><a href="threads.html">Threads</a></li><li><a href="ios.html">ofxiOS</a></li><li class="selected"><a href="c++11.html">C++ 11</a></li><li class="group">project breakdowns</li><li><a href="project_elliot.html">Case Study : Line Segments Space</a></li><li><a href="project_eva.html">Case Study: Choreographies for Humans and Stars</a></li><li><a href="project_joel.html">Case Study: Anthropocene, an interactive film installation for Greenpeace as part of their field at Glastonbury 2013</a></li><li class="group">tools</li><li><a href="version_control_with_git.html">Version control with Git</a></li><li><a href="ofSketch.html">ofSketch</a></li><li><a href="installation_up_4evr_macosx.html">Installation up 4evr - OSX</a></li><li><a href="installation_up_4evr_linux.html">Installation up 4evr - Linux</a></li></ul></div>
 <!-- info about the book -->
 <div id="bookInfo">
 <span class="closeBtn mega-octicon octicon-x"></span>
@@ -88,12 +88,8 @@ ofVec2f rectangleCenter = myRectangle.getCenter();
 <p>Then the compiler can do some of the coding for us. In fact, thanks to <code>auto</code>, we can do this now. This code block compiles to exactly the same result as the first code block did. The compiler notices what's on the right hand side and substitutes in the correct type wherever it sees <code>auto</code>.</p>
 <h4 id="how-this-helps">How this helps</h4>
 <p>Well obviously auto's going to save you keystrokes. Imagine the following:</p>
-<pre class="sourceCode cpp"><code class="sourceCode cpp">[.h]
-
-vector&lt;shared_ptr&lt;ofThread&gt; &gt; myVectorOfThreads;</code></pre>
-<pre class="sourceCode cpp"><code class="sourceCode cpp">[.cpp]
-
-<span class="co">// the old way</span>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">vector&lt;shared_ptr&lt;ofThread&gt; &gt; myVectorOfThreads;</code></pre>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// the old way</span>
 vector&lt;shared_ptr&lt;ofThread&gt;&gt;::iterator firstThreadIterator = <span class="kw">this</span>-&gt;myVectorOfThreads.begin();
 
 <span class="co">// the new way</span>
@@ -207,9 +203,7 @@ vector&lt;ofxSnapChat::Friend&gt; myFriends = snapChatClient.getFriends();
 </ul>
 <h2 id="override">override</h2>
 <p><code>override</code> saves you time not by reducing the amount of typing you do, but by reducing the amount of head-scratching you might do when dealing with <code>virtual</code> functions. Imagine the following:</p>
-<pre class="sourceCode cpp"><code class="sourceCode cpp">[.h]
-
-<span class="kw">class</span> BuildingProjectionMapper {
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> BuildingProjectionMapper {
 <span class="kw">public</span>:
 <span class="co">//...</span>
     <span class="kw">virtual</span> <span class="dt">void</span> mapTheGreekColumns();

@@ -7,6 +7,25 @@
 <meta content="pandoc" name="generator"/>
 <title></title>
 <style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
 <link href="../style/bootstrap.css" rel="stylesheet">
 <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/themes/black-tie/jquery-ui.css" rel="stylesheet">
 <link href="../style/jquery.tocify.css" rel="stylesheet">
@@ -35,7 +54,7 @@
 <div id="chapters">
 <span class="closeBtn mega-octicon octicon-x"></span>
 chapters
-<ul><li><a href="intro.html">intro</a></li><li><a href="cplusplus_basics.html">C++ Language Basics</a></li><li><a href="setup_and_project_structure.html">openFrameworks project structure and setup</a></li><li><a href="OOPs!.html">Ooops! = Object Oriented Programming + Classes</a></li><li><a href="animation.html">Animation</a></li><li><a href="intro_to_graphics.html">Graphics</a></li><li><a href="data_vis.html">Information Visualization Chapter</a></li><li><a href="game_design.html">Experimental Game Development in openFrameworks</a></li><li><a href="hardware.html">needs h1</a></li><li><a href="sound.html">Sound</a></li><li><a href="ios.html">ofxiOS</a></li><li><a href="c++11.html">C++ 11</a></li><li><a href="memory.html">Memory in C++</a></li><li><a href="threads.html">Threads</a></li><li><a href="version_control_with_git.html">Version control with Git</a></li><li><a href="advanced_graphics.html">Advanced graphics</a></li><li><a href="network.html">Network</a></li><li><a href="math.html">That Math Chapter: From 1D to 4D</a></li><li><a href="ofSketch.html">ofSketch</a></li><li><a href="project_elliot.html">Case Study : Line Segments Space</a></li><li class="selected"><a href="project_eva.html">Case Study: Choreographies for Humans and Stars</a></li><li><a href="project_joel.html">Case Study: Anthropocene, an interactive film installation for Greenpeace as part of their field at Glastonbury 2013</a></li><li><a href="project_memo.html">Case Study: Memo (TODO: need title!)</a></li><li><a href="installation_up_4evr_macosx.html">Installation up 4evr - OSX</a></li><li><a href="installation_up_4evr_linux.html">Installation up 4evr - Linux</a></li></ul></div>
+<ul><li class="group">foreword</li><li><a href="foreword.html">Foreword</a></li><li class="group">basics</li><li><a href="of_philosophy.html">philosophy</a></li><li><a href="cplusplus_basics.html">C++ Language Basics</a></li><li><a href="setup_and_project_structure.html">OF structure</a></li><li><a href="intro_to_graphics.html">Graphics</a></li><li><a href="OOPs!.html">Ooops! = Object Oriented Programming + Classes</a></li><li class="group">approaches</li><li><a href="animation.html">Animation</a></li><li><a href="data_vis.html">Information Visualization Chapter</a></li><li><a href="game_design.html">Experimental Game Development in openFrameworks</a></li><li><a href="image_processing_computer_vision.html">Image Processing and Computer Vision</a></li><li class="group">i/o</li><li><a href="hardware.html">hardware</a></li><li><a href="sound.html">Sound</a></li><li><a href="network.html">Network</a></li><li class="group">advanced topics</li><li><a href="advanced_graphics.html">Advanced graphics</a></li><li><a href="math.html">That Math Chapter: From 1D to 4D</a></li><li><a href="memory.html">Memory in C++</a></li><li><a href="threads.html">Threads</a></li><li><a href="ios.html">ofxiOS</a></li><li><a href="c++11.html">C++ 11</a></li><li class="group">project breakdowns</li><li><a href="project_elliot.html">Case Study : Line Segments Space</a></li><li class="selected"><a href="project_eva.html">Case Study: Choreographies for Humans and Stars</a></li><li><a href="project_joel.html">Case Study: Anthropocene, an interactive film installation for Greenpeace as part of their field at Glastonbury 2013</a></li><li class="group">tools</li><li><a href="version_control_with_git.html">Version control with Git</a></li><li><a href="ofSketch.html">ofSketch</a></li><li><a href="installation_up_4evr_macosx.html">Installation up 4evr - OSX</a></li><li><a href="installation_up_4evr_linux.html">Installation up 4evr - Linux</a></li></ul></div>
 <!-- info about the book -->
 <div id="bookInfo">
 <span class="closeBtn mega-octicon octicon-x"></span>
@@ -162,7 +181,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
 <h4 id="dealing-with-split-message-blocks-and-framerate-differences">Dealing with split message blocks and framerate differences</h4>
 <p>The OSC messages sent by the tracking software take this format:</p>
 <pre><code>/blobserver/startFrame      389 1
-/blobserver/hog             128 140 287 0.4 1.2 77 4 1	
+/blobserver/hog             128 140 287 0.4 1.2 77 4 1    
 /blobserver/hog             135 418 103 2.2 2.8 20 0 0
 /blobserver/hog             136 356 72 0.3 0.2 18 0 0
 /blobserver/endFrame</code></pre>
@@ -172,31 +191,31 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
 <h4 id="storing-and-updating-tracking-data">Storing and updating tracking data</h4>
 <p>The received tracking data is stored in a map of <code>Blob</code> objects <code>std::map&lt;int,Blob&gt; blobs</code>. Maps give all the flexibility of vectors (loop, iterator, etc.) but also allow for easy access of entities via their id.</p>
 <p>If new tracking data arrives, the system first checks if the blob-id already exists in the map or if it needs to be created. Then it updates the instance with the new data.</p>
-<pre><code>while (receiver.hasWaitingMessages()) {
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">while</span> (receiver.hasWaitingMessages()) {
 
-    // ...
-    if(m.getAddress() == "/blobserver/hog") {
+    <span class="co">// ...</span>
+    <span class="kw">if</span>(m.getAddress() == <span class="st">"/blobserver/hog"</span>) {
     
-        // parse incoming message arguments
-        int blobid = m.getArgAsInt32(0);
-		int posx = m.getArgAsInt32(1);
-		int posy = m.getArgAsInt32(2);
+        <span class="co">// parse incoming message arguments</span>
+        <span class="dt">int</span> blobid = m.getArgAsInt32(<span class="dv">0</span>);
+        <span class="dt">int</span> posx = m.getArgAsInt32(<span class="dv">1</span>);
+        <span class="dt">int</span> posy = m.getArgAsInt32(<span class="dv">2</span>);
     
-        // first look if object with that ID already exists
-        std::map&lt;int,Blob&gt;::iterator iter = blobs.find(blobid);
-        if( iter == blobs.end() ) {
-            // didn't exist yet, therefore we create it
+        <span class="co">// first look if object with that ID already exists</span>
+        std::map&lt;<span class="dt">int</span>,Blob&gt;::iterator iter = blobs.find(blobid);
+        <span class="kw">if</span>( iter == blobs.end() ) {
+            <span class="co">// didn't exist yet, therefore we create it</span>
             blobs[blobid].id = blobid;
-            //....
-            ofAddListener( blobs[blobid].onLost, this, &amp;planeApp::blobOnLost );
+            <span class="co">//....</span>
+            ofAddListener( blobs[blobid].onLost, <span class="kw">this</span>, &amp;planeApp::blobOnLost );
         }
         
-        // now update the blob (old or new)
+        <span class="co">// now update the blob (old or new)</span>
         Blob* b = &amp;blobs.find(blobid)-&gt;second;
         b-&gt;setRawPosition(posx, posy);
         b-&gt;setVelocity(velx, vely);
         b-&gt;age = age;
-        //....
+        <span class="co">//....</span>
     
     }
 
@@ -217,15 +236,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
 <h4 id="dynamic-video-elements">Dynamic video elements</h4>
 <p>While the background videos appear on schedule and are preloaded by the system, most foreground videos appear dynamically based on participant actions. To be able to handle them easily all dynamic video elements are stored in a vector of shared pointers <code>std::vector&lt; ofPtr&lt;mediaElement&gt; &gt; fgMedia</code>. The whole vector of pointers can then be updated and drawn, no matter how few or many videos of shootings stars or planets are currently being displayed. By using <code>ofPtr</code> one doesn't need to worry about properly releasing dynamically allocated memory.</p>
 <p>Example: Everytime a user stands still long enough during scene 1, a video element displaying a blinking star gets added to the vector:</p>
-<pre><code>// add new STAR video
-fgMedia.push_back(ofPtr&lt;mediaElement&gt;( new videoElement("video/stars/STAR_01.mov")));
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// add new STAR video</span>
+fgMedia.push_back(ofPtr&lt;mediaElement&gt;( <span class="kw">new</span> videoElement(<span class="st">"video/stars/STAR_01.mov"</span>)));
 
-// set position of video, and press play
-( *fgMedia[fgMedia.size()-1] ).setPosition( blobMapToScreen( blobs[blobID].position ) );
-( *fgMedia[fgMedia.size()-1] ).playVideo();
+<span class="co">// set position of video, and press play</span>
+( *fgMedia[fgMedia.size()<span class="dv">-1</span>] ).setPosition( blobMapToScreen( blobs[blobID].position ) );
+( *fgMedia[fgMedia.size()<span class="dv">-1</span>] ).playVideo();
 
-// link blob to video, to be able to control it later
-blobs[blobID].mediaLink = fgMedia[fgMedia.size()-1];</code></pre>
+<span class="co">// link blob to video, to be able to control it later</span>
+blobs[blobID].mediaLink = fgMedia[fgMedia.size()<span class="dv">-1</span>];</code></pre>
 <h4 id="preloading-versus-dynamic-loading">Preloading versus dynamic loading</h4>
 <p>In general all video sources that are used in a controlled way (as in: used only as one instance) are preloaded at startup of the software. For video sources that are called up dynamically in possibly multiple instances at once, a combination of two approaches were used:</p>
 <ol style="list-style-type: decimal">
@@ -249,44 +268,44 @@ blobs[blobID].mediaLink = fgMedia[fgMedia.size()-1];</code></pre>
 <li>...</li>
 </ul>
 <p><code>ofEvent</code> instances are defined in the blob object header:</p>
-<pre><code>class Blob {
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> Blob {
     
-    ofEvent&lt;int&gt; onLost;            
-    ofEvent&lt;int&gt; onFreeze;     
-    ofEvent&lt;int&gt; unFreeze; 
+    ofEvent&lt;<span class="dt">int</span>&gt; onLost;            
+    ofEvent&lt;<span class="dt">int</span>&gt; onFreeze;     
+    ofEvent&lt;<span class="dt">int</span>&gt; unFreeze; 
     
 }</code></pre>
 <p>When a new blob object is created in the baseApp, <code>ofAddListener()</code> connects the object's events to functions within the baseApp.</p>
-<pre><code>// create new blob
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// create new blob</span>
 blobs[blobid].id = blobid;
 
-ofAddListener( blobs[blobid].onLost, this, &amp;planeApp::blobOnLost );
-ofAddListener( blobs[blobid].onFreeze, this, &amp;planeApp::blobOnFreeze );
-ofAddListener( blobs[blobid].unFreeze, this, &amp;planeApp::blobUnFreeze );
-// ... </code></pre>
+ofAddListener( blobs[blobid].onLost, <span class="kw">this</span>, &amp;planeApp::blobOnLost );
+ofAddListener( blobs[blobid].onFreeze, <span class="kw">this</span>, &amp;planeApp::blobOnFreeze );
+ofAddListener( blobs[blobid].unFreeze, <span class="kw">this</span>, &amp;planeApp::blobUnFreeze );
+<span class="co">// ... </span></code></pre>
 <p>When a blob then updates and analyses its position, velocity etc. it can trigger those events with <code>ofNotifyEvent()</code>.</p>
-<pre><code>void Blob::evalVelocity(float freezeMaxVel, float freezeMinTime) {
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> Blob::evalVelocity(<span class="dt">float</span> freezeMaxVel, <span class="dt">float</span> freezeMinTime) {
 
-    if ( this-&gt;vel &lt; freezeMaxVel ) {
-        if ( !frozen ) {
-            frozen = true;
-            ofNotifyEvent(onFreeze,this-&gt;id,this);
+    <span class="kw">if</span> ( <span class="kw">this</span>-&gt;vel &lt; freezeMaxVel ) {
+        <span class="kw">if</span> ( !frozen ) {
+            frozen = <span class="kw">true</span>;
+            ofNotifyEvent(onFreeze,<span class="kw">this</span>-&gt;id,<span class="kw">this</span>);
         }
-    } else {
-        if ( frozen ) {
-            frozen = false;
-            ofNotifyEvent(unFreeze,this-&gt;id,this);
+    } <span class="kw">else</span> {
+        <span class="kw">if</span> ( frozen ) {
+            frozen = <span class="kw">false</span>;
+            ofNotifyEvent(unFreeze,<span class="kw">this</span>-&gt;id,<span class="kw">this</span>);
         }
     }
     
 }</code></pre>
 <p>The <code>ofNotifyEvent()</code> call then triggers the connected function in the baseApp:</p>
-<pre><code>void planeApp::blobOnFreeze(int &amp; blobID) {
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> planeApp::blobOnFreeze(<span class="dt">int</span> &amp; blobID) {
 
-    if (scene==STARS &amp;&amp; blobs[blobID].onStage) {
-        // add new STAR video
-        fgMedia.push_back(ofPtr&lt;mediaElement&gt;( new videoElement("video/stars/STAR_01.mov")));
-        // ...
+    <span class="kw">if</span> (scene==STARS &amp;&amp; blobs[blobID].onStage) {
+        <span class="co">// add new STAR video</span>
+        fgMedia.push_back(ofPtr&lt;mediaElement&gt;( <span class="kw">new</span> videoElement(<span class="st">"video/stars/STAR_01.mov"</span>)));
+        <span class="co">// ...</span>
     }
     
 }</code></pre>

@@ -7,6 +7,25 @@
 <meta content="pandoc" name="generator"/>
 <title></title>
 <style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
 <link href="../style/bootstrap.css" rel="stylesheet">
 <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/themes/black-tie/jquery-ui.css" rel="stylesheet">
 <link href="../style/jquery.tocify.css" rel="stylesheet">
@@ -35,7 +54,7 @@
 <div id="chapters">
 <span class="closeBtn mega-octicon octicon-x"></span>
 chapters
-<ul><li><a href="intro.html">intro</a></li><li><a href="cplusplus_basics.html">C++ Language Basics</a></li><li><a href="setup_and_project_structure.html">openFrameworks project structure and setup</a></li><li><a href="OOPs!.html">Ooops! = Object Oriented Programming + Classes</a></li><li><a href="animation.html">Animation</a></li><li><a href="intro_to_graphics.html">Graphics</a></li><li><a href="data_vis.html">Information Visualization Chapter</a></li><li><a href="game_design.html">Experimental Game Development in openFrameworks</a></li><li><a href="hardware.html">needs h1</a></li><li class="selected"><a href="sound.html">Sound</a></li><li><a href="ios.html">ofxiOS</a></li><li><a href="c++11.html">C++ 11</a></li><li><a href="memory.html">Memory in C++</a></li><li><a href="threads.html">Threads</a></li><li><a href="version_control_with_git.html">Version control with Git</a></li><li><a href="advanced_graphics.html">Advanced graphics</a></li><li><a href="network.html">Network</a></li><li><a href="math.html">That Math Chapter: From 1D to 4D</a></li><li><a href="ofSketch.html">ofSketch</a></li><li><a href="project_elliot.html">Case Study : Line Segments Space</a></li><li><a href="project_eva.html">Case Study: Choreographies for Humans and Stars</a></li><li><a href="project_joel.html">Case Study: Anthropocene, an interactive film installation for Greenpeace as part of their field at Glastonbury 2013</a></li><li><a href="project_memo.html">Case Study: Memo (TODO: need title!)</a></li><li><a href="installation_up_4evr_macosx.html">Installation up 4evr - OSX</a></li><li><a href="installation_up_4evr_linux.html">Installation up 4evr - Linux</a></li></ul></div>
+<ul><li class="group">foreword</li><li><a href="foreword.html">Foreword</a></li><li class="group">basics</li><li><a href="of_philosophy.html">philosophy</a></li><li><a href="cplusplus_basics.html">C++ Language Basics</a></li><li><a href="setup_and_project_structure.html">OF structure</a></li><li><a href="intro_to_graphics.html">Graphics</a></li><li><a href="OOPs!.html">Ooops! = Object Oriented Programming + Classes</a></li><li class="group">approaches</li><li><a href="animation.html">Animation</a></li><li><a href="data_vis.html">Information Visualization Chapter</a></li><li><a href="game_design.html">Experimental Game Development in openFrameworks</a></li><li><a href="image_processing_computer_vision.html">Image Processing and Computer Vision</a></li><li class="group">i/o</li><li><a href="hardware.html">hardware</a></li><li class="selected"><a href="sound.html">Sound</a></li><li><a href="network.html">Network</a></li><li class="group">advanced topics</li><li><a href="advanced_graphics.html">Advanced graphics</a></li><li><a href="math.html">That Math Chapter: From 1D to 4D</a></li><li><a href="memory.html">Memory in C++</a></li><li><a href="threads.html">Threads</a></li><li><a href="ios.html">ofxiOS</a></li><li><a href="c++11.html">C++ 11</a></li><li class="group">project breakdowns</li><li><a href="project_elliot.html">Case Study : Line Segments Space</a></li><li><a href="project_eva.html">Case Study: Choreographies for Humans and Stars</a></li><li><a href="project_joel.html">Case Study: Anthropocene, an interactive film installation for Greenpeace as part of their field at Glastonbury 2013</a></li><li class="group">tools</li><li><a href="version_control_with_git.html">Version control with Git</a></li><li><a href="ofSketch.html">ofSketch</a></li><li><a href="installation_up_4evr_macosx.html">Installation up 4evr - OSX</a></li><li><a href="installation_up_4evr_linux.html">Installation up 4evr - Linux</a></li></ul></div>
 <!-- info about the book -->
 <div id="bookInfo">
 <span class="closeBtn mega-octicon octicon-x"></span>
@@ -55,24 +74,24 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
 <p><code>ofSoundObject</code> is an interface for chaining bits of sound code together, similar to how a guitarist might use guitar pedals. This is mostly relevant for addon authors or people looking to share their audio processing code.</p>
 <h2 id="getting-started-with-sound-files">Getting Started With Sound Files</h2>
 <p>Playing a sound file is only a couple lines of code in openFrameworks. Just point an <code>ofSoundPlayer</code> at a file stored in your app's data folder and tell it to play.</p>
-<pre><code>class ofApp : public ofBaseApp {
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> ofApp : <span class="kw">public</span> ofBaseApp {
   ...
   ofSoundPlayer soundPlayer;
 };
 
-void ofApp::setup() {
-  soundPlayer.loadSound("song.mp3");
+<span class="dt">void</span> ofApp::setup() {
+  soundPlayer.loadSound(<span class="st">"song.mp3"</span>);
   soundPlayer.play();
 }</code></pre>
 <p>This is fine for adding some background music or ambiance to your app, but ofSoundPlayer comes with a few extra features that are particularly handy for handling sound effects.</p>
 <p>"Multiplay" allows you to have a file playing several times simultaneously. This is great for any sound effect which might end up getting triggered rapidly, so you don't get stuck with an unnatural cutoff as the player's playhead abruptly jumps back to the beginning of the file. Multiplay isn't on by default. Use <code>soundPlayer.setMultiPlay(true)</code> to enable it. Then you can get natural sound effect behaviour with dead-simple trigger logic like this:</p>
-<pre><code>if ( thingHappened )
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">if</span> ( thingHappened )
   soundPlayer.play();
 }</code></pre>
 <p>Another feature built-in to ofSoundPlayer is speed control. If you set the speed faster than normal, the sound's pitch will rise accordingly, and vice-versa (just like a vinyl record). Playback speed is defined relative to "1", so "0.5" is half speed and "2" is double speed.</p>
 <p>Speed control and multiplay are made for each other. Making use of both simultaneously can really extend the life of a single sound effect file. Every time you change a sound player's playback speed with multiplay enabled, previously triggered sound effects continue on unaffected. So, by extending the above trigger logic to something like...</p>
-<pre><code>if( thingHappened ) {
-  soundPlayer.setSpeed(ofRandom(0.8, 1.2));
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">if</span>( thingHappened ) {
+  soundPlayer.setSpeed(ofRandom(<span class="fl">0.</span><span class="dv">8</span>, <span class="fl">1.</span><span class="dv">2</span>));
   soundPlayer.play();
 }</code></pre>
 <p>...you'll introduce a bit of unique character to each instance of the sound.</p>
@@ -81,23 +100,23 @@ void ofApp::setup() {
 <h2 id="getting-started-with-the-sound-stream">Getting Started With the Sound Stream</h2>
 <p>ofSoundStream is the gateway to the audio hardware on your computer, such as the microphone and the speakers. If you want to have your app react to live audio input or generate sound on the fly, this is the section for you!</p>
 <p>You may never have to use the ofSoundStream directly, but it's the object that manages the resources needed to trigger <code>audioOut()</code> and <code>audioIn()</code> on your app. These two functions are optional members of your ofApp, like <code>keyPressed()</code>, <code>windowResized()</code> and <code>mouseMoved()</code>. They will start being called once you implement them and initiate the sound stream. Here's the basic structure for a sound-producing openFrameworks app:</p>
-<pre><code>class ofApp : public ofBaseApp {
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> ofApp : <span class="kw">public</span> ofBaseApp {
   ...
-  void audioOut( float * output, int bufferSize, int nChannels );
-  double phase;
+  <span class="dt">void</span> audioOut( <span class="dt">float</span> * output, <span class="dt">int</span> bufferSize, <span class="dt">int</span> nChannels );
+  <span class="dt">double</span> phase;
 }
 
-void ofApp::setup() {
-  phase = 0;
-  ofSoundStreamSetup(2, 0); // 2 output channels (stereo), 0 input channels
+<span class="dt">void</span> ofApp::setup() {
+  phase = <span class="dv">0</span>;
+  ofSoundStreamSetup(<span class="dv">2</span>, <span class="dv">0</span>); <span class="co">// 2 output channels (stereo), 0 input channels</span>
 }
 
-void ofApp::audioOut( float * output, int bufferSize, int nChannels ) {
-  for(int i = 0; i &lt; bufferSize * nChannels; i+=2) {
-    float sample = sin(phase); // generating a sine wave sample
-    output[i] = sample; // writing to the left channel
-    output[i+1] = sample; // writing to the right channel
-    phase += 0.05;
+<span class="dt">void</span> ofApp::audioOut( <span class="dt">float</span> * output, <span class="dt">int</span> bufferSize, <span class="dt">int</span> nChannels ) {
+  <span class="kw">for</span>(<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; bufferSize * nChannels; i+=<span class="dv">2</span>) {
+    <span class="dt">float</span> sample = sin(phase); <span class="co">// generating a sine wave sample</span>
+    output[i] = sample; <span class="co">// writing to the left channel</span>
+    output[i<span class="dv">+1</span>] = sample; <span class="co">// writing to the right channel</span>
+    phase += <span class="fl">0.</span><span class="bn">05</span>;
   }
 }</code></pre>
 <p>When producing or receiving audio, the format is floating point numbers between -1 and 1 (the reason for this is coming a little later in this chapter). The sound will arrive in your app in the form of <em>buffers</em>. Buffers are just arrays, but the term "buffer" implies that each time you get a new one, it represents the chunk of time after the previous buffer. The reason openFrameworks asks you for buffers (instead of individual samples) is due to the overhead involved in shuttling data from your program to the audio hardware, and is a little outside the scope of this book.</p>
@@ -122,10 +141,10 @@ void ofApp::audioOut( float * output, int bufferSize, int nChannels ) {
 <p>In the frequency domain, you'll be able to see how much of your input signal lies in various frequencies, split into separate "bins" (see above image).</p>
 <p>You can transform a signal from the time domain to the frequency domain by a ubiquitous algorithm called the Fast Fourier Transform. You can get an openFrameworks-ready implementation of the FFT (along with examples!) in either the ofxFFT or ofxFft addons (by Lukasz Karluk and Kyle McDonald respectively).</p>
 <p>In an FFT sample, bins in the higher indexes will represent higher pitched frequencies (i.e. treble) and the lower ones will represent bassy frequencies. Exactly <em>which</em> frequency is represented by each bin depends on the number of time-domain samples that went into the transform. You can calculate this as follows:</p>
-<pre><code>frequency = (binIndex * sampleRate) / totalSampleCount</code></pre>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">frequency = (binIndex * sampleRate) / totalSampleCount</code></pre>
 <p>So, if you were to run an FFT on a buffer of 1024 time domain samples at 44100Hz, bin 3 would represent 129.2Hz ( <code>(3 * 44100) / 1024 ≈ 129.2</code> ). This calculation demonstrates a property of the FFT that is very useful to keep in mind: the more time domain samples you use to calculate the FFT, the better frequency resolution you'll get (as in, each subsequent FFT bin will represent frequencies that are closer together). The tradeoff for increasing the frequency resolution this way is that you'll start losing track of time, since your FFT will be representing a bigger portion of the signal.</p>
 <p>Note: A raw FFT sample will typically represent its output as <a href="http://en.wikipedia.org/wiki/Complex_number" target="_blank">Complex numbers</a>, though this probably isn't what you're after if you're attempting to do something like audio visualization. A more intuitive representation is the <em>magnitude</em> of each complex number, which is calculated as:</p>
-<pre><code>magnitude = sqrt( pow(complex.real, 2) + pow(complex.imaginary, 2) )</code></pre>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">magnitude = sqrt( pow(complex.real, <span class="dv">2</span>) + pow(complex.imaginary, <span class="dv">2</span>) )</code></pre>
 <p>If you're working with an FFT implementation that gives you a simple array of float values, it's most likely already done this calculation for you.</p>
 <p>You can also transform a signal from the frequency domain <em>back</em> to the time domain, using an Inverse Fast Fourier Transform (aka IFFT). This is less common, but there is an entire genre of audio synthesis called Additive Synthesis which is built around this principle (generating values in the frequency domain then running an IFFT on them to create synthesized sound).</p>
 <p>The frequency domain is useful for many things, but one of the most straightforward is isolating particular elements of a sound by frequency range, such as instruments in a song. Another common use is analyzing the character or timbre of a sound, in order to drive complex audio-reactive visuals.</p>
@@ -133,45 +152,45 @@ void ofApp::audioOut( float * output, int bufferSize, int nChannels ) {
 <h2 id="reacting-to-live-audio">Reacting to Live Audio</h2>
 <h3 id="rms">RMS</h3>
 <p>One of the simplest ways to add audio-reactivity to your app is to calculate the RMS of incoming buffers of audio data. RMS stands for "root mean square" and is a pretty straightforward calculation that serves as a good approximation of "loudness" (much better than something like averaging the buffer or picking the maximum value). The "square" step of the algorithim will ensure that the output will always be a positive value. This means you can ignore the fact that the original audio may have had "negative" samples (since they'd sound just as loud as their positive equivalent, anyway). You can see RMS being calculated in the <em>audioInputExample</em>.</p>
-<pre><code>// modified from audioInputExample
-float rms = 0.0;
-int numCounted = 0;
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// modified from audioInputExample</span>
+<span class="dt">float</span> rms = <span class="fl">0.</span><span class="dv">0</span>;
+<span class="dt">int</span> numCounted = <span class="dv">0</span>;
 
-for (int i = 0; i &lt; bufferSize; i++){
-    float leftSample = input[i * 2] * 0.5;
-    float rightSample = input[i * 2 + 1] * 0.5;
-	
+<span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; bufferSize; i++){
+    <span class="dt">float</span> leftSample = input[i * <span class="dv">2</span>] * <span class="fl">0.</span><span class="dv">5</span>;
+    <span class="dt">float</span> rightSample = input[i * <span class="dv">2</span> + <span class="dv">1</span>] * <span class="fl">0.</span><span class="dv">5</span>;
+    
     rms += leftSample * leftSample;
     rms += rightSample * rightSample;
-    numCounted += 2;
+    numCounted += <span class="dv">2</span>;
 }
 
-rms /= (float)numCounted;
+rms /= (<span class="dt">float</span>)numCounted;
 rms = sqrt(rms);
-// rms is now calculated</code></pre>
+<span class="co">// rms is now calculated</span></code></pre>
 <h3 id="onset-detection-aka-beat-detection">Onset Detection (aka Beat Detection)</h3>
 <p>Onset detection algorithms attempt to locate moments in an audio stream where an <em>onset</em> occurs, which is usually something like an instrument playing a note or the impulse of a drum hit. There are many onset detection algorithms available at various levels of complexity and accuracy, some fine-tuned for speech as opposed to music, some working in the frequency domain instead of the time domain, some made for offline processing as opposed to realtime, etc.</p>
 <p>A simple realtime onset detection algorithm can be built on top of the RMS calculation above.</p>
-<pre><code>class class ofApp : public ofBaseApp {
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> <span class="kw">class</span> ofApp : <span class="kw">public</span> ofBaseApp {
     ...
-    float threshold;
-    float minimumThreshold;
-    float decayRate;
+    <span class="dt">float</span> threshold;
+    <span class="dt">float</span> minimumThreshold;
+    <span class="dt">float</span> decayRate;
 }
 
-void ofApp::setup() {
+<span class="dt">void</span> ofApp::setup() {
     ...
-    decayRate = 0.05;
-    minimumThreshold = 0.1;
+    decayRate = <span class="fl">0.</span><span class="bn">05</span>;
+    minimumThreshold = <span class="fl">0.</span><span class="dv">1</span>;
     threshold = minimumThreshold;
 }
 
-void ofApp::audioIn(float * input, int bufferSize, int nChannels) {
+<span class="dt">void</span> ofApp::audioIn(<span class="dt">float</span> * input, <span class="dt">int</span> bufferSize, <span class="dt">int</span> nChannels) {
     ...
     threshold = ofLerp(threshold, minimumThreshold, decayRate);
 
-    if(rms &gt; threshold) {
-        // onset detected!
+    <span class="kw">if</span>(rms &gt; threshold) {
+        <span class="co">// onset detected!</span>
         threshold = rms;
     }
 }</code></pre>
@@ -188,104 +207,104 @@ void ofApp::audioIn(float * input, int bufferSize, int nChannels) {
 <p>Your synthesizer's waveform will define the oscillator's "timbre". The closer the waveform is to a sine wave, the more "pure" the resulting tone will be. A waveform can be made of just about anything, and many <a href="http://en.wikipedia.org/wiki/Category:Sound_synthesis_types" target="_blank">genres of synthesis</a> revolve around techniques for generating and manipulating waveforms.</p>
 <p>A common technique for implementing a waveform is to create a <em>Lookup Table</em> containing the full waveform at a certain resolution. A <em>phase</em> index is used to scan through the table, and the speed that the phase index is incremented determines the pitch of the oscillator.</p>
 <p>Here's a starting point for a synthesizer app that we'll keep expanding upon during this section. It demonstrates the lookup table technique for storing a waveform, and also visualizes the waveform and resulting audio output. You can use the mouse to change the resolution of the lookup table as well as the rendered frequency.</p>
-<pre><code>class ofApp : public ofBaseApp {
-public:
-	void setup();
-	void update();
-	void draw();
-	
-	void updateWaveform(int waveformResolution);
-	void audioOut(float * output, int bufferSize, int nChannels);
-	
-	std::vector&lt;float&gt; waveform; // this is the lookup table
-	double phase;
-	float frequency;
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> ofApp : <span class="kw">public</span> ofBaseApp {
+<span class="kw">public</span>:
+    <span class="dt">void</span> setup();
+    <span class="dt">void</span> update();
+    <span class="dt">void</span> draw();
+    
+    <span class="dt">void</span> updateWaveform(<span class="dt">int</span> waveformResolution);
+    <span class="dt">void</span> audioOut(<span class="dt">float</span> * output, <span class="dt">int</span> bufferSize, <span class="dt">int</span> nChannels);
+    
+    std::vector&lt;<span class="dt">float</span>&gt; waveform; <span class="co">// this is the lookup table</span>
+    <span class="dt">double</span> phase;
+    <span class="dt">float</span> frequency;
 
-	ofMutex waveformMutex;
-	ofPolyline waveLine;
-	ofPolyline outLine;
+    ofMutex waveformMutex;
+    ofPolyline waveLine;
+    ofPolyline outLine;
 };
 
-void ofApp::setup() {
-	phase = 0;
-	updateWaveform(32);
-	ofSoundStreamSetup(1, 0); // mono output
+<span class="dt">void</span> ofApp::setup() {
+    phase = <span class="dv">0</span>;
+    updateWaveform(<span class="dv">32</span>);
+    ofSoundStreamSetup(<span class="dv">1</span>, <span class="dv">0</span>); <span class="co">// mono output</span>
 }
 
-void ofApp::update() {
-	ofScopedLock waveformLock(waveformMutex);
-	updateWaveform(ofMap(ofGetMouseX(), 0, ofGetWidth(), 3, 64, true));
-	frequency = ofMap(ofGetMouseY(), 0, ofGetHeight(), 60, 700, true);
+<span class="dt">void</span> ofApp::update() {
+    ofScopedLock waveformLock(waveformMutex);
+    updateWaveform(ofMap(ofGetMouseX(), <span class="dv">0</span>, ofGetWidth(), <span class="dv">3</span>, <span class="dv">64</span>, <span class="kw">true</span>));
+    frequency = ofMap(ofGetMouseY(), <span class="dv">0</span>, ofGetHeight(), <span class="dv">60</span>, <span class="dv">700</span>, <span class="kw">true</span>);
 }
 
-void ofApp::draw() {
-	ofBackground(ofColor::black);
-	ofSetLineWidth(5);
-	ofSetColor(ofColor::lightGreen);
-	outLine.draw();
-	ofSetColor(ofColor::cyan);
-	waveLine.draw();
+<span class="dt">void</span> ofApp::draw() {
+    ofBackground(ofColor::black);
+    ofSetLineWidth(<span class="dv">5</span>);
+    ofSetColor(ofColor::lightGreen);
+    outLine.draw();
+    ofSetColor(ofColor::cyan);
+    waveLine.draw();
 }
 
-void ofApp::updateWaveform(int waveformResolution) {
-	waveform.resize(waveformResolution);
-	waveLine.clear();
-	
-	// "waveformStep" maps a full oscillation of sin() to the size 
-	// of the waveform lookup table
-	float waveformStep = (M_PI * 2.) / (float) waveform.size();
-	
-	for(int i = 0; i &lt; waveform.size(); i++) {
-		waveform[i] = sin(i * waveformStep);
-		
-		waveLine.addVertex(ofMap(i, 0, waveform.size() - 1, 0, ofGetWidth()),
-		                   ofMap(waveform[i], -1, 1, 0, ofGetHeight()));
-	}
+<span class="dt">void</span> ofApp::updateWaveform(<span class="dt">int</span> waveformResolution) {
+    waveform.resize(waveformResolution);
+    waveLine.clear();
+    
+    <span class="co">// "waveformStep" maps a full oscillation of sin() to the size </span>
+    <span class="co">// of the waveform lookup table</span>
+    <span class="dt">float</span> waveformStep = (M_PI * <span class="fl">2.</span>) / (<span class="dt">float</span>) waveform.size();
+    
+    <span class="kw">for</span>(<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; waveform.size(); i++) {
+        waveform[i] = sin(i * waveformStep);
+        
+        waveLine.addVertex(ofMap(i, <span class="dv">0</span>, waveform.size() - <span class="dv">1</span>, <span class="dv">0</span>, ofGetWidth()),
+                           ofMap(waveform[i], <span class="dv">-1</span>, <span class="dv">1</span>, <span class="dv">0</span>, ofGetHeight()));
+    }
 }
 
-void ofApp::audioOut(float * output, int bufferSize, int nChannels) {
-	ofScopedLock waveformLock(waveformMutex);
-	
-	float sampleRate = 44100;
-	float phaseStep = frequency / sampleRate;
-	
-	outLine.clear();
-	
-	for(int i = 0; i &lt; bufferSize * nChannels; i += nChannels) {
-		phase += phaseStep;
-		int waveformIndex = (int)(phase * waveform.size()) % waveform.size();
-		output[i] = waveform[waveformIndex];
-		
-		outLine.addVertex(ofMap(i, 0, bufferSize - 1, 0, ofGetWidth()),
-		                  ofMap(output[i], -1, 1, 0, ofGetHeight()));
-	}
+<span class="dt">void</span> ofApp::audioOut(<span class="dt">float</span> * output, <span class="dt">int</span> bufferSize, <span class="dt">int</span> nChannels) {
+    ofScopedLock waveformLock(waveformMutex);
+    
+    <span class="dt">float</span> sampleRate = <span class="dv">44100</span>;
+    <span class="dt">float</span> phaseStep = frequency / sampleRate;
+    
+    outLine.clear();
+    
+    <span class="kw">for</span>(<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; bufferSize * nChannels; i += nChannels) {
+        phase += phaseStep;
+        <span class="dt">int</span> waveformIndex = (<span class="dt">int</span>)(phase * waveform.size()) % waveform.size();
+        output[i] = waveform[waveformIndex];
+        
+        outLine.addVertex(ofMap(i, <span class="dv">0</span>, bufferSize - <span class="dv">1</span>, <span class="dv">0</span>, ofGetWidth()),
+                          ofMap(output[i], <span class="dv">-1</span>, <span class="dv">1</span>, <span class="dv">0</span>, ofGetHeight()));
+    }
 }</code></pre>
 <p>Once you've got this running, try experimenting with different ways of filling up the waveform table (the line with <code>sin(...)</code> in it inside <code>updateWaveform(...)</code>). For instance, a fun one is to replace that line with:</p>
-<pre><code>waveform[i] = ofSignedNoise(i * waveformStep, ofGetElapsedTimef());</code></pre>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">waveform[i] = ofSignedNoise(i * waveformStep, ofGetElapsedTimef());</code></pre>
 <p>This will get you a waveform that naturally evolves over time. Be careful to keep your waveform samples in the range -1 to 1, though, lest you explode your speakers and / or brain.</p>
 <h3 id="envelopes">Envelopes</h3>
 <p>We've got a drone generator happening now, but adding some volume modulation into the mix will really bring the sound to life. This will let the waveform be played like an instrument, or otherwise let it sound like it's a living being that reacts to events.</p>
 <p>We can create a simple (but effective) envelope with <code>ofLerp(...)</code> by adding the following to our app:</p>
-<pre><code>class ofApp : public ofBaseApp {
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> ofApp : <span class="kw">public</span> ofBaseApp {
     ...
-	float volume;
+    <span class="dt">float</span> volume;
 };
 
-void ofApp::setup() {
+<span class="dt">void</span> ofApp::setup() {
     ...
-    volume = 0;
+    volume = <span class="dv">0</span>;
 }
 
-void ofApp::update() {
+<span class="dt">void</span> ofApp::update() {
     ...
-    if(ofGetKeyPressed()) {
-		volume = ofLerp(volume, 1, 0.8); // jump quickly to 1
-    } else {
-	    volume = ofLerp(volume, 0, 0.1); // fade slowly to 0
-	}    
+    <span class="kw">if</span>(ofGetKeyPressed()) {
+        volume = ofLerp(volume, <span class="dv">1</span>, <span class="fl">0.</span><span class="dv">8</span>); <span class="co">// jump quickly to 1</span>
+    } <span class="kw">else</span> {
+        volume = ofLerp(volume, <span class="dv">0</span>, <span class="fl">0.</span><span class="dv">1</span>); <span class="co">// fade slowly to 0</span>
+    }    
 }
 
-void ofApp::audioOut(float * output, int bufferSize, int nChannels) {
+<span class="dt">void</span> ofApp::audioOut(<span class="dt">float</span> * output, <span class="dt">int</span> bufferSize, <span class="dt">int</span> nChannels) {
     ...
     output[i] = waveform[waveformIndex] * volume;
     ...
@@ -301,39 +320,39 @@ void ofApp::audioOut(float * output, int bufferSize, int nChannels) {
 <p>A full ADSR implementation is left as an exercise for the reader, though <a href="http://www.earlevel.com/main/2013/06/03/envelope-generators-adsr-code/" target="_blank">this example from earlevel.com</a> is a nice reference.</p>
 <h3 id="frequency-control">Frequency Control</h3>
 <p>You can probably tell where we're going, here. Now that the app is responding to key presses, we can use those key presses to determine the oscillator's frequency. We'll introduce a bit more <code>ofLerp(...)</code> here too to get a nice <em>legato</em> effect.</p>
-<pre><code>class ofApp : public ofBaseApp {
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> ofApp : <span class="kw">public</span> ofBaseApp {
     ...
-    void keyPressed(int key);
-    float frequencyTarget;
+    <span class="dt">void</span> keyPressed(<span class="dt">int</span> key);
+    <span class="dt">float</span> frequencyTarget;
 }
 
-void ofApp::setup() {
+<span class="dt">void</span> ofApp::setup() {
     ...
-    frequency = 0;
+    frequency = <span class="dv">0</span>;
     frequencyTarget = frequency;
 }
 
-void ofApp::update() {
+<span class="dt">void</span> ofApp::update() {
     ...
-    // replace the "frequency = " line from earlier with this
-    frequency = ofLerp(frequency, frequencyTarget, 0.4);
+    <span class="co">// replace the "frequency = " line from earlier with this</span>
+    frequency = ofLerp(frequency, frequencyTarget, <span class="fl">0.</span><span class="dv">4</span>);
 }
 
-void ofApp::keyPressed(int key) {
-    if(key == 'z') {
-        frequencyTarget = 261.63; // C
-    } else if(key == 'x') {
-        frequencyTarget = 293.67; // D
-    } else if(key == 'c') {
-        frequencyTarget = 329.63; // E
-    } else if(key == 'v') {
-        frequencyTarget = 349.23; // F
-    } else if(key == 'b') {
-        frequencyTarget = 392.00; // G
-    } else if(key == 'n') {
-        frequencyTarget = 440.00; // A
-    } else if(key == 'm') {
-        frequencyTarget = 493.88; // B
+<span class="dt">void</span> ofApp::keyPressed(<span class="dt">int</span> key) {
+    <span class="kw">if</span>(key == <span class="st">'z'</span>) {
+        frequencyTarget = <span class="fl">261.</span><span class="dv">63</span>; <span class="co">// C</span>
+    } <span class="kw">else</span> <span class="kw">if</span>(key == <span class="st">'x'</span>) {
+        frequencyTarget = <span class="fl">293.</span><span class="dv">67</span>; <span class="co">// D</span>
+    } <span class="kw">else</span> <span class="kw">if</span>(key == <span class="st">'c'</span>) {
+        frequencyTarget = <span class="fl">329.</span><span class="dv">63</span>; <span class="co">// E</span>
+    } <span class="kw">else</span> <span class="kw">if</span>(key == <span class="st">'v'</span>) {
+        frequencyTarget = <span class="fl">349.</span><span class="dv">23</span>; <span class="co">// F</span>
+    } <span class="kw">else</span> <span class="kw">if</span>(key == <span class="st">'b'</span>) {
+        frequencyTarget = <span class="fl">392.</span><span class="bn">00</span>; <span class="co">// G</span>
+    } <span class="kw">else</span> <span class="kw">if</span>(key == <span class="st">'n'</span>) {
+        frequencyTarget = <span class="fl">440.</span><span class="bn">00</span>; <span class="co">// A</span>
+    } <span class="kw">else</span> <span class="kw">if</span>(key == <span class="st">'m'</span>) {
+        frequencyTarget = <span class="fl">493.</span><span class="dv">88</span>; <span class="co">// B</span>
     }
 }</code></pre>
 <p>Now we've got a basic, useable instrument!</p>
@@ -348,29 +367,29 @@ void ofApp::keyPressed(int key) {
 <li>Keep several copies of the <code>phase</code> index, and use <code>ofSignedNoise(...)</code> to slightly modify the frequency they represent. Add each of the waveforms together in <code>output</code>, but average the result by the number of phases you're tracking.</li>
 </ul>
 <p>For example:</p>
-<pre><code>void ofApp::audioOut(float * output, int bufferSize, int nChannels) {
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> ofApp::audioOut(<span class="dt">float</span> * output, <span class="dt">int</span> bufferSize, <span class="dt">int</span> nChannels) {
     ofScopedLock waveformLock(waveformMutex);
 
-    float sampleRate = 44100;
-    float t = ofGetElapsedTimef();
-    float detune = 5;
+    <span class="dt">float</span> sampleRate = <span class="dv">44100</span>;
+    <span class="dt">float</span> t = ofGetElapsedTimef();
+    <span class="dt">float</span> detune = <span class="dv">5</span>;
 
-    for(int phaseIndex = 0; phaseIndex &lt; phases.size(); phaseIndex++) {
-        float phaseFreq = frequency + ofSignedNoise(phaseIndex, t) * detune;
-        float phaseStep = phaseFreq / sampleRate;
+    <span class="kw">for</span>(<span class="dt">int</span> phaseIndex = <span class="dv">0</span>; phaseIndex &lt; phases.size(); phaseIndex++) {
+        <span class="dt">float</span> phaseFreq = frequency + ofSignedNoise(phaseIndex, t) * detune;
+        <span class="dt">float</span> phaseStep = phaseFreq / sampleRate;
 
-        for(int i = 0; i &lt; bufferSize * nChannels; i += nChannels) {
+        <span class="kw">for</span>(<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; bufferSize * nChannels; i += nChannels) {
             phases[phaseIndex] += phaseStep;
-            int waveformIndex = (int)(phases[phaseIndex] * waveform.size()) % waveform.size();
+            <span class="dt">int</span> waveformIndex = (<span class="dt">int</span>)(phases[phaseIndex] * waveform.size()) % waveform.size();
             output[i] += waveform[waveformIndex] * volume;
         }
     }
     
     outLine.clear();
-    for(int i = 0; i &lt; bufferSize * nChannels; i+= nChannels) {
+    <span class="kw">for</span>(<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; bufferSize * nChannels; i+= nChannels) {
         output[i] /= phases.size();
-        outLine.addVertex(ofMap(i, 0, bufferSize - 1, 0, ofGetWidth()),
-                          ofMap(output[i], -1, 1, 0, ofGetHeight()));
+        outLine.addVertex(ofMap(i, <span class="dv">0</span>, bufferSize - <span class="dv">1</span>, <span class="dv">0</span>, ofGetWidth()),
+                          ofMap(output[i], <span class="dv">-1</span>, <span class="dv">1</span>, <span class="dv">0</span>, ofGetHeight()));
     }
 }</code></pre>
 <h2 id="audio-gotchas">Audio Gotchas</h2>

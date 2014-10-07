@@ -54,7 +54,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <div id="chapters">
 <span class="closeBtn mega-octicon octicon-x"></span>
 chapters
-<ul><li><a href="intro.html">intro</a></li><li><a href="cplusplus_basics.html">C++ Language Basics</a></li><li><a href="setup_and_project_structure.html">openFrameworks project structure and setup</a></li><li><a href="OOPs!.html">Ooops! = Object Oriented Programming + Classes</a></li><li><a href="animation.html">Animation</a></li><li><a href="intro_to_graphics.html">Graphics</a></li><li class="selected"><a href="data_vis.html">Information Visualization Chapter</a></li><li><a href="game_design.html">Experimental Game Development in openFrameworks</a></li><li><a href="hardware.html">needs h1</a></li><li><a href="sound.html">Sound</a></li><li><a href="ios.html">ofxiOS</a></li><li><a href="c++11.html">C++ 11</a></li><li><a href="memory.html">Memory in C++</a></li><li><a href="threads.html">Threads</a></li><li><a href="version_control_with_git.html">Version control with Git</a></li><li><a href="advanced_graphics.html">Advanced graphics</a></li><li><a href="network.html">Network</a></li><li><a href="math.html">That Math Chapter: From 1D to 4D</a></li><li><a href="ofSketch.html">ofSketch</a></li><li><a href="project_elliot.html">Case Study : Line Segments Space</a></li><li><a href="project_eva.html">Case Study: Choreographies for Humans and Stars</a></li><li><a href="project_joel.html">Case Study: Anthropocene, an interactive film installation for Greenpeace as part of their field at Glastonbury 2013</a></li><li><a href="project_memo.html">Case Study: Memo (TODO: need title!)</a></li><li><a href="installation_up_4evr_macosx.html">Installation up 4evr - OSX</a></li><li><a href="installation_up_4evr_linux.html">Installation up 4evr - Linux</a></li></ul></div>
+<ul><li class="group">foreword</li><li><a href="foreword.html">Foreword</a></li><li class="group">basics</li><li><a href="of_philosophy.html">philosophy</a></li><li><a href="cplusplus_basics.html">C++ Language Basics</a></li><li><a href="setup_and_project_structure.html">OF structure</a></li><li><a href="intro_to_graphics.html">Graphics</a></li><li><a href="OOPs!.html">Ooops! = Object Oriented Programming + Classes</a></li><li class="group">approaches</li><li><a href="animation.html">Animation</a></li><li class="selected"><a href="data_vis.html">Information Visualization Chapter</a></li><li><a href="game_design.html">Experimental Game Development in openFrameworks</a></li><li><a href="image_processing_computer_vision.html">Image Processing and Computer Vision</a></li><li class="group">i/o</li><li><a href="hardware.html">hardware</a></li><li><a href="sound.html">Sound</a></li><li><a href="network.html">Network</a></li><li class="group">advanced topics</li><li><a href="advanced_graphics.html">Advanced graphics</a></li><li><a href="math.html">That Math Chapter: From 1D to 4D</a></li><li><a href="memory.html">Memory in C++</a></li><li><a href="threads.html">Threads</a></li><li><a href="ios.html">ofxiOS</a></li><li><a href="c++11.html">C++ 11</a></li><li class="group">project breakdowns</li><li><a href="project_elliot.html">Case Study : Line Segments Space</a></li><li><a href="project_eva.html">Case Study: Choreographies for Humans and Stars</a></li><li><a href="project_joel.html">Case Study: Anthropocene, an interactive film installation for Greenpeace as part of their field at Glastonbury 2013</a></li><li class="group">tools</li><li><a href="version_control_with_git.html">Version control with Git</a></li><li><a href="ofSketch.html">ofSketch</a></li><li><a href="installation_up_4evr_macosx.html">Installation up 4evr - OSX</a></li><li><a href="installation_up_4evr_linux.html">Installation up 4evr - Linux</a></li></ul></div>
 <!-- info about the book -->
 <div id="bookInfo">
 <span class="closeBtn mega-octicon octicon-x"></span>
@@ -63,12 +63,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
 <div class="row-fluid">
 <div id="chapter">
 <h1 id="information-visualization-chapter">Information Visualization Chapter</h1>
+<p><em>by <a href="http://www.tegabrain.com/" target="_blank">Tega Brain</a></em></p>
 <p>This chapter gives a brief overview of working with data in OpenFrameworks and introduces some basic information visualisation techniques. It describes steps in the data visualisation process, common file formats and useful functions for converting data. It is structured using two specific examples; a time based plot and a map with geolocated data.</p>
-<h2 id="intro">1. Intro</h2>
-<h3 id="what-is-data-what-is-information">1.1 What is data? What is information?</h3>
+<h2 id="intro">Intro</h2>
+<h3 id="what-is-data-what-is-information">What is data? What is information?</h3>
 <p>Computation has driven a huge increase in our capacity to collect, sort and store data and yet our ability to understand it remains limited by our sensory and cognitive capacities. A visual process that is used across multiple fields, data visualisation is a way of interpreting and presenting data and can potentially reveal trends and patterns that might otherwise remain invisible.</p>
 <p>Data are symbols or numerical interpretations that represent the properties of objects and environments (Ackoff, 1989). Information is produced from analysing the context and descriptive qualities of data, it relates to why the data was collected. Although these terms are often used interchangeably, in the field of information science data is generally thought of as a raw material from which information is produced through analytical processes.</p>
-<h3 id="steps-of-visualising-data">1.3 Steps of visualising data</h3>
+<h3 id="steps-of-visualising-data">Steps of visualising data</h3>
 <p>Ben Fry is a data artist and the author of Visualizing Data (2008), a well-known text outlining data visualisation approaches for the Processing programming environment. In this excellent reference text Fry describes seven stages for visualising data and these provide a useful structure for approaching data-driven projects. These steps are:</p>
 <p>*Acquire: Obtain the data. Data is commonly made available in files downloadable from online sources such as weather services, newspapers, census records and from social media platforms. However there are also times when you may need to compile and format data from hardware or sensors. Real-time data is often available via an Application Programming Interfaces (API), which is an interface or a set of rules that define the process of how other applications can communicate with it. Every API is designed differently and therefore can be communicated with in different ways. This chapter presents two examples of visualising a static dataset imported into OF from external files, and an example that reads data from the New York Times API.</p>
 <p>*Parse: Provide some structure for the data’s meaning, and order it into categories. Once you have obtained your data, before you load it into OpenFrameworks it is important to parse the data. Parsing means checking the file’s format. Is the dataset tagged correctly? Check that each line of your data is broken up consistently across columns. This can be done in a number of ways such as, printing your file out in the terminal or opening your file in a text editor or spreadsheet program and checking for inconsistencies or gaps.</p>
@@ -77,8 +78,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
 <p>*Represent: Choose a basic visual model, such as a bar graph, list, or tree.</p>
 <p>*Refine: Improve the basic representation to make it clearer and more visually engaging.</p>
 <p>*Interact: Add methods for manipulating the data or controlling what features are visible.</p>
-<h2 id="working-with-data-files-in-openframeworks">2. Working with data files in OpenFrameworks</h2>
-<h3 id="common-data-file-structures-tsv-csv-xml-json">2.1 Common data file structures: tsv, csv, xml, json</h3>
+<h2 id="working-with-data-files-in-openframeworks">Working with data files in OpenFrameworks</h2>
+<h3 id="common-data-file-structures-tsv-csv-xml-json">Common data file structures: tsv, csv, xml, json</h3>
 <p>Data is available and stored in specific file types that have particular structures and syntax. The following file types are some of the most common forms of structuring data.</p>
 <p><em>CSV: Comma separated values (csv) files are files where entries in the lines of the file are separated by commas. These can be directly imported into OF by using the ofxCsv add-on. This add-on allows for the reading and writing of CSV file. </em>TSV: Tab separated value files are text files where entries in the lines of the file are separated by tabs. These can be directly imported into OF. *XML: XML files are written in EXtensible Markup Language. XML files are composed of tags that define a data hierarchy for the values within them. A tag has a name, attributes and values within it. If tags are nested the enclosing tags are called parent tags and the nested tags are the children. The tags next to one another are siblings.</p>
 <pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;parentTagName&gt;</span>
@@ -87,7 +88,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
 <span class="kw">&lt;/parentName&gt;</span> </code></pre>
 <p>Reading an XML file in OF requires the use of an OF addon called ofXmlSettings.</p>
 <p>*JSON: JSON stands for ‘javascript object notation’. This is a human readable file that is built on two structures, a collection of name/value pairs which can be realised in OF as a struct and an ordered list of values, realised as a vector. Json files also are parsed using an OF addon called ofxJSON, see example 2.XX for how to implement this.</p>
-<h3 id="example---visualising-time-series-plot">2.2 Example - Visualising Time Series Plot</h3>
+<h3 id="example---visualising-time-series-plot">Example - Visualising Time Series Plot</h3>
 <p><strong>Step 1 Acquire:</strong> This section works through an example of a data visualisation of US population data downloaded from the United States Census service here: http://www.nber.org/data/census-decennial-population.html</p>
 <p><strong>Step 2 Parse and Filter:</strong> Open this file in a spreadsheet program and inspect its contents. You will see that there is an population data for all the regions of the USA from 1900-1990. This example visualises the total population data and data from New York, Louisiana and Alabama so we must construct the data file with only the data from those particular states. You will want to copy and past the selected data into a new spreadsheet so that you are working with a file structure that looks like Figure 1. If you are working in Excel to parse the data, this program has a useful way of transposing the table. Copy a row from the original spreadsheet, and then paste it into your new file by selecting the “Paste Special” option in the Edit menu and selecting “Transpose” before hitting ok.</p>
 <p>IMAGE HERE.</p>
@@ -107,7 +108,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
 <span class="ot">#include "testApp.h"</span>
 <span class="ot">#include "ofAppGlutWindow.h"</span>
 
-<span class="co">//========================================================================</span>
+
 <span class="dt">int</span> main( ){
     
     ofAppGlutWindow window;
@@ -186,9 +187,9 @@ vector &lt; popData &gt; dataPoints;
 };</code></pre>
 <p>IN THE TESTAPP FILE:</p>
 <p>We will now load the data file into OF using the ofBuffer class.</p>
-<h4 id="ofbuffer-class">2.2.1 ofBuffer Class</h4>
+<h4 id="ofbuffer-class">ofBuffer Class</h4>
 <p>ofBuffer will read the data into a buffer which is temporary storage for it as we write code to restructure and process it. ofBuffer is what is known as a convenience class, and provides easy methods for reading from and writing to files. A convenience class simply means that this is a class that doesn’t do anything by itself but wraps or allows access to the functionality of a group of other classes.</p>
-<h4 id="buffer-functions">2.2.2 Buffer Functions</h4>
+<h4 id="buffer-functions">Buffer Functions</h4>
 <p>ofBufferFromFile(); is a function that allows you to load your data file.</p>
 <pre class="sourceCode cpp"><code class="sourceCode cpp">ofBuffer file = ofBufferFromFile(“population.tsv<span class="st">");</span>
 cout &lt;&lt; file.getText();</code></pre>
@@ -384,8 +385,8 @@ ofRectangle rect = font.getStringBoundingBox(“NewYork”, dimensions.x, dimens
     	<span class="kw">if</span> (which == <span class="dv">2</span>) ofSetColor(<span class="dv">180</span>,<span class="dv">90</span>,<span class="dv">90</span>);
     	<span class="kw">else</span> ofSetColor(<span class="dv">90</span>,<span class="dv">90</span>,<span class="dv">90</span>);
     	font.drawString(<span class="st">"Coffee"</span>, dimensions.x + <span class="dv">160</span>, dimensions.y<span class="dv">-15</span>); </code></pre>
-<h2 id="more-useful-functions-for-working-with-data">2.3 More Useful functions for working with data</h2>
-<h3 id="conversion-functions-ofsplitstring-oftostring-oftoint">2.3.1 Conversion functions (ofSplitString, ofToString, ofToInt)</h3>
+<h2 id="more-useful-functions-for-working-with-data">More Useful functions for working with data</h2>
+<h3 id="conversion-functions-ofsplitstring-oftostring-oftoint">Conversion functions (ofSplitString, ofToString, ofToInt)</h3>
 <p>Conversion functions enable the manipulation of each line of data in the buffer. They allow each line to be split and for parts of it to be placed into string or integer variables.</p>
 <pre class="sourceCode cpp"><code class="sourceCode cpp">ofSplitString(line, “\t” );</code></pre>
 <p>This function splits a string at a specified character. It has two arguments, the first is the name of the string to be split and the second is the character at which it is to be split. (indicates split at a tab)</p>
@@ -397,8 +398,8 @@ ofToInt(string);</code></pre>
 <pre class="sourceCode cpp"><code class="sourceCode cpp">ofToFloat(<span class="dt">const</span> string &amp;intString);
 ofToFloat(string);</code></pre>
 <p>This object converts another variable type into an a float variable.</p>
-<h2 id="working-with-apis">3. Working with APIs</h2>
-<h3 id="what-are-apis">3.1 What are APIs?</h3>
+<h2 id="working-with-apis">Working with APIs</h2>
+<h3 id="what-are-apis">What are APIs?</h3>
 <p>An API is an Application Programming Interface. This means it is a software to software interface allowing one piece of software to interact automatically with another online software. It takes the form of a set of instructions for how a program can be designed to interface with the online service. Every API is different with some being very well documented while others are not.</p>
 <p>You can write programs in OpenFrameworks so that data an be pulled from an API automatically and used in your sketch. For example if we want to be able to pull data from the New York Times API we would inspect the instructions for doing so here: http://developer.nytimes.com/docs.</p>
 <h2 id="further-resources">Further resources</h2>

@@ -54,7 +54,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <div id="chapters">
 <span class="closeBtn mega-octicon octicon-x"></span>
 chapters
-<ul><li><a href="intro.html">intro</a></li><li><a href="cplusplus_basics.html">C++ Language Basics</a></li><li><a href="setup_and_project_structure.html">openFrameworks project structure and setup</a></li><li><a href="OOPs!.html">Ooops! = Object Oriented Programming + Classes</a></li><li><a href="animation.html">Animation</a></li><li><a href="intro_to_graphics.html">Graphics</a></li><li><a href="data_vis.html">Information Visualization Chapter</a></li><li><a href="game_design.html">Experimental Game Development in openFrameworks</a></li><li><a href="hardware.html">needs h1</a></li><li><a href="sound.html">Sound</a></li><li><a href="ios.html">ofxiOS</a></li><li><a href="c++11.html">C++ 11</a></li><li><a href="memory.html">Memory in C++</a></li><li><a href="threads.html">Threads</a></li><li><a href="version_control_with_git.html">Version control with Git</a></li><li><a href="advanced_graphics.html">Advanced graphics</a></li><li><a href="network.html">Network</a></li><li><a href="math.html">That Math Chapter: From 1D to 4D</a></li><li class="selected"><a href="ofSketch.html">ofSketch</a></li><li><a href="project_elliot.html">Case Study : Line Segments Space</a></li><li><a href="project_eva.html">Case Study: Choreographies for Humans and Stars</a></li><li><a href="project_joel.html">Case Study: Anthropocene, an interactive film installation for Greenpeace as part of their field at Glastonbury 2013</a></li><li><a href="project_memo.html">Case Study: Memo (TODO: need title!)</a></li><li><a href="installation_up_4evr_macosx.html">Installation up 4evr - OSX</a></li><li><a href="installation_up_4evr_linux.html">Installation up 4evr - Linux</a></li></ul></div>
+<ul><li class="group">foreword</li><li><a href="foreword.html">Foreword</a></li><li class="group">basics</li><li><a href="of_philosophy.html">philosophy</a></li><li><a href="cplusplus_basics.html">C++ Language Basics</a></li><li><a href="setup_and_project_structure.html">OF structure</a></li><li><a href="intro_to_graphics.html">Graphics</a></li><li><a href="OOPs!.html">Ooops! = Object Oriented Programming + Classes</a></li><li class="group">approaches</li><li><a href="animation.html">Animation</a></li><li><a href="data_vis.html">Information Visualization Chapter</a></li><li><a href="game_design.html">Experimental Game Development in openFrameworks</a></li><li><a href="image_processing_computer_vision.html">Image Processing and Computer Vision</a></li><li class="group">i/o</li><li><a href="hardware.html">hardware</a></li><li><a href="sound.html">Sound</a></li><li><a href="network.html">Network</a></li><li class="group">advanced topics</li><li><a href="advanced_graphics.html">Advanced graphics</a></li><li><a href="math.html">That Math Chapter: From 1D to 4D</a></li><li><a href="memory.html">Memory in C++</a></li><li><a href="threads.html">Threads</a></li><li><a href="ios.html">ofxiOS</a></li><li><a href="c++11.html">C++ 11</a></li><li class="group">project breakdowns</li><li><a href="project_elliot.html">Case Study : Line Segments Space</a></li><li><a href="project_eva.html">Case Study: Choreographies for Humans and Stars</a></li><li><a href="project_joel.html">Case Study: Anthropocene, an interactive film installation for Greenpeace as part of their field at Glastonbury 2013</a></li><li class="group">tools</li><li><a href="version_control_with_git.html">Version control with Git</a></li><li class="selected"><a href="ofSketch.html">ofSketch</a></li><li><a href="installation_up_4evr_macosx.html">Installation up 4evr - OSX</a></li><li><a href="installation_up_4evr_linux.html">Installation up 4evr - Linux</a></li></ul></div>
 <!-- info about the book -->
 <div id="bookInfo">
 <span class="closeBtn mega-octicon octicon-x"></span>
@@ -63,17 +63,19 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
 <div class="row-fluid">
 <div id="chapter">
 <h1 id="ofsketch">ofSketch</h1>
-<p>By Brannon Dorsey (&amp; Christopher Baker?)</p>
+<p>By Brannon Dorsey</p>
+<p>Edited by <a href="http://www.mikewesthad.com/" target="_blank">Michael Hadley</a>.</p>
 <div class="figure">
-<div style="clear:both"><img alt="ofSketch Screenshot" src="..\images\ofSketch/images/ofSketch.jpg"/></div><span class="caption">ofSketch Screenshot</span>
+<div style="clear:both"><img alt="Hello World Example" src="..\images\ofSketch/images/HelloWorldExample.png"/></div><span class="caption">Hello World Example</span>
 </div>
-<p><strong>[MH: I modified the headers so that h1 is only used for the title. Otherwise the web/pdf outputs get a little funky]</strong> ## What is ofSketch? <a href="https://github.com/olab-io/ofSketch" target="_blank">ofSketch</a> is a barebones development environment created specifically for building and running openFrameworks sketches. It is a "plug and play" openFrameworks application that allows you to spend more time coding and less time with configuration. <strong>[mh: maybe instead of saying "plug and play," you could just mention that there is not installation process - it's just download and run]</strong></p>
+<h2 id="what-is-ofsketch">What is ofSketch?</h2>
+<p><a href="https://github.com/olab-io/ofSketch" target="_blank">ofSketch</a> is a barebones development environment created specifically for building and running openFrameworks sketches. Its a minimal installation openFrameworks application that allows you to spend more time coding and less time with configuration.</p>
 <p>One of the main goals in developing ofSketch is to decrease the barriers to entry for openFrameworks. For this reason, it should be noted that ofSketch is primarily geared towards beginners and new coders.</p>
 <h3 id="what-is-ofsketch-good-for">What is ofSketch Good For?</h3>
 <ul>
 <li>Teaching or learning openFrameworks</li>
 <li>Making <a href="http://openframeworks.cc/tutorials/first%20steps/002_openFrameworks_for_processing_users.html" target="_blank">the leap</a> from <a href="http://processing.org" target="_blank">Processing</a> to openFrameworks</li>
-<li>Writing and running code quickly <strong>[mh: Rapid prototyping? Running code quickly almost sounds like processing speed]</strong></li>
+<li>Rapid code prototyping</li>
 <li>Creating code snippets, experiments, and examples</li>
 <li>Running openFrameworks on the <a href="http://www.raspberrypi.org/" target="_blank">Raspberry Pi</a></li>
 </ul>
@@ -82,9 +84,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
 <li>Replacing a professional IDE like Xcode, Code::Blocks, Visual Studio, etc...</li>
 <li>Building sizable projects or applications</li>
 </ul>
-<p><strong>[mh: I think the above two lists could be folded into one section, and then, the text below could be folded into the download and install section]</strong></p>
-<p>If you've read Roy's <em>openFrameworks Project Structure and Setup</em> chapter <strong>[mh: include ch number]</strong> , ofSketch should be an easy step sideways <strong>[mh: "step sideways" is a little unclear]</strong>. That chapter gave an overview of installing and using openFrameworks with different professional IDEs. If you skipped ahead to this chapter, that is okay too! With ofSketch you don't have to worry about downloading openFrameworks or using Project Generator. All you need to do is download the ofSketch App. <strong>[mh: is this going to be true for windows by the 15th?]</strong></p>
-<h2 id="download-install-mh-download-and-run">Download &amp; Install [mh: Download and Run?]</h2>
+<h3 id="how-does-ofsketch-work">How does ofSketch work?</h3>
+<div class="figure">
+<div style="clear:both"><img alt="App to Browser Diagram" src="..\images\ofSketch/images/browser_diagram.png"/></div><span class="caption">App to Browser Diagram</span>
+</div>
+<p>ofSketch works by internally communicating back and forth between the ofSketch application and the browser editor. The application, among other things, reads/writes files to your computer, and compiles and launches your projects. The browser editor acts as the graphical user interface (GUI), where you code, run, and manage your projects. When you interact with ofSketch you are doing so from the browser, however the distinction between the application and the browser should not be overlooked. For more info, check out the <a href="https://github.com/olab-io/ofSketch/blob/master/ARCHITECTURE.md" target="_blank">ARCHITECTURE.md</a> file on the ofSketch GitHub repository.</p>
+<!-- If you've read Roy's _openFrameworks Project Structure and Setup_ chapter, ofSketch should be an easy step sideways **[mh: "step sideways" is a little unclear]**. That chapter gave an overview of installing and using openFrameworks with different professional IDEs. If you skipped ahead to this chapter, that is okay too! With ofSketch you don't have to worry about downloading openFrameworks or using Project Generator. All you need to do is download the ofSketch App. -->
+<h2 id="download">Download</h2>
 <p>Visit the ofSketch <a href="https://github.com/olab-io/ofSketch/releases" target="_blank">releases page</a> to download the ofSketch app for your platform.</p>
 <p>ofSketch comes packaged with the following files:</p>
 <ul>
@@ -101,10 +107,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
 <h3 id="getting-started-with-ofsketch">Getting Started With ofSketch</h3>
 <p>Code in ofSketch looks a bit different than what you may be used to with openFrameworks. If you are new to openFrameworks, great! We think that ofSketch code is easier to learn than the normal <code>.h</code> and <code>.cpp</code> openFrameworks code structure.</p>
 <h3 id="ofsketch-style-code">ofSketch Style Code</h3>
-<p>ofSketch uses "header style" <strong>[mh: maybe add a ref here]</strong> C++, where code implementation is written along with declarations in the header file, instead of the matching <code>.cpp</code> source file. If this doesn't make since to you, don't worry. Essentially, this allows us to write simple, easy-to-read code, that is great for beginners!</p>
+<p>ofSketch uses "<a href="http://hanxue-it.blogspot.com/2014/04/why-include-cc-implementation-code-in.html" target="_blank">header style</a>" C++, where code implementation is written along with declarations inside of the header file, instead of the matching <code>.cpp</code> source file. If this doesn't make since to you, don't worry. Essentially, this allows us to write simple, easy-to-read code, that is great for beginners!</p>
 <h3 id="project-file">Project File</h3>
 <p>Every ofSketch project starts with an empty project file that looks like this:</p>
-<p><strong>[mh: we're switching over to github flavored fencing for code blocks]</strong></p>
 <pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> setup() {
         <span class="co">// put your setup code here, to run once:</span>
         
@@ -114,7 +119,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
         <span class="co">// put your main code here, to run once each frame:</span>
         
 }</code></pre>
-<p>If you are coming from Processing, this should be extremely familiar. To add global functions and variables, simply add them to this project file. You don't need to prefix any identifiers (variables, functions, etc...) with <code>ofApp</code> (or the older <code>testApp</code>). <strong>[mh: not sure you even need to mention the testApp bit]</strong></p>
+<p>If you are coming from Processing, this should be extremely familiar. To add global functions and variables, simply add them to this project file. You don't need to prefix any identifiers (variables, functions, etc...) with <code>ofApp</code>.</p>
 <pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// global variables go up here</span>
 std::string text; 
 
@@ -134,13 +139,12 @@ std::string text;
         cout &lt;&lt; text &lt;&lt; endl;
 }</code></pre>
 <h3 id="classes">Classes</h3>
-<p>Using classes in ofSketch is easy! Press the "+" button in the tab bar <strong>[mh: in the browser]</strong> to add a new class. When you do this a class template is automatically generated for you. Here is an example class template for a class called "MyNewClass":</p>
-<p>**[mh: i'd suggest using Particle here rather than MyNewClass. It helps link up this code block with the next one**]</p>
-<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> MyNewClass{
+<p>Using classes in ofSketch is easy! Press the "+" button in the tab bar in the ofSketch browser window to add a new class. When you do this a class template is automatically generated for you. Here is an example class template for a "Particle" class:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> Particle{
 
 <span class="kw">public</span>:
 
-    MyNewClass(){
+    Particle(){
 
     }        
 };</code></pre>
@@ -215,19 +219,20 @@ Particle p;
 <p>Here we include the "Particle.h" file, use it to instantiate a Particle object "p", and then place it in the middle of the screen.</p>
 <p>Note that we also added an <code>update</code> function. As you may know by now, it is customary in openFrameworks to separate operations that update logic from operations that render graphics to the screen. This is for performance reasons, however, it is not necessary, and all of the code placed in <code>void update()</code> can instead live inside of <code>void draw()</code> if you prefer.</p>
 <h3 id="examples">Examples</h3>
-<p>ofSketch comes packaged with a few basic examples that illustrate the ofSketch code style. Most of them are ported from the regular openFrameworks examples, but there are a few new ones too. Press the "Open Project" button inside ofSketch to open one of them. <strong>[mh: shout out specific example to run and show a pic]</strong></p>
-<p>While the code in this chapter highlights the difference between ofSketch code and a normal implementation of C++ code, reviewing the examples should give you a better idea of the general ofSketch style. <strong>[mh: this paragraph seems redundant since you've already introduced the ofSketch style]</strong></p>
+<div class="figure">
+<div style="clear:both"><img alt="Open Project" src="..\images\ofSketch/images/open_project.png"/></div><span class="caption">Open Project</span>
+</div>
+<p>ofSketch comes packaged with a few basic examples that illustrate the ofSketch code style. Most of them are ported from the regular openFrameworks examples, but there are a few new ones too. Press the "Open Project" button inside ofSketch to open one of them.</p>
+<p>While the code in this chapter highlights the difference between ofSketch code and a normal implementation of C++ code, reviewing the examples should give you a better idea of the general ofSketch style.</p>
 <h2 id="sketch-format">Sketch Format</h2>
 <div class="figure">
 <div style="clear:both"><img alt="Sketch Folder Structure" src="..\images\ofSketch/images/sketch_folder_structure.png"/></div><span class="caption">Sketch Folder Structure</span>
 </div>
-<p><strong>[mh: I assume data/ is in the bin/? Might be useful to mention that somewhere. Beginners might not know where to put files that they want to load.]</strong></p>
 <p>If you take a look at an app in your Projects folder, you will see a "sketch" directory. This is where all of the ofSketch source files are saved, each with a ".sketch" file extension. When you use ofSketch, you are editing the files in this directory. Whenever you run an app from inside ofSketch, all of the files in the "sketch" directory are processed to generate source files inside of the "src" directory.</p>
 <p>Because of this workflow, it is important to edit ofSketch projects through <strong>ofSketch only</strong>. You could easily get yourself into trouble if you edited an ofSketch project with Xcode (modifying the files in the "src" directory) and then opened it in ofSketch again, pressed the play button, and then overwrote all of our changes.</p>
 <p>Soon, ofSketch will include fancy project import and export feature which will allow you to import/export a project from/to a professional IDE target of your choice. Until then, it is best to just copy a project if you want to edit it with something other than ofSketch.</p>
 <h2 id="remote-coding">Remote Coding</h2>
 <p>One of the highlights of the ofSketch browser editor is the ability to edit code on a remote machine through a network connection. This is especially helpful when coding with the Raspberry Pi, or when tweaking live installation code. The figure below illustrates this in practice.</p>
-<p><strong>[mh: I'd add a screenshot of the ofSketch browser interface on the mac in the diagram. Aside from that, kickass graphic.]</strong></p>
 <div class="figure">
 <div style="clear:both"><img alt="Remote Coding Diagram" src="..\images\ofSketch/images/remote_setup.png"/></div><span class="caption">Remote Coding Diagram</span>
 </div>
@@ -235,19 +240,17 @@ Particle p;
 <li>Raspberry Pi running an ofSketch app that draws a landscape to a connected to a TV</li>
 <li>Laptop with web browser pointed to RPi's IP address and port 7890 (e.x. http://192.168.0.204:7890)</li>
 </ol>
-<p>To code with ofSketch remotely, start ofSketch <strong>[MH: Might not be clear to everyone that you mean the executable here]</strong> on the machine that you want to run the openFrameworks app. In order to connect to ofSketch from that machine, you need to know its unique IP address on the network. You can use an application like <a href="https://www.google.com/webhp?sourceid=chrome-instant&amp;ion=1&amp;espv=2&amp;ie=UTF-8#q=bonjour+browser" target="_blank">Bonjour Browser</a> on CPU 2 to discover CPU 1's IP address.</p>
-<p>Once you have the IP address of CPU 1, open a web browser on CPU 2 and visit <code>http://CPU_1_IP_ADDRESS:7890</code>.</p>
-<p>You can now create, edit, and run projects remotely on CPU 2.</p>
-<p><strong>(BD: Is all of this "CPU 1" &amp; "CPU 2" language confusing?)</strong> <strong>[mh: I'd go with something a bit more generic, like device 1 &amp; 2. Then you could include those names in your diagram]</strong></p>
+<p>To code with ofSketch remotely, start the ofSketch application on the machine that you want to run the openFrameworks app. In order to connect to ofSketch from that machine, you need to know its unique IP address on the network. You can use an application like <a href="https://www.google.com/webhp?sourceid=chrome-instant&amp;ion=1&amp;espv=2&amp;ie=UTF-8#q=bonjour+browser" target="_blank">Bonjour Browser</a> on device 2 to discover device 1's IP address.</p>
+<p>Once you have the IP address of device 1, open a web browser on device 2 and visit <code>http://CPU_1_IP_ADDRESS:7890</code>.</p>
+<p>You can now create, edit, and run projects using device 2.</p>
 <h2 id="future">Future</h2>
 <p>The ofSketch project is still in its infancy. In fact, at the time of writing this chapter, the most recent ofSketch release is v0.3.2. Undoubtedly the application will change as we approach a stable release (v1.0), but we are particularly excited about some of the things we have in store. Below is a list of planned features to watch out for over the next year.</p>
 <h3 id="app-export">App Export</h3>
-<p>App Export will allow users to export executables and resources to use on other computers <strong>[mh: maybe "...resource that can be transferred to and run on a different computer."]</strong>. These will be presented as a zipped bundle for easier transport. <strong>[mh: maybe "the exported project will be downloaded a zipped bundle for easier transport."]</strong></p>
+<p>App Export will allow users to export executables and resources that can be transferred to and run on other computers. The exported project will be downloaded as zipped bundle for easy transport.</p>
 <h3 id="project-file-export">Project File Export</h3>
 <p>Project File Export will use an integrated version of the openFrameworks Project Generator in the ofSketch app to export a project for Xcode, Code::Blocks, and Visual Studio 2012. These project files will be useful to allow new users to access more advanced editing features available in professional IDEs.</p>
 <h3 id="custom-.h-.cpp-files">Custom .h &amp; .cpp Files</h3>
 <p>To aid in the transition from ofSketch to more advanced IDEs, ofSketch users will be given the option to create and work with <code>.h</code> and <code>.cpp</code> files. Eventually, using this functionality will be as simple as including the appropriate extension when creating the file.</p>
-<p>Both Processing and <a href="http://arduino.cc/" target="_blank">Arduino</a> IDEs allows similar functionality when creating and using <code>.java</code> or <code>.h</code> and <code>.cpp</code> files respectively. <strong>[mh: I don't think this is necessary to mention]</strong></p>
 <h3 id="clang-indexed-autocomplete">Clang Indexed Autocomplete</h3>
 <p>We intend to use some of <a href="https://github.com/brannondorsey/ofSketch/wiki/Clang-Resources" target="_blank">these</a> Clang resources to index the openFrameworks Core and use it to better provide autocomplete and syntax highlighting tools in the editor. Ideally, this system would also auto-index user code.</p>
 </div>

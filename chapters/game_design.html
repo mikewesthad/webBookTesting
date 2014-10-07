@@ -35,7 +35,7 @@
 <div id="chapters">
 <span class="closeBtn mega-octicon octicon-x"></span>
 chapters
-<ul><li><a href="intro.html">intro</a></li><li><a href="cplusplus_basics.html">C++ Language Basics</a></li><li><a href="setup_and_project_structure.html">openFrameworks project structure and setup</a></li><li><a href="OOPs!.html">Ooops! = Object Oriented Programming + Classes</a></li><li><a href="animation.html">Animation</a></li><li><a href="intro_to_graphics.html">Graphics</a></li><li><a href="data_vis.html">Information Visualization Chapter</a></li><li class="selected"><a href="game_design.html">Experimental Game Development in openFrameworks</a></li><li><a href="hardware.html">needs h1</a></li><li><a href="sound.html">Sound</a></li><li><a href="ios.html">ofxiOS</a></li><li><a href="c++11.html">C++ 11</a></li><li><a href="memory.html">Memory in C++</a></li><li><a href="threads.html">Threads</a></li><li><a href="version_control_with_git.html">Version control with Git</a></li><li><a href="advanced_graphics.html">Advanced graphics</a></li><li><a href="network.html">Network</a></li><li><a href="math.html">That Math Chapter: From 1D to 4D</a></li><li><a href="ofSketch.html">ofSketch</a></li><li><a href="project_elliot.html">Case Study : Line Segments Space</a></li><li><a href="project_eva.html">Case Study: Choreographies for Humans and Stars</a></li><li><a href="project_joel.html">Case Study: Anthropocene, an interactive film installation for Greenpeace as part of their field at Glastonbury 2013</a></li><li><a href="project_memo.html">Case Study: Memo (TODO: need title!)</a></li><li><a href="installation_up_4evr_macosx.html">Installation up 4evr - OSX</a></li><li><a href="installation_up_4evr_linux.html">Installation up 4evr - Linux</a></li></ul></div>
+<ul><li class="group">foreword</li><li><a href="foreword.html">Foreword</a></li><li class="group">basics</li><li><a href="of_philosophy.html">philosophy</a></li><li><a href="cplusplus_basics.html">C++ Language Basics</a></li><li><a href="setup_and_project_structure.html">OF structure</a></li><li><a href="intro_to_graphics.html">Graphics</a></li><li><a href="OOPs!.html">Ooops! = Object Oriented Programming + Classes</a></li><li class="group">approaches</li><li><a href="animation.html">Animation</a></li><li><a href="data_vis.html">Information Visualization Chapter</a></li><li class="selected"><a href="game_design.html">Experimental Game Development in openFrameworks</a></li><li><a href="image_processing_computer_vision.html">Image Processing and Computer Vision</a></li><li class="group">i/o</li><li><a href="hardware.html">hardware</a></li><li><a href="sound.html">Sound</a></li><li><a href="network.html">Network</a></li><li class="group">advanced topics</li><li><a href="advanced_graphics.html">Advanced graphics</a></li><li><a href="math.html">That Math Chapter: From 1D to 4D</a></li><li><a href="memory.html">Memory in C++</a></li><li><a href="threads.html">Threads</a></li><li><a href="ios.html">ofxiOS</a></li><li><a href="c++11.html">C++ 11</a></li><li class="group">project breakdowns</li><li><a href="project_elliot.html">Case Study : Line Segments Space</a></li><li><a href="project_eva.html">Case Study: Choreographies for Humans and Stars</a></li><li><a href="project_joel.html">Case Study: Anthropocene, an interactive film installation for Greenpeace as part of their field at Glastonbury 2013</a></li><li class="group">tools</li><li><a href="version_control_with_git.html">Version control with Git</a></li><li><a href="ofSketch.html">ofSketch</a></li><li><a href="installation_up_4evr_macosx.html">Installation up 4evr - OSX</a></li><li><a href="installation_up_4evr_linux.html">Installation up 4evr - Linux</a></li></ul></div>
 <!-- info about the book -->
 <div id="bookInfo">
 <span class="closeBtn mega-octicon octicon-x"></span>
@@ -44,12 +44,21 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
 <div class="row-fluid">
 <div id="chapter">
 <h1 id="experimental-game-development-in-openframeworks">Experimental Game Development in openFrameworks</h1>
+<p><em>by <a href="http://www.phoenixperry.com" target="_blank">Phoenix Perry</a> and <a href="janefriedhoff.com" target="_blank">Jane Friedhoff</a></em></p>
 <p>Game developers are, in greater and greater numbers, turning to openFrameworks' creative coding toolkit to develop their games. Unlike platforms like Unity, GameMaker, and Construct2, oF was not specifically developed for game makers. However, oF's ability to port to mobile, manipulate video, utilize camera input, support generative graphics, and hook in with devices like Arduino and Kinect (among other features) makes it a very attractive option for developers who want to be able to rapidly produce compelling, unique games.</p>
 <h3 id="popular-games-in-open-frameworks">Popular games in open frameworks</h3>
-<p><img src="images/RushModeSm.png"/><br/><strong>Spell Tower by Zach Gage</strong></p>
-<p><img src="images/particleMace.png"/><br/><strong>Particle Mace by Andy Wallace</strong></p>
-<p><img src="images/eliss012.jpg"/><br/><strong>Eliss by Steph Thirion</strong></p>
-<p><img src="images/screamup.png"/><br/><strong>Scream Em Up by Jane Friedhoff</strong></p>
+<div class="figure">
+<div style="clear:both"><img alt="Spell Tower by Zach Gage" src="..\images\game_design/images/RushModeSm.png" title="Spell Tower by Zach Gage"/></div><span class="caption">Spell Tower by Zach Gage</span>
+</div>
+<div class="figure">
+<div style="clear:both"><img alt="Particle Mace by Andy Wallace" src="..\images\game_design/images/particleMace.png" title="Particle Mace by Andy Wallace"/></div><span class="caption">Particle Mace by Andy Wallace</span>
+</div>
+<div class="figure">
+<div style="clear:both"><img alt="Eliss by Steph Thirion" src="..\images\game_design/images/eliss012.jpg" title="Eliss by Steph Thirion"/></div><span class="caption">Eliss by Steph Thirion</span>
+</div>
+<div class="figure">
+<div style="clear:both"><img alt="Scream Em Up by Jane Friedhoff" src="..\images\game_design/images/screamup.png" title="Scream Em Up by Jane Friedhoff"/></div><span class="caption">Scream Em Up by Jane Friedhoff</span>
+</div>
 <p>In this chapter, we'll learn about game development in openFrameworks. We'll cover what goes into making a game, as well as how to code a simple space shooter. Finally, we'll put an experimental oF twist on our game by implementing OSC functionality, which will allow you to alter the difficulty of the game live—while a player is playing it.</p>
 <p>Ready? Let's go!</p>
 <h2 id="how-do-game-developers-actually-make-games">How do game developers actually make games?</h2>
@@ -64,11 +73,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
 <ul>
 <li>An address pattern. This is a hierarchical name space, and looks a bit like a Unix filesystem or URL (e.g. <code>/Address1</code>). These patterns can effectively be anything you want (e.g. <code>/EnemySpeed</code>)--think of them as names for what you send.</li>
 <li>A Type tag string. This simply represents the kind of data being sent (e.g. <code>int</code>, <code>string</code>).</li>
-<li>Arguments. The actual value that is being transmitted (e.g. <code>6</code>, <code>“Hello world”</code>, etc.).</li>
+<li>Arguments. The actual value that is being transmitted (e.g. <code>6</code>, <code>"Hello world"</code>, etc.).</li>
 </ul>
 <p>There are plenty of inexpensive apps for smartphones and tablets that provide customizable GUIs (complete with buttons, sliders, etc.) for sending different kinds of MIDI messages. Download one (we like TouchOSC) so we have something to send our messages with. With this in mind, let's start making our game!</p>
 <h2 id="our-basic-game---making-it-not-so-basic">Our basic game--&amp; making it not-so-basic</h2>
-<p>OpenFrameworks handles OSC as an included addon, so our first step will be to run the project generator and create a project with the OSC addon. (If you haven't had a chance to read about addons, now would be a good time to jump over to [here] and do just that!) Launch the project generator, then, in the main menu, click the word “Addons.” A popup will appear. Select ofxOsc and then click back. Now, next to the word Addons, you should see ofxOsc. Press “generate”. When it completes the project creation process, close the generator and open up the project in either Visual Studio or Xcode. The project will be set up in your myApps folder. Open it now.</p>
+<p>OpenFrameworks handles OSC as an included addon, so our first step will be to run the project generator and create a project with the OSC addon. (If you haven't had a chance to read about addons, now would be a good time to jump over to [here] and do just that!) Launch the project generator, then, in the main menu, click the word "Addons." A popup will appear. Select ofxOsc and then click back. Now, next to the word Addons, you should see ofxOsc. Press "generate". When it completes the project creation process, close the generator and open up the project in either Visual Studio or Xcode. The project will be set up in your myApps folder. Open it now.</p>
 <p>Here's what our game will have:</p>
 <ul>
 <li>A player, who has an on-screen position, a movement speed, and an image to represent it</li>
@@ -77,7 +86,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
 <li>Bullets (for the player and the enemies), which have an on-screen position, images to represent them, a way to keep track of where they come from (player or enemy), and a speed</li>
 <li>Bonus lives, which have an on-screen position, an image to represent them, and a speed</li>
 </ul>
-<p><img src="images/game.png"/><br/><strong><em>Space Game in action!</em></strong></p>
+<div class="figure">
+<div style="clear:both"><img alt="Space Game in action!" src="..\images\game_design/images/game.png" title="Space Game in action!"/></div><span class="caption">Space Game in action!</span>
+</div>
 <p>With all that written out, let’s use OSC to affect the following:</p>
 <ul>
 <li>The horizontal movement of our enemies--whether they move in a more exaggerated sin wave, or whether they move in more of a straight line</li>
@@ -86,9 +97,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
 <li>Whether a life bonus is on screen or not</li>
 </ul>
 <p>These three parameters will allow the developer to, second-by-second, tailor the difficulty of the game to the individual playing it.</p>
-<p>Let’s start with our testApp. There are a few things we definitely know we’ll want classes for, so make corresponding .h and .cpp files for Player, Bullet, Life, Enemy, and LevelController. Remember to <code>#include “ofMain.h”</code> in each of those classes, and to include the .h file of each of those classes in <code>testApp.h</code>.</p>
+<p>Let’s start with our testApp. There are a few things we definitely know we’ll want classes for, so make corresponding .h and .cpp files for Player, Bullet, Life, Enemy, and LevelController. Remember to <code>#include "ofMain.h"</code> in each of those classes, and to include the .h file of each of those classes in <code>testApp.h</code>.</p>
 <h3 id="gamestates">Gamestates</h3>
-<p>First let’s create the basic structure of our game. Games typically have at least three parts: a start screen, the game itself, and an end screen. We need to keep track of which section of the game we’re in, which we’ll do using a variable called a game state. In this example, our game state variable is a string, and the three parts of our game are <code>“start”</code>, <code>“game”</code>, and <code>“end”</code>. Let’s add a score and a player at this point as well. </p>
+<p>First let’s create the basic structure of our game. Games typically have at least three parts: a start screen, the game itself, and an end screen. We need to keep track of which section of the game we’re in, which we’ll do using a variable called a game state. In this example, our game state variable is a string, and the three parts of our game are <code>"start"</code>, <code>"game"</code>, and <code>"end"</code>. Let’s add a score and a player at this point as well. </p>
 <pre><code>string game_state;
 int score;
 Player player_1;</code></pre>
@@ -98,7 +109,7 @@ void testApp::update(){
    if (game_state == "start") {
  
    } else if (game_state == "game") {
-   } else if (game_state == “end”) {
+   } else if (game_state == "end") {
  
    }
 }
@@ -106,11 +117,11 @@ void testApp::update(){
 void testApp::draw(){
    if (game_state == "start") {
    } else if (game_state == "game") {
-   } else if (game_state == “end”) {
+   } else if (game_state == "end") {
  
    }
 }</code></pre>
-<p>Let’s set the initial value of <code>game_state</code> to <code>“start”</code> right when the app begins.</p>
+<p>Let’s set the initial value of <code>game_state</code> to <code>"start"</code> right when the app begins.</p>
 <pre><code>//--------------------------------------------------------------
 void testApp::setup(){
    game_state = "start";
@@ -490,7 +501,7 @@ bool LevelController::should_spawn() {
    return false;
 }</code></pre>
 <p>When we set up our level controller, we’ll give it a starting time. It’ll use this time as a baseline for the first enemy spawn. The should_spawn code should look familiar from the enemy bullet section.</p>
-<p>We’ll wait to set up our level controller until the game actually starts--namely, when the game state changes from <code>“start”</code> to <code>“game”</code>.</p>
+<p>We’ll wait to set up our level controller until the game actually starts--namely, when the game state changes from <code>"start"</code> to <code>"game"</code>.</p>
 <pre><code>void testApp::keyReleased(int key){
    if (game_state == "start") {
        game_state = "game";
@@ -653,7 +664,10 @@ void testApp::draw_score() {
 <p>Congrats--you made a game!</p>
 <h3 id="linking-of-and-osc">Linking oF and OSC</h3>
 <p>Now let’s add in the OSC functionality. We are going to set our application up to receive messages from our iPad and then make changes in real-time while our game is running to test some possible player scenarios. As mentioned before, this can trump going into your application and making manual changes because you skip the need to recompile your game and playtest live. In fact, you can use Touch OSC to even open up new ways to interact with your players.</p>
-<p><img src="images/touchGame.png"/><br/><strong><em>Nightgame developer interface by Phoenix Perry</em></strong><br/><em>Touch OSC is used to switch game levels on the fly and to run challenges.</em></p>
+<div class="figure">
+<div style="clear:both"><img alt="Nightgame developer interface by Phoenix Perry" src="..\images\game_design/images/touchGame.png" title="Nightgame developer interface by Phoenix Perry"/></div><span class="caption">Nightgame developer interface by Phoenix Perry</span>
+</div>
+<p><em>Touch OSC is used to switch game levels on the fly and to run challenges.</em></p>
 <p>To accomplish this we are going to create a new class that will contain our OSC functionality. Create a .cpp and .h file for this class now and name it LiveTesting. Open <code>LiveTesting.h</code> And let’s add the line to import the OSC at the top of your file after your preprocessor directives and also a line for using iostream for testing purposes. As we add the code we will explain in inline in the code comments.</p>
 <p>Add the following:</p>
 <pre><code>#include &lt;iostream&gt;
