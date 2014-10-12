@@ -517,6 +517,45 @@ currentPolyline.draw();</code></pre>
 <li>The density of tangents or normals drawn is dependent on the length of the brush stroke. Try making it independent (hint: you may need to adjust your loop and use <code>getPerimeter()</code> to calculate the length).</li>
 <li>Check out how to draw polygons using <code>ofPath</code> and try drawing a brush stroke that is a giant, closed shape.</li>
 </ol>
+<h4 id="vector-graphics-taking-a-snapshot-part-2">Vector Graphics: Taking a Snapshot (Part 2)</h4>
+<p>Remember how we saved our drawings that we made with the basic shape brushes by doing a screen capture? Well, we can also save drawings as a PDF. A PDF stores the graphics as a series of geometric objects rather than as a series of pixel values. So, if we render out our polylines as a PDF, we can open it in a vector graphics editor (like <a href="http://www.inkscape.org/en/" target="_blank">Inkscape</a> or Adobe Illustrator) and modify our polylines in all sorts of ways. For example, see figure 17 where I colored and blurred the polylines to create a glowing effect.</p>
+<p>Once we have a PDF, we could also use it to blow up our polyines to create a massive, high resolution print.</p>
+<p>To do any of this, we need to use <a href="http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#!show_ofBeginSaveScreenAsPDF" target="_blank" title="ofBeginSaveScreenAsPDF openFrameworks Documentation"><code>ofBeginSaveScreenAsPDF(...)</code></a> and <a href="http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#show_ofEndSaveScreenAsPDF" target="_blank" title="ofBeingEndSaveAsPDF openFrameworks Documentation"><code>ofEndSaveScreenAsPDF()</code></a>. When we call <code>ofBeginSaveScreenAsPDF(...)</code>, any subsequent drawing commands will output to a PDF <em>instead of</em> being drawn to the screen. <code>ofBeginSaveScreenAsPDF(...)</code> takes one required argument, a <code>string</code> that contains the desired filename for the PDF. (The PDF will be saved into <code>./bin/data/</code> unless you specify an alternate path). When we call <code>ofEndSaveScreenAsPDF()</code>, the PDF is saved and drawing commands begin outputting back to the screen.</p>
+<p>Let's use the polyline brush code from the last section to save a PDF. The way we saved a screenshot previously was to put <code>ofSaveScreen()</code> inside of <code>keyPressed(...)</code>. We can't do that here because <code>ofBeginSaveScreenAsPDF(...)</code> and <code>ofEndSaveScreenAsPDF()</code> need to be before and after (respectively) the drawing code. So we'll make use of a <code>bool</code> variable. Add <code>bool isSavingPDF</code> to the header (.h) file, and then modify your source code (.cpp) to look like this:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> ofApp::setup(){
+	<span class="co">// Setup code omitted for clarity...</span>
+
+    isSavingPDF = <span class="kw">false</span>;
+}
+
+<span class="dt">void</span> ofApp::draw(){
+    <span class="co">// If isSavingPDF is true (i.e. the s key has been pressed), then</span>
+    <span class="co">// anything in between ofBeginSaveScreenAsPDF(...) and ofEndSaveScreenAsPDF()</span>
+    <span class="co">// is saved to the file.</span>
+    <span class="kw">if</span> (isSavingPDF) {
+        ofBeginSaveScreenAsPDF(<span class="st">"savedScreenshot_"</span>+ofGetTimestampString()+<span class="st">".pdf"</span>);
+    }
+
+	<span class="co">// Drawing code omitted for clarity...</span>
+
+    <span class="co">// Finish saving the PDF and reset the isSavingPDF flag to false</span>
+    <span class="co">// Ending the PDF tells openFrameworks to resume drawing to the screen.</span>
+    <span class="kw">if</span> (isSavingPDF) {
+        ofEndSaveScreenAsPDF();
+        isSavingPDF = <span class="kw">false</span>;
+    }
+}
+
+<span class="dt">void</span> ofApp::keyPressed(<span class="dt">int</span> key){
+    <span class="kw">if</span> (key == <span class="st">'s'</span>) {
+        <span class="co">// isSavingPDF is a flag that lets us know whether or not save a PDF</span>
+        isSavingPDF = <span class="kw">true</span>;
+    }
+}</code></pre>
+<div class="figure">
+<div style="clear:both"><img alt="Figure 17: Editing a saved PDF from openFrameworks in Illustrator" src="..\images\intro_to_graphics/images/Figure17_EditingVectorGraphics.png" title="Figure 17: Editing a saved PDF from openFrameworks in Illustrator"/></div><span class="caption">Figure 17: Editing a saved PDF from openFrameworks in Illustrator</span>
+</div>
+<p>[<a href="https://github.com/openframeworks/ofBook/tree/master/chapters/intro_to_graphics/code/2_ii_c_Save_Vector_Graphics" target="_blank">Source code for this section</a>][<a href="https://github.com/openframeworks/ofBook/blob/master/chapters/intro_to_graphics/code/2_ii_c_Save_Vector_Graphics.sketch" target="_blank">ofSketch file for this section</a>]</p>
 <h2 id="moving-the-world">Moving The World</h2>
 <p>We've been making brushes for a long time, so let's move onto something different: moving the world. By the world, I really just mean the coordinate system (though it sounds more exciting the other way).</p>
 <p>Whenever we call a drawing function, like <code>ofRect(...)</code> for example, we pass in an <code>x</code> and <code>y</code> location at which we want our shape to be drawn. We know (0,0) to be the upper left pixel of our window, that the positive x direction is rightward across our window and that positive y direction is downward along our window (recall figure 1). We are about to violate this established knowledge.</p>
@@ -532,9 +571,9 @@ ofCircle(<span class="dv">45</span>, <span class="dv">90</span>, <span class="dv
 ofRect(<span class="dv">30</span>, <span class="dv">110</span>, <span class="dv">30</span>, <span class="dv">60</span>);
 ofCircle(<span class="dv">80</span>, <span class="dv">90</span>, <span class="dv">15</span>);
 ofRect(<span class="dv">65</span>, <span class="dv">110</span>, <span class="dv">30</span>, <span class="dv">60</span>);</code></pre>
-<p>Draw a white background and color the shapes, and we end up with something like figure 17 (left).</p>
+<p>Draw a white background and color the shapes, and we end up with something like figure 18 (left).</p>
 <div class="figure">
-<div style="clear:both"><img alt="Figure 17: Arranging a little stick figure family" src="..\images\intro_to_graphics/images/Figure17_ArrangingTheFamily.png" title="Figure 17: Arranging a little stick figure family"/></div><span class="caption">Figure 17: Arranging a little stick figure family</span>
+<div style="clear:both"><img alt="Figure 18: Arranging a little stick figure family" src="..\images\intro_to_graphics/images/Figure18_ArrangingTheFamily.png" title="Figure 18: Arranging a little stick figure family"/></div><span class="caption">Figure 18: Arranging a little stick figure family</span>
 </div>
 <p>What if, after figuring out where to put our shapes, we needed to draw them at a different spot on the screen, or to draw a row of copies? We <em>could</em> change all the positions manually, or we could use <code>ofTranslate(...)</code> to move our coordinate system and leave the positions alone:</p>
 <pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Loop and draw a row</span>
@@ -544,8 +583,8 @@ ofRect(<span class="dv">65</span>, <span class="dv">110</span>, <span class="dv"
 
     ofTranslate(<span class="dv">150</span>, <span class="dv">0</span>);
 }</code></pre>
-<p>So our original shapes are wrapped it in a loop with <code>ofTranslate(150, 0)</code>, which shifts our coordinate system to the left 150 pixels each time it executes. And we'll end up with figure 17 (second from left). Or something close to that, I randomized the colors in the figure - every family is different, right?</p>
-<p>If we wanted to create a grid of families, we will run into problems. After the first row of families, our coordinate system will have been moved quite far to the left. If we move our coordinate system up in order to start drawing our second row, we will end up drawing off the screen. It would look like figure 17 (third from left).</p>
+<p>So our original shapes are wrapped it in a loop with <code>ofTranslate(150, 0)</code>, which shifts our coordinate system to the left 150 pixels each time it executes. And we'll end up with figure 18 (second from left). Or something close to that, I randomized the colors in the figure - every family is different, right?</p>
+<p>If we wanted to create a grid of families, we will run into problems. After the first row of families, our coordinate system will have been moved quite far to the left. If we move our coordinate system up in order to start drawing our second row, we will end up drawing off the screen. It would look like figure 18 (third from left).</p>
 <p>So what we need is to reset the coordinate system using <a href="http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#show_ofPushMatrix" target="_blank" title="ofPushMatrix Documentation Page"><code>ofPushMatrix()</code></a> and <a href="http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#show_ofPopMatrix" target="_blank" title="ofPopMatrix Documentation Page"><code>ofPopMatrix()</code></a>. <code>ofPushMatrix()</code> saves the current coordinate system and <code>ofPopMatrix()</code> returns us to the last saved coordinate system. These functions have the word matrix in them because openFrameworks stores all of our combined rotations, translations and scalings in a single matrix. So we can use these new functions like this:</p>
 <pre class="sourceCode cpp"><code class="sourceCode cpp">    <span class="kw">for</span> (<span class="dt">int</span> rows=<span class="dv">0</span>; rows&lt;<span class="dv">10</span>; rows++) {
         ofPushMatrix(); <span class="co">// Save the coordinate system before we shift it horizontally</span>
@@ -557,15 +596,15 @@ ofRect(<span class="dv">65</span>, <span class="dv">110</span>, <span class="dv"
         ofPopMatrix(); <span class="co">// Return to the coordinate system before we shifted it horizontally</span>
         ofTranslate(<span class="dv">0</span>, <span class="dv">200</span>);
     }</code></pre>
-<p>And we should end up with a grid. See figure 17, right. (I used <code>ofScale</code> to jam many in one image.) Or if you hate grids, we can make a mess of a crowd using random rotations and translations, figure 18.</p>
+<p>And we should end up with a grid. See figure 18, right. (I used <code>ofScale</code> to jam many in one image.) Or if you hate grids, we can make a mess of a crowd using random rotations and translations, figure 19.</p>
 <div class="figure">
-<div style="clear:both"><img alt="Figure 18: A crowd" src="..\images\intro_to_graphics/images/Figure18_Crowd.png" title="Figure 18: A crowd"/></div><span class="caption">Figure 18: A crowd</span>
+<div style="clear:both"><img alt="Figure 19: A crowd" src="..\images\intro_to_graphics/images/Figure19_Crowd.png" title="Figure 19: A crowd"/></div><span class="caption">Figure 19: A crowd</span>
 </div>
 <p>[<a href="https://github.com/openframeworks/ofBook/tree/master/chapters/intro_to_graphics/code/3_i_Translating_Stick_Family" target="_blank">Source code for this section</a>][<a href="https://github.com/openframeworks/ofBook/blob/master/chapters/intro_to_graphics/code/3_i_Translating_Stick_Family.sketch" target="_blank">ofSketch file for this section</a>]</p>
 <h3 id="rotating-and-scaling-spiraling-rectangles">Rotating and Scaling: Spiraling Rectangles</h3>
-<p>Onto <code>ofScale(...)</code> and <code>ofRotate(...)</code>! Let's create a new project where rotating and scaling rectangles to get something like figure 19.</p>
+<p>Onto <code>ofScale(...)</code> and <code>ofRotate(...)</code>! Let's create a new project where rotating and scaling rectangles to get something like figure 20.</p>
 <div class="figure">
-<div style="clear:both"><img alt="Figure 19: Drawing a series of spiraling rectangles" src="..\images\intro_to_graphics/images/Figure19_SpiralingRectangles.png" title="Figure 19: Drawing a series of spiraling rectangles"/></div><span class="caption">Figure 19: Drawing a series of spiraling rectangles</span>
+<div style="clear:both"><img alt="Figure 20: Drawing a series of spiraling rectangles" src="..\images\intro_to_graphics/images/Figure20_SpiralingRectangles.png" title="Figure 20: Drawing a series of spiraling rectangles"/></div><span class="caption">Figure 20: Drawing a series of spiraling rectangles</span>
 </div>
 <p>Before knowing about <code>ofRotate(...)</code>, we couldn't have drawn a rotated rectangle with <code>ofRect(...)</code>. <a href="http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#show_ofRotate" target="_blank" title="ofRotate Documentation Page"><code>ofRotate(...)</code></a> takes an angle (in degrees) and rotates our coordinate system around the current origin. Let's attempt a rotated rectangle:</p>
 <pre class="sourceCode cpp"><code class="sourceCode cpp">ofBackground(<span class="dv">255</span>);
@@ -579,9 +618,9 @@ ofPushMatrix();
     ofSetColor(<span class="dv">255</span>, <span class="dv">0</span>, <span class="dv">0</span>);
     ofRect(<span class="dv">500</span>, <span class="dv">200</span>, <span class="dv">200</span>, <span class="dv">200</span>);
 ofPopMatrix();</code></pre>
-<p>Hmm, not quite right (figure 20, left). <code>ofRotate(...)</code> rotates around the current origin, the top left corner of the screen. To rotate in place, we need <code>ofTranslate(...)</code> to move the origin to our rectangle <em>before</em> we rotate. Add <code>ofTranslate(500, 200)</code> before rotating (figure 20, second from left). Now we are rotating around the upper left corner of the rectangle. The easiest way to rotate the rectangle around its center is to use <code>ofSetRectMode(OF_RECTMODE_CENTER)</code> draw the center at (500, 200). Do that, and we finally get figure 20, third from left.</p>
+<p>Hmm, not quite right (figure 21, left). <code>ofRotate(...)</code> rotates around the current origin, the top left corner of the screen. To rotate in place, we need <code>ofTranslate(...)</code> to move the origin to our rectangle <em>before</em> we rotate. Add <code>ofTranslate(500, 200)</code> before rotating (figure 21, second from left). Now we are rotating around the upper left corner of the rectangle. The easiest way to rotate the rectangle around its center is to use <code>ofSetRectMode(OF_RECTMODE_CENTER)</code> draw the center at (500, 200). Do that, and we finally get figure 21, third from left.</p>
 <div class="figure">
-<div style="clear:both"><img alt="Figure 20: Steps along the way to rotating and scaling a rectangle in place" src="..\images\intro_to_graphics/images/Figure20_CoordSystemManipulations.png" title="Figure 20: Steps along the way to rotating and scaling a rectangle in place"/></div><span class="caption">Figure 20: Steps along the way to rotating and scaling a rectangle in place</span>
+<div style="clear:both"><img alt="Figure 21: Steps along the way to rotating and scaling a rectangle in place" src="..\images\intro_to_graphics/images/Figure21_CoordSystemManipulations.png" title="Figure 21: Steps along the way to rotating and scaling a rectangle in place"/></div><span class="caption">Figure 21: Steps along the way to rotating and scaling a rectangle in place</span>
 </div>
 <p>Push, translate, rotate, pop - no problem. Only thing left is <a href="http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#show_ofScale" target="_blank" title="ofScale Documentation Page"><code>ofScale(...)</code></a>. It takes two arguments: the desired scaling in x and y directions (and an optional z scaling). Applying scaling to our rectangles:</p>
 <pre class="sourceCode cpp"><code class="sourceCode cpp">ofSetRectMode(OF_RECTMODE_CENTER);
@@ -598,7 +637,7 @@ ofPushMatrix();
     ofSetColor(<span class="dv">255</span>, <span class="dv">0</span>, <span class="dv">0</span>);
     ofRect(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">200</span>, <span class="dv">200</span>);
 ofPopMatrix();</code></pre>
-<p>We'll run into the same issues that we ran into with rotation and centering. The solution is the same - translating before scaling and using <code>OF_RECTMODE_CENTER</code>. Example scaling shown in figure 20 (right).</p>
+<p>We'll run into the same issues that we ran into with rotation and centering. The solution is the same - translating before scaling and using <code>OF_RECTMODE_CENTER</code>. Example scaling shown in figure 21 (right).</p>
 <p>Now we can make trippy rectangles. Start a new project. The idea is really simple, we are going to draw a rectangle at the center of the screen, scale, rotate, draw a rectangle, repeat and repeat. Add the following to our <code>draw()</code> function:</p>
 <pre class="sourceCode cpp"><code class="sourceCode cpp">ofBackground(<span class="dv">255</span>);
 
@@ -613,7 +652,7 @@ ofPushMatrix();
         ofRect(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">50</span>, <span class="dv">50</span>);
     }
 ofPopMatrix();</code></pre>
-<p>That's it (figure 19). We can play with the scaling, rotation, size of the rectangle, etc. Three lines of code will add some life to our rectangles and cause them to coil and uncoil over time. Put these in the place of <code>ofRotate(5)</code>:</p>
+<p>That's it (figure 20). We can play with the scaling, rotation, size of the rectangle, etc. Three lines of code will add some life to our rectangles and cause them to coil and uncoil over time. Put these in the place of <code>ofRotate(5)</code>:</p>
 <pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Noise is a topic that deserves a section in a book unto itself</span>
 <span class="co">// Check out Section 1.6 of "The Nature of Code" for a good explanation</span>
 <span class="co">// http://natureofcode.com/book/introduction/</span>
@@ -646,9 +685,9 @@ bgColor.lerp(lightColor, percent);  <span class="co">// This modifies our color 
 bgColor.a = clearAlpha;  <span class="co">// Our initial colors were opaque, but our rectangle needs to be transparent</span>
 ofColor fgColor = lightColor;  <span class="co">// Color for the rectangle outlines</span>
 fgColor.lerp(darkColor, percent);  <span class="co">// Modifies color in place</span></code></pre>
-<p>Now use <code>bgColor</code> for the transparent rectangle we draw on the screen and <code>fgColor</code> for the rectangle outlines to get figure 21</p>
+<p>Now use <code>bgColor</code> for the transparent rectangle we draw on the screen and <code>fgColor</code> for the rectangle outlines to get figure 22.</p>
 <div class="figure">
-<div style="clear:both"><img alt="Figure 21: A single frame from animated spiraling rectangles where the contrast reverses over time" src="..\images\intro_to_graphics/images/Figure21_ContrastReversingSpiral.png" title="Figure 21: A single frame from animated spiraling rectangles where the contrast reverses over time"/></div><span class="caption">Figure 21: A single frame from animated spiraling rectangles where the contrast reverses over time</span>
+<div style="clear:both"><img alt="Figure 22: A single frame from animated spiraling rectangles where the contrast reverses over time" src="..\images\intro_to_graphics/images/Figure22_ContrastReversingSpiral.png" title="Figure 22: A single frame from animated spiraling rectangles where the contrast reverses over time"/></div><span class="caption">Figure 22: A single frame from animated spiraling rectangles where the contrast reverses over time</span>
 </div>
 <p>[<a href="https://github.com/openframeworks/ofBook/tree/master/chapters/intro_to_graphics/code/3_ii_Rotating_and_Scaling" target="_blank">Source code for this section</a>][<a href="https://github.com/openframeworks/ofBook/blob/master/chapters/intro_to_graphics/code/3_ii_Rotating_and_Scaling.sketch" target="_blank">ofSketch file for this section</a>]</p>
 <p><strong>Extensions</strong></p>
