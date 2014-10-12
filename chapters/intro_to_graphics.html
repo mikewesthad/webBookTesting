@@ -63,7 +63,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
 <div class="row-fluid">
 <div id="chapter">
 <h1 id="graphics">Graphics</h1>
-<p><em>By: <a href="http://www.mikewesthad.com/" target="_blank">Michael Hadley</a> with generous editor support from <a href="http://abrahamavnisan.com/" target="_blank">Abraham Avnisan</a>, <a href="http://brannondorsey.com/" target="_blank">Brannon Dorsey</a> and <a href="http://christopherbaker.net/" target="_blank">Christopher Baker</a></em></p>
+<p><em>By: <a href="http://www.mikewesthad.com/" target="_blank">Michael Hadley</a> with generous editor support from <a href="http://abrahamavnisan.com/" target="_blank">Abraham Avnisan</a>, <a href="http://brannondorsey.com/" target="_blank">Brannon Dorsey</a> and <a href="http://christopherbaker.net/" target="_blank">Christopher Baker</a>.</em></p>
 <p>This chapter builds off of the <em>C++ Basics</em> and <em>Setup and Project Structure</em> chapters, so if you aren't familiar with basic C++ and creating openFrameworks projects, check out those chapters first.</p>
 <p>In sections 1 and 2, we will create "paintbrushes" where the mouse is our brush and our code defines how our brush makes marks on the screen. In section 3, we will explore something called "coordinate system transformations" to create hypnotizing, spiraling rectangles. Source code for the projects is linked at the end of each section. If you feel lost at any point, don't hesitate to look at the completed code! You can check out the whole collection of code <a href="https://github.com/openframeworks/ofBook/tree/master/chapters/intro_to_graphics/code" target="_blank">here</a> - both for standard development structure (Xcode, Code::Blocks, etc.) and for ofSketch.</p>
 <p>If you are following along using ofSketch, great! There are a couple things to note. Coding in ofSketch is a bit different than coding in other Xcode, Code::Blocks, etc. 1) There will be a few points where variables are added to something called a header file (<code>.h</code>). When you see those instructions, that means you should put your variables above your <code>setup()</code> function in ofSketch. 2) You'll want to use <code>ofSetWindowShape(int width, int height)</code> in <code>setup()</code> to control the size of your application. 3) Some of the applications you write will save images to your computer. You can find them in your ofSketch folder, by looking for <code>ofSketch/data/Projects/YOUR_PROJECT_NAME/bin/data/</code>.</p>
@@ -97,7 +97,8 @@ ofNoFill(); <span class="co">// If we omit this and leave ofFill(), all the shap
 <div class="figure">
 <div style="clear:both"><img alt="Figure 2: Basic shapes with and without a fill" src="..\images\intro_to_graphics/images/Figure2_BasicShapes.png" title="Figure 2: Basic shapes with and without a fill"/></div><span class="caption">Figure 2: Basic shapes with and without a fill</span>
 </div>
-<p>[<a href="https://github.com/openframeworks/ofBook/tree/master/chapters/intro_to_graphics/code/1_i_Basic_Shapes" target="_blank">Source code for this section</a>][<a href="https://github.com/openframeworks/ofBook/blob/master/chapters/intro_to_graphics/code/1_i_Basic_Shapes.sketch" target="_blank">ofSketch file for this section</a>]</p>
+<p>[<a href="https://github.com/openframeworks/ofBook/tree/master/chapters/intro_to_graphics/code/1_i_Basic_Shapes" target="_blank">Source code for this section</a>]</p>
+<p>[<a href="https://github.com/openframeworks/ofBook/blob/master/chapters/intro_to_graphics/code/1_i_Basic_Shapes.sketch" target="_blank">ofSketch file for this section</a>]</p>
 <p><strong>Extensions</strong></p>
 <ol style="list-style-type: decimal">
 <li>We can change the thickness of lines using <a href="http://openframeworks.cc/documentation/graphics/ofGraphics.html#show_ofSetLineWidth" target="_blank" title="ofSetLineWidth Documentation Page"><code>ofSetLineWidth(...)</code></a>. The default thickness is 1. We use this function like <code>ofFill()</code> and <code>ofSetColor(...)</code> in that it changes the thickness of the "marker" we use to draw lines. Note: the range of widths supported by this feature is dependent on your graphics card, so if it's not working, it might not be your fault!</li>
@@ -137,7 +138,8 @@ ofSetColor(randomColor);  <span class="co">// Exclude dark grayscale values (0 -
 <pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">if</span> (ofGetMousePressed(OF_MOUSE_BUTTON_RIGHT)) {  <span class="co">// If the right mouse button is pressed...</span>
     ofBackground(<span class="dv">0</span>);  <span class="co">// Draw a black background over the screen</span>
 }</code></pre>
-<p>[<a href="https://github.com/openframeworks/ofBook/tree/master/chapters/intro_to_graphics/code/1_ii_a_Single_Rectangle_Brush" target="_blank">Source code for this section</a>]</p>
+<p><a href="https://github.com/openframeworks/ofBook/tree/master/chapters/intro_to_graphics/code/1_ii_a_Single_Rectangle_Brush" target="_blank">Source code for this section</a>]</p>
+<p>[<a href="https://github.com/openframeworks/ofBook/blob/master/chapters/intro_to_graphics/code/1_ii_a_Single_Rectangle_Brush.sketch" target="_blank">ofSketch file for this section</a>]</p>
 <h4 id="bursting-rectangle-brush-creating-randomized-bursts">Bursting Rectangle Brush: Creating Randomized Bursts</h4>
 <p>We now have the basics in place for a brush, but instead of drawing a single rectangle in <code>draw()</code>, let's draw a burst of randomized rectangles. We are going use a <code>for</code> loop to create multiple rectangles whose parameters are randomly chosen. What can we randomize? Grayscale color, width and height are easy candidates. We can also use a small positive or negative value to offset each rectangle from mouse position. Modify <code>draw()</code> to look like this:</p>
 <pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">if</span> (ofGetMousePressed(OF_MOUSE_BUTTON_LEFT)) {  <span class="co">// If the left mouse button is pressed...</span>
@@ -178,7 +180,8 @@ ofSetColor(randomColor);  <span class="co">// Exclude dark grayscale values (0 -
 <div class="figure">
 <div style="clear:both"><img alt="Figure 5: Cartesian brush spread versus polar brush spread" src="..\images\intro_to_graphics/images/Figure5_CartesianVsPolarSpread.png" title="Figure 5: Cartesian brush spread versus polar brush spread"/></div><span class="caption">Figure 5: Cartesian brush spread versus polar brush spread</span>
 </div>
-<p>[<a href="https://github.com/openframeworks/ofBook/tree/master/chapters/intro_to_graphics/code/1_ii_b_Bursting_Rect_Brush" target="_blank">Source code for this section</a>][<a href="https://github.com/openframeworks/ofBook/blob/master/chapters/intro_to_graphics/code/1_ii_a_Single_Rectangle_Brush.sketch" target="_blank">ofSketch file for this section</a>]</p>
+<p>[<a href="https://github.com/openframeworks/ofBook/tree/master/chapters/intro_to_graphics/code/1_ii_b_Bursting_Rect_Brush" target="_blank">Source code for this section</a>]</p>
+<p>[<a href="https://github.com/openframeworks/ofBook/blob/master/chapters/intro_to_graphics/code/1_ii_a_Single_Rectangle_Brush.sketch" target="_blank">ofSketch file for this section</a>]</p>
 <h4 id="glowing-circle-brush-using-transparency-and-color">Glowing Circle Brush: Using Transparency and Color</h4>
 <p>Unlike what we did with the rectangle brush, we are going to layer colorful, transparent circles on top of each to create a glowing haze. We will draw a giant transparent circle, then draw a slightly smaller transparent circle on top of it, then repeat, repeat, repeat. We can add transparency to <code>ofSetColor(...)</code> with a second parameter, the alpha channel (e.g.<code>ofSetColor(255, 50)</code>), with a value from <code>0</code> (completely transparent) to <code>255</code> (completely opaque).</p>
 <p>Before we use alpha, we need to enable something called "alpha blending." Using transparency costs computing power, so <a href="http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#show_ofEnableAlphaBlending" target="_blank" title="ofEnableAlphaBlending Documentation Page"><code>ofEnableAlphaBlending()</code></a> and <a href="http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#show_ofDisableAlphaBlending" target="_blank" title="ofDisableAlphaBlending Documentation Page"><code>ofDisableAlphaBlending()</code></a> allow us to turn on and off this blending at our discretion. We need it, so enable it in <code>setup()</code>.</p>
@@ -226,7 +229,8 @@ ofColor myPurple = ofColor::plum;
 ofColor myRed(<span class="dv">255</span>, <span class="dv">6</span>, <span class="dv">0</span>, alpha);
 ofColor inBetween = myOrange.getLerped(myRed, ofRandom(<span class="fl">1.</span><span class="dv">0</span>));
 ofSetColor(inBetween);</code></pre>
-<p>[<a href="https://github.com/openframeworks/ofBook/tree/master/chapters/intro_to_graphics/code/1_ii_c_Glowing_Circle_Brush" target="_blank">Source code for this section</a>][<a href="https://github.com/openframeworks/ofBook/blob/master/chapters/intro_to_graphics/code/1_ii_c_Glowing_Circle_Brush.sketch" target="_blank">ofSketch file for this section</a>]</p>
+<p>[<a href="https://github.com/openframeworks/ofBook/tree/master/chapters/intro_to_graphics/code/1_ii_c_Glowing_Circle_Brush" target="_blank">Source code for this section</a>]</p>
+<p>[<a href="https://github.com/openframeworks/ofBook/blob/master/chapters/intro_to_graphics/code/1_ii_c_Glowing_Circle_Brush.sketch" target="_blank">ofSketch file for this section</a>]</p>
 <h4 id="star-line-brush-working-with-a-linear-map">Star Line Brush: Working with a Linear Map</h4>
 <p>What about lines? We are going to create a brush that draws lines that radiate out from the mouse to create something similar to an asterisk or a twinkling star (figure 7). Comment out the circle brush and add:</p>
 <pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">int</span> numLines = <span class="dv">30</span>;
@@ -247,6 +251,7 @@ ofSetColor(inBetween);</code></pre>
 <div style="clear:both"><img alt="Figure 7: Results from using the line brush" src="..\images\intro_to_graphics/images/Figure7_LineStarBrush.png" title="Figure 7: Results from using the line brush"/></div><span class="caption">Figure 7: Results from using the line brush</span>
 </div>
 <p>[<a href="https://github.com/openframeworks/ofBook/tree/master/chapters/intro_to_graphics/code/1_ii_d_Star_Line_Brush" target="_blank">Source code for this section</a>]</p>
+<p>[<a href="https://github.com/openframeworks/ofBook/blob/master/chapters/intro_to_graphics/code/1_ii_d_Star_Line_Brush.sketch" target="_blank">ofSketch file for this section</a>]</p>
 <h4 id="fleeing-triangle-brush-vectors-and-rotations">Fleeing Triangle Brush: Vectors and Rotations</h4>
 <p>Time for the last brush in section 1: the triangle. We'll draw a bunch of triangles that are directed outward from the mouse position (figure 8, left). <code>ofTriangle(...)</code> requires us to specify the three corners of the triangle, which means that we will need to calculate the rotation of the corners to make the triangle point away from the mouse. A new class will make that math easier: <a href="http://openframeworks.cc/documentation/math/ofVec2f.html" target="_blank" title="ofVec2f Documentation Page"><code>ofVec2f</code></a>.</p>
 <div class="figure">
@@ -321,7 +326,8 @@ p3.rotate(rotation);</code></pre>
 <div class="figure">
 <div style="clear:both"><img alt="Figure 10: Results from using the final triangle brush" src="..\images\intro_to_graphics/images/Figure10_TriangleSwirlBrush.png" title="Figure 10: Results from using the final triangle brush"/></div><span class="caption">Figure 10: Results from using the final triangle brush</span>
 </div>
-<p>[<a href="https://github.com/openframeworks/ofBook/tree/master/chapters/intro_to_graphics/code/1_ii_e_Triangle_Brush" target="_blank">Source code for this section</a>][<a href="https://github.com/openframeworks/ofBook/blob/master/chapters/intro_to_graphics/code/1_ii_e_Triangle_Brush.sketch" target="_blank">ofSketch file for this section</a>]</p>
+<p>[<a href="https://github.com/openframeworks/ofBook/tree/master/chapters/intro_to_graphics/code/1_ii_e_Triangle_Brush" target="_blank">Source code for this section</a>]</p>
+<p>[<a href="https://github.com/openframeworks/ofBook/blob/master/chapters/intro_to_graphics/code/1_ii_e_Triangle_Brush.sketch" target="_blank">ofSketch file for this section</a>]</p>
 <p><strong>Extensions</strong></p>
 <ol style="list-style-type: decimal">
 <li>Define some public variables to control brush parameters like <code>transparency</code>, <code>brushWidth</code>, <code>offsetDistance</code>, <code>numberOfShapes</code>, etc.</li>
@@ -380,7 +386,8 @@ closedShapePolyline.draw();</code></pre>
 <div style="clear:both"><img alt="Figure 11: Examples of polylines - straight, curved and closed straight" src="..\images\intro_to_graphics/images/Figure11_PolylineExamples.png" title="Figure 11: Examples of polylines - straight, curved and closed straight"/></div><span class="caption">Figure 11: Examples of polylines - straight, curved and closed straight</span>
 </div>
 <p>The advantage of drawing in this way (versus raster graphics) is that the polylines are modifiable. We could easily move, add, delete, scale our vertices on the the fly.</p>
-<p>[<a href="https://github.com/openframeworks/ofBook/tree/master/chapters/intro_to_graphics/code/2_i_Basic_Polylines" target="_blank">Source code for this section</a>][<a href="https://github.com/openframeworks/ofBook/blob/master/chapters/intro_to_graphics/code/2_i_Basic_Polylines.sketch" target="_blank">ofSketch file for this section</a>]</p>
+<p>[<a href="https://github.com/openframeworks/ofBook/tree/master/chapters/intro_to_graphics/code/2_i_Basic_Polylines" target="_blank">Source code for this section</a>]</p>
+<p>[<a href="https://github.com/openframeworks/ofBook/blob/master/chapters/intro_to_graphics/code/2_i_Basic_Polylines.sketch" target="_blank">ofSketch file for this section</a>]</p>
 <p><strong>Extensions</strong></p>
 <ol style="list-style-type: decimal">
 <li>Check out <a href="http://www.openframeworks.cc/documentation/graphics/ofPolyline.html#show_arc" target="_blank" title="arc Documentation Page"><code>arc(...)</code></a>, <a href="http://www.openframeworks.cc/documentation/graphics/ofPolyline.html#show_arcNegative" target="_blank" title="arcNegative Documentation Page"><code>arcNegative(...)</code></a> and <a href="http://www.openframeworks.cc/documentation/graphics/ofPolyline.html#show_bezierTo" target="_blank" title="bezierTo Documentation Page"><code>bezierTo(...)</code></a> for other ways to draw shapes with <code>ofPolyline</code>.</li>
@@ -437,7 +444,8 @@ currentPolyline.draw();</code></pre>
 <div class="figure">
 <div style="clear:both"><img alt="Figure 12: Drawing a smilie with the polyline brush" src="..\images\intro_to_graphics/images/Figure12_PolylineSmilie.png" title="Figure 12: Drawing a smilie with the polyline brush"/></div><span class="caption">Figure 12: Drawing a smilie with the polyline brush</span>
 </div>
-<p>[<a href="https://github.com/openframeworks/ofBook/tree/master/chapters/intro_to_graphics/code/2_ii_a_Polyline_Pen" target="_blank">Source code for this section</a>][<a href="https://github.com/openframeworks/ofBook/blob/master/chapters/intro_to_graphics/code/2_ii_a_Polyline_Pen.sketch" target="_blank">ofSketch file for this section</a>]</p>
+<p>[<a href="https://github.com/openframeworks/ofBook/tree/master/chapters/intro_to_graphics/code/2_ii_a_Polyline_Pen" target="_blank">Source code for this section</a>]</p>
+<p>[<a href="https://github.com/openframeworks/ofBook/blob/master/chapters/intro_to_graphics/code/2_ii_a_Polyline_Pen.sketch" target="_blank">ofSketch file for this section</a>]</p>
 <p><strong>Extensions</strong></p>
 <ol style="list-style-type: decimal">
 <li>Add color!</li>
@@ -510,7 +518,8 @@ currentPolyline.draw();</code></pre>
     ofVec3f tangent = polyline.getTangentAtIndexInterpolated(floatIndex) * tangentLength;
     ofLine(point-tangent/<span class="dv">2</span>, point+tangent/<span class="dv">2</span>);
 }</code></pre>
-<p>[<a href="https://github.com/openframeworks/ofBook/tree/master/chapters/intro_to_graphics/code/2_ii_b_Polyline_Brushes" target="_blank">Source code for this section</a>][<a href="https://github.com/openframeworks/ofBook/blob/master/chapters/intro_to_graphics/code/2_ii_b_Polyline_Brushes.sketch" target="_blank">ofSketch file for this section</a>]</p>
+<p>[<a href="https://github.com/openframeworks/ofBook/tree/master/chapters/intro_to_graphics/code/2_ii_b_Polyline_Brushes" target="_blank">Source code for this section</a>]</p>
+<p>[<a href="https://github.com/openframeworks/ofBook/blob/master/chapters/intro_to_graphics/code/2_ii_b_Polyline_Brushes.sketch" target="_blank">ofSketch file for this section</a>]</p>
 <p><strong>Extensions</strong></p>
 <ol style="list-style-type: decimal">
 <li>Try drawing shapes other than <code>ofLine(...)</code> and <code>ofCircle(...)</code> along your polylines. You could use your brush code from section 1.</li>
@@ -555,7 +564,8 @@ currentPolyline.draw();</code></pre>
 <div class="figure">
 <div style="clear:both"><img alt="Figure 17: Editing a saved PDF from openFrameworks in Illustrator" src="..\images\intro_to_graphics/images/Figure17_EditingVectorGraphics.png" title="Figure 17: Editing a saved PDF from openFrameworks in Illustrator"/></div><span class="caption">Figure 17: Editing a saved PDF from openFrameworks in Illustrator</span>
 </div>
-<p>[<a href="https://github.com/openframeworks/ofBook/tree/master/chapters/intro_to_graphics/code/2_ii_c_Save_Vector_Graphics" target="_blank">Source code for this section</a>][<a href="https://github.com/openframeworks/ofBook/blob/master/chapters/intro_to_graphics/code/2_ii_c_Save_Vector_Graphics.sketch" target="_blank">ofSketch file for this section</a>]</p>
+<p>[<a href="https://github.com/openframeworks/ofBook/tree/master/chapters/intro_to_graphics/code/2_ii_c_Save_Vector_Graphics" target="_blank">Source code for this section</a>]</p>
+<p>[<a href="https://github.com/openframeworks/ofBook/blob/master/chapters/intro_to_graphics/code/2_ii_c_Save_Vector_Graphics.sketch" target="_blank">ofSketch file for this section</a>]</p>
 <h2 id="moving-the-world">Moving The World</h2>
 <p>We've been making brushes for a long time, so let's move onto something different: moving the world. By the world, I really just mean the coordinate system (though it sounds more exciting the other way).</p>
 <p>Whenever we call a drawing function, like <code>ofRect(...)</code> for example, we pass in an <code>x</code> and <code>y</code> location at which we want our shape to be drawn. We know (0,0) to be the upper left pixel of our window, that the positive x direction is rightward across our window and that positive y direction is downward along our window (recall figure 1). We are about to violate this established knowledge.</p>
@@ -600,7 +610,8 @@ ofRect(<span class="dv">65</span>, <span class="dv">110</span>, <span class="dv"
 <div class="figure">
 <div style="clear:both"><img alt="Figure 19: A crowd" src="..\images\intro_to_graphics/images/Figure19_Crowd.png" title="Figure 19: A crowd"/></div><span class="caption">Figure 19: A crowd</span>
 </div>
-<p>[<a href="https://github.com/openframeworks/ofBook/tree/master/chapters/intro_to_graphics/code/3_i_Translating_Stick_Family" target="_blank">Source code for this section</a>][<a href="https://github.com/openframeworks/ofBook/blob/master/chapters/intro_to_graphics/code/3_i_Translating_Stick_Family.sketch" target="_blank">ofSketch file for this section</a>]</p>
+<p>[<a href="https://github.com/openframeworks/ofBook/tree/master/chapters/intro_to_graphics/code/3_i_Translating_Stick_Family" target="_blank">Source code for this section</a>]</p>
+<p>[<a href="https://github.com/openframeworks/ofBook/blob/master/chapters/intro_to_graphics/code/3_i_Translating_Stick_Family.sketch" target="_blank">ofSketch file for this section</a>]</p>
 <h3 id="rotating-and-scaling-spiraling-rectangles">Rotating and Scaling: Spiraling Rectangles</h3>
 <p>Onto <code>ofScale(...)</code> and <code>ofRotate(...)</code>! Let's create a new project where rotating and scaling rectangles to get something like figure 20.</p>
 <div class="figure">
@@ -689,7 +700,8 @@ fgColor.lerp(darkColor, percent);  <span class="co">// Modifies color in place</
 <div class="figure">
 <div style="clear:both"><img alt="Figure 22: A single frame from animated spiraling rectangles where the contrast reverses over time" src="..\images\intro_to_graphics/images/Figure22_ContrastReversingSpiral.png" title="Figure 22: A single frame from animated spiraling rectangles where the contrast reverses over time"/></div><span class="caption">Figure 22: A single frame from animated spiraling rectangles where the contrast reverses over time</span>
 </div>
-<p>[<a href="https://github.com/openframeworks/ofBook/tree/master/chapters/intro_to_graphics/code/3_ii_Rotating_and_Scaling" target="_blank">Source code for this section</a>][<a href="https://github.com/openframeworks/ofBook/blob/master/chapters/intro_to_graphics/code/3_ii_Rotating_and_Scaling.sketch" target="_blank">ofSketch file for this section</a>]</p>
+<p>[<a href="https://github.com/openframeworks/ofBook/tree/master/chapters/intro_to_graphics/code/3_ii_Rotating_and_Scaling" target="_blank">Source code for this section</a>]</p>
+<p>[<a href="https://github.com/openframeworks/ofBook/blob/master/chapters/intro_to_graphics/code/3_ii_Rotating_and_Scaling.sketch" target="_blank">ofSketch file for this section</a>]</p>
 <p><strong>Extensions</strong></p>
 <ol style="list-style-type: decimal">
 <li>Pass in a third parameter, <code>z</code>, into <code>ofTranslate(...)</code> and <code>ofScale(...)</code> or rotate around the x and y axes with of <code>ofRotate(...)</code>.</li>
