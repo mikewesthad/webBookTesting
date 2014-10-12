@@ -88,8 +88,12 @@ ofVec2f rectangleCenter = myRectangle.getCenter();
 <p>Then the compiler can do some of the coding for us. In fact, thanks to <code>auto</code>, we can do this now. This code block compiles to exactly the same result as the first code block did. The compiler notices what's on the right hand side and substitutes in the correct type wherever it sees <code>auto</code>.</p>
 <h4 id="how-this-helps">How this helps</h4>
 <p>Well obviously auto's going to save you keystrokes. Imagine the following:</p>
-<pre class="sourceCode cpp"><code class="sourceCode cpp">vector&lt;shared_ptr&lt;ofThread&gt; &gt; myVectorOfThreads;</code></pre>
-<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// the old way</span>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">[.h]
+
+vector&lt;shared_ptr&lt;ofThread&gt; &gt; myVectorOfThreads;</code></pre>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">[.cpp]
+
+<span class="co">// the old way</span>
 vector&lt;shared_ptr&lt;ofThread&gt;&gt;::iterator firstThreadIterator = <span class="kw">this</span>-&gt;myVectorOfThreads.begin();
 
 <span class="co">// the new way</span>
@@ -203,7 +207,9 @@ vector&lt;ofxSnapChat::Friend&gt; myFriends = snapChatClient.getFriends();
 </ul>
 <h2 id="override">override</h2>
 <p><code>override</code> saves you time not by reducing the amount of typing you do, but by reducing the amount of head-scratching you might do when dealing with <code>virtual</code> functions. Imagine the following:</p>
-<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> BuildingProjectionMapper {
+<pre class="sourceCode cpp"><code class="sourceCode cpp">[.h]
+
+<span class="kw">class</span> BuildingProjectionMapper {
 <span class="kw">public</span>:
 <span class="co">//...</span>
     <span class="kw">virtual</span> <span class="dt">void</span> mapTheGreekColumns();

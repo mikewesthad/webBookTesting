@@ -67,7 +67,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
 <p>Edited by <a href="http://brannondorsey.com" target="_blank">Brannon Dorsey</a></p>
 <h2 id="preliminaries-to-image-processing">Preliminaries to Image Processing</h2>
 <h3 id="digital-image-acquisition-and-data-structures">Digital image acquisition and data structures</h3>
-<p>This chapter introduces techniques for manipulating (and extracting certain kinds of information from) <em>raster images</em>. Such images are sometimes also known as <em>bitmap images</em> or <em>pixmap images</em>, though we'll just use the generic term <strong>image</strong> to refer to any array (or <em>buffer</em>) of numbers that represenRat the color values of a rectangular grid of <em>pixels</em> ("picture elements"). In openFrameworks, such buffers come in a variety of flavors, and are used within (and managed by) a wide variety of convenient container objects, as we shall see.</p>
+<p>This chapter introduces techniques for manipulating (and extracting certain kinds of information from) <em>raster images</em>. Such images are sometimes also known as <em>bitmap images</em> or <em>pixmap images</em>, though we'll just use the generic term <strong>image</strong> to refer to any array (or <em>buffer</em>) of numbers that represent the color values of a rectangular grid of <em>pixels</em> ("picture elements"). In openFrameworks, such buffers come in a variety of flavors, and are used within (and managed by) a wide variety of convenient container objects, as we shall see.</p>
 <h4 id="loading-and-displaying-an-image">Loading and Displaying an Image</h4>
 <p>Image processing begins with, well, <em>an image</em>. Happily, loading and displaying an image is very straightforward in OF. Let's start with this tiny, low-resolution (12x16 pixel) grayscale portrait of Abraham Lincoln:</p>
 <div class="figure">
@@ -357,11 +357,11 @@ buffer[arrayIndex] = pixelValueAtXY;</code></pre>
 <p>Our Lincoln portrait image shows an 8-bit, 1-channel image. Each pixel uses a single round number (technically, an unsigned char) to represent a single luminance value. But other data types and formats are possible.</p>
 <p>For example, it is common for color images to be represented by 8-bit, <em>3-channel</em> images. In this case, each pixel brings together 3 bytes' worth of information: one byte each for red, green and blue intensities. In computer memory, it is common for these values to be interleaved R-G-B. As you can see, color images necessarily contain three times as much data.</p>
 <div class="figure">
-<div style="clear:both"><img alt="Not mine" src="..\images\image_processing_computer_vision/images/interleaved.jpg"/></div><span class="caption">Not mine</span>
+<div style="clear:both"><img alt="Not mine" src="..\images\image_processing_computer_vision/https://dl.dropboxusercontent.com/u/10137599/ofbook/interleaved.jpg"/></div><span class="caption">Not mine</span>
 </div>
 <p>Take a very close look at your LCD screen, and you'll see how this way of storing the data is directly motivated by the layout of your display's phosphors:</p>
 <div class="figure">
-<div style="clear:both"><img alt="Not mine" src="..\images\image_processing_computer_vision/images/rgb-screen.jpg"/></div><span class="caption">Not mine</span>
+<div style="clear:both"><img alt="Not mine" src="..\images\image_processing_computer_vision/https://dl.dropboxusercontent.com/u/10137599/ofbook/rgb-screen.jpg"/></div><span class="caption">Not mine</span>
 </div>
 <p>Because the color data are interleaved, accessing pixel values in buffers containing RGB data is slightly more complex. Here's how you can retrieve the values representing the individual red, green and blue components of pixel at a given (x,y) location:</p>
 <pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Given:</span>
@@ -468,8 +468,8 @@ buffer[arrayIndex] = pixelValueAtXY;</code></pre>
 <div class="figure">
 <div style="clear:both"><img alt="Daniel Rozin, Time Scan Mirror (2004)" src="..\images\image_processing_computer_vision/images/rozin_timescan.jpg"/></div><span class="caption">Daniel Rozin, Time Scan Mirror (2004)</span>
 </div>
-<h4 id="text-rain-by-camille-utterback-and-romy-achituv-1999.">Text Rain by Camille Utterback and Romy Achituv (1999).</h4>
-<p><em><a href="http://camilleutterback.com/projects/text-rain/" target="_blank">Text Rain</a></em> is a now-classic work of interactive art in which virtual letters appear to "fall" on the visitor's "silhouette". Utterback writes: "In the Text Rain installation, participants stand or move in front of a large projection screen. On the screen they see a mirrored video projection of themselves in black and white, combined with a color animation of falling letters. Like rain or snow, the letters appears to land on participants’ heads and arms. The letters respond to the participants’ motions and can be caught, lifted, and then let fall again. The falling text will 'land' on anything darker than a certain threshold, and 'fall' whenever that obstacle is removed."</p>
+<h4 id="text-rain-by-camille-utterback-and-romy-achituv-1999."><em><a href="http://camilleutterback.com/projects/text-rain/" target="_blank">Text Rain</a></em> by Camille Utterback and Romy Achituv (1999).<br/></h4>
+<p><em>Text Rain</em> is a now-classic work of interactive art in which virtual letters appear to "fall" on the visitor's "silhouette". Utterback writes: "In the Text Rain installation, participants stand or move in front of a large projection screen. On the screen they see a mirrored video projection of themselves in black and white, combined with a color animation of falling letters. Like rain or snow, the letters appears to land on participants’ heads and arms. The letters respond to the participants’ motions and can be caught, lifted, and then let fall again. The falling text will 'land' on anything darker than a certain threshold, and 'fall' whenever that obstacle is removed."</p>
 <div class="figure">
 <div style="clear:both"><img alt="Camille Utterback and Romy Achituv, Text Rain (1999)" src="..\images\image_processing_computer_vision/images/text-rain.jpg"/></div><span class="caption">Camille Utterback and Romy Achituv, Text Rain (1999)</span>
 </div>
