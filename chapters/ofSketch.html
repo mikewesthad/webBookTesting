@@ -66,7 +66,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
 <p>By Brannon Dorsey</p>
 <p>Edited by <a href="http://www.mikewesthad.com/" target="_blank">Michael Hadley</a>.</p>
 <div class="figure">
-<div style="clear:both"><img alt="Hello World Example" src="..\images\ofSketch/images/HelloWorldExample.png"/></div><span class="caption">Hello World Example</span>
+<div style="clear:both"><a href="..\images\ofSketch/images/HelloWorldExample.png" target="_blank"><img alt="Hello World Example" src="..\images\ofSketch/images/HelloWorldExample.png"/></a></div><span class="caption">Hello World Example</span>
 </div>
 <h2 id="what-is-ofsketch">What is ofSketch?</h2>
 <p><a href="https://github.com/olab-io/ofSketch" target="_blank">ofSketch</a> is a barebones development environment created specifically for building and running openFrameworks sketches. Its a minimal installation openFrameworks application that allows you to spend more time coding and less time with configuration.</p>
@@ -86,7 +86,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
 </ul>
 <h3 id="how-does-ofsketch-work">How does ofSketch work?</h3>
 <div class="figure">
-<div style="clear:both"><img alt="App to Browser Diagram" src="..\images\ofSketch/images/browser_diagram.png"/></div><span class="caption">App to Browser Diagram</span>
+<div style="clear:both"><a href="..\images\ofSketch/images/browser_diagram.png" target="_blank"><img alt="App to Browser Diagram" src="..\images\ofSketch/images/browser_diagram.png"/></a></div><span class="caption">App to Browser Diagram</span>
 </div>
 <p>ofSketch works by internally communicating back and forth between the ofSketch application and the browser editor. The application, among other things, reads/writes files to your computer, and compiles and launches your projects. The browser editor acts as the graphical user interface (GUI), where you code, run, and manage your projects. When you interact with ofSketch you are doing so from the browser, however the distinction between the application and the browser should not be overlooked. For more info, check out the <a href="https://github.com/olab-io/ofSketch/blob/master/ARCHITECTURE.md" target="_blank">ARCHITECTURE.md</a> file on the ofSketch GitHub repository.</p>
 <!-- If you've read Roy's _openFrameworks Project Structure and Setup_ chapter, ofSketch should be an easy step sideways **[mh: "step sideways" is a little unclear]**. That chapter gave an overview of installing and using openFrameworks with different professional IDEs. If you skipped ahead to this chapter, that is okay too! With ofSketch you don't have to worry about downloading openFrameworks or using Project Generator. All you need to do is download the ofSketch App. -->
@@ -220,13 +220,13 @@ Particle p;
 <p>Note that we also added an <code>update</code> function. As you may know by now, it is customary in openFrameworks to separate operations that update logic from operations that render graphics to the screen. This is for performance reasons, however, it is not necessary, and all of the code placed in <code>void update()</code> can instead live inside of <code>void draw()</code> if you prefer.</p>
 <h3 id="examples">Examples</h3>
 <div class="figure">
-<div style="clear:both"><img alt="Open Project" src="..\images\ofSketch/images/open_project.png"/></div><span class="caption">Open Project</span>
+<div style="clear:both"><a href="..\images\ofSketch/images/open_project.png" target="_blank"><img alt="Open Project" src="..\images\ofSketch/images/open_project.png"/></a></div><span class="caption">Open Project</span>
 </div>
 <p>ofSketch comes packaged with a few basic examples that illustrate the ofSketch code style. Most of them are ported from the regular openFrameworks examples, but there are a few new ones too. Press the "Open Project" button inside ofSketch to open one of them.</p>
 <p>While the code in this chapter highlights the difference between ofSketch code and a normal implementation of C++ code, reviewing the examples should give you a better idea of the general ofSketch style.</p>
 <h2 id="sketch-format">Sketch Format</h2>
 <div class="figure">
-<div style="clear:both"><img alt="Sketch Folder Structure" src="..\images\ofSketch/images/sketch_folder_structure.png"/></div><span class="caption">Sketch Folder Structure</span>
+<div style="clear:both"><a href="..\images\ofSketch/images/sketch_folder_structure.png" target="_blank"><img alt="Sketch Folder Structure" src="..\images\ofSketch/images/sketch_folder_structure.png"/></a></div><span class="caption">Sketch Folder Structure</span>
 </div>
 <p>If you take a look at an app in your Projects folder, you will see a "sketch" directory. This is where all of the ofSketch source files are saved, each with a ".sketch" file extension. When you use ofSketch, you are editing the files in this directory. Whenever you run an app from inside ofSketch, all of the files in the "sketch" directory are processed to generate source files inside of the "src" directory.</p>
 <p>Because of this workflow, it is important to edit ofSketch projects through <strong>ofSketch only</strong>. You could easily get yourself into trouble if you edited an ofSketch project with Xcode (modifying the files in the "src" directory) and then opened it in ofSketch again, pressed the play button, and then overwrote all of our changes.</p>
@@ -234,7 +234,7 @@ Particle p;
 <h2 id="remote-coding">Remote Coding</h2>
 <p>One of the highlights of the ofSketch browser editor is the ability to edit code on a remote machine through a network connection. This is especially helpful when coding with the Raspberry Pi, or when tweaking live installation code. The figure below illustrates this in practice.</p>
 <div class="figure">
-<div style="clear:both"><img alt="Remote Coding Diagram" src="..\images\ofSketch/images/remote_setup.png"/></div><span class="caption">Remote Coding Diagram</span>
+<div style="clear:both"><a href="..\images\ofSketch/images/remote_setup.png" target="_blank"><img alt="Remote Coding Diagram" src="..\images\ofSketch/images/remote_setup.png"/></a></div><span class="caption">Remote Coding Diagram</span>
 </div>
 <ol style="list-style-type: decimal">
 <li>Raspberry Pi running an ofSketch app that draws a landscape to a connected to a TV</li>

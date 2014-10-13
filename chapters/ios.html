@@ -47,7 +47,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
 <p><em>by <a href="http://www.julapy.com/" target="_blank">Lukasz Karluk</a></em></p>
 <h2 id="openframeworks-on-ios-devices.">OpenFrameworks on iOS devices.</h2>
 <div class="figure">
-<div style="clear:both"><img alt="Figure 1: OF on iPhone." src="..\images\ios/images/ofxiOS_iPhone_sml.png" title="Figure 1: OF on iPhone."/></div><span class="caption">Figure 1: OF on iPhone.</span>
+<div style="clear:both"><a href="..\images\ios/images/ofxiOS_iPhone_sml.png" target="_blank"><img alt="Figure 1: OF on iPhone." src="..\images\ios/images/ofxiOS_iPhone_sml.png" title="Figure 1: OF on iPhone."/></a></div><span class="caption">Figure 1: OF on iPhone.</span>
 </div>
 <h2 id="intro">Intro</h2>
 <p>The beauty behind OpenFrameworks is its cross-platform nature and the ability to run the same code on your desktop and mobile devices while achieving the same results.</p>
@@ -226,11 +226,11 @@ firstName = [nameStr retain];</code></pre>
 <p>All this talk of memory management can get pretty heavy, so you'll be happy to know that Obj-C have made programming easier using Automatic Reference Countng (ARC). ARC does all the memory management for you so you no longer have to worry about retaining and releasing objects, its all done by the compiler. ARC works by looking at your code at compile time and making sure that each object is retained for as long as it needs to be but also that its released as soon as it no longer used.</p>
 <p>By default ARC is turned off inside ofxiOS XCode projects, but can be easily turned on in the project's Build Settings. Worth noting is that even though ARC can be turned on, ofxiOS source files are still compiled with non-ARC. ARC is only applied to Obj-C files in the main XCode project.</p>
 <div class="figure">
-<div style="clear:both"><img alt="Figure 1: OF on iPhone." src="..\images\ios/images/ofxiOS_ARC_0_sml.jpg" title="Figure 2: ofxiOS XCode."/></div><span class="caption">Figure 1: OF on iPhone.</span>
+<div style="clear:both"><a href="..\images\ios/images/ofxiOS_ARC_0_sml.jpg" target="_blank"><img alt="Figure 1: OF on iPhone." src="..\images\ios/images/ofxiOS_ARC_0_sml.jpg" title="Figure 2: ofxiOS XCode."/></a></div><span class="caption">Figure 1: OF on iPhone.</span>
 </div>
 <p>When ARC is turned on, it is possible to specify which Obj-C class should use ARC and which should use regular memory management. You can disable ARC for a specific class using the -fno-objc-arc compiler flag for that class.</p>
 <div class="figure">
-<div style="clear:both"><img alt="Figure 1: OF on iPhone." src="..\images\ios/images/ofxiOS_ARC_1.png" title="Figure 2: ofxiOS XCode."/></div><span class="caption">Figure 1: OF on iPhone.</span>
+<div style="clear:both"><a href="..\images\ios/images/ofxiOS_ARC_1.png" target="_blank"><img alt="Figure 1: OF on iPhone." src="..\images\ios/images/ofxiOS_ARC_1.png" title="Figure 2: ofxiOS XCode."/></a></div><span class="caption">Figure 1: OF on iPhone.</span>
 </div>
 <h3 id="mixing-obj-c-and-c-objective-c">Mixing Obj-C and C++ (Objective-C++)</h3>
 <p>Since both the Obj-C and C++ languages are a subset of the C language, it is possible to mix the two together. First of all before you start typing C++ code into your Obj-C classes or vise versa you need to rename your implementation file extension from <code>(*.m)</code> =&gt; <code>(*.mm)</code>. This lets the XCode compiler know that the file is a combination of Obj-C and C++.</p>
@@ -256,7 +256,7 @@ firstName = [nameStr retain];</code></pre>
 <p>TODO // need to make a diagram to visualise all this.</p>
 <h3 id="ofxiosapp">ofxiOSApp</h3>
 <div class="figure">
-<div style="clear:both"><img alt="Figure 1: OF on iPhone." src="..\images\ios/images/ofxiOS_XCode_sml.png" title="Figure 2: ofxiOS XCode."/></div><span class="caption">Figure 1: OF on iPhone.</span>
+<div style="clear:both"><a href="..\images\ios/images/ofxiOS_XCode_sml.png" target="_blank"><img alt="Figure 1: OF on iPhone." src="..\images\ios/images/ofxiOS_XCode_sml.png" title="Figure 2: ofxiOS XCode."/></a></div><span class="caption">Figure 1: OF on iPhone.</span>
 </div>
 <p>When you open up a empty ofxiOS project you will immediatly notice some differences in the ofApp header file. You will see that ofApp extends ofxiOSApp instead of ofBaseApp as you would see when running a desktop app. This is because iOS apps and desktop apps are slightly different, desktop apps receive mouse and keyboard events and iOS apps receive touch events as well a orientation events and memory warnings. To handle these new events, new methods had to be defined inside ofxiOSApp which the ofApp inherits from.</p>
 <pre><code>void touchDown(ofTouchEventArgs &amp; touch);
@@ -307,7 +307,7 @@ void gotFocus();</code></pre>
 <p>For example, lets say you have a very simple ofApp that plays a video. To achieve this you would use the <code>ofVideoPlayer</code> class, create a object instance of the class, call the <code>loadMovie()</code> method to load the video file and then call the <code>play()</code> method to begin playback of the video. Now to do this across desktop OF apps or iOS OF apps, the code is exactly the same. This is because we are using the <code>ofVideoPlayer</code> API which is common across all supported OF platforms. Although the thing to know here is that even though the code works the same way across the different platforms, the actual code used to play a video on OSX and iOS (for example) is very different.</p>
 <h3 id="ofxiosvideoplayer">ofxiOSVideoPlayer</h3>
 <div class="figure">
-<div style="clear:both"><img alt="Figure 1: OF on iPhone." src="..\images\ios/images/ofxiOS_moviePlayerExample_sml.png" title="Figure 2: ofxiOS XCode."/></div><span class="caption">Figure 1: OF on iPhone.</span>
+<div style="clear:both"><a href="..\images\ios/images/ofxiOS_moviePlayerExample_sml.png" target="_blank"><img alt="Figure 1: OF on iPhone." src="..\images\ios/images/ofxiOS_moviePlayerExample_sml.png" title="Figure 2: ofxiOS XCode."/></a></div><span class="caption">Figure 1: OF on iPhone.</span>
 </div>
 <p><code>ofxiOSVideoPlayer</code> is the video player class used for video playback inside ofxiOS. When you're using <code>ofVideoPlayer</code> inside a iOS OF project, you are actually using <code>ofxiOSVideoPlayer</code>. OF automatically selects the correct video player class to use depending on the platform you are using.</p>
 <p>A iOS example that demonstrates the use of the video player on iOS can be found in the folder, examples/ios/moviePlayerExample</p>
@@ -336,7 +336,7 @@ avVideoPlayer = (AVFoundationVideoPlayer *)video.getAVFoundationVideoPlayer();
 <h3 id="ofxiosvideograbber">ofxiOSVideoGrabber</h3>
 <h3 id="ofxiossoundplayer-and-ofxopenalsoundplayer">ofxiOSSoundPlayer and ofxOpenALSoundPlayer</h3>
 <div class="figure">
-<div style="clear:both"><img alt="Figure 1: OF on iPhone." src="..\images\ios/images/ofxiOS_soundPlayerExample_sml.png" title="Figure 2: ofxiOS XCode."/></div><span class="caption">Figure 1: OF on iPhone.</span>
+<div style="clear:both"><a href="..\images\ios/images/ofxiOS_soundPlayerExample_sml.png" target="_blank"><img alt="Figure 1: OF on iPhone." src="..\images\ios/images/ofxiOS_soundPlayerExample_sml.png" title="Figure 2: ofxiOS XCode."/></a></div><span class="caption">Figure 1: OF on iPhone.</span>
 </div>
 <h3 id="ofxiossoundstream">ofxiOSSoundStream</h3>
 <p><img alt="Figure 1: OF on iPhone." src="images/ofxiOS_audioInputExample_sml.png" title="Figure 2: ofxiOS XCode."/> <img alt="Figure 1: OF on iPhone." src="images/ofxiOS_audioOutputExample_sml.png" title="Figure 2: ofxiOS XCode."/></p>

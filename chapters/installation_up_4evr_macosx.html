@@ -85,16 +85,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
 <li><strong>Security:</strong> I would make sure that "Disable Automatic Login" is unchecked so you don't hit any surprises on reboots. If you’re really paranoid, you can even disable things like the IR remote receiver that still exists on some macs and definitely on Macbooks. This would keep pranksters with Apple TV remotes from “Front Rowing” your installation. To disable, go to Security-&gt;General-&gt;Advanced (in &gt;10.8) and “Disable remote control IR receiver”.</li>
 </ul>
 <div class="figure">
-<div style="clear:both"><img alt="BluetoothSettings" src="..\images\installation_up_4evr_macosx/images/Bluetooth_settings.png"/></div><span class="caption">BluetoothSettings</span>
+<div style="clear:both"><a href="..\images\installation_up_4evr_macosx/images/Bluetooth_settings.png" target="_blank"><img alt="BluetoothSettings" src="..\images\installation_up_4evr_macosx/images/Bluetooth_settings.png"/></a></div><span class="caption">BluetoothSettings</span>
 </div>
 <div class="figure">
-<div style="clear:both"><img alt="SecuritySettings" src="..\images\installation_up_4evr_macosx/images/Security_settings.png"/></div><span class="caption">SecuritySettings</span>
+<div style="clear:both"><a href="..\images\installation_up_4evr_macosx/images/Security_settings.png" target="_blank"><img alt="SecuritySettings" src="..\images\installation_up_4evr_macosx/images/Security_settings.png"/></a></div><span class="caption">SecuritySettings</span>
 </div>
 <div class="figure">
-<div style="clear:both"><img alt="SharingSettings" src="..\images\installation_up_4evr_macosx/images/Sharing_settings.png"/></div><span class="caption">SharingSettings</span>
+<div style="clear:both"><a href="..\images\installation_up_4evr_macosx/images/Sharing_settings.png" target="_blank"><img alt="SharingSettings" src="..\images\installation_up_4evr_macosx/images/Sharing_settings.png"/></a></div><span class="caption">SharingSettings</span>
 </div>
 <div class="figure">
-<div style="clear:both"><img alt="Login_items" src="..\images\installation_up_4evr_macosx/images/Auto_login.png"/></div><span class="caption">Login_items</span>
+<div style="clear:both"><a href="..\images\installation_up_4evr_macosx/images/Auto_login.png" target="_blank"><img alt="Login_items" src="..\images\installation_up_4evr_macosx/images/Auto_login.png"/></a></div><span class="caption">Login_items</span>
 </div>
 <p>You can also disable the "This Application Unexpectedly Quit" and the subsequent bug report that comes with it by running this command in terminal OR renaming the Problem Reporter app:</p>
 <pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> chmod 000 /System/Library/CoreServices/Problem\ Reporter.app</code></pre>
@@ -106,7 +106,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
 <h2 id="step-2-boot-into-your-software">Step 2: Boot into your software</h2>
 <p>Things get unplugged, power goes out, not everyone has budget or space for a battery backup etc etc. Above, I covered how to have everything reboot automatically after power failures or freezes, but you’ll also need your app to be ready to go from boot and not leave the desktop open to prying eyes. There are many ways to have your application load automatically - the simplest is using OSX's built in tools: In the System Preferences “Accounts” panel, select “Login Items” and drag your application into there to have it open automatically on launch.</p>
 <div class="figure">
-<div style="clear:both"><img alt="Login Items" src="..\images\installation_up_4evr_macosx/images/Login_items.png"/></div><span class="caption">Login Items</span>
+<div style="clear:both"><a href="..\images\installation_up_4evr_macosx/images/Login_items.png" target="_blank"><img alt="Login Items" src="..\images\installation_up_4evr_macosx/images/Login_items.png"/></a></div><span class="caption">Login Items</span>
 </div>
 <h2 id="step-3-keep-it-up-champ">Step 3: Keep it up (champ!)</h2>
 <p>There are several ways to make sure your application goes up and stays up -</p>
@@ -119,11 +119,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
 <p>Of course you could make the launchd plist yourself for free from a template like above. You can read all about them with the command "man launchd.plist" typed into terminal to get an idea of what each toggle controls. One quick method to setting up Launchd is to use Lingon ($4.99 in the App Store) or <a href="http://www.peterborgapps.com/lingon/" target="_blank">Lingon X</a></p>
 <p>In Lingon, hit the + to create a new launchd plist. Just make it a standard launch agent. Now Set up your plist like so:</p>
 <div class="figure">
-<div style="clear:both"><img alt="LingonSetup" src="..\images\installation_up_4evr_macosx/images/LingonSetup.png"/></div><span class="caption">LingonSetup</span>
+<div style="clear:both"><a href="..\images\installation_up_4evr_macosx/images/LingonSetup.png" target="_blank"><img alt="LingonSetup" src="..\images\installation_up_4evr_macosx/images/LingonSetup.png"/></a></div><span class="caption">LingonSetup</span>
 </div>
 <p>One additional/optional thing you can add to this is to put an additional key in the plist for a “Successful Exit”. By adding this, your app won’t re-open when it has detected that it closed normally (ie You just hit escape intentionally, it didn’t crash). Can be useful if you’re trying to check something and OS X won’t stop re-opening the app on you. To easily add this to the key, just hit “expert mode” on the bottom of the Lingon window after selecting your newly made script on the left. Then modify the relevant bits highlighted in the screenshot:</p>
 <div class="figure">
-<div style="clear:both"><img alt="LingonplistSetup" src="..\images\installation_up_4evr_macosx/images/LingonSetup2.png"/></div><span class="caption">LingonplistSetup</span>
+<div style="clear:both"><a href="..\images\installation_up_4evr_macosx/images/LingonSetup2.png" target="_blank"><img alt="LingonplistSetup" src="..\images\installation_up_4evr_macosx/images/LingonSetup2.png"/></a></div><span class="caption">LingonplistSetup</span>
 </div>
 <p><strong>Shell script+Cron Job method</strong></p>
 <p>(I got the following super helpful tip from <a href="http://kylemcdonald.net/" target="_blank">Kyle McDonald</a>)</p>
@@ -139,7 +139,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
 <p>Cronjobs are just low level system tasks that are set to run on a timer. The syntax for cronjobs is outside of the scope of this walkthrough, but there are many sites available for that. Instead, the application CronniX can do a lot of the heavy lifting for you.</p>
 <p>After downloading CronniX, open it up and create a new cronjob. In the window that opens, in the command window, point it to your KeepOpen.sh file and check all of the boxes in the simple tab for minute, hour, month, etc. This tells the job to run every minute, every hour, every day, every month. If you want it to run less frequently or at a different frequency, play around with the sliders.</p>
 <div class="figure">
-<div style="clear:both"><img alt="Cronnix_link" src="..\images\installation_up_4evr_macosx/images/Cronnix-settings.png"/></div><span class="caption">Cronnix_link</span>
+<div style="clear:both"><a href="..\images\installation_up_4evr_macosx/images/Cronnix-settings.png" target="_blank"><img alt="Cronnix_link" src="..\images\installation_up_4evr_macosx/images/Cronnix-settings.png"/></a></div><span class="caption">Cronnix_link</span>
 </div>
 <p>Now just hit “New” and then make sure to hit “Save” to save it into the system’s crontab. Now if you just wait a minute then it should open your app every minute on the minute. Maybe save this one for the very end if you have more to do :)</p>
 <p>This is a great tool if there is an unintended crash because the app will never be down longer than a minute.</p>
@@ -160,17 +160,17 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
 <p>This one is a little more preventative, or maybe superstitious so hopefully someone can point out a concrete reason why this is a good idea. Depending on your app and the amount of stuff it reaches into, there could be some memory leaks or other OS bugs that you haven’t accounted for. Rebooting every day or week is a good idea to keep everything tidy, system wise.</p>
 <p>The simplest option by far would be to go to System Preferences-&gt;Energy Saver and then click “Schedule…” and enter in some values if you need to turn the computer off to rest for a longer period of time to save it some stress when it might not be used at night time or something. Heat can do funny things sometimes, so if you have a chance to get your computer to rest and the time to test it, definitely give this a shot…saves some energy too which is nice.</p>
 <div class="figure">
-<div style="clear:both"><img alt="Auto-reboot" src="..\images\installation_up_4evr_macosx/images/Auto_reboot.png"/></div><span class="caption">Auto-reboot</span>
+<div style="clear:both"><a href="..\images\installation_up_4evr_macosx/images/Auto_reboot.png" target="_blank"><img alt="Auto-reboot" src="..\images\installation_up_4evr_macosx/images/Auto_reboot.png"/></a></div><span class="caption">Auto-reboot</span>
 </div>
 <p>You could also set up another shell script with a crontab as above with CronniX that reboots the system with as often as you specify.</p>
 <p>Another option (if you don’t want to deal with the terminal and shell scripting) is to use iCal to call an Automator iCal event. This method is perhaps a little easier to schedule and visualize when you will reboot. Within Automator, create a new file with the iCal event template to do something like this:</p>
 <div class="figure">
-<div style="clear:both"><img alt="Automator Shell Script" src="..\images\installation_up_4evr_macosx/images/Automator_example2.png"/></div><span class="caption">Automator Shell Script</span>
+<div style="clear:both"><a href="..\images\installation_up_4evr_macosx/images/Automator_example2.png" target="_blank"><img alt="Automator Shell Script" src="..\images\installation_up_4evr_macosx/images/Automator_example2.png"/></a></div><span class="caption">Automator Shell Script</span>
 </div>
 <p>Run it to see if it does what you expect and then save it out. When you save,it will open in iCal as an action that gets opened. Just set it to repeat as often as you’d like. You can also set things like having it email you when it reboots or runs the script.</p>
 <p>If you’d like to just close your programs and re-open them and there is a background and foreground do something like this (pauses are so the quitting and re-opening stuff has time to actually execute):</p>
 <div class="figure">
-<div style="clear:both"><img alt="enter image description here" src="..\images\installation_up_4evr_macosx/images/Automator_example.png"/></div><span class="caption">enter image description here</span>
+<div style="clear:both"><a href="..\images\installation_up_4evr_macosx/images/Automator_example.png" target="_blank"><img alt="enter image description here" src="..\images\installation_up_4evr_macosx/images/Automator_example.png"/></a></div><span class="caption">enter image description here</span>
 </div>
 <h2 id="step-5-check-in-on-it-from-afar">Step 5: Check in on it from afar</h2>
 <p>There are a bunch of options here from various paid web services (like <a href="http://www.logmein.com/" target="_blank">Logmein</a> or <a href="http://teamviewer.com/" target="_blank">Teamviewer</a>), to VNC (many options for this: <a href="http://realvnc.com/" target="_blank">RealVNC</a> and Chicken of the VNC tend to come up a bunch) to <a href="http://www.mactricksandtips.com/2009/06/ssh-into-your-mac.html" target="_blank">SSHing</a>. The choice here depends on your comfort level and how much you need to do to perform maintenance from far away. Also - see below for tips on logging the status of your app as an alternative way</p>
