@@ -5,7 +5,7 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <meta content="text/css" http-equiv="Content-Style-Type"/>
 <meta content="pandoc" name="generator"/>
-<title></title>
+<title>ofBook - Image Processing and Computer Vision</title>
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
 table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
@@ -26,53 +26,36 @@ code > span.al { color: #ff0000; font-weight: bold; }
 code > span.fu { color: #06287e; }
 code > span.er { color: #ff0000; font-weight: bold; }
   </style>
-<link href="../style/bootstrap.css" rel="stylesheet">
-<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/themes/black-tie/jquery-ui.css" rel="stylesheet">
-<link href="../style/jquery.tocify.css" rel="stylesheet">
-<link href="../style/prettify.css" rel="stylesheet" type="text/css"/>
+<link href="../style/bootstrap.min.css" rel="stylesheet">
 <link href="../style/style.css" rel="stylesheet" type="text/css"/>
 <link href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|Merriweather:400,300,300italic,400italic,700,900,700italic,900italic" rel="stylesheet" type="text/css">
-<link href="../octicons/octicons.css" rel="stylesheet">
-<style>  
-  .headerDoc {
-        color: #005580;
-      }
-  }
-  </style>
-</link></link></link></link></link></head>
+<script src="../javascript/jquery-1.8.3.min.js"></script>
+<script src="../javascript/bootstrap.min.js"></script>
+<script src="../javascript/navbar.js"></script>
+</link></link></head>
 <body>
-<span id="side-nav">
-<span class="side-nav-button chapterBtn mega-octicon octicon-book"></span>
-<span class="side-nav-button navBtn mega-octicon octicon-three-bars"></span>
-<span class="side-nav-button infoBtn mega-octicon octicon-info"></span>
-</span>
-<!-- table of content -->
-<div id="toc">
-<span class="closeBtn mega-octicon octicon-x"></span>
-</div></body></html>
-<!-- table of content -->
-<div id="chapters">
-<span class="closeBtn mega-octicon octicon-x"></span>
-chapters
-<ul><li class="group">foreword</li><li><a href="foreword.html">Foreword</a></li><li class="group">basics</li><li><a href="of_philosophy.html">philosophy</a></li><li><a href="cplusplus_basics.html">C++ Language Basics</a></li><li><a href="setup_and_project_structure.html">OF structure</a></li><li><a href="intro_to_graphics.html">Graphics</a></li><li><a href="OOPs!.html">Ooops! = Object Oriented Programming + Classes</a></li><li class="group">approaches</li><li><a href="animation.html">Animation</a></li><li><a href="data_vis.html">Information Visualization Chapter</a></li><li><a href="game_design.html">Experimental Game Development in openFrameworks</a></li><li class="selected"><a href="image_processing_computer_vision.html">Image Processing and Computer Vision</a></li><li class="group">i/o</li><li><a href="hardware.html">hardware</a></li><li><a href="sound.html">Sound</a></li><li><a href="network.html">Network</a></li><li class="group">advanced topics</li><li><a href="advanced_graphics.html">Advanced graphics</a></li><li><a href="math.html">That Math Chapter: From 1D to 4D</a></li><li><a href="memory.html">Memory in C++</a></li><li><a href="threads.html">Threads</a></li><li><a href="ios.html">ofxiOS</a></li><li><a href="c++11.html">C++ 11</a></li><li class="group">project breakdowns</li><li><a href="project_elliot.html">Case Study : Line Segments Space</a></li><li><a href="project_eva.html">Case Study: Choreographies for Humans and Stars</a></li><li><a href="project_joel.html">Case Study: Anthropocene, an interactive film installation for Greenpeace as part of their field at Glastonbury 2013</a></li><li class="group">tools</li><li><a href="version_control_with_git.html">Version control with Git</a></li><li><a href="ofSketch.html">ofSketch</a></li><li><a href="installation_up_4evr_macosx.html">Installation up 4evr - OSX</a></li><li><a href="installation_up_4evr_linux.html">Installation up 4evr - Linux</a></li></ul></div>
-<!-- info about the book -->
-<div id="bookInfo">
-<span class="closeBtn mega-octicon octicon-x"></span>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida, luctus mauris in, congue ante. Phasellus egestas est id velit ornare, eu vehicula augue tincidunt. Aliquam laoreet faucibus turpis eget gravida. Vestibulum pharetra scelerisque leo, eu tincidunt leo tincidunt feugiat. Sed rutrum, felis eget posuere tempus, neque justo pretium libero, quis facilisis mauris turpis nec enim. Sed quis metus massa. Maecenas tincidunt, leo at ultricies interdum, nisl ipsum finibus massa, quis dictum nulla nibh sed urna. Vestibulum rhoncus, nunc sit amet tincidunt interdum, ligula lacus dictum massa, pharetra tristique nisi augue vitae risus.
+<div class="banner">
+<div class="content-wrapper">
+<b>Work in progress!</b>
+        This is a preliminary version of the <a href="https://github.com/openframeworks/ofBook/" target="_blank">ofBook</a>
 </div>
-<div class="row-fluid">
-<div id="chapter">
+</div>
+<div class="content-wrapper">
+<nav role="navigation">
+<ul id="nav-parts"><li class="group">Foreword<ul><li class="chapter"><a href="foreword.html">Foreword</a><ul><li class="section selected"><a href="#aboutthisbook" target="_top">about this book</a></li><li class="section"><a href="#credits" target="_top">credits</a></li></ul></li></ul></li><li class="group">Basics<ul><li class="chapter"><a href="of_philosophy.html">philosophy</a><ul><li class="section selected"><a href="#ofstructure" target="_top">OF structure</a></li><li class="section"><a href="#projectgenerator" target="_top">project generator</a></li><li class="section"><a href="#handcpp" target="_top">.h and .cpp</a></li><li class="section"><a href="#setupupdatedraw" target="_top">setup/update/draw</a></li><li class="section"><a href="#preprocessorcompilerlinker" target="_top">preprocessor/compiler/linker</a></li></ul></li></ul><ul><li class="chapter"><a href="cplusplus_basics.html">C++ Language Basics</a><ul><li class="section selected"><a href="#lookalive" target="_top">Look Alive!</a></li><li class="section"><a href="#iteration" target="_top">Iteration</a></li><li class="section"><a href="#compilingmyfirstapp" target="_top">Compiling My First App</a></li><li class="section"><a href="#beyondhelloworld" target="_top">Beyond Hello World</a></li><li class="section"><a href="#functions" target="_top">Functions</a></li><li class="section"><a href="#customfunctions" target="_top">Custom Functions</a></li><li class="section"><a href="#encapsulationofcomplexity" target="_top">Encapsulation of Complexity</a></li><li class="section"><a href="#variablespart1" target="_top">Variables (part 1)</a></li><li class="section"><a href="#conclusion" target="_top">Conclusion</a></li><li class="section"><a href="#ps" target="_top">PS.</a></li></ul></li></ul><ul><li class="chapter"><a href="setup_and_project_structure.html">OF structure</a><ul><li class="section selected"><a href="#firstthingsfirst" target="_top">First things first</a></li><li class="section"><a href="#welcometoyournewkitchen" target="_top">Welcome to your new kitchen</a></li><li class="section"><a href="#runningexamples" target="_top">Running examples</a></li><li class="section"><a href="#offolderstructure" target="_top">OF folder structure</a></li></ul></li></ul><ul><li class="chapter"><a href="intro_to_graphics.html">Graphics</a><ul><li class="section selected"><a href="#brusheswithbasicshapes" target="_top">Brushes with Basic Shapes</a></li><li class="section"><a href="#brushesfromfreeformshapes" target="_top">Brushes from Freeform Shapes</a></li><li class="section"><a href="#movingtheworld" target="_top">Moving The World</a></li><li class="section"><a href="#nextsteps" target="_top">Next Steps</a></li></ul></li></ul><ul><li class="chapter"><a href="OOPs!.html">Ooops! = Object Oriented Programming + Classes</a><ul><li class="section selected"><a href="#overview" target="_top">Overview</a></li><li class="section"><a href="#whatisoop" target="_top">What is OOP</a></li><li class="section"><a href="#howtobuildyourownclassessimpleclass" target="_top">How to build your own Classes (simple Class)</a></li><li class="section"><a href="#makeanobjectfromyourclass" target="_top">make an Object from your Class</a></li><li class="section"><a href="#makeobjectsfromyourclass" target="_top">make objects from your Class</a></li><li class="section"><a href="#makemoreobjectsfromyourclass" target="_top">make more Objects from your Class</a></li><li class="section"><a href="#makeevenmoreobjectsfromyourclasspropertiesandconstructors" target="_top">make even more Objects from your Class: properties and constructors</a></li><li class="section"><a href="#makeevenmoreobjectsfromyourclass" target="_top">make even more Objects from your Class</a></li><li class="section"><a href="#makeanddeleteasyouwishusingvectors" target="_top">Make and delete as you wish - using vectors</a></li><li class="section"><a href="#quickintrotopolymorphisminheritance" target="_top">Quick intro to polymorphism (inheritance)</a></li></ul></li></ul></li><li class="group selected">Approaches<ul><li class="chapter"><a href="animation.html">Animation</a><ul><li class="section selected"><a href="#background" target="_top">Background</a></li><li class="section"><a href="#animationinofusefulconcepts" target="_top">Animation in OF / useful concepts:</a></li><li class="section"><a href="#linearmovement" target="_top">linear movement</a></li><li class="section"><a href="#functionbasedmovement" target="_top">Function based movement</a></li><li class="section"><a href="#simulation" target="_top">Simulation</a></li><li class="section"><a href="#wheretogofurther" target="_top">where to go further</a></li></ul></li></ul><ul><li class="chapter"><a href="data_vis.html">Information Visualization Chapter</a><ul><li class="section selected"><a href="#intro" target="_top">Intro</a></li><li class="section"><a href="#workingwithdatafilesinopenframeworks" target="_top">Working with data files in OpenFrameworks</a></li><li class="section"><a href="#moreusefulfunctionsforworkingwithdata" target="_top">More Useful functions for working with data</a></li><li class="section"><a href="#workingwithapis" target="_top">Working with APIs</a></li><li class="section"><a href="#furtherresources" target="_top">Further resources</a></li><li class="section"><a href="#references" target="_top">References</a></li></ul></li></ul><ul><li class="chapter"><a href="game_design.html">Experimental Game Development in openFrameworks</a><ul><li class="section selected"><a href="#howdogamedevelopersactuallymakegames" target="_top">How do game developers actually make games?</a></li><li class="section"><a href="#sowhatisoscanyway" target="_top">So what is OSC, anyway?</a></li><li class="section"><a href="#ourbasicgamemakingitnotsobasic" target="_top">Our basic game--&amp; making it not-so-basic</a></li></ul></li></ul><ul><li class="chapter selected"><a href="image_processing_computer_vision.html">Image Processing and Computer Vision</a><ul><li class="section selected"><a href="#preliminariestoimageprocessing" target="_top">Preliminaries to Image Processing</a></li></ul></li></ul></li><li class="group">I/O<ul><li class="chapter"><a href="hardware.html">hardware</a><ul><li class="section selected"><a href="#introduction" target="_top">introduction</a></li><li class="section"><a href="#gettingstartedwithserialcommunication" target="_top">getting started with serial communication</a></li><li class="section"><a href="#digitalandanalogcommunication" target="_top">digital and analog communication</a></li><li class="section"><a href="#usingserialforcommunicationbetweenarduinoandopenframeworks" target="_top">using serial for communication between arduino and openframeworks</a></li><li class="section"><a href="#lightsoncontrollinghardwareviadmx" target="_top">Lights On - controlling hardware via DMX</a></li><li class="section"><a href="#raspberrypigettingyourofappintosmallspaces" target="_top">Raspberry Pi - getting your OF app into small spaces</a></li></ul></li></ul><ul><li class="chapter"><a href="sound.html">Sound</a><ul><li class="section selected"><a href="#gettingstartedwithsoundfiles" target="_top">Getting Started With Sound Files</a></li><li class="section"><a href="#gettingstartedwiththesoundstream" target="_top">Getting Started With the Sound Stream</a></li><li class="section"><a href="#why1to1" target="_top">Why -1 to 1?</a></li><li class="section"><a href="#timedomainvsfrequencydomain" target="_top">Time Domain vs Frequency Domain</a></li><li class="section"><a href="#reactingtoliveaudio" target="_top">Reacting to Live Audio</a></li><li class="section"><a href="#synthesizingaudio" target="_top">Synthesizing Audio</a></li><li class="section"><a href="#audiogotchas" target="_top">Audio Gotchas</a></li></ul></li></ul><ul><li class="chapter"><a href="network.html">Network</a><ul><li class="section selected"><a href="#tcpvsudp" target="_top">TCP vs UDP</a></li><li class="section"><a href="#osc" target="_top">OSC</a></li></ul></li></ul></li><li class="group">Advanced topics<ul><li class="chapter"><a href="advanced_graphics.html">Advanced graphics</a><ul><li class="section selected"><a href="#dimmediatemodevsofpolylineofpath" target="_top">2D, immediate mode vs ofPolyline/ofPath</a></li><li class="section"><a href="#d" target="_top">3D</a></li></ul></li></ul><ul><li class="chapter"><a href="math.html">That Math Chapter: From 1D to 4D</a><ul><li class="section selected"><a href="#howartistsapproachmath" target="_top">How Artists Approach Math</a></li><li class="section"><a href="#aboutthischapter" target="_top">About this Chapter</a></li><li class="section"><a href="#onedimensionusingchange" target="_top">One Dimension: Using Change</a></li><li class="section"><a href="#moredimensionssomelinearalgebra" target="_top">More Dimensions: Some Linear Algebra</a></li></ul></li></ul><ul><li class="chapter"><a href="memory.html">Memory in C++</a><ul><li class="section selected"><a href="#computermemoryandvariables" target="_top">Computer memory and variables</a></li><li class="section"><a href="#stackvariablesvariablesinfunctionsvsvariablesinobjects" target="_top">Stack variables, variables in functions vs variables in objects</a></li><li class="section"><a href="#pointersandreferences" target="_top">Pointers and references</a></li><li class="section"><a href="#variablesintheheap" target="_top">Variables in the heap</a></li><li class="section"><a href="#memorystructuresarraysandvectors" target="_top">Memory structures, arrays and vectors</a></li><li class="section"><a href="#othermemorystructureslistsandmaps" target="_top">Other memory structures, lists and maps</a></li><li class="section"><a href="#smartpointers" target="_top">smart pointers</a></li></ul></li></ul><ul><li class="chapter"><a href="threads.html">Threads</a><ul><li class="section selected"><a href="#whatsathreadandwhentouseit" target="_top">What's a thread and when to use it</a></li><li class="section"><a href="#ofthread" target="_top">ofThread</a></li><li class="section"><a href="#threadsandopengl" target="_top">Threads and openGL</a></li><li class="section"><a href="#ofmutex" target="_top">ofMutex</a></li><li class="section"><a href="#externalthreadsanddoublebuffering" target="_top">External threads and double buffering</a></li><li class="section"><a href="#ofscopedlock" target="_top">ofScopedLock</a></li><li class="section"><a href="#pococondition" target="_top">Poco::Condition</a></li><li class="section"><a href="#conclusion" target="_top">Conclusion</a></li></ul></li></ul><ul><li class="chapter"><a href="ios.html">ofxiOS</a><ul><li class="section selected"><a href="#openframeworksoniosdevices" target="_top">OpenFrameworks on iOS devices.</a></li><li class="section"><a href="#intro" target="_top">Intro</a></li><li class="section"><a href="#introtoobjectivec" target="_top">Intro to Objective-C</a></li><li class="section"><a href="#underthehood" target="_top">Under the Hood</a></li><li class="section"><a href="#ofuikit" target="_top">OF &amp; UIKit</a></li><li class="section"><a href="#mediaplaybackandcapture" target="_top">Media Playback and Capture</a></li><li class="section"><a href="#lifehacks" target="_top">Life Hacks</a></li><li class="section"><a href="#appstore" target="_top">App Store</a></li><li class="section"><a href="#casestudies" target="_top">Case Studies</a></li></ul></li></ul><ul><li class="chapter"><a href="c++11.html">C++ 11</a><ul><li class="section selected"><a href="#blahblah" target="_top">Blah blah</a></li><li class="section"><a href="#auto" target="_top">auto</a></li><li class="section"><a href="#forthingthings" target="_top">for (thing : things)</a></li><li class="section"><a href="#override" target="_top">override</a></li><li class="section"><a href="#lambdafunctions" target="_top">Lambda functions</a></li></ul></li></ul></li><li class="group">Project breakdowns<ul><li class="chapter"><a href="project_elliot.html">Case Study : Line Segments Space</a><ul><li class="section selected"><a href="#foreward" target="_top">Foreward</a></li><li class="section"><a href="#artiststatement" target="_top">Artist statement</a></li><li class="section"><a href="#digitalemulsion" target="_top">Digital Emulsion</a></li><li class="section"><a href="#technicalsolution" target="_top">Technical solution</a></li><li class="section"><a href="#designtimeapplications" target="_top">Design time applications</a></li></ul></li></ul><ul><li class="chapter"><a href="project_eva.html">Case Study: Choreographies for Humans and Stars</a><ul><li class="section selected"><a href="#projectoverview" target="_top">Project Overview</a></li><li class="section"><a href="#ideationandprototyping" target="_top">Ideation and Prototyping</a></li><li class="section"><a href="#findingthetechnicalsolutions" target="_top">Finding the Technical Solutions</a></li><li class="section"><a href="#developingthevisualizationsoftware" target="_top">Developing the Visualization Software</a></li><li class="section"><a href="#failsafesanddirtyfixes" target="_top">Fail-safes and dirty fixes</a></li><li class="section"><a href="#resultsandreception" target="_top">Results and Reception</a></li></ul></li></ul><ul><li class="chapter"><a href="project_joel.html">Case Study: Anthropocene, an interactive film installation for Greenpeace as part of their field at Glastonbury 2013</a><ul><li class="section selected"><a href="#projectoverview" target="_top">Project Overview</a></li><li class="section"><a href="#theproject" target="_top">The Project</a></li><li class="section"><a href="#development" target="_top">Development</a></li><li class="section"><a href="#showtime" target="_top">Show time</a></li><li class="section"><a href="#postevent" target="_top">Post Event</a></li><li class="section"><a href="#teamandcredits" target="_top">Team and Credits</a></li><li class="section"><a href="#hardwareselection" target="_top">Hardware selection</a></li><li class="section"><a href="#appendix1codestructuremainloop" target="_top">Appendix 1: Code structure, main loop</a></li><li class="section"><a href="#appendix2modeswithscreengrabsandcodeexplanation" target="_top">Appendix 2: Modes, with screen grabs and code explanation</a></li><li class="section"><a href="#appendix3editeddevelopmentnotes" target="_top">Appendix 3: Edited development notes</a></li></ul></li></ul></li><li class="group">Tools<ul><li class="chapter"><a href="version_control_with_git.html">Version control with Git</a><ul><li class="section selected"><a href="#whatisversioncontrolandwhyshouldyouuseit" target="_top">What is version control, and why should you use it?</a></li><li class="section"><a href="#differentversioncontrolsystems" target="_top">Different version control systems</a></li><li class="section"><a href="#introductiontogit" target="_top">Introduction to Git</a></li><li class="section"><a href="#popularguiclients" target="_top">Popular GUI clients</a></li><li class="section"><a href="#conclusion" target="_top">Conclusion</a></li></ul></li></ul><ul><li class="chapter"><a href="ofSketch.html">ofSketch</a><ul><li class="section selected"><a href="#whatisofsketch" target="_top">What is ofSketch?</a></li><li class="section"><a href="#download" target="_top">Download</a></li><li class="section"><a href="#sketchformat" target="_top">Sketch Format</a></li><li class="section"><a href="#remotecoding" target="_top">Remote Coding</a></li><li class="section"><a href="#future" target="_top">Future</a></li></ul></li></ul><ul><li class="chapter"><a href="installation_up_4evr_macosx.html">Installation up 4evr - OSX</a><ul><li class="section selected"><a href="#step1prepyoursoftwareandthecomputer" target="_top">Step 1: Prep your software and the computer</a></li><li class="section"><a href="#step2bootintoyoursoftware" target="_top">Step 2: Boot into your software</a></li><li class="section"><a href="#step3keepitupchamp" target="_top">Step 3: Keep it up (champ!)</a></li><li class="section"><a href="#step4rebootperiodically" target="_top">Step 4: Reboot periodically</a></li><li class="section"><a href="#step5checkinonitfromafar" target="_top">Step 5: Check in on it from afar</a></li><li class="section"><a href="#step6testtesttest" target="_top">Step 6: Test, test, test.</a></li><li class="section"><a href="#additionaltipslogging" target="_top">Additional Tips: Logging</a></li><li class="section"><a href="#memoryleakmurderer" target="_top">Memory leak murderer</a></li><li class="section"><a href="#alternateresources" target="_top">Alternate resources</a></li></ul></li></ul><ul><li class="chapter"><a href="installation_up_4evr_linux.html">Installation up 4evr - Linux</a><ul><li class="section selected"><a href="#someadditionaltricks" target="_top">Some additional tricks:</a></li></ul></li></ul></li></ul>
+</nav>
+<div class="chapter-content">
 <h1 id="image-processing-and-computer-vision">Image Processing and Computer Vision</h1>
 <p>By <a href="http://www.flong.com/" target="_blank">Golan Levin</a></p>
 <p>Edited by <a href="http://brannondorsey.com" target="_blank">Brannon Dorsey</a></p>
-<h2 id="preliminaries-to-image-processing">Preliminaries to Image Processing</h2>
+<h2 id="preliminariestoimageprocessing">Preliminaries to Image Processing</h2>
 <h3 id="digital-image-acquisition-and-data-structures">Digital image acquisition and data structures</h3>
 <p>This chapter introduces techniques for manipulating (and extracting certain kinds of information from) <em>raster images</em>. Such images are sometimes also known as <em>bitmap images</em> or <em>pixmap images</em>, though we'll just use the generic term <strong>image</strong> to refer to any array (or <em>buffer</em>) of numbers that represenRat the color values of a rectangular grid of <em>pixels</em> ("picture elements"). In openFrameworks, such buffers come in a variety of flavors, and are used within (and managed by) a wide variety of convenient container objects, as we shall see.</p>
 <h4 id="loading-and-displaying-an-image">Loading and Displaying an Image</h4>
 <p>Image processing begins with, well, <em>an image</em>. Happily, loading and displaying an image is very straightforward in OF. Let's start with this tiny, low-resolution (12x16 pixel) grayscale portrait of Abraham Lincoln:</p>
-<div class="figure">
-<div style="clear:both"><a href="..\images\image_processing_computer_vision/images/lincoln.png" target="_blank"><img alt="Small Lincoln image" src="..\images\image_processing_computer_vision/images/lincoln.png"/></a></div><span class="caption">Small Lincoln image</span>
-</div>
+<div class="figure"><div class="inner">
+<div style="image"><a href="..\images\image_processing_computer_vision/images/lincoln.png" target="_blank"><img alt="Small Lincoln image" src="..\images\image_processing_computer_vision/images/lincoln.png"/></a></div><div class="caption">Small Lincoln image</div>
+</div></div>
 <p>Below is a simple application for loading and displaying an image, very similar to the <em>imageLoaderExample</em> in the OF examples collection. The header file for our program, <em>ofApp.h</em>, declares an instance of an <code>ofImage</code> object, <em>myImage</em>:</p>
 <pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Example 1: Load and display an image.</span>
 <span class="co">// This is ofApp.h</span>
@@ -106,9 +89,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
 	myImage.draw(<span class="dv">10</span>, <span class="dv">10</span>, imgW * <span class="dv">10</span>, imgH * <span class="dv">10</span>);
 }</code></pre>
 <p>Compiling and running the above program displays the following canvas, in which this (very tiny!) image is scaled up by a factor of 10, and rendered so that its upper left corner is positioned at pixel location (10,10). The positioning and scaling of the image are performed by the <code>myImage.draw()</code> command. Note that the image appears "blurry" because, by default, openFrameworks uses <a href="http://en.wikipedia.org/wiki/Linear_interpolation" target="_blank">linear interpolation</a> when displaying upscaled images.</p>
-<div class="figure">
-<div style="clear:both"><a href="..\images\image_processing_computer_vision/images/lincoln-displayed.jpg" target="_blank"><img alt="Pixel data diagram" src="..\images\image_processing_computer_vision/images/lincoln-displayed.jpg"/></a></div><span class="caption">Pixel data diagram</span>
-</div>
+<div class="figure"><div class="inner">
+<div style="image"><a href="..\images\image_processing_computer_vision/images/lincoln-displayed.jpg" target="_blank"><img alt="Pixel data diagram" src="..\images\image_processing_computer_vision/images/lincoln-displayed.jpg"/></a></div><div class="caption">Pixel data diagram</div>
+</div></div>
 <p>If you're new to working with images in OF, it's worth pointing out that you should try to avoid loading images in the <code>draw()</code> or <code>update()</code> functions, if possible. Why? Well, reading data from disk is one of the slowest things you can ask a computer to do. In many circumstances, you can simply load all the images you'll need just once, when your program is first initialized, in <code>setup()</code>. By contrast, if you're repeatedly loading an image in your <code>draw()</code> loop — the same image, again and again, sixty times per second — you're hurting the performance of your app, and potentially even risking damage to your hard disk.</p>
 <h4 id="where-else-images-come-from">Where (Else) Images Come From</h4>
 <p>In openFrameworks, raster images can come from a wide variety of sources, including (but not limited to):</p>
@@ -205,9 +188,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
 	myTexture.draw(<span class="dv">340</span>, <span class="dv">10</span>);
 }</code></pre>
 <p>This application continually displays the live camera feed, and also presents a live, "filtered" (photo negative) version. Here's the result, using my laptop's webcam:</p>
-<div class="figure">
-<div style="clear:both"><a href="..\images\image_processing_computer_vision/images/videograbber.png" target="_blank"><img alt="Video grabber screenshot" src="..\images\image_processing_computer_vision/images/videograbber.png"/></a></div><span class="caption">Video grabber screenshot</span>
-</div>
+<div class="figure"><div class="inner">
+<div style="image"><a href="..\images\image_processing_computer_vision/images/videograbber.png" target="_blank"><img alt="Video grabber screenshot" src="..\images\image_processing_computer_vision/images/videograbber.png"/></a></div><div class="caption">Video grabber screenshot</div>
+</div></div>
 <p>Acquiring frames from a Quicktime movie or other digital video file stored on disk is an almost identical procedure. See the OF <em>videoPlayerExample</em> implementation or <code>ofVideoGrabber</code> <a href="http://openframeworks.cc/documentation/video/ofVideoGrabber.html" target="_blank">documentation</a> for details.</p>
 <p>A common pattern among developers of interactive computer vision systems is to enable easy switching between a pre-stored "sample" video of your scene, and video from a live camera grabber. That way, you can test and refine your processing algorithms in the comfort of your hotel room, and then switch to "real" camera input when you're back at the installation site. A hacky if effective example of this pattern can be found in the openFrameworks <em>opencvExample</em>, in the addons example directory, where the switch is built using a <code>#define</code> <a href="http://www.cplusplus.com/doc/tutorial/preprocessor/" target="_blank">preprocessor directive</a>:</p>
 <pre class="sourceCode cpp"><code class="sourceCode cpp">    <span class="co">//...</span>
@@ -221,9 +204,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
 <p>Uncommenting the <code>//#define _USE_LIVE_VIDEO</code> line in the .h file of the <em>opencvExample</em> forces the compiler to attempt to use a webcam instead of the pre-stored sample video.</p>
 <h4 id="pixels-in-memory">Pixels in Memory</h4>
 <p>To begin our study of image processing and computer vision, we'll need to do more than just load and display images; we'll need to <em>access, manipulate and analyze the numeric data represented by their pixels</em>. It's therefore worth reviewing how pixels are stored in computer memory. Below is a simple illustration of the grayscale image buffer which stores our image of Abraham Lincoln. Each pixel's brightness is represented by a single 8-bit number, whose range is from 0 (black) to 255 (white):</p>
-<div class="figure">
-<div style="clear:both"><a href="..\images\image_processing_computer_vision/images/lincoln_pixel_values.png" target="_blank"><img alt="Pixel data diagram" src="..\images\image_processing_computer_vision/images/lincoln_pixel_values.png"/></a></div><span class="caption">Pixel data diagram</span>
-</div>
+<div class="figure"><div class="inner">
+<div style="image"><a href="..\images\image_processing_computer_vision/images/lincoln_pixel_values.png" target="_blank"><img alt="Pixel data diagram" src="..\images\image_processing_computer_vision/images/lincoln_pixel_values.png"/></a></div><div class="caption">Pixel data diagram</div>
+</div></div>
 <p>In point of fact, pixel values are almost universally stored, at the hardware level, in a <em>one-dimensional array</em>. For example, the data from the image above is stored in a manner similar to this long list of unsigned chars:</p>
 <pre class="sourceCode cpp"><code class="sourceCode cpp">{<span class="dv">157</span>, <span class="dv">153</span>, <span class="dv">174</span>, <span class="dv">168</span>, <span class="dv">150</span>, <span class="dv">152</span>, <span class="dv">129</span>, <span class="dv">151</span>, <span class="dv">172</span>, <span class="dv">161</span>, <span class="dv">155</span>, <span class="dv">156</span>,
  <span class="dv">155</span>, <span class="dv">182</span>, <span class="dv">163</span>,  <span class="dv">74</span>,  <span class="dv">75</span>,  <span class="dv">62</span>,  <span class="dv">33</span>,  <span class="dv">17</span>, <span class="dv">110</span>, <span class="dv">210</span>, <span class="dv">180</span>, <span class="dv">154</span>,
@@ -245,9 +228,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
 <p>Note how this data includes no details about the image's width and height. Should this list of values be interpreted as a grayscale image which is 12 pixels wide and 16 pixels tall, or 8x24, or 3x64? Could it be interpreted as a color image? Such 'meta-data' is specified elsewhere — generally in a container object like an <code>ofImage</code>.</p>
 <h4 id="grayscale-pixels-and-array-indices">Grayscale Pixels and Array Indices</h4>
 <p>It's important to understand how pixel data is stored in computer memory. Each pixel has an <em>address</em>, indicated by a number (whose counting begins with zero):</p>
-<div class="figure">
-<div style="clear:both"><a href="..\images\image_processing_computer_vision/images/pixels_in_memory.png" target="_blank"><img alt="Based on Shiffman's image in the Processing tutorial" src="..\images\image_processing_computer_vision/images/pixels_in_memory.png"/></a></div><span class="caption">Based on Shiffman's image in the Processing tutorial</span>
-</div>
+<div class="figure"><div class="inner">
+<div style="image"><a href="..\images\image_processing_computer_vision/images/pixels_in_memory.png" target="_blank"><img alt="Based on Shiffman's image in the Processing tutorial" src="..\images\image_processing_computer_vision/images/pixels_in_memory.png"/></a></div><div class="caption">Based on Shiffman's image in the Processing tutorial</div>
+</div></div>
 <p>Observe how the (one-dimensional) list of values have been distributed to successive (two-dimensional) pixel locations in the image — wrapping over the right edge just like English text.</p>
 <p>It frequently happens that you'll need to determine the array-index of a given pixel <em>(x,y)</em> in an image that is stored in an <code>unsigned char*</code> buffer. This little task comes up often enough that it's worth committing the following pattern to memory:</p>
 <pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Given:</span>
@@ -280,9 +263,9 @@ buffer[arrayIndex] = pixelValueAtXY;</code></pre>
 <span class="dt">float</span> brightnessOfColorAtXY = colorAtXY.getBrightness();</code></pre>
 <h4 id="finding-the-brightest-pixel-in-an-image">Finding the Brightest Pixel in an Image</h4>
 <p>Using what we know now, we can write a simple computer-vision program that locates the brightest pixel in an image. This elementary concept was used to great artistic effect by the artist collective, Graffiti Research Lab (GRL), in the openFrameworks application they built for their 2007 project <a href="http://www.graffitiresearchlab.com/blog/projects/laser-tag/" target="_blank"><em>L.A.S.E.R Tag</em></a>. The concept of <em>L.A.S.E.R Tag</em> was to allow people to draw projected graffiti on a large building facade, using a laser pointer. The bright spot from the laser pointer was tracked by code similar to that shown below, and used as the basis for creating projected graphics.</p>
-<div class="figure">
-<div style="clear:both"><a href="..\images\image_processing_computer_vision/images/laser_tag.jpg" target="_blank"><img alt="Laser Tag by GRL" src="..\images\image_processing_computer_vision/images/laser_tag.jpg"/></a></div><span class="caption">Laser Tag by GRL</span>
-</div>
+<div class="figure"><div class="inner">
+<div style="image"><a href="..\images\image_processing_computer_vision/images/laser_tag.jpg" target="_blank"><img alt="Laser Tag by GRL" src="..\images\image_processing_computer_vision/images/laser_tag.jpg"/></a></div><div class="caption">Laser Tag by GRL</div>
+</div></div>
 <p>The .h file for our app loads an ofImage (<code>laserTagImage</code>) of someone pointing a laser at the building. (In the real application, a live camera was used.)</p>
 <pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Example 3. Finding the Brightest Pixel in an Image</span>
 <span class="co">// This is ofApp.h</span>
@@ -341,28 +324,28 @@ buffer[arrayIndex] = pixelValueAtXY;</code></pre>
 	ofEllipse (maxBrightnessX, maxBrightnessY, <span class="dv">40</span>,<span class="dv">40</span>);
 }</code></pre>
 <p>Our application locates the bright spot of the laser (which, luckily for us, is the brightest part of the scene) and draws a circle around it. Of course, now that we know where the brightest (or darkest) spot is, we can can develop many interesting applications, such as sun trackers, turtle trackers...</p>
-<div class="figure">
-<div style="clear:both"><a href="..\images\image_processing_computer_vision/images/laser_tag_result.jpg" target="_blank"><img alt="Laser Tag by GRL" src="..\images\image_processing_computer_vision/images/laser_tag_result.jpg"/></a></div><span class="caption">Laser Tag by GRL</span>
-</div>
+<div class="figure"><div class="inner">
+<div style="image"><a href="..\images\image_processing_computer_vision/images/laser_tag_result.jpg" target="_blank"><img alt="Laser Tag by GRL" src="..\images\image_processing_computer_vision/images/laser_tag_result.jpg"/></a></div><div class="caption">Laser Tag by GRL</div>
+</div></div>
 <p>Being able to locate the brightest pixel in an image has other uses, too. For example, in a depth image (such as produced by a Kinect sensor), the brightest pixel corresponds to the <em>foremost point</em>—or the nearest object to the camera. This can be extremely useful if you're making an interactive installation that tracks a user's hand.</p>
-<div class="figure">
-<div style="clear:both"><a href="..\images\image_processing_computer_vision/images/kinect-forepoint.jpg" target="_blank"><img alt="Not mine" src="..\images\image_processing_computer_vision/images/kinect-forepoint.jpg"/></a></div><span class="caption">Not mine</span>
-</div>
+<div class="figure"><div class="inner">
+<div style="image"><a href="..\images\image_processing_computer_vision/images/kinect-forepoint.jpg" target="_blank"><img alt="Not mine" src="..\images\image_processing_computer_vision/images/kinect-forepoint.jpg"/></a></div><div class="caption">Not mine</div>
+</div></div>
 <p><em>The brightest pixel in a depth image corresponds to the nearest object to the camera.</em></p>
 <p>Unsurprisingly, tracking <em>more than one</em> bright point requires more sophisticated forms of processing. If you're able to design and control the tracking environment, one simple yet effective way to track up to three objects is to search for the reddest, greenest and bluest pixels in the scene. Zachary Lieberman used a technique similar to this in his <a href="https://vimeo.com/5233789" target="_blank"><em>IQ Font</em></a> collaboration with typographers Pierre &amp; Damien et al., in which letterforms were created by tracking the movements of a specially-marked sports car.</p>
-<div class="figure">
-<div style="clear:both"><a href="..\images\image_processing_computer_vision/images/iq_font.jpg" target="_blank"><img alt="Not mine" src="..\images\image_processing_computer_vision/images/iq_font.jpg"/></a></div><span class="caption">Not mine</span>
-</div>
+<div class="figure"><div class="inner">
+<div style="image"><a href="..\images\image_processing_computer_vision/images/iq_font.jpg" target="_blank"><img alt="Not mine" src="..\images\image_processing_computer_vision/images/iq_font.jpg"/></a></div><div class="caption">Not mine</div>
+</div></div>
 <h4 id="three-channel-rgb-images.">Three-Channel (RGB) Images.</h4>
 <p>Our Lincoln portrait image shows an 8-bit, 1-channel image. Each pixel uses a single round number (technically, an unsigned char) to represent a single luminance value. But other data types and formats are possible.</p>
 <p>For example, it is common for color images to be represented by 8-bit, <em>3-channel</em> images. In this case, each pixel brings together 3 bytes' worth of information: one byte each for red, green and blue intensities. In computer memory, it is common for these values to be interleaved R-G-B. As you can see, color images necessarily contain three times as much data.</p>
-<div class="figure">
-<div style="clear:both"><a href="..\images\image_processing_computer_vision/images/interleaved.jpg" target="_blank"><img alt="Not mine" src="..\images\image_processing_computer_vision/images/interleaved.jpg"/></a></div><span class="caption">Not mine</span>
-</div>
+<div class="figure"><div class="inner">
+<div style="image"><a href="..\images\image_processing_computer_vision/images/interleaved.jpg" target="_blank"><img alt="Not mine" src="..\images\image_processing_computer_vision/images/interleaved.jpg"/></a></div><div class="caption">Not mine</div>
+</div></div>
 <p>Take a very close look at your LCD screen, and you'll see how this way of storing the data is directly motivated by the layout of your display's phosphors:</p>
-<div class="figure">
-<div style="clear:both"><a href="..\images\image_processing_computer_vision/images/rgb-screen.jpg" target="_blank"><img alt="Not mine" src="..\images\image_processing_computer_vision/images/rgb-screen.jpg"/></a></div><span class="caption">Not mine</span>
-</div>
+<div class="figure"><div class="inner">
+<div style="image"><a href="..\images\image_processing_computer_vision/images/rgb-screen.jpg" target="_blank"><img alt="Not mine" src="..\images\image_processing_computer_vision/images/rgb-screen.jpg"/></a></div><div class="caption">Not mine</div>
+</div></div>
 <p>Because the color data are interleaved, accessing pixel values in buffers containing RGB data is slightly more complex. Here's how you can retrieve the values representing the individual red, green and blue components of pixel at a given (x,y) location:</p>
 <pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Given:</span>
 <span class="co">// unsigned char *buffer, an array storing an RGB image</span>
@@ -465,35 +448,22 @@ buffer[arrayIndex] = pixelValueAtXY;</code></pre>
 <p>I sometimes assign my students the project of copying a well-known work of interactive new-media art. Reimplementing projects such as the ones below can be highly instructive, and test the limits of your attention to detail. As Gerald King <a href="http://www.geraldking.com/Copying.htm" target="_blank">writes</a>, such copying "provides insights which cannot be learned from any other source." <em>I recommend you build...</em></p>
 <h4 id="a-slit-scanner.">A Slit-Scanner.</h4>
 <p><em>Slit-scanning</em> — a type of "time-space imaging" — has been a common trope in interactive video art for more than twenty years. Interactive slit-scanners have been developed by some of the most revered pioneers of new media art (Toshio Iwai, Paul de Marinis, Steina Vasulka) as well as by <a href="http://www.flong.com/texts/lists/slit_scan/" target="_blank">literally dozens</a> of other highly regarded practitioners. The premise remains an open-ended format for seemingly limitless experimentation, whose possibilities have yet to be exhausted. It is also a good exercise in managing image data, particularly in extracting and copying pixel ROIs. In digital slit-scanning, thin slices are extracted from a sequence of video frames, and concatenated into a new image. The result is an image which succinctly reveals the history of movements in a video or camera stream.</p>
-<div class="figure">
-<div style="clear:both"><a href="..\images\image_processing_computer_vision/images/rozin_timescan.jpg" target="_blank"><img alt="Daniel Rozin, Time Scan Mirror (2004)" src="..\images\image_processing_computer_vision/images/rozin_timescan.jpg"/></a></div><span class="caption">Daniel Rozin, Time Scan Mirror (2004)</span>
-</div>
+<div class="figure"><div class="inner">
+<div style="image"><a href="..\images\image_processing_computer_vision/images/rozin_timescan.jpg" target="_blank"><img alt="Daniel Rozin, Time Scan Mirror (2004)" src="..\images\image_processing_computer_vision/images/rozin_timescan.jpg"/></a></div><div class="caption">Daniel Rozin, Time Scan Mirror (2004)</div>
+</div></div>
 <h4 id="text-rain-by-camille-utterback-and-romy-achituv-1999.">Text Rain by Camille Utterback and Romy Achituv (1999).</h4>
 <p><em><a href="http://camilleutterback.com/projects/text-rain/" target="_blank">Text Rain</a></em> is a now-classic work of interactive art in which virtual letters appear to "fall" on the visitor's "silhouette". Utterback writes: "In the Text Rain installation, participants stand or move in front of a large projection screen. On the screen they see a mirrored video projection of themselves in black and white, combined with a color animation of falling letters. Like rain or snow, the letters appears to land on participants’ heads and arms. The letters respond to the participants’ motions and can be caught, lifted, and then let fall again. The falling text will 'land' on anything darker than a certain threshold, and 'fall' whenever that obstacle is removed."</p>
-<div class="figure">
-<div style="clear:both"><a href="..\images\image_processing_computer_vision/images/text-rain.jpg" target="_blank"><img alt="Camille Utterback and Romy Achituv, Text Rain (1999)" src="..\images\image_processing_computer_vision/images/text-rain.jpg"/></a></div><span class="caption">Camille Utterback and Romy Achituv, Text Rain (1999)</span>
-</div>
+<div class="figure"><div class="inner">
+<div style="image"><a href="..\images\image_processing_computer_vision/images/text-rain.jpg" target="_blank"><img alt="Camille Utterback and Romy Achituv, Text Rain (1999)" src="..\images\image_processing_computer_vision/images/text-rain.jpg"/></a></div><div class="caption">Camille Utterback and Romy Achituv, Text Rain (1999)</div>
+</div></div>
 <p>========================================================<br/>## A Computer-Vision lexicon, and where to find out more information</p>
 <p>Computer vision is a huge field and we can't possibly cover all useful examples here. Sometimes people lack the terminology to know what to google for.</p>
 <p>-- Camera calibration. -- Homography transforms and re-projection.</p>
+<div class="footer">
+<div id="prev_chapter"><a href="game_design.html">&lt; Experimental Game Development in openFrameworks</a></div>
+<div id="next_chapter"><a href="hardware.html">hardware &gt;</a></div>
 </div>
 </div>
-<script src="../javascript/jquery-1.8.3.min.js"></script>
-<script src="../javascript/jquery-ui-1.9.1.custom.min.js"></script>
-<script src="../javascript/bootstrap.js"></script>
-<script src="../javascript/jquery.tocify.js"></script>
-<script src="../javascript/prettify.js"></script>
-<script src="../javascript/tocOpenClose.js"></script>
-<script>
-        $(function() {
-
-            var toc = $("#toc").tocify({
-              selectors: "h2,h3,h4,h5",
-              showAndHide: false
-            }).data("toc-tocify");
-
-            prettyPrint();
-            $(".optionName").popover({ trigger: "hover" });
-
-        });
-    </script>
+</div>
+</body>
+</html>

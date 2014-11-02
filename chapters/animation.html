@@ -5,7 +5,7 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <meta content="text/css" http-equiv="Content-Style-Type"/>
 <meta content="pandoc" name="generator"/>
-<title></title>
+<title>ofBook - Animation</title>
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
 table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
@@ -26,42 +26,25 @@ code > span.al { color: #ff0000; font-weight: bold; }
 code > span.fu { color: #06287e; }
 code > span.er { color: #ff0000; font-weight: bold; }
   </style>
-<link href="../style/bootstrap.css" rel="stylesheet">
-<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/themes/black-tie/jquery-ui.css" rel="stylesheet">
-<link href="../style/jquery.tocify.css" rel="stylesheet">
-<link href="../style/prettify.css" rel="stylesheet" type="text/css"/>
+<link href="../style/bootstrap.min.css" rel="stylesheet">
 <link href="../style/style.css" rel="stylesheet" type="text/css"/>
 <link href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|Merriweather:400,300,300italic,400italic,700,900,700italic,900italic" rel="stylesheet" type="text/css">
-<link href="../octicons/octicons.css" rel="stylesheet">
-<style>  
-  .headerDoc {
-        color: #005580;
-      }
-  }
-  </style>
-</link></link></link></link></link></head>
+<script src="../javascript/jquery-1.8.3.min.js"></script>
+<script src="../javascript/bootstrap.min.js"></script>
+<script src="../javascript/navbar.js"></script>
+</link></link></head>
 <body>
-<span id="side-nav">
-<span class="side-nav-button chapterBtn mega-octicon octicon-book"></span>
-<span class="side-nav-button navBtn mega-octicon octicon-three-bars"></span>
-<span class="side-nav-button infoBtn mega-octicon octicon-info"></span>
-</span>
-<!-- table of content -->
-<div id="toc">
-<span class="closeBtn mega-octicon octicon-x"></span>
-</div></body></html>
-<!-- table of content -->
-<div id="chapters">
-<span class="closeBtn mega-octicon octicon-x"></span>
-chapters
-<ul><li class="group">foreword</li><li><a href="foreword.html">Foreword</a></li><li class="group">basics</li><li><a href="of_philosophy.html">philosophy</a></li><li><a href="cplusplus_basics.html">C++ Language Basics</a></li><li><a href="setup_and_project_structure.html">OF structure</a></li><li><a href="intro_to_graphics.html">Graphics</a></li><li><a href="OOPs!.html">Ooops! = Object Oriented Programming + Classes</a></li><li class="group">approaches</li><li class="selected"><a href="animation.html">Animation</a></li><li><a href="data_vis.html">Information Visualization Chapter</a></li><li><a href="game_design.html">Experimental Game Development in openFrameworks</a></li><li><a href="image_processing_computer_vision.html">Image Processing and Computer Vision</a></li><li class="group">i/o</li><li><a href="hardware.html">hardware</a></li><li><a href="sound.html">Sound</a></li><li><a href="network.html">Network</a></li><li class="group">advanced topics</li><li><a href="advanced_graphics.html">Advanced graphics</a></li><li><a href="math.html">That Math Chapter: From 1D to 4D</a></li><li><a href="memory.html">Memory in C++</a></li><li><a href="threads.html">Threads</a></li><li><a href="ios.html">ofxiOS</a></li><li><a href="c++11.html">C++ 11</a></li><li class="group">project breakdowns</li><li><a href="project_elliot.html">Case Study : Line Segments Space</a></li><li><a href="project_eva.html">Case Study: Choreographies for Humans and Stars</a></li><li><a href="project_joel.html">Case Study: Anthropocene, an interactive film installation for Greenpeace as part of their field at Glastonbury 2013</a></li><li class="group">tools</li><li><a href="version_control_with_git.html">Version control with Git</a></li><li><a href="ofSketch.html">ofSketch</a></li><li><a href="installation_up_4evr_macosx.html">Installation up 4evr - OSX</a></li><li><a href="installation_up_4evr_linux.html">Installation up 4evr - Linux</a></li></ul></div>
-<!-- info about the book -->
-<div id="bookInfo">
-<span class="closeBtn mega-octicon octicon-x"></span>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida, luctus mauris in, congue ante. Phasellus egestas est id velit ornare, eu vehicula augue tincidunt. Aliquam laoreet faucibus turpis eget gravida. Vestibulum pharetra scelerisque leo, eu tincidunt leo tincidunt feugiat. Sed rutrum, felis eget posuere tempus, neque justo pretium libero, quis facilisis mauris turpis nec enim. Sed quis metus massa. Maecenas tincidunt, leo at ultricies interdum, nisl ipsum finibus massa, quis dictum nulla nibh sed urna. Vestibulum rhoncus, nunc sit amet tincidunt interdum, ligula lacus dictum massa, pharetra tristique nisi augue vitae risus.
+<div class="banner">
+<div class="content-wrapper">
+<b>Work in progress!</b>
+        This is a preliminary version of the <a href="https://github.com/openframeworks/ofBook/" target="_blank">ofBook</a>
 </div>
-<div class="row-fluid">
-<div id="chapter">
+</div>
+<div class="content-wrapper">
+<nav role="navigation">
+<ul id="nav-parts"><li class="group">Foreword<ul><li class="chapter"><a href="foreword.html">Foreword</a><ul><li class="section selected"><a href="#aboutthisbook" target="_top">about this book</a></li><li class="section"><a href="#credits" target="_top">credits</a></li></ul></li></ul></li><li class="group">Basics<ul><li class="chapter"><a href="of_philosophy.html">philosophy</a><ul><li class="section selected"><a href="#ofstructure" target="_top">OF structure</a></li><li class="section"><a href="#projectgenerator" target="_top">project generator</a></li><li class="section"><a href="#handcpp" target="_top">.h and .cpp</a></li><li class="section"><a href="#setupupdatedraw" target="_top">setup/update/draw</a></li><li class="section"><a href="#preprocessorcompilerlinker" target="_top">preprocessor/compiler/linker</a></li></ul></li></ul><ul><li class="chapter"><a href="cplusplus_basics.html">C++ Language Basics</a><ul><li class="section selected"><a href="#lookalive" target="_top">Look Alive!</a></li><li class="section"><a href="#iteration" target="_top">Iteration</a></li><li class="section"><a href="#compilingmyfirstapp" target="_top">Compiling My First App</a></li><li class="section"><a href="#beyondhelloworld" target="_top">Beyond Hello World</a></li><li class="section"><a href="#functions" target="_top">Functions</a></li><li class="section"><a href="#customfunctions" target="_top">Custom Functions</a></li><li class="section"><a href="#encapsulationofcomplexity" target="_top">Encapsulation of Complexity</a></li><li class="section"><a href="#variablespart1" target="_top">Variables (part 1)</a></li><li class="section"><a href="#conclusion" target="_top">Conclusion</a></li><li class="section"><a href="#ps" target="_top">PS.</a></li></ul></li></ul><ul><li class="chapter"><a href="setup_and_project_structure.html">OF structure</a><ul><li class="section selected"><a href="#firstthingsfirst" target="_top">First things first</a></li><li class="section"><a href="#welcometoyournewkitchen" target="_top">Welcome to your new kitchen</a></li><li class="section"><a href="#runningexamples" target="_top">Running examples</a></li><li class="section"><a href="#offolderstructure" target="_top">OF folder structure</a></li></ul></li></ul><ul><li class="chapter"><a href="intro_to_graphics.html">Graphics</a><ul><li class="section selected"><a href="#brusheswithbasicshapes" target="_top">Brushes with Basic Shapes</a></li><li class="section"><a href="#brushesfromfreeformshapes" target="_top">Brushes from Freeform Shapes</a></li><li class="section"><a href="#movingtheworld" target="_top">Moving The World</a></li><li class="section"><a href="#nextsteps" target="_top">Next Steps</a></li></ul></li></ul><ul><li class="chapter"><a href="OOPs!.html">Ooops! = Object Oriented Programming + Classes</a><ul><li class="section selected"><a href="#overview" target="_top">Overview</a></li><li class="section"><a href="#whatisoop" target="_top">What is OOP</a></li><li class="section"><a href="#howtobuildyourownclassessimpleclass" target="_top">How to build your own Classes (simple Class)</a></li><li class="section"><a href="#makeanobjectfromyourclass" target="_top">make an Object from your Class</a></li><li class="section"><a href="#makeobjectsfromyourclass" target="_top">make objects from your Class</a></li><li class="section"><a href="#makemoreobjectsfromyourclass" target="_top">make more Objects from your Class</a></li><li class="section"><a href="#makeevenmoreobjectsfromyourclasspropertiesandconstructors" target="_top">make even more Objects from your Class: properties and constructors</a></li><li class="section"><a href="#makeevenmoreobjectsfromyourclass" target="_top">make even more Objects from your Class</a></li><li class="section"><a href="#makeanddeleteasyouwishusingvectors" target="_top">Make and delete as you wish - using vectors</a></li><li class="section"><a href="#quickintrotopolymorphisminheritance" target="_top">Quick intro to polymorphism (inheritance)</a></li></ul></li></ul></li><li class="group selected">Approaches<ul><li class="chapter selected"><a href="animation.html">Animation</a><ul><li class="section selected"><a href="#background" target="_top">Background</a></li><li class="section"><a href="#animationinofusefulconcepts" target="_top">Animation in OF / useful concepts:</a></li><li class="section"><a href="#linearmovement" target="_top">linear movement</a></li><li class="section"><a href="#functionbasedmovement" target="_top">Function based movement</a></li><li class="section"><a href="#simulation" target="_top">Simulation</a></li><li class="section"><a href="#wheretogofurther" target="_top">where to go further</a></li></ul></li></ul><ul><li class="chapter"><a href="data_vis.html">Information Visualization Chapter</a><ul><li class="section selected"><a href="#intro" target="_top">Intro</a></li><li class="section"><a href="#workingwithdatafilesinopenframeworks" target="_top">Working with data files in OpenFrameworks</a></li><li class="section"><a href="#moreusefulfunctionsforworkingwithdata" target="_top">More Useful functions for working with data</a></li><li class="section"><a href="#workingwithapis" target="_top">Working with APIs</a></li><li class="section"><a href="#furtherresources" target="_top">Further resources</a></li><li class="section"><a href="#references" target="_top">References</a></li></ul></li></ul><ul><li class="chapter"><a href="game_design.html">Experimental Game Development in openFrameworks</a><ul><li class="section selected"><a href="#howdogamedevelopersactuallymakegames" target="_top">How do game developers actually make games?</a></li><li class="section"><a href="#sowhatisoscanyway" target="_top">So what is OSC, anyway?</a></li><li class="section"><a href="#ourbasicgamemakingitnotsobasic" target="_top">Our basic game--&amp; making it not-so-basic</a></li></ul></li></ul><ul><li class="chapter"><a href="image_processing_computer_vision.html">Image Processing and Computer Vision</a><ul><li class="section selected"><a href="#preliminariestoimageprocessing" target="_top">Preliminaries to Image Processing</a></li></ul></li></ul></li><li class="group">I/O<ul><li class="chapter"><a href="hardware.html">hardware</a><ul><li class="section selected"><a href="#introduction" target="_top">introduction</a></li><li class="section"><a href="#gettingstartedwithserialcommunication" target="_top">getting started with serial communication</a></li><li class="section"><a href="#digitalandanalogcommunication" target="_top">digital and analog communication</a></li><li class="section"><a href="#usingserialforcommunicationbetweenarduinoandopenframeworks" target="_top">using serial for communication between arduino and openframeworks</a></li><li class="section"><a href="#lightsoncontrollinghardwareviadmx" target="_top">Lights On - controlling hardware via DMX</a></li><li class="section"><a href="#raspberrypigettingyourofappintosmallspaces" target="_top">Raspberry Pi - getting your OF app into small spaces</a></li></ul></li></ul><ul><li class="chapter"><a href="sound.html">Sound</a><ul><li class="section selected"><a href="#gettingstartedwithsoundfiles" target="_top">Getting Started With Sound Files</a></li><li class="section"><a href="#gettingstartedwiththesoundstream" target="_top">Getting Started With the Sound Stream</a></li><li class="section"><a href="#why1to1" target="_top">Why -1 to 1?</a></li><li class="section"><a href="#timedomainvsfrequencydomain" target="_top">Time Domain vs Frequency Domain</a></li><li class="section"><a href="#reactingtoliveaudio" target="_top">Reacting to Live Audio</a></li><li class="section"><a href="#synthesizingaudio" target="_top">Synthesizing Audio</a></li><li class="section"><a href="#audiogotchas" target="_top">Audio Gotchas</a></li></ul></li></ul><ul><li class="chapter"><a href="network.html">Network</a><ul><li class="section selected"><a href="#tcpvsudp" target="_top">TCP vs UDP</a></li><li class="section"><a href="#osc" target="_top">OSC</a></li></ul></li></ul></li><li class="group">Advanced topics<ul><li class="chapter"><a href="advanced_graphics.html">Advanced graphics</a><ul><li class="section selected"><a href="#dimmediatemodevsofpolylineofpath" target="_top">2D, immediate mode vs ofPolyline/ofPath</a></li><li class="section"><a href="#d" target="_top">3D</a></li></ul></li></ul><ul><li class="chapter"><a href="math.html">That Math Chapter: From 1D to 4D</a><ul><li class="section selected"><a href="#howartistsapproachmath" target="_top">How Artists Approach Math</a></li><li class="section"><a href="#aboutthischapter" target="_top">About this Chapter</a></li><li class="section"><a href="#onedimensionusingchange" target="_top">One Dimension: Using Change</a></li><li class="section"><a href="#moredimensionssomelinearalgebra" target="_top">More Dimensions: Some Linear Algebra</a></li></ul></li></ul><ul><li class="chapter"><a href="memory.html">Memory in C++</a><ul><li class="section selected"><a href="#computermemoryandvariables" target="_top">Computer memory and variables</a></li><li class="section"><a href="#stackvariablesvariablesinfunctionsvsvariablesinobjects" target="_top">Stack variables, variables in functions vs variables in objects</a></li><li class="section"><a href="#pointersandreferences" target="_top">Pointers and references</a></li><li class="section"><a href="#variablesintheheap" target="_top">Variables in the heap</a></li><li class="section"><a href="#memorystructuresarraysandvectors" target="_top">Memory structures, arrays and vectors</a></li><li class="section"><a href="#othermemorystructureslistsandmaps" target="_top">Other memory structures, lists and maps</a></li><li class="section"><a href="#smartpointers" target="_top">smart pointers</a></li></ul></li></ul><ul><li class="chapter"><a href="threads.html">Threads</a><ul><li class="section selected"><a href="#whatsathreadandwhentouseit" target="_top">What's a thread and when to use it</a></li><li class="section"><a href="#ofthread" target="_top">ofThread</a></li><li class="section"><a href="#threadsandopengl" target="_top">Threads and openGL</a></li><li class="section"><a href="#ofmutex" target="_top">ofMutex</a></li><li class="section"><a href="#externalthreadsanddoublebuffering" target="_top">External threads and double buffering</a></li><li class="section"><a href="#ofscopedlock" target="_top">ofScopedLock</a></li><li class="section"><a href="#pococondition" target="_top">Poco::Condition</a></li><li class="section"><a href="#conclusion" target="_top">Conclusion</a></li></ul></li></ul><ul><li class="chapter"><a href="ios.html">ofxiOS</a><ul><li class="section selected"><a href="#openframeworksoniosdevices" target="_top">OpenFrameworks on iOS devices.</a></li><li class="section"><a href="#intro" target="_top">Intro</a></li><li class="section"><a href="#introtoobjectivec" target="_top">Intro to Objective-C</a></li><li class="section"><a href="#underthehood" target="_top">Under the Hood</a></li><li class="section"><a href="#ofuikit" target="_top">OF &amp; UIKit</a></li><li class="section"><a href="#mediaplaybackandcapture" target="_top">Media Playback and Capture</a></li><li class="section"><a href="#lifehacks" target="_top">Life Hacks</a></li><li class="section"><a href="#appstore" target="_top">App Store</a></li><li class="section"><a href="#casestudies" target="_top">Case Studies</a></li></ul></li></ul><ul><li class="chapter"><a href="c++11.html">C++ 11</a><ul><li class="section selected"><a href="#blahblah" target="_top">Blah blah</a></li><li class="section"><a href="#auto" target="_top">auto</a></li><li class="section"><a href="#forthingthings" target="_top">for (thing : things)</a></li><li class="section"><a href="#override" target="_top">override</a></li><li class="section"><a href="#lambdafunctions" target="_top">Lambda functions</a></li></ul></li></ul></li><li class="group">Project breakdowns<ul><li class="chapter"><a href="project_elliot.html">Case Study : Line Segments Space</a><ul><li class="section selected"><a href="#foreward" target="_top">Foreward</a></li><li class="section"><a href="#artiststatement" target="_top">Artist statement</a></li><li class="section"><a href="#digitalemulsion" target="_top">Digital Emulsion</a></li><li class="section"><a href="#technicalsolution" target="_top">Technical solution</a></li><li class="section"><a href="#designtimeapplications" target="_top">Design time applications</a></li></ul></li></ul><ul><li class="chapter"><a href="project_eva.html">Case Study: Choreographies for Humans and Stars</a><ul><li class="section selected"><a href="#projectoverview" target="_top">Project Overview</a></li><li class="section"><a href="#ideationandprototyping" target="_top">Ideation and Prototyping</a></li><li class="section"><a href="#findingthetechnicalsolutions" target="_top">Finding the Technical Solutions</a></li><li class="section"><a href="#developingthevisualizationsoftware" target="_top">Developing the Visualization Software</a></li><li class="section"><a href="#failsafesanddirtyfixes" target="_top">Fail-safes and dirty fixes</a></li><li class="section"><a href="#resultsandreception" target="_top">Results and Reception</a></li></ul></li></ul><ul><li class="chapter"><a href="project_joel.html">Case Study: Anthropocene, an interactive film installation for Greenpeace as part of their field at Glastonbury 2013</a><ul><li class="section selected"><a href="#projectoverview" target="_top">Project Overview</a></li><li class="section"><a href="#theproject" target="_top">The Project</a></li><li class="section"><a href="#development" target="_top">Development</a></li><li class="section"><a href="#showtime" target="_top">Show time</a></li><li class="section"><a href="#postevent" target="_top">Post Event</a></li><li class="section"><a href="#teamandcredits" target="_top">Team and Credits</a></li><li class="section"><a href="#hardwareselection" target="_top">Hardware selection</a></li><li class="section"><a href="#appendix1codestructuremainloop" target="_top">Appendix 1: Code structure, main loop</a></li><li class="section"><a href="#appendix2modeswithscreengrabsandcodeexplanation" target="_top">Appendix 2: Modes, with screen grabs and code explanation</a></li><li class="section"><a href="#appendix3editeddevelopmentnotes" target="_top">Appendix 3: Edited development notes</a></li></ul></li></ul></li><li class="group">Tools<ul><li class="chapter"><a href="version_control_with_git.html">Version control with Git</a><ul><li class="section selected"><a href="#whatisversioncontrolandwhyshouldyouuseit" target="_top">What is version control, and why should you use it?</a></li><li class="section"><a href="#differentversioncontrolsystems" target="_top">Different version control systems</a></li><li class="section"><a href="#introductiontogit" target="_top">Introduction to Git</a></li><li class="section"><a href="#popularguiclients" target="_top">Popular GUI clients</a></li><li class="section"><a href="#conclusion" target="_top">Conclusion</a></li></ul></li></ul><ul><li class="chapter"><a href="ofSketch.html">ofSketch</a><ul><li class="section selected"><a href="#whatisofsketch" target="_top">What is ofSketch?</a></li><li class="section"><a href="#download" target="_top">Download</a></li><li class="section"><a href="#sketchformat" target="_top">Sketch Format</a></li><li class="section"><a href="#remotecoding" target="_top">Remote Coding</a></li><li class="section"><a href="#future" target="_top">Future</a></li></ul></li></ul><ul><li class="chapter"><a href="installation_up_4evr_macosx.html">Installation up 4evr - OSX</a><ul><li class="section selected"><a href="#step1prepyoursoftwareandthecomputer" target="_top">Step 1: Prep your software and the computer</a></li><li class="section"><a href="#step2bootintoyoursoftware" target="_top">Step 2: Boot into your software</a></li><li class="section"><a href="#step3keepitupchamp" target="_top">Step 3: Keep it up (champ!)</a></li><li class="section"><a href="#step4rebootperiodically" target="_top">Step 4: Reboot periodically</a></li><li class="section"><a href="#step5checkinonitfromafar" target="_top">Step 5: Check in on it from afar</a></li><li class="section"><a href="#step6testtesttest" target="_top">Step 6: Test, test, test.</a></li><li class="section"><a href="#additionaltipslogging" target="_top">Additional Tips: Logging</a></li><li class="section"><a href="#memoryleakmurderer" target="_top">Memory leak murderer</a></li><li class="section"><a href="#alternateresources" target="_top">Alternate resources</a></li></ul></li></ul><ul><li class="chapter"><a href="installation_up_4evr_linux.html">Installation up 4evr - Linux</a><ul><li class="section selected"><a href="#someadditionaltricks" target="_top">Some additional tricks:</a></li></ul></li></ul></li></ul>
+</nav>
+<div class="chapter-content">
 <h1 id="animation">Animation</h1>
 <p><em>by <a href="http://thesystemis.com" target="_blank">Zach Lieberman</a></em></p>
 <p><em>with edits from Kayla Lewis</em></p>
@@ -69,7 +52,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
 <p>The word animation is a medieval term stemming from the Latin animare, which means ‘instill with life’. In modern terms, it's used to describe the process of creating movement from still, sequential images. Early creators of animation used spinning discs (phenakistoscopes) and cylinders (zoetropes) with successive frames to create the illusion of a smooth movement from persistence of vision. In modern times, we're quite used to other techniques such as flip books and cinematic techniques like stop motion. Increasingly, artists have been using computational techniques to create animation -- using code to "bring life" to objects on the screen over successive frames. This chapter is going to look at these techniques and specifically try to address a central question: how can we create compelling, organic, and even absurd movement through code?</p>
 <p>As a side note, I studied fine arts, painting and printmaking, and it was accidental that I started using computers. The moment that I saw how you could write code to move something across the screen, even as simple as silly rectangle, I was hooked. I began during the first dot-com era working with flash / actionscript and lingo / director and have never looked back.</p>
 <p>This chapter will first explain some basic principles that are useful to understanding animation in OF, then attempt to show a few entrypoints to interesting approaches.</p>
-<h2 id="animation-in-of-useful-concepts">Animation in OF / useful concepts:</h2>
+<h2 id="animationinofusefulconcepts">Animation in OF / useful concepts:</h2>
 <h3 id="draw-cycle">Draw cycle</h3>
 <p>The first point to make about animation is that it's based on successive still frames. In openFrameworks we have a certain loop cycle that's based roughly on game programming paradigms. It goes like this:</p>
 <ul>
@@ -124,7 +107,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
 <h3 id="objects">Objects</h3>
 <p>In these examples, I'll be using objects pretty heavily. It's helpful to feel comfortable with OOP to understand the code. One object that is used heavily is <code>ofPoint</code>, which contains an x,y and z variable. In the past this was called "ofVec3f" (vector of three floating point numbers), but we just use the more convenient ofPoint. In some animation code, you'll see vectors used, and you should know that ofPoint is essentially a vector.</p>
 <p>You will also see objects that have basic functionality and internal variables. I will typically have a setup, update and draw inside them. A lot of times, these objects are either made because they are useful recipies to have many things on the screen or they help by putting all the variables and logic of movement in one place. I like to have as little code as possible at the testApp / ofApp level. If you are familiar with actionscript / flash, this would be similar to having as a little as possible in your main timeline.</p>
-<h2 id="linear-movement">linear movement</h2>
+<h2 id="linearmovement">linear movement</h2>
 <h3 id="getting-from-point-a-to-point-b">getting from point a to point b</h3>
 <p>One of the most important things to think about when it comes to animation is answering the simple question:</p>
 <p><em>how do you get from point A to point B?</em></p>
@@ -147,15 +130,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
 <p><strong>[note: plot grpahic here]</strong></p>
 <p><strong>[note: better explanation of how to read the chart]</strong> Think about the x value of the plot as the input and y value as the output. If put in 0, we get out a y value of 0, if we put in 0.1, we get out a y value of 0.01, all the way to putting in a value of 1 and getting out a value of 1.</p>
 <p>As side note, it's important to note that things in the world often don't move linearly. They don't take "even" steps. Roll a ball on the floor, it slows down. It's accelerating in a negative direction. Sometimes things speed up, like a baseball bat going from resting to swinging. Curving pct leads to interesting behavior. The objects still take the same amount of time to get there, but they do it in more lifelike, non-linear ways.</p>
-<div class="figure">
-<div style="clear:both"><a href="..\images\animation/images/atob_nonlinear.png" target="_blank"><img alt="nonlinear" src="..\images\animation/images/atob_nonlinear.png"/></a></div><span class="caption">nonlinear</span>
-</div>
+<div class="figure"><div class="inner">
+<div style="image"><a href="..\images\animation/images/atob_nonlinear.png" target="_blank"><img alt="nonlinear" src="..\images\animation/images/atob_nonlinear.png"/></a></div><div class="caption">nonlinear</div>
+</div></div>
 <p>If you raise the incoming number between 0 and 1 to a larger power it looks more extreme. Interestingly, if you raise this value between 0 and 1 to a fractional (rational) power (i.e., a power that's less than 1 and greater than 0), it curves in the other direction.</p>
 <p>The second example shows an animation that uses pct again to get from A to B, but in this case, pct is raised to a power:</p>
 <p>In the 4th example (<strong>4_rectangleInterpolatePowfMultiple</strong>), you can see a variety of these rectangles, all moving with different shaping functions. They take the same amount of time to get from A to B, but do it in very different ways. I usually ask my students to guess which one is moving linearly -- see if you can figure it out without looking at the code:</p>
-<div class="figure">
-<div style="clear:both"><a href="..\images\animation/images/multiCurved.png" target="_blank"><img alt="xeno diagram" src="..\images\animation/images/multiCurved.png"/></a></div><span class="caption">xeno diagram</span>
-</div>
+<div class="figure"><div class="inner">
+<div style="image"><a href="..\images\animation/images/multiCurved.png" target="_blank"><img alt="xeno diagram" src="..\images\animation/images/multiCurved.png"/></a></div><div class="caption">xeno diagram</div>
+</div></div>
 <p>http://en.wikipedia.org/wiki/12_basic_principles_of_animation#Slow_in_and_slow_out</p>
 <p><strong>[note: can we get rights for a screenshot of masahiko sato curves DVD ? ]</strong></p>
 <p>Raising percent to a power is one of a whole host of functions that are called "shaping functions" or "easing equations." Robert Penner wrote about and derived many of these functions so they are also commonly reffered to as "Penner Easing Equations." <a href="http://easings.net/" target="_blank">Easings.net</a> is a good resource, as well there are several openFrameworks addons for easing.</p>
@@ -176,9 +159,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
 <li>Move 50% closer.</li>
 <li>Go to (3).</li>
 </ol>
-<div class="figure">
-<div style="clear:both"><a href="..\images\animation/images/xeno.png" target="_blank"><img alt="xeno diagram" src="..\images\animation/images/xeno.png"/></a></div><span class="caption">xeno diagram</span>
-</div>
+<div class="figure"><div class="inner">
+<div style="image"><a href="..\images\animation/images/xeno.png" target="_blank"><img alt="xeno diagram" src="..\images\animation/images/xeno.png"/></a></div><div class="caption">xeno diagram</div>
+</div></div>
 <p>In code, that's basically the same as saying</p>
 <pre class="sourceCode cpp"><code class="sourceCode cpp">currentValue = currentValue + ( targetValue - currentValue ) * <span class="fl">0.5.</span></code></pre>
 <p>In this case <code>targetValue - currentValue</code> is the distance. You could also change the size of the step you make every time, for example, taking steps of 10% instead of 50%:</p>
@@ -194,16 +177,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ante gravida
 }</code></pre>
 <p>Here, we have a value, <code>catchUpSpeed</code>, that represents how fast we catch up to the object we are trying to get to. It's set to 0.01 (1%) in this example code, which means take 99% of my own postion, 1% of the target position and move to their sum. If you alter this number you'll see the rectangle catch up to the mouse faster or slower. 0.001 means it will run 10 times slower, 0.1 means ten times faster.</p>
 <p>This technique is very useful if you are working with noisy data -- a sensor for example. You can create a variable that catched up to it using xeno and smoothes out the result. I use this quite often when I'm working with hardware sensors / physical computing, or when I have noisy data. The nice thing is that the catch up speed becomes a knob that you can adjust between more real-time (and more noisey data) and less real-time (and more smooth) data. Having that kind of control comes in handy!</p>
-<h2 id="function-based-movement">Function based movement</h2>
+<h2 id="functionbasedmovement">Function based movement</h2>
 <p>In this section of the book we'll look at a few examples that show function based movement, which means using a function that takes some input and returns an output that we'll use for animation. For input, we'll be passing in counters, elapsed time, position, and the output we'll use to control position.</p>
 <h3 id="sine-and-cosine">Sine and Cosine</h3>
 <p>Another interesting and simple system to experiment with motion in openframeworks is using sin and cos.</p>
 <p>Sin and cos (sine and cosine) are trigonometric functions, which means they are based on angles. They are the x and y position of a point moving in a constant rate around a circle. The circle is a unit circle with a radius of 1, which means the diameter is <code>2*r*PI</code> or <code>2*PI</code>. In OF you'll see this constant as <code>TWO_PI</code>, which is 6.28318...</p>
 <p><em>As a side note, sometimes it can be confusing that some functions in OF take degress where others take radians. Sin and cos are part of the math library, so they take radians, whereas most openGL rotation takes degrees. We have some helper constants such as <code>DEG_TO_RAD</code> and <code>RAD_TO_DEG</code>, which can help you convert one to the other.</em></p>
 <p>Here's a simple drawing that helps explain sin and cos.</p>
-<div class="figure">
-<div style="clear:both"><a href="..\images\animation/images/atob_circle.png" target="_blank"><img alt="sin" src="..\images\animation/images/atob_circle.png"/></a></div><span class="caption">sin</span>
-</div>
+<div class="figure"><div class="inner">
+<div style="image"><a href="..\images\animation/images/atob_circle.png" target="_blank"><img alt="sin" src="..\images\animation/images/atob_circle.png"/></a></div><div class="caption">sin</div>
+</div></div>
 <p>All you have to is imagine a unit circle, which has a radius of 1 and a center position of 0,0. Now, imagine a point moving counter clockwise around that point as a constant speed. If you look at the height of that point, it goes from 0 at the far right (3 o'clock position), up to 1 at the top (12 o'clock), back at 0 at the left (9 o'clock) and down to -1 at the bottom (6 o'clock). So it's a smooth, curving line that moves between -1 and 1. That's it. Sin is the height of this dot and cos is the horizontal position of this dot. At the far right, where the height of this dot is 0, the horizontal position is 1. When sin is 1, cos is 0, etc. They are in sync, but shifted.</p>
 <h4 id="simple-examples">Simple examples</h4>
 <p>It's pretty easy to use sin to animate the position of an object.</p>
@@ -262,9 +245,9 @@ yPos = yOrig + radius * sin(angle);</code></pre>
 <p>Noise is similar sin/cos in that it's a function that takes some input and produces output, which we can then use for movement. In the case of sin/cos you are passing in an angle and getting a results back that goes back and forth between -1 and 1. In openframeworks we wrap code that uses <a href="http://en.wikipedia.org/wiki/Simplex_noise" target="_blank">simplex noise</a>, which is comparable to Perlin noise and we have a function <code>ofNoise()</code> that takes an input and produces an output. Both algorithms (Perlin, Simplex) provide a psueduo random noise pattern -- they are quite useful for animation, because they are continuous functions, unlike something like ofRandom, which just returns random values.</p>
 <p>When I say continuous function, what I mean is if you pass in smaller changes as input, you get smaller output and if you pass in the same value you get the same result. For example, <code>sin(1.7)</code> always returns the same value, and <code>ofNoise(1.7)</code> also always returns the same result. Likewise if you call <code>sin(1.7)</code> and <code>sin(1.75)</code> you get results that are continuous (meaning, you can call <code>sin(1.71) sin(1.72)... sin(1.74)</code> to get intermediate results).</p>
 <p>You can do the same thing with ofNoise -- here, I write a for loop to draw noise as a line. <code>ofNoise</code> takes an input, here i/10 and produces an output which is between 0 and 1. <code>ofSignedNoise</code> is similar but it produces an output between -1 and 1.</p>
-<div class="figure">
-<div style="clear:both"><a href="..\images\animation/images/noiseLine.png" target="_blank"><img alt="noise line" src="..\images\animation/images/noiseLine.png"/></a></div><span class="caption">noise line</span>
-</div>
+<div class="figure"><div class="inner">
+<div style="image"><a href="..\images\animation/images/noiseLine.png" target="_blank"><img alt="noise line" src="..\images\animation/images/noiseLine.png"/></a></div><div class="caption">noise line</div>
+</div></div>
 <pre class="sourceCode cpp"><code class="sourceCode cpp">ofBackground(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>);
 ofSetColor(<span class="dv">255</span>);
 
@@ -279,12 +262,12 @@ ofBeginShape();
 }
 ofEndShape();</code></pre>
 <p>If you alter the i/10.0, you can adjust the scale of the noise, either zooming in (ie, i/100.0), so you see more details, or zooming out (ie, i/5.0) so you see more variation.</p>
-<div class="figure">
-<div style="clear:both"><a href="..\images\animation/images/noise_i_d_100.png" target="_blank"><img alt="noise with i dividied by 100" src="..\images\animation/images/noise_i_d_100.png"/></a></div><span class="caption">noise with i dividied by 100</span>
-</div>
-<div class="figure">
-<div style="clear:both"><a href="..\images\animation/images/noise_i_d_5.png" target="_blank"><img alt="noise with i dividied by 5" src="..\images\animation/images/noise_i_d_5.png"/></a></div><span class="caption">noise with i dividied by 5</span>
-</div>
+<div class="figure"><div class="inner">
+<div style="image"><a href="..\images\animation/images/noise_i_d_100.png" target="_blank"><img alt="noise with i dividied by 100" src="..\images\animation/images/noise_i_d_100.png"/></a></div><div class="caption">noise with i dividied by 100</div>
+</div></div>
+<div class="figure"><div class="inner">
+<div style="image"><a href="..\images\animation/images/noise_i_d_5.png" target="_blank"><img alt="noise with i dividied by 5" src="..\images\animation/images/noise_i_d_5.png"/></a></div><div class="caption">noise with i dividied by 5</div>
+</div></div>
 <p>We can use noise to animate, for example, here, we move an object on screen using noise:</p>
 <pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">float</span> x = ofMap( ofNoise( ofGetElapsedTimef()), <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, ofGetWidth());
 ofCircle(x,<span class="dv">200</span>,<span class="dv">30</span>);</code></pre>
@@ -293,9 +276,9 @@ ofCircle(x,<span class="dv">200</span>,<span class="dv">30</span>);</code></pre>
 <span class="dt">float</span> y = ofMap( ofNoise( <span class="fl">1000.</span><span class="dv">0</span>+ ofGetElapsedTimef()), <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, ofGetHeight());
 ofCircle(x,y,<span class="dv">30</span>);</code></pre>
 <p>Alternatively, ofNoise takes multiple demensions. Here's a quick sketch moving something in a path via ofNoise using the 2d dimensions</p>
-<div class="figure">
-<div style="clear:both"><a href="..\images\animation/images/noise2d.png" target="_blank"><img alt="noise via 2d" src="..\images\animation/images/noise2d.png"/></a></div><span class="caption">noise via 2d</span>
-</div>
+<div class="figure"><div class="inner">
+<div style="image"><a href="..\images\animation/images/noise2d.png" target="_blank"><img alt="noise via 2d" src="..\images\animation/images/noise2d.png"/></a></div><div class="caption">noise via 2d</div>
+</div></div>
 <p>The code for this example (note the 2 inputs into ofNoise, this is a 2-dimensional noise call. it allows us to use the same value for time, but get different results):</p>
 <pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//--------------------------------------------------------------</span>
 <span class="dt">void</span> ofApp::setup(){
@@ -381,9 +364,9 @@ v = v + a;   <span class="co">// velocity = velocity + acceleration</span></code
 <span class="dt">void</span> addClockwiseForce( <span class="dt">float</span> px, <span class="dt">float</span> py, <span class="dt">float</span> radius, <span class="dt">float</span> strength);
 <span class="dt">void</span> addCounterClockwiseForce( <span class="dt">float</span> px, <span class="dt">float</span> py, <span class="dt">float</span> radius, <span class="dt">float</span> strength);</code></pre>
 <p>They essentially adds forces the move towards or away from a point that you pass in, or in the case of clockwise forces, around a point.</p>
-<div class="figure">
-<div style="clear:both"><a href="..\images\animation/images/particle.png" target="_blank"><img alt="sin" src="..\images\animation/images/particle.png"/></a></div><span class="caption">sin</span>
-</div>
+<div class="figure"><div class="inner">
+<div style="image"><a href="..\images\animation/images/particle.png" target="_blank"><img alt="sin" src="..\images\animation/images/particle.png"/></a></div><div class="caption">sin</div>
+</div></div>
 <p>The calculation of these forces is fairly straight forward - first, we figure out how far away from a point is from the center of the force. If it's outside of the radius of interaction, we disregard it. If it's inside, we figure out its percentage , ie, the distance between the force and the particle devided by the radius of interaction. This gives us a number that's close to 1 when we towards the far edge of the circle and 0 as we get towards the center. If we invert this, by taking 1 - percent, we get a number that's small on the outside, and larger as we get closer to the center.</p>
 <p>This is useful because often times forces are proportional to disctance. For example, a magnetic force will have a radius at which it works, and the closer you get to the magnet the stronger the force.</p>
 <p>Here's a quick look at one of the functions for adding force:</p>
@@ -460,29 +443,16 @@ p.frc.y = p.frc.y - diff.y * scale * pct;</code></pre>
 <p>One thing to note is that even through we've cut down the number of calculations, it's still quite a lot! This is a problem that doen't scale linearly. In computer science, you talk about a problem using "O" notation, ie big O notation. This is a bite more like O^2 / 2 -- the complexity is like 1/2 of a square. If you have 100 particles, you are doing almost 5000 calculations (100 * 100 / 2). If you have 1000 particles, it's almost half a million. Needless to say, lots of particles can get slow...</p>
 <p>We don't have time to get into it in this chapter, but there's different approaches to avoiding that many calculations. Many of them have to deal with spatial hashing, ways of quickly identifying which particles are far away enough to not even consider (thus avoiding a distance calculation).</p>
 <h3 id="local-interactions-lead-to-global-behavior">local interactions lead to global behavior</h3>
-<div class="figure">
-<div style="clear:both"><a href="..\images\animation/images/multiForces.png" target="_blank"><img alt="sin" src="..\images\animation/images/multiForces.png"/></a></div><span class="caption">sin</span>
-</div>
-<h2 id="where-to-go-further">where to go further</h2>
+<div class="figure"><div class="inner">
+<div style="image"><a href="..\images\animation/images/multiForces.png" target="_blank"><img alt="sin" src="..\images\animation/images/multiForces.png"/></a></div><div class="caption">sin</div>
+</div></div>
+<h2 id="wheretogofurther">where to go further</h2>
 <h3 id="physics-and-animation-libraries">physics and animation libraries</h3>
+<div class="footer">
+<div id="prev_chapter"><a href="OOPs!.html">&lt; Ooops! = Object Oriented Programming + Classes</a></div>
+<div id="next_chapter"><a href="data_vis.html">Information Visualization Chapter &gt;</a></div>
 </div>
 </div>
-<script src="../javascript/jquery-1.8.3.min.js"></script>
-<script src="../javascript/jquery-ui-1.9.1.custom.min.js"></script>
-<script src="../javascript/bootstrap.js"></script>
-<script src="../javascript/jquery.tocify.js"></script>
-<script src="../javascript/prettify.js"></script>
-<script src="../javascript/tocOpenClose.js"></script>
-<script>
-        $(function() {
-
-            var toc = $("#toc").tocify({
-              selectors: "h2,h3,h4,h5",
-              showAndHide: false
-            }).data("toc-tocify");
-
-            prettyPrint();
-            $(".optionName").popover({ trigger: "hover" });
-
-        });
-    </script>
+</div>
+</body>
+</html>
